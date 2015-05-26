@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  SecondViewController.swift
 //  drnk
 //
 //  Created by Jake Sulkoske on 5/25/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class LiquorStoresViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		DE8377F61B13F30D00CD8435 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8377F51B13F30D00CD8435 /* AppDelegate.swift */; };
-		DE8377F81B13F30D00CD8435 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8377F71B13F30D00CD8435 /* FirstViewController.swift */; };
-		DE8377FA1B13F30D00CD8435 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8377F91B13F30D00CD8435 /* SecondViewController.swift */; };
+		DE8377F81B13F30D00CD8435 /* BarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8377F71B13F30D00CD8435 /* BarsViewController.swift */; };
+		DE8377FA1B13F30D00CD8435 /* LiquorStoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8377F91B13F30D00CD8435 /* LiquorStoresViewController.swift */; };
 		DE8377FD1B13F30D00CD8435 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8377FB1B13F30D00CD8435 /* Main.storyboard */; };
 		DE8377FF1B13F30E00CD8435 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE8377FE1B13F30E00CD8435 /* Images.xcassets */; };
 		DE8378021B13F30E00CD8435 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE8378001B13F30E00CD8435 /* LaunchScreen.xib */; };
 		DE83780E1B13F30E00CD8435 /* drnkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83780D1B13F30E00CD8435 /* drnkTests.swift */; };
+		DE83781A1B13F56E00CD8435 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8378191B13F56E00CD8435 /* MapViewController.swift */; };
+		DE83781C1B13F5CB00CD8435 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83781B1B13F5CB00CD8435 /* MoreViewController.swift */; };
+		DE83781E1B13F6C000CD8435 /* BarsInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83781D1B13F6C000CD8435 /* BarsInformation.swift */; };
+		DE8378201B13F72F00CD8435 /* CustomBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83781F1B13F72F00CD8435 /* CustomBarTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,14 +34,18 @@
 		DE8377F01B13F30D00CD8435 /* drnk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = drnk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE8377F41B13F30D00CD8435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE8377F51B13F30D00CD8435 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DE8377F71B13F30D00CD8435 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		DE8377F91B13F30D00CD8435 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		DE8377F71B13F30D00CD8435 /* BarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarsViewController.swift; sourceTree = "<group>"; };
+		DE8377F91B13F30D00CD8435 /* LiquorStoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiquorStoresViewController.swift; sourceTree = "<group>"; };
 		DE8377FC1B13F30D00CD8435 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE8377FE1B13F30E00CD8435 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DE8378011B13F30E00CD8435 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		DE8378071B13F30E00CD8435 /* drnkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = drnkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE83780C1B13F30E00CD8435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE83780D1B13F30E00CD8435 /* drnkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drnkTests.swift; sourceTree = "<group>"; };
+		DE8378191B13F56E00CD8435 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		DE83781B1B13F5CB00CD8435 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		DE83781D1B13F6C000CD8435 /* BarsInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarsInformation.swift; sourceTree = "<group>"; };
+		DE83781F1B13F72F00CD8435 /* CustomBarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBarTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +88,12 @@
 			isa = PBXGroup;
 			children = (
 				DE8377F51B13F30D00CD8435 /* AppDelegate.swift */,
-				DE8377F71B13F30D00CD8435 /* FirstViewController.swift */,
-				DE8377F91B13F30D00CD8435 /* SecondViewController.swift */,
+				DE8377F71B13F30D00CD8435 /* BarsViewController.swift */,
+				DE8378191B13F56E00CD8435 /* MapViewController.swift */,
+				DE8377F91B13F30D00CD8435 /* LiquorStoresViewController.swift */,
+				DE83781B1B13F5CB00CD8435 /* MoreViewController.swift */,
+				DE83781D1B13F6C000CD8435 /* BarsInformation.swift */,
+				DE83781F1B13F72F00CD8435 /* CustomBarTableViewCell.swift */,
 				DE8377FB1B13F30D00CD8435 /* Main.storyboard */,
 				DE8377FE1B13F30E00CD8435 /* Images.xcassets */,
 				DE8378001B13F30E00CD8435 /* LaunchScreen.xib */,
@@ -215,9 +227,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE8377FA1B13F30D00CD8435 /* SecondViewController.swift in Sources */,
+				DE83781C1B13F5CB00CD8435 /* MoreViewController.swift in Sources */,
+				DE8378201B13F72F00CD8435 /* CustomBarTableViewCell.swift in Sources */,
+				DE8377FA1B13F30D00CD8435 /* LiquorStoresViewController.swift in Sources */,
 				DE8377F61B13F30D00CD8435 /* AppDelegate.swift in Sources */,
-				DE8377F81B13F30D00CD8435 /* FirstViewController.swift in Sources */,
+				DE8377F81B13F30D00CD8435 /* BarsViewController.swift in Sources */,
+				DE83781E1B13F6C000CD8435 /* BarsInformation.swift in Sources */,
+				DE83781A1B13F56E00CD8435 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +361,7 @@
 				INFOPLIST_FILE = drnk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -355,6 +372,7 @@
 				INFOPLIST_FILE = drnk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -411,6 +429,7 @@
 				DE8378131B13F30E00CD8435 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE8378141B13F30E00CD8435 /* Build configuration list for PBXNativeTarget "drnkTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +438,7 @@
 				DE8378161B13F30E00CD8435 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
