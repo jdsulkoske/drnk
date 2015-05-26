@@ -1,33 +1,113 @@
-//
-//  MapViewController.swift
-//  drnk
-//
-//  Created by Jake Sulkoske on 5/25/15.
-//  Copyright (c) 2015 Sulk. All rights reserved.
-//
+
 
 import MapKit
 import UIKit
 import CoreLocation
 
-class MapViewController: UIViewController, MKMapViewDelegate {
-
+class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManagerDelegate {
+    
     @IBOutlet weak var mapView: MKMapView!
     var locationManager: CLLocationManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager = CLLocationManager()
-        locationManager.requestAlwaysAuthorization()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy - kCLLocationAccuracyBest
+        
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
         mapView.showsUserLocation = true
-
-        // Do any additional setup after loading the view.
+        var uilpgr = UILongPressGestureRecognizer(target: self, action: "action:")
+        uilpgr.minimumPressDuration = 2.0
+        mapView.addGestureRecognizer(uilpgr)
     }
+    
+  
+    func action(gestureRecognizer:UIGestureRecognizer) {
+        
+        if gestureRecognizer.state == UIGestureRecognizerState.Began {
+            
+            var touchPoint = gestureRecognizer.locationInView(self.mapView)
+            
+            var newCoordinate = self.mapView.convertPoint(touchPoint, toCoordinateFromView: self.mapView)
+            
+            var location = CLLocation(latitude: newCoordinate.latitude, longitude: newCoordinate.longitude)
+            
+            CLGeocoder().reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
+                
+                var title = ""
+                var subTitle = ""
+                
+                if (error == nil) {
+                    
+                    if let p = CLPlacemark(placemark: placemarks?[0] as! CLPlacemark) {
+                        var streetNumber:String = ""
+                        var streetName:String = ""
+                        
+                        if p.subThoroughfare != nil {
+                            
+                            streetNumber = p.subThoroughfare
+                        }
+                        
+                        if p.thoroughfare != nil {
+                            
+                            streetName = p.thoroughfare
+                        }
+                        
+                        title = "\(streetNumber) \(streetName)"
+                        subTitle = "\(p.subLocality)\(p.subAdministrativeArea),\(p.postalCode)"
+                    }
+                }
+                if title == "" {
+                    
+                    title = "Added \(NSDate())"
+                }
+                
+                var annotation = MKPointAnnotation()
+                
+                annotation.coordinate = newCoordinate
+                
+                annotation.title = title
+                annotation.subtitle = subTitle
+                
+                self.mapView.addAnnotation(annotation)
+                
+                
+            })
+        }
+    }
+    
+ 
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        
+        var userLocation:CLLocation = locations[0] as! CLLocation
+        
+        var latitude = userLocation.coordinate.latitude
+        
+        var longitude = userLocation.coordinate.longitude
+        
+        var coordinate = CLLocationCoordinate2DMake(latitude, longitude)
+        
+        var latDelta:CLLocationDegrees = 0.01
+        
+        var lonDelta:CLLocationDegrees = 0.01
+        
+        var span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
+        
+        var region:MKCoordinateRegion = MKCoordinateRegionMake(coordinate, span)
+
+        self.mapView.setRegion(region, animated: true)
+        
+        
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
 
     /*
