@@ -6,12 +6,20 @@
 //  Copyright (c) 2015 Sulk. All rights reserved.
 //
 
+import MapKit
 import UIKit
+import CoreLocation
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate {
 
+    @IBOutlet weak var mapView: MKMapView!
+    var locationManager: CLLocationManager!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager = CLLocationManager()
+        locationManager.requestAlwaysAuthorization()
+        mapView.showsUserLocation = true
 
         // Do any additional setup after loading the view.
     }
