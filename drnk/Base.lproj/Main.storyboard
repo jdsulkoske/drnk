@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="yvX-hM-S0D" kind="relationship" relationship="rootViewController" id="6AZ-FO-5yi"/>
+                        <segue destination="yvX-hM-S0D" kind="relationship" relationship="rootViewController" id="ADV-Ms-q20"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1lR-op-pHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -73,9 +73,11 @@
                                                 <constraint firstItem="9CW-uQ-Oxb" firstAttribute="leading" secondItem="yUR-3y-lh1" secondAttribute="leadingMargin" id="y6h-bw-3fI"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <gestureRecognizers/>
                                         <connections>
                                             <outlet property="addressOfBar" destination="K5x-dY-iBW" id="Nck-ae-ne8"/>
                                             <outlet property="nameOfBar" destination="9CW-uQ-Oxb" id="WYD-CX-fcb"/>
+                                            <outletCollection property="gestureRecognizers" destination="kfX-Jq-Bhs" appends="YES" id="a7O-xU-gwT"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -87,11 +89,55 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Bars" id="6bL-ne-HQ6"/>
+                    <navigationItem key="navigationItem" title="Bars" id="6bL-ne-HQ6">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="lWO-VG-WgV"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="XBf-wS-PsZ" kind="show" identifier="showBarInformationSegue" id="AbQ-O9-hi3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIc-5b-NbA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="kfX-Jq-Bhs">
+                    <connections>
+                        <action selector="showBarInformation:" destination="yvX-hM-S0D" id="5Cl-y6-xWJ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1270" y="-1023"/>
+        </scene>
+        <!--Bar Information View Controller-->
+        <scene sceneID="9xX-7D-UUd">
+            <objects>
+                <viewController id="XBf-wS-PsZ" customClass="BarInformationViewController" customModule="drnk" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pkp-nD-2pR"/>
+                        <viewControllerLayoutGuide type="bottom" id="5fi-4X-USy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xRQ-0W-gYE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fuck with this bar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwV-CA-0iE">
+                                <rect key="frame" x="233.5" y="289.5" width="133" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bwV-CA-0iE" secondAttribute="height" multiplier="136:21" id="py5-81-hQR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.36670278280000002" alpha="0.70999999999999996" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="bwV-CA-0iE" secondAttribute="centerY" constant="0.5" id="D5i-vS-bzf"/>
+                            <constraint firstAttribute="centerX" secondItem="bwV-CA-0iE" secondAttribute="centerX" id="YMY-Ug-IBx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="y5u-Kg-R0U"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sEY-Iv-tkf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1977" y="-1023"/>
         </scene>
         <!--Liquor Stores-->
         <scene sceneID="LCx-T4-Zqc">

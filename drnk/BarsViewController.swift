@@ -63,6 +63,19 @@ class BarsViewController: UIViewController, UITableViewDelegate {
         return cell
         
     }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showBarInformationSegue"{
+            let barInformationViewController = segue.destinationViewController as BarInformationViewController
+            
+        }
+    }
+    
+    @IBAction func showBarInformation(sender: AnyObject) {
+        performSegueWithIdentifier("showBarInformationSegue", sender: sender)    }
+    
+    
+    
+    
     
 }
 
