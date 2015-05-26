@@ -47,7 +47,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     }
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
     {
-        let cell: CustomBarTableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell") as CustomBarTableViewCell
+        let cell: CustomBarTableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell") as! CustomBarTableViewCell
         
         if indexPath.row % 2 == 0{
             cell.backgroundColor = UIColor.darkGrayColor()
@@ -65,7 +65,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showBarInformationSegue"{
-            let barInformationViewController = segue.destinationViewController as BarInformationViewController
+            let barInformationViewController = segue.destinationViewController as! BarInformationViewController
             
         }
     }
