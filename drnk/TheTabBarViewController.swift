@@ -15,7 +15,7 @@ class TheTabBarViewController: UITabBarController {
         
         UITabBar.appearance().selectedImageTintColor = UIColor.redColor()
 
-        for item in self.tabBar.items as [UITabBarItem] {
+        for item in self.tabBar.items as! [UITabBarItem] {
             if let image = item.image {
                 item.image = image.imageWithColor(UIColor.blackColor()).imageWithRenderingMode(.AlwaysOriginal)
                 
@@ -24,11 +24,14 @@ class TheTabBarViewController: UITabBarController {
         
         // Do any additional setup after loading the view.
     }
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     
 }

@@ -11,7 +11,7 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>00A2A3B396C85A2C79340A87202356A2C4132DF6</key>
-		<string>https://github.com/jdsulkoske/drnk.git</string>
+		<string>https://github.com/jdsulkoske/drnk</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>drnk.xcodeproj</string>
@@ -21,7 +21,7 @@
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/jdsulkoske/drnk.git</string>
+	<string>https://github.com/jdsulkoske/drnk</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>

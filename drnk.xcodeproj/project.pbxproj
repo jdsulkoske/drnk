@@ -21,6 +21,7 @@
 		DE83781C1B13F5CB00CD8435 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83781B1B13F5CB00CD8435 /* MoreViewController.swift */; };
 		DE83781E1B13F6C000CD8435 /* BarsInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83781D1B13F6C000CD8435 /* BarsInformation.swift */; };
 		DE8378201B13F72F00CD8435 /* CustomBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83781F1B13F72F00CD8435 /* CustomBarTableViewCell.swift */; };
+		DE9D2E541B15FD970099253D /* DataConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D2E531B15FD970099253D /* DataConnection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		DE83781B1B13F5CB00CD8435 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		DE83781D1B13F6C000CD8435 /* BarsInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarsInformation.swift; sourceTree = "<group>"; };
 		DE83781F1B13F72F00CD8435 /* CustomBarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBarTableViewCell.swift; sourceTree = "<group>"; };
+		DE9D2E531B15FD970099253D /* DataConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataConnection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,16 +97,17 @@
 		DE8377F21B13F30D00CD8435 /* drnk */ = {
 			isa = PBXGroup;
 			children = (
-				DE8377F51B13F30D00CD8435 /* AppDelegate.swift */,
+				DE83781D1B13F6C000CD8435 /* BarsInformation.swift */,
+				DE11AE3B1B14E47B00999AE0 /* TheTabBarViewController.swift */,
+				DE83781F1B13F72F00CD8435 /* CustomBarTableViewCell.swift */,
+				DE5C83E51B1435DA00ED4255 /* BarInformationViewController.swift */,
 				DE8377F71B13F30D00CD8435 /* BarsViewController.swift */,
+				DE9D2E531B15FD970099253D /* DataConnection.swift */,
 				DE8378191B13F56E00CD8435 /* MapViewController.swift */,
 				DE8377F91B13F30D00CD8435 /* LiquorStoresViewController.swift */,
 				DE83781B1B13F5CB00CD8435 /* MoreViewController.swift */,
-				DE83781D1B13F6C000CD8435 /* BarsInformation.swift */,
-				DE83781F1B13F72F00CD8435 /* CustomBarTableViewCell.swift */,
-				DE5C83E51B1435DA00ED4255 /* BarInformationViewController.swift */,
-				DE11AE3B1B14E47B00999AE0 /* TheTabBarViewController.swift */,
 				DE8377FB1B13F30D00CD8435 /* Main.storyboard */,
+				DE8377F51B13F30D00CD8435 /* AppDelegate.swift */,
 				DE8377FE1B13F30E00CD8435 /* Images.xcassets */,
 				DE8378001B13F30E00CD8435 /* LaunchScreen.xib */,
 				DE8377F31B13F30D00CD8435 /* Supporting Files */,
@@ -240,6 +243,7 @@
 				DE83781C1B13F5CB00CD8435 /* MoreViewController.swift in Sources */,
 				DE8378201B13F72F00CD8435 /* CustomBarTableViewCell.swift in Sources */,
 				DE8377FA1B13F30D00CD8435 /* LiquorStoresViewController.swift in Sources */,
+				DE9D2E541B15FD970099253D /* DataConnection.swift in Sources */,
 				DE5C83E61B1435DA00ED4255 /* BarInformationViewController.swift in Sources */,
 				DE11AE3C1B14E47B00999AE0 /* TheTabBarViewController.swift in Sources */,
 				DE8377F61B13F30D00CD8435 /* AppDelegate.swift in Sources */,

@@ -3,6 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationAlwaysUsageDescription</key>
+	<string>drnk. would like to always use your current location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>drnk. would like to use your current location</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
