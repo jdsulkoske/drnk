@@ -9,6 +9,7 @@
 import UIKit
 
 class BarInformationViewController: UIViewController {
+    @IBOutlet weak var collectionviewCell: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
