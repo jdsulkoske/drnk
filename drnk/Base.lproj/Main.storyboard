@@ -10,6 +10,7 @@
             <objects>
                 <navigationController id="bqp-kP-jr6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Bars" image="barglass" id="aMR-1X-YgS"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="L3x-OJ-eLr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -31,105 +32,117 @@
                         <viewControllerLayoutGuide type="bottom" id="K9u-hw-fGj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PiP-xQ-9pv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tC1-b1-PNE">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="chalkboard-black" translatesAutoresizingMaskIntoConstraints="NO" id="1xi-8j-IbA">
-                                        <rect key="frame" x="0.0" y="66" width="600" height="534"/>
+                                        <rect key="frame" x="0.0" y="66" width="414" height="670"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="drnk." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEM-Pb-Ys9">
-                                        <rect key="frame" x="196" y="76" width="208" height="76"/>
+                                        <rect key="frame" x="103" y="81" width="208" height="76"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="208" id="4LW-lG-G6I"/>
-                                            <constraint firstAttribute="height" constant="76" id="D5J-FG-feH"/>
+                                            <constraint firstAttribute="height" constant="76" id="3eb-7f-Cg1"/>
+                                            <constraint firstAttribute="width" constant="208" id="fnI-4A-8kj"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="47"/>
                                         <color key="textColor" red="0.50196081399917603" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="121" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ziq-L7-Kao">
+                                        <rect key="frame" x="25" y="155" width="374" height="389"/>
+                                        <color key="backgroundColor" red="0.24705883860588074" green="0.24705883860588074" blue="0.24705883860588074" alpha="1" colorSpace="deviceRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="389" id="7Lh-44-kbu"/>
+                                        </constraints>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="121" id="fDo-VJ-Csh" customClass="CustomBarTableViewCell" customModule="drnk" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fDo-VJ-Csh" id="yUR-3y-lh1">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of bar goes right here" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9CW-uQ-Oxb">
+                                                            <rect key="frame" x="1" y="-7" width="215" height="31"/>
+                                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="15"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address of bar goes right here" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5x-dY-iBW">
+                                                            <rect key="frame" x="4" y="14" width="209" height="26"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="209" id="wCt-Do-Xkj"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="12"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="9CW-uQ-Oxb" secondAttribute="bottom" constant="89" id="CkG-nn-eYq"/>
+                                                        <constraint firstItem="9CW-uQ-Oxb" firstAttribute="leading" secondItem="yUR-3y-lh1" secondAttribute="leadingMargin" constant="-7" id="Kp4-Rg-gzl"/>
+                                                        <constraint firstItem="K5x-dY-iBW" firstAttribute="top" secondItem="yUR-3y-lh1" secondAttribute="topMargin" constant="6" id="LVC-Es-gQQ"/>
+                                                        <constraint firstItem="9CW-uQ-Oxb" firstAttribute="top" secondItem="yUR-3y-lh1" secondAttribute="top" constant="-7" id="Nxl-yl-Pea"/>
+                                                        <constraint firstItem="K5x-dY-iBW" firstAttribute="centerX" secondItem="9CW-uQ-Oxb" secondAttribute="centerX" id="OcR-u5-Aaq"/>
+                                                        <constraint firstItem="K5x-dY-iBW" firstAttribute="leading" secondItem="yUR-3y-lh1" secondAttribute="leadingMargin" constant="-4" id="hi1-QF-Ugq"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="K5x-dY-iBW" secondAttribute="bottom" constant="73" id="jvw-P0-F42"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" red="0.11764706671237946" green="0.38823533058166504" blue="0.26274511218070984" alpha="1" colorSpace="deviceRGB"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outlet property="addressOfBar" destination="K5x-dY-iBW" id="Nck-ae-ne8"/>
+                                                    <outlet property="nameOfBar" destination="9CW-uQ-Oxb" id="WYD-CX-fcb"/>
+                                                    <outletCollection property="gestureRecognizers" destination="kfX-Jq-Bhs" appends="YES" id="a7O-xU-gwT"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="yvX-hM-S0D" id="mFv-lS-S6V"/>
+                                            <outlet property="delegate" destination="yvX-hM-S0D" id="gfx-Tx-ksB"/>
+                                        </connections>
+                                    </tableView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gy6-eo-vED">
+                                        <rect key="frame" x="8" y="544" width="398" height="135"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="19"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="MEM-Pb-Ys9" secondAttribute="bottom" constant="448" id="1vb-FI-Wx0"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ziq-L7-Kao" secondAttribute="trailing" constant="15" id="1mY-VK-YbF"/>
+                                    <constraint firstItem="Gy6-eo-vED" firstAttribute="centerX" secondItem="MEM-Pb-Ys9" secondAttribute="centerX" id="3Tr-tf-ZQU"/>
                                     <constraint firstAttribute="bottom" secondItem="1xi-8j-IbA" secondAttribute="bottom" id="BIu-R1-0M7"/>
-                                    <constraint firstAttribute="trailing" secondItem="MEM-Pb-Ys9" secondAttribute="trailing" constant="196" id="CBb-91-ZiV"/>
+                                    <constraint firstItem="Gy6-eo-vED" firstAttribute="leading" secondItem="tC1-b1-PNE" secondAttribute="leadingMargin" id="ETE-EI-5rl"/>
+                                    <constraint firstItem="Ziq-L7-Kao" firstAttribute="leading" secondItem="tC1-b1-PNE" secondAttribute="leading" constant="25" id="Fpy-yz-EeD"/>
                                     <constraint firstItem="1xi-8j-IbA" firstAttribute="leading" secondItem="tC1-b1-PNE" secondAttribute="leading" id="G9Z-Ea-Wa6"/>
+                                    <constraint firstItem="MEM-Pb-Ys9" firstAttribute="centerX" secondItem="1xi-8j-IbA" secondAttribute="centerX" id="GYw-7r-oBR"/>
                                     <constraint firstAttribute="trailing" secondItem="1xi-8j-IbA" secondAttribute="trailing" id="R7R-Cz-vTN"/>
                                     <constraint firstItem="1xi-8j-IbA" firstAttribute="top" secondItem="tC1-b1-PNE" secondAttribute="top" constant="66" id="S06-Oz-mt3"/>
-                                    <constraint firstItem="MEM-Pb-Ys9" firstAttribute="top" secondItem="1xi-8j-IbA" secondAttribute="top" constant="10" id="Sji-tE-nxy"/>
-                                    <constraint firstItem="MEM-Pb-Ys9" firstAttribute="leading" secondItem="tC1-b1-PNE" secondAttribute="leading" constant="196" id="vbu-em-73n"/>
+                                    <constraint firstItem="MEM-Pb-Ys9" firstAttribute="top" secondItem="tC1-b1-PNE" secondAttribute="top" constant="81" id="fqN-8b-LIP"/>
+                                    <constraint firstItem="Gy6-eo-vED" firstAttribute="top" secondItem="Ziq-L7-Kao" secondAttribute="bottom" id="j4h-3x-Zja"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gy6-eo-vED" secondAttribute="bottom" constant="57" id="jqf-u6-jca"/>
+                                    <constraint firstItem="Ziq-L7-Kao" firstAttribute="top" secondItem="tC1-b1-PNE" secondAttribute="top" constant="155" id="tuL-LO-IaW"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="121" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ziq-L7-Kao">
-                                <rect key="frame" x="24" y="191" width="560" height="255"/>
-                                <color key="backgroundColor" red="0.24705883860588074" green="0.24705883860588074" blue="0.24705883860588074" alpha="1" colorSpace="deviceRGB"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="121" id="fDo-VJ-Csh" customClass="CustomBarTableViewCell" customModule="drnk" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fDo-VJ-Csh" id="yUR-3y-lh1">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name of bar goes right here" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9CW-uQ-Oxb">
-                                                    <rect key="frame" x="1" y="-7" width="215" height="31"/>
-                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="15"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Address of bar goes right here" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5x-dY-iBW">
-                                                    <rect key="frame" x="4" y="14" width="209" height="26"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="209" id="wCt-Do-Xkj"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="12"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="9CW-uQ-Oxb" secondAttribute="bottom" constant="88" id="CkG-nn-eYq"/>
-                                                <constraint firstItem="9CW-uQ-Oxb" firstAttribute="leading" secondItem="yUR-3y-lh1" secondAttribute="leadingMargin" constant="-7" id="Kp4-Rg-gzl"/>
-                                                <constraint firstItem="K5x-dY-iBW" firstAttribute="top" secondItem="yUR-3y-lh1" secondAttribute="topMargin" constant="6" id="LVC-Es-gQQ"/>
-                                                <constraint firstItem="9CW-uQ-Oxb" firstAttribute="top" secondItem="yUR-3y-lh1" secondAttribute="top" constant="-7" id="Nxl-yl-Pea"/>
-                                                <constraint firstItem="K5x-dY-iBW" firstAttribute="centerX" secondItem="9CW-uQ-Oxb" secondAttribute="centerX" id="OcR-u5-Aaq"/>
-                                                <constraint firstItem="K5x-dY-iBW" firstAttribute="leading" secondItem="yUR-3y-lh1" secondAttribute="leadingMargin" constant="-4" id="hi1-QF-Ugq"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="K5x-dY-iBW" secondAttribute="bottom" constant="72" id="jvw-P0-F42"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.11764706671237946" green="0.38823533058166504" blue="0.26274511218070984" alpha="1" colorSpace="deviceRGB"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outlet property="addressOfBar" destination="K5x-dY-iBW" id="Nck-ae-ne8"/>
-                                            <outlet property="nameOfBar" destination="9CW-uQ-Oxb" id="WYD-CX-fcb"/>
-                                            <outletCollection property="gestureRecognizers" destination="kfX-Jq-Bhs" appends="YES" id="a7O-xU-gwT"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="yvX-hM-S0D" id="mFv-lS-S6V"/>
-                                    <outlet property="delegate" destination="yvX-hM-S0D" id="gfx-Tx-ksB"/>
-                                </connections>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="tC1-b1-PNE" firstAttribute="leading" secondItem="PiP-xQ-9pv" secondAttribute="leading" id="7gb-g3-4bc"/>
                             <constraint firstItem="tC1-b1-PNE" firstAttribute="top" secondItem="PiP-xQ-9pv" secondAttribute="top" id="HHo-7e-6Bo"/>
                             <constraint firstAttribute="bottom" secondItem="tC1-b1-PNE" secondAttribute="bottom" id="RdO-4b-wrt"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ziq-L7-Kao" secondAttribute="trailing" id="Xdp-DG-nwu"/>
-                            <constraint firstItem="K9u-hw-fGj" firstAttribute="top" secondItem="Ziq-L7-Kao" secondAttribute="bottom" constant="105" id="Z3a-CH-ofm"/>
-                            <constraint firstItem="Ziq-L7-Kao" firstAttribute="leading" secondItem="PiP-xQ-9pv" secondAttribute="leadingMargin" constant="8" id="ZVw-4P-KAh"/>
                             <constraint firstAttribute="trailing" secondItem="tC1-b1-PNE" secondAttribute="trailing" id="pGc-8Q-iM3"/>
-                            <constraint firstItem="Ziq-L7-Kao" firstAttribute="top" secondItem="jEg-wL-YoF" secondAttribute="bottom" constant="127" id="z6m-Nu-wY6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Bars" id="6bL-ne-HQ6">
                         <barButtonItem key="backBarButtonItem" title="Back" id="lWO-VG-WgV"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="dateLabel" destination="Gy6-eo-vED" id="bji-Jp-t6e"/>
+                        <outlet property="myTableView" destination="Ziq-L7-Kao" id="qh8-jK-wyv"/>
                         <segue destination="XBf-wS-PsZ" kind="show" identifier="showBarInformationSegue" id="AbQ-O9-hi3"/>
                     </connections>
                 </viewController>
@@ -151,21 +164,48 @@
                         <viewControllerLayoutGuide type="bottom" id="5fi-4X-USy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xRQ-0W-gYE">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information for bar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwV-CA-0iE">
-                                <rect key="frame" x="233" y="257" width="135" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Information for bar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwV-CA-0iE">
+                                <rect key="frame" x="121" y="257" width="135" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chalkboard-black" translatesAutoresizingMaskIntoConstraints="NO" id="7da-JK-Q2r">
+                                <rect key="frame" x="0.0" y="64" width="414" height="652"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMf-6w-KgS">
+                                <rect key="frame" x="-6" y="201" width="420" height="62"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="f4o-ba-jt6">
+                                    <rect key="frame" x="0.0" y="0.0" width="420" height="62"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <color key="tintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Brothers" translatesAutoresizingMaskIntoConstraints="NO" id="Ojo-mi-KOz">
+                                <rect key="frame" x="0.0" y="64" width="414" height="171"/>
+                                <color key="tintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.36670278280000002" alpha="0.70999999999999996" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="UMf-6w-KgS" firstAttribute="top" secondItem="pkp-nD-2pR" secondAttribute="bottom" constant="137" id="56l-lp-e0U"/>
+                            <constraint firstItem="Ojo-mi-KOz" firstAttribute="centerX" secondItem="bwV-CA-0iE" secondAttribute="centerX" id="8yX-px-eHN"/>
+                            <constraint firstItem="bwV-CA-0iE" firstAttribute="top" secondItem="Ojo-mi-KOz" secondAttribute="bottom" constant="22" id="AVP-K8-PcX"/>
                             <constraint firstItem="bwV-CA-0iE" firstAttribute="centerX" secondItem="xRQ-0W-gYE" secondAttribute="centerX" id="FGW-GN-1Cf"/>
+                            <constraint firstItem="7da-JK-Q2r" firstAttribute="top" secondItem="Ojo-mi-KOz" secondAttribute="top" id="Lsk-wE-3lm"/>
+                            <constraint firstItem="Ojo-mi-KOz" firstAttribute="leading" secondItem="xRQ-0W-gYE" secondAttribute="leading" id="TT0-kx-iik"/>
                             <constraint firstItem="5fi-4X-USy" firstAttribute="top" secondItem="bwV-CA-0iE" secondAttribute="bottom" constant="274" id="ZzU-d0-fJO"/>
+                            <constraint firstItem="7da-JK-Q2r" firstAttribute="leading" secondItem="Ojo-mi-KOz" secondAttribute="leading" id="aQv-35-lhZ"/>
+                            <constraint firstItem="Ojo-mi-KOz" firstAttribute="top" secondItem="pkp-nD-2pR" secondAttribute="bottom" id="cC1-Rk-ven"/>
+                            <constraint firstItem="UMf-6w-KgS" firstAttribute="leading" secondItem="xRQ-0W-gYE" secondAttribute="leadingMargin" constant="-22" id="es7-gR-aqu"/>
+                            <constraint firstItem="bwV-CA-0iE" firstAttribute="top" secondItem="UMf-6w-KgS" secondAttribute="bottom" constant="-6" id="gkC-9F-UIV"/>
+                            <constraint firstItem="UMf-6w-KgS" firstAttribute="trailing" secondItem="7da-JK-Q2r" secondAttribute="trailing" id="jl5-pW-71K"/>
                             <constraint firstItem="bwV-CA-0iE" firstAttribute="top" secondItem="pkp-nD-2pR" secondAttribute="bottom" constant="193" id="q4E-Be-xJP"/>
+                            <constraint firstItem="UMf-6w-KgS" firstAttribute="trailing" secondItem="Ojo-mi-KOz" secondAttribute="trailing" id="qNi-70-88V"/>
+                            <constraint firstAttribute="bottom" secondItem="7da-JK-Q2r" secondAttribute="bottom" constant="20" symbolic="YES" id="t85-12-ZGK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="y5u-Kg-R0U"/>
@@ -267,6 +307,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Brothers" width="128" height="128"/>
         <image name="america" width="60" height="60"/>
         <image name="barglass" width="60" height="60"/>
         <image name="chalkboard-black" width="612" height="792"/>

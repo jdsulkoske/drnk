@@ -10,12 +10,17 @@ import UIKit
 
 class BarsViewController: UIViewController, UITableViewDelegate {
     
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var myTableView: UITableView!
     var arrayOfBars: [BarsInformation] = [BarsInformation]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let date = NSDate()
+        var formatter = NSDateFormatter()
+        formatter.dateFormat = "EEEE"
+        let day = formatter.stringFromDate(date)
+        dateLabel.text = "Hey its \(day)! \nCheckout today's specials!"
         // Do any additional setup after loading the view, typically from a nib.
         
         self.setUpBar()
