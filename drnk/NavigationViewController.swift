@@ -1,23 +1,25 @@
 //
-//  BarInformationViewController.swift
+//  NavigationViewController.swift
 //  drnk
 //
-//  Created by Jake Sulkoske on 5/26/15.
+//  Created by faris shatat on 5/30/15.
 //  Copyright (c) 2015 Sulk. All rights reserved.
 //
 
 import UIKit
 
-class BarInformationViewController: UIViewController {
-    @IBOutlet weak var collectionviewCell: UICollectionView!
+class NavigationViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+      //  self.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationBar.barTintColor = UIColor.redColor()
+        self.navigationBar.translucent = true
+        self.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Zapfino", size: 20)! , NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
 
-        // Do any additional setup after loading the view.
     }
 
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

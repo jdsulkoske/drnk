@@ -14,15 +14,37 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy - kCLLocationAccuracyBest
+          mapView.showsUserLocation = true
         
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
-        mapView.showsUserLocation = true
+        if activePlace == 1 {
+            locationManager.requestWhenInUseAuthorization()
+            locationManager.startUpdatingLocation()
+            
+        } else {
+            activePlace = 1
+            findAddressOnMap()
+        }
+        
         var uilpgr = UILongPressGestureRecognizer(target: self, action: "action:")
         uilpgr.minimumPressDuration = 2.0
         mapView.addGestureRecognizer(uilpgr)
     }
     
+    
+    func findAddressOnMap(){
+        var address = arrayOfBars[index].address
+        var annotation = MKPointAnnotation()
+        var geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(address, completionHandler: {(placemarks: [AnyObject]!, error: NSError!) -> Void in
+            if let placemark = placemarks?[0] as? CLPlacemark {
+                
+                self.mapView.addAnnotation(MKPlacemark(placemark: placemark))
+                
+            }
+        })
+        
+        self.mapView.addAnnotation(annotation)
+    }
   
     func action(gestureRecognizer:UIGestureRecognizer) {
         

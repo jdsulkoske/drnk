@@ -13,14 +13,16 @@ class TheTabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UITabBar.appearance().tintColor = UIColor.redColor()
-
+        UITabBar.appearance().tintColor = UIColor.grayColor()
+        UITabBar.appearance().barTintColor = UIColor.redColor()
+        UITabBar.appearance().translucent = true
         for item in self.tabBar.items as! [UITabBarItem] {
             if let image = item.image {
-                item.image = image.imageWithColor(UIColor.blackColor()).imageWithRenderingMode(.AlwaysOriginal)
+                item.image = image.imageWithColor(UIColor.whiteColor()).imageWithRenderingMode(.AlwaysOriginal)
                 
             }
         }
+       
         
         // Do any additional setup after loading the view.
     }
