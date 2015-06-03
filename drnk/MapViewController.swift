@@ -37,7 +37,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
         var geocoder = CLGeocoder()
         geocoder.geocodeAddressString(address, completionHandler: {(placemarks: [AnyObject]!, error: NSError!) -> Void in
             if let placemark = placemarks?[0] as? CLPlacemark {
-                
+                self.mapView.setRegion(MKCoordinateRegionMake(CLLocationCoordinate2DMake (placemark.location.coordinate.latitude, placemark.location.coordinate.longitude), MKCoordinateSpanMake(0.002, 0.002)), animated: true)
                 self.mapView.addAnnotation(MKPlacemark(placemark: placemark))
                 
             }
