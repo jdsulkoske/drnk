@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		DE11AE3C1B14E47B00999AE0 /* TheTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE11AE3B1B14E47B00999AE0 /* TheTabBarViewController.swift */; };
 		DE2E1EF81B23A2B100C73295 /* CustomLiquorStoresTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2E1EF71B23A2B100C73295 /* CustomLiquorStoresTableViewCell.swift */; };
+		DE2E1EFC1B23A5A300C73295 /* LiquorStoresInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2E1EFB1B23A5A300C73295 /* LiquorStoresInformation.swift */; };
+		DE2E1EFE1B23A75E00C73295 /* Headphones.png in Resources */ = {isa = PBXBuildFile; fileRef = DE2E1EFD1B23A75E00C73295 /* Headphones.png */; };
+		DE2E1F001B23A76400C73295 /* BeerGlass.png in Resources */ = {isa = PBXBuildFile; fileRef = DE2E1EFF1B23A76400C73295 /* BeerGlass.png */; };
+		DE2E1F021B23A76B00C73295 /* VCImage.png in Resources */ = {isa = PBXBuildFile; fileRef = DE2E1F011B23A76B00C73295 /* VCImage.png */; };
+		DE2E1F041B23A77100C73295 /* redsolocupicon.png in Resources */ = {isa = PBXBuildFile; fileRef = DE2E1F031B23A77100C73295 /* redsolocupicon.png */; };
 		DE5C83E61B1435DA00ED4255 /* BarInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5C83E51B1435DA00ED4255 /* BarInformationViewController.swift */; };
 		DE5FB7871B14F73D00C9EC44 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE5FB7861B14F73D00C9EC44 /* CoreLocation.framework */; };
 		DE8377F61B13F30D00CD8435 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8377F51B13F30D00CD8435 /* AppDelegate.swift */; };
@@ -55,6 +60,11 @@
 		CE7E4B028E49A6FCEA94D4A6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DE11AE3B1B14E47B00999AE0 /* TheTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheTabBarViewController.swift; sourceTree = "<group>"; };
 		DE2E1EF71B23A2B100C73295 /* CustomLiquorStoresTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLiquorStoresTableViewCell.swift; sourceTree = "<group>"; };
+		DE2E1EFB1B23A5A300C73295 /* LiquorStoresInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiquorStoresInformation.swift; sourceTree = "<group>"; };
+		DE2E1EFD1B23A75E00C73295 /* Headphones.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Headphones.png; sourceTree = "<group>"; };
+		DE2E1EFF1B23A76400C73295 /* BeerGlass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BeerGlass.png; sourceTree = "<group>"; };
+		DE2E1F011B23A76B00C73295 /* VCImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VCImage.png; sourceTree = "<group>"; };
+		DE2E1F031B23A77100C73295 /* redsolocupicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redsolocupicon.png; sourceTree = "<group>"; };
 		DE5C83E51B1435DA00ED4255 /* BarInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarInformationViewController.swift; sourceTree = "<group>"; };
 		DE5FB7861B14F73D00C9EC44 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DE8377F01B13F30D00CD8435 /* drnk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = drnk.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +140,7 @@
 			children = (
 				DE2E1EF71B23A2B100C73295 /* CustomLiquorStoresTableViewCell.swift */,
 				DE8377F91B13F30D00CD8435 /* LiquorStoresViewController.swift */,
+				DE2E1EFB1B23A5A300C73295 /* LiquorStoresInformation.swift */,
 			);
 			name = "Liquor Stores";
 			sourceTree = "<group>";
@@ -167,6 +178,10 @@
 				DE8377FB1B13F30D00CD8435 /* Main.storyboard */,
 				DEFB18201B1A5CCB0091622C /* NavigationViewController.swift */,
 				DE8377F51B13F30D00CD8435 /* AppDelegate.swift */,
+				DE2E1EFF1B23A76400C73295 /* BeerGlass.png */,
+				DE2E1EFD1B23A75E00C73295 /* Headphones.png */,
+				DE2E1F031B23A77100C73295 /* redsolocupicon.png */,
+				DE2E1F011B23A76B00C73295 /* VCImage.png */,
 				DE8377FE1B13F30E00CD8435 /* Images.xcassets */,
 				DE8378001B13F30E00CD8435 /* LaunchScreen.xib */,
 				DE8377F31B13F30D00CD8435 /* Supporting Files */,
@@ -283,8 +298,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE2E1F021B23A76B00C73295 /* VCImage.png in Resources */,
+				DE2E1EFE1B23A75E00C73295 /* Headphones.png in Resources */,
 				DE8377FD1B13F30D00CD8435 /* Main.storyboard in Resources */,
+				DE2E1F041B23A77100C73295 /* redsolocupicon.png in Resources */,
 				DE8378021B13F30E00CD8435 /* LaunchScreen.xib in Resources */,
+				DE2E1F001B23A76400C73295 /* BeerGlass.png in Resources */,
 				DE8377FF1B13F30E00CD8435 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +378,7 @@
 				DE5C83E61B1435DA00ED4255 /* BarInformationViewController.swift in Sources */,
 				DE11AE3C1B14E47B00999AE0 /* TheTabBarViewController.swift in Sources */,
 				DE8377F61B13F30D00CD8435 /* AppDelegate.swift in Sources */,
+				DE2E1EFC1B23A5A300C73295 /* LiquorStoresInformation.swift in Sources */,
 				DE8377F81B13F30D00CD8435 /* BarsViewController.swift in Sources */,
 				DE83781E1B13F6C000CD8435 /* BarsInformation.swift in Sources */,
 				DE2E1EF81B23A2B100C73295 /* CustomLiquorStoresTableViewCell.swift in Sources */,
