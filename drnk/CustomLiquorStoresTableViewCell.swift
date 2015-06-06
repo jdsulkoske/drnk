@@ -10,6 +10,11 @@ import UIKit
 
 class CustomLiquorStoresTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var nameOfLiquorStore: UILabel!
+    @IBOutlet weak var imageOfLiquorStore: UIImageView!
+    @IBOutlet weak var addressOfLiquorStore: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

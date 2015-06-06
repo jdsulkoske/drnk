@@ -225,17 +225,17 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="mqb-NF-X7A" kind="relationship" relationship="rootViewController" id="O1d-nF-7jX"/>
+                        <segue destination="mqb-NF-X7A" kind="relationship" relationship="rootViewController" id="Vbr-kz-fMj"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aJi-bq-kJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="188" y="-206"/>
         </scene>
-        <!--View Controller-->
+        <!--Liquor Stores View Controller-->
         <scene sceneID="FCo-Wt-G42">
             <objects>
-                <viewController id="mqb-NF-X7A" sceneMemberID="viewController">
+                <viewController id="mqb-NF-X7A" customClass="LiquorStoresViewController" customModule="drnk" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jCg-eJ-j3t"/>
                         <viewControllerLayoutGuide type="bottom" id="6JF-0X-bDc"/>
@@ -248,7 +248,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="172" id="cFb-tw-DLi">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="LiquorCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="172" id="cFb-tw-DLi" customClass="CustomLiquorStoresTableViewCell" customModule="drnk" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cFb-tw-DLi" id="tFN-8J-MwA">
@@ -307,7 +307,7 @@
                                                     <color key="textColor" red="0.015686274509803921" green="0.12941176470588234" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZFe-hU-0jJ">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZFe-hU-0jJ">
                                                     <rect key="frame" x="8" y="98" width="77" height="66.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -329,7 +329,7 @@
                                                 <constraint firstItem="iLH-Xx-UYf" firstAttribute="top" secondItem="txa-r4-tVR" secondAttribute="bottom" constant="8" id="3Ar-Ec-lch"/>
                                                 <constraint firstItem="qM4-Mu-2va" firstAttribute="trailing" secondItem="tFN-8J-MwA" secondAttribute="trailingMargin" id="4Nl-ko-pqI"/>
                                                 <constraint firstItem="qM4-Mu-2va" firstAttribute="top" secondItem="tFN-8J-MwA" secondAttribute="topMargin" id="6g4-NO-IAu"/>
-                                                <constraint firstItem="ZFe-hU-0jJ" firstAttribute="bottom" secondItem="tFN-8J-MwA" secondAttribute="bottomMargin" constant="-16" id="768-8M-woI"/>
+                                                <constraint firstItem="ZFe-hU-0jJ" firstAttribute="bottom" secondItem="tFN-8J-MwA" secondAttribute="bottomMargin" constant="1" id="768-8M-woI"/>
                                                 <constraint firstItem="TS6-uW-S5Z" firstAttribute="leading" secondItem="tFN-8J-MwA" secondAttribute="leadingMargin" id="7oS-h6-HSO"/>
                                                 <constraint firstItem="gdg-55-imQ" firstAttribute="top" secondItem="iLH-Xx-UYf" secondAttribute="bottom" constant="8" id="7tP-3g-W9W"/>
                                                 <constraint firstItem="qM4-Mu-2va" firstAttribute="leading" secondItem="tFN-8J-MwA" secondAttribute="leadingMargin" id="B5B-fg-NC5"/>
@@ -353,6 +353,11 @@
                                                 <constraint firstItem="txa-r4-tVR" firstAttribute="top" secondItem="uZJ-CX-5RD" secondAttribute="bottom" constant="8" id="yd4-pX-RD7"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addressOfLiquorStore" destination="RwW-3b-HAk" id="EDj-6J-e8b"/>
+                                            <outlet property="imageOfLiquorStore" destination="m0X-zy-dWx" id="07r-Iq-6sV"/>
+                                            <outlet property="nameOfLiquorStore" destination="qM4-Mu-2va" id="IQg-w0-wcC"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -360,10 +365,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="GAB-bg-UFa"/>
+                    <connections>
+                        <outlet property="liquorStoreTableVIew" destination="Ppe-9m-1f2" id="rae-CO-bWZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jPp-U1-gu3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="597" y="-206"/>
+            <point key="canvasLocation" x="596" y="-206"/>
         </scene>
         <!--Map-->
         <scene sceneID="oLp-kv-9eP">

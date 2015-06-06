@@ -10,6 +10,8 @@ import UIKit
 
 class LiquorStoresViewController: UIViewController {
 
+    @IBOutlet weak var liquorStoreTableVIew: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
