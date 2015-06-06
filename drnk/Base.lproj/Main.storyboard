@@ -232,7 +232,7 @@
             </objects>
             <point key="canvasLocation" x="188" y="-206"/>
         </scene>
-        <!--Liquor Stores View Controller-->
+        <!--drnk.-->
         <scene sceneID="FCo-Wt-G42">
             <objects>
                 <viewController id="mqb-NF-X7A" customClass="LiquorStoresViewController" customModule="drnk" customModuleProvider="target" sceneMemberID="viewController">
@@ -374,7 +374,7 @@
                             <constraint firstAttribute="bottom" secondItem="Ppe-9m-1f2" secondAttribute="bottom" id="vvb-Fs-BG9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="GAB-bg-UFa"/>
+                    <navigationItem key="navigationItem" title="drnk." id="GAB-bg-UFa"/>
                     <connections>
                         <outlet property="liquorStoreTableVIew" destination="Ppe-9m-1f2" id="rae-CO-bWZ"/>
                     </connections>
