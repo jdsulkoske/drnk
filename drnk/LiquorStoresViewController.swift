@@ -28,7 +28,7 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
     }
 
     func setUpLiquorStore(){
-        var ls1 = LiquorStoresInformation(lsName: "Muncie Liquors", lsAddress: "1110 West Neely Avenue", lsImage: "BeerGlass.png")
+        var ls1 = LiquorStoresInformation(lsName: "Muncie Liquors", lsAddress: "1110 West Neely Avenue", lsImage: "drnklogo.png")
         var ls2 = LiquorStoresInformation(lsName: "Friendly Package", lsAddress: "10213 Nicole Drive", lsImage: "Headphones.png")
         var ls3 = LiquorStoresInformation(lsName: "Muncie Liquors", lsAddress: "909 West Riverside", lsImage: "redsolocupicon.png")
         var ls4 = LiquorStoresInformation(lsName: "Another Liquor Store", lsAddress: "505 North EverWood Dr.", lsImage: "VCImage.png")
