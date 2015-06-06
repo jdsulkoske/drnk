@@ -2,3 +2,11 @@
 
 import Foundation
 
+
+
+class DataConnection {
+    
+    
+  
+    
+}
