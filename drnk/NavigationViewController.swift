@@ -15,7 +15,7 @@ class NavigationViewController: UINavigationController {
       //  self.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationBar.barTintColor = UIColor.redColor()
         self.navigationBar.translucent = true
-        self.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Zapfino", size: 20)! , NSForegroundColorAttributeName: UIColor.whiteColor()]
+        self.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Avenir", size: 20)! , NSForegroundColorAttributeName: UIColor.whiteColor()]
         
 
     }
