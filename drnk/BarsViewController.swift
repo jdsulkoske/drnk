@@ -23,6 +23,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
       
         super.viewDidLoad()
+        
         //myTableView.reloadData()
 //        myTableView.estimatedRowHeight = 121
 //        myTableView.rowHeight = UITableViewAutomaticDimension
