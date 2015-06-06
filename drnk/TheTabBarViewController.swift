@@ -13,7 +13,7 @@ class TheTabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UITabBar.appearance().tintColor = UIColor.grayColor()
+        UITabBar.appearance().tintColor = UIColor(red: 1/225, green: 1/225, blue: 1/225, alpha: 1/225)
         UITabBar.appearance().barTintColor = UIColor.redColor()
         UITabBar.appearance().translucent = true
         for item in self.tabBar.items as! [UITabBarItem] {
