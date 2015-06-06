@@ -2,8 +2,6 @@
 
 import Foundation
 
-
-
 class DataConnection {
     
     
