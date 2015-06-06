@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
             //Selected tab color
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.blueColor()], forState:.Selected)
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         
         return true
         

@@ -6,6 +6,8 @@
 	<string>drnk. would like to always use your current location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>drnk. would like to use your current location</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
