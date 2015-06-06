@@ -14,7 +14,7 @@ class CustomBarTableViewCell: UITableViewCell {
    
     @IBOutlet weak var addressOfBar: UIButton!
    
-
+//fuckthis
     @IBAction func addressOfBarPressed(sender: AnyObject) {
    
     }
