@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -68,7 +68,7 @@
                                                             <connections>
                                                                 <action selector="addressOfBarPressed:" destination="fDo-VJ-Csh" eventType="touchUpInside" id="tI4-Qb-UnH"/>
                                                                 <action selector="assignRowIndexToButton:" destination="yvX-hM-S0D" eventType="touchUpInside" id="x7f-Qu-zJE"/>
-                                                                <segue destination="aFS-wp-g30" kind="push" identifier="newPlace" id="Jip-si-LOY"/>
+                                                                <segue destination="aFS-wp-g30" kind="show" identifier="newPlace" id="Jip-si-LOY"/>
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2 Double Wells " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.70000000000000018" translatesAutoresizingMaskIntoConstraints="NO" id="lp6-Sv-0bj">
@@ -162,7 +162,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="myTableView" destination="Ziq-L7-Kao" id="qh8-jK-wyv"/>
-                        <segue destination="XBf-wS-PsZ" kind="push" identifier="showBarInformationSegue" id="AbQ-O9-hi3"/>
+                        <segue destination="XBf-wS-PsZ" kind="show" identifier="showBarInformationSegue" id="AbQ-O9-hi3"/>
                     </connections>
                 </viewController>
                 <tapGestureRecognizer id="kfX-Jq-Bhs">
@@ -172,7 +172,7 @@
                 </tapGestureRecognizer>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIc-5b-NbA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="651" y="-1019"/>
+            <point key="canvasLocation" x="1220.625" y="-1076.4084507042253"/>
         </scene>
         <!--Bar Information View Controller-->
         <scene sceneID="9xX-7D-UUd">
@@ -213,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEY-Iv-tkf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1187" y="-1019"/>
+            <point key="canvasLocation" x="2225.625" y="-1076.4084507042253"/>
         </scene>
         <!--Liquor Stores-->
         <scene sceneID="LCx-T4-Zqc">
@@ -230,7 +230,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aJi-bq-kJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="188" y="-206"/>
+            <point key="canvasLocation" x="352.5" y="-217.6056338028169"/>
         </scene>
         <!--drnk.-->
         <scene sceneID="FCo-Wt-G42">
@@ -241,11 +241,11 @@
                         <viewControllerLayoutGuide type="bottom" id="6JF-0X-bDc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="h4N-vx-T2p">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="172" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ppe-9m-1f2">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="172" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ppe-9m-1f2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="172" id="cFb-tw-DLi" customClass="CustomLiquorStoresTableViewCell" customModule="drnk" customModuleProvider="target">
@@ -255,71 +255,71 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m0X-zy-dWx">
-                                                    <rect key="frame" x="8" y="37" width="57" height="53"/>
+                                                    <rect key="frame" x="8" y="40" width="57" height="53"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="53" id="2qJ-M2-Orl"/>
                                                         <constraint firstAttribute="width" constant="57" id="c6p-El-gAF"/>
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TS6-uW-S5Z">
-                                                    <rect key="frame" x="8" y="32" width="304" height="2"/>
-                                                    <color key="backgroundColor" red="0.015686274510000001" green="0.12941176469999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <rect key="frame" x="8" y="35.5" width="584" height="2"/>
+                                                    <color key="backgroundColor" red="0.47552423747296296" green="0.12941176469999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="2" id="x8r-sa-btt"/>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Bar Goes here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qM4-Mu-2va">
-                                                    <rect key="frame" x="8" y="8" width="304" height="24"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <color key="textColor" red="0.015686274509803921" green="0.12941176470588234" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <rect key="frame" x="8" y="8" width="584" height="27.5"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                                    <color key="textColor" red="0.015686274510000001" green="0.12941176469999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address of liquore store" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwW-3b-HAk">
-                                                    <rect key="frame" x="73" y="37" width="239" height="14.5"/>
+                                                    <rect key="frame" x="73" y="40.5" width="519" height="14.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" red="0.015686274509803921" green="0.12941176470588234" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featured Specials:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZJ-CX-5RD">
-                                                    <rect key="frame" x="73" y="60" width="239" height="21"/>
+                                                    <rect key="frame" x="73" y="63.5" width="519" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="zpg-1t-8r2"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" red="0.015686274509803921" green="0.12941176470588234" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.41533905228758172" green="0.12941176470588189" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$4 Long Island Pitchers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLH-Xx-UYf">
-                                                    <rect key="frame" x="93" y="117" width="219" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Penny Pitchers: Coors &amp; Miller Lite" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLH-Xx-UYf">
+                                                    <rect key="frame" x="120" y="120.5" width="472" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="1xR-vB-Xup"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                                     <color key="textColor" red="0.015686274509803921" green="0.12941176470588234" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2.50 Bud Lite" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdg-55-imQ">
-                                                    <rect key="frame" x="93" y="145" width="219" height="20"/>
+                                                    <rect key="frame" x="120" y="148.5" width="472" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="bTE-Rh-zMj"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                                     <color key="textColor" red="0.015686274509803921" green="0.12941176470588234" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZFe-hU-0jJ">
-                                                    <rect key="frame" x="8" y="98" width="77" height="66.5"/>
+                                                    <rect key="frame" x="8" y="101" width="104" height="63"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="77" id="fPD-R4-fn8"/>
+                                                        <constraint firstAttribute="width" constant="104" id="fPD-R4-fn8"/>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2 Double Wells" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txa-r4-tVR">
-                                                    <rect key="frame" x="93" y="89" width="219" height="20"/>
+                                                    <rect key="frame" x="120" y="92.5" width="472" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="2Wu-FA-Cbj"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                                     <color key="textColor" red="0.015686274509803921" green="0.12941176470588234" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -329,7 +329,7 @@
                                                 <constraint firstItem="iLH-Xx-UYf" firstAttribute="top" secondItem="txa-r4-tVR" secondAttribute="bottom" constant="8" id="3Ar-Ec-lch"/>
                                                 <constraint firstItem="qM4-Mu-2va" firstAttribute="trailing" secondItem="tFN-8J-MwA" secondAttribute="trailingMargin" id="4Nl-ko-pqI"/>
                                                 <constraint firstItem="qM4-Mu-2va" firstAttribute="top" secondItem="tFN-8J-MwA" secondAttribute="topMargin" id="6g4-NO-IAu"/>
-                                                <constraint firstItem="ZFe-hU-0jJ" firstAttribute="bottom" secondItem="tFN-8J-MwA" secondAttribute="bottomMargin" constant="1" id="768-8M-woI"/>
+                                                <constraint firstItem="ZFe-hU-0jJ" firstAttribute="bottom" secondItem="tFN-8J-MwA" secondAttribute="bottomMargin" id="768-8M-woI"/>
                                                 <constraint firstItem="TS6-uW-S5Z" firstAttribute="leading" secondItem="tFN-8J-MwA" secondAttribute="leadingMargin" id="7oS-h6-HSO"/>
                                                 <constraint firstItem="gdg-55-imQ" firstAttribute="top" secondItem="iLH-Xx-UYf" secondAttribute="bottom" constant="8" id="7tP-3g-W9W"/>
                                                 <constraint firstItem="qM4-Mu-2va" firstAttribute="leading" secondItem="tFN-8J-MwA" secondAttribute="leadingMargin" id="B5B-fg-NC5"/>
@@ -381,7 +381,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jPp-U1-gu3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="596" y="-206"/>
+            <point key="canvasLocation" x="1117.5" y="-217.6056338028169"/>
         </scene>
         <!--Map-->
         <scene sceneID="oLp-kv-9eP">
@@ -419,7 +419,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pjb-rF-ovs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1729" y="-497"/>
+            <point key="canvasLocation" x="3241.875" y="-525"/>
         </scene>
         <!--More-->
         <scene sceneID="Rdo-MM-GIo">
@@ -430,7 +430,7 @@
                         <viewControllerLayoutGuide type="bottom" id="cDp-1M-pYp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5q8-yW-kgq">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -438,7 +438,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ht3-kH-OaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-226.13333333333333" y="564.21333333333337"/>
+            <point key="canvasLocation" x="-424" y="596"/>
         </scene>
         <!--The Tab Bar View Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -459,7 +459,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-226.13333333333333" y="-200.69333333333333"/>
+            <point key="canvasLocation" x="-424" y="-211.99999999999997"/>
         </scene>
         <!--Bars-->
         <scene sceneID="N2s-gl-wC5">
@@ -481,7 +481,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Cp-OX-g0U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="194" y="-1103"/>
+            <point key="canvasLocation" x="363.75" y="-1165.1408450704225"/>
         </scene>
     </scenes>
     <resources>
@@ -492,11 +492,6 @@
         <image name="first" width="30" height="30"/>
         <image name="liquorstore (1)" width="60" height="60"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Jip-si-LOY"/>
     </inferredMetricsTieBreakers>
