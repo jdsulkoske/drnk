@@ -17,7 +17,7 @@ class TheTabBarViewController: UITabBarController {
         UITabBar.appearance().tintColor = UIColor.whiteColor()
         //TabBar background color:
         UITabBar.appearance().barTintColor = UIColor(red: 146/225, green: 18/225, blue: 18/225, alpha: 1)
-        UITabBar.appearance().translucent = true
+        UITabBar.appearance().translucent = false
         for item in self.tabBar.items as! [UITabBarItem] {
             if let image = item.image {
                 item.image = image.imageWithColor(UIColor.grayColor()).imageWithRenderingMode(.AlwaysOriginal)
