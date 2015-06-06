@@ -20,7 +20,7 @@ class TheTabBarViewController: UITabBarController {
         UITabBar.appearance().translucent = false
         for item in self.tabBar.items as! [UITabBarItem] {
             if let image = item.image {
-                item.image = image.imageWithColor(UIColor.grayColor()).imageWithRenderingMode(.AlwaysOriginal)
+                item.image = image.imageWithColor(UIColor.lightGrayColor()).imageWithRenderingMode(.AlwaysOriginal)
                 
             }
         }
