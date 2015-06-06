@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LiquorStoresViewController: UIViewController {
+class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var liquorStoreTableVIew: UITableView!
     
@@ -38,6 +38,20 @@ class LiquorStoresViewController: UIViewController {
         arrayOfLiquorStores.append(ls3)
         arrayOfLiquorStores.append(ls4)
 
+    }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrayOfLiquorStores.count
+        
+    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell:CustomLiquorStoresTableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell") as! CustomLiquorStoresTableViewCell
+        
+        let liquorStore = arrayOfLiquorStores[indexPath.row]
+        
+        cell.setLiquorStoreCell(liquorStore.liquorStoreName, addressLabel: liquorStore.liquorStoreAddress, image: liquorStore.liquorStoreImage)
+        
+        return cell
+        
     }
 
 }

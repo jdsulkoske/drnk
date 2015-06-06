@@ -25,5 +25,12 @@ class CustomLiquorStoresTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func setLiquorStoreCell(nameLabel: String, addressLabel: String, image: String) {
+        self.nameOfLiquorStore.text = nameLabel
+        self.addressOfLiquorStore.text = addressLabel
+        self.imageOfLiquorStore.image = UIImage(named: image)
+        
+    }
 
 }
