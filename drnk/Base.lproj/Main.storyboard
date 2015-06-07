@@ -256,7 +256,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cFb-tw-DLi" id="tFN-8J-MwA">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m0X-zy-dWx">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m0X-zy-dWx">
                                                     <rect key="frame" x="8" y="40" width="57" height="53"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="53" id="2qJ-M2-Orl"/>
@@ -302,7 +302,7 @@
                                                     <color key="textColor" red="0.015686274509803921" green="0.12941176470588234" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZFe-hU-0jJ">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZFe-hU-0jJ">
                                                     <rect key="frame" x="8" y="101" width="104" height="63"/>
                                                     <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -335,7 +335,7 @@
                                                 <constraint firstItem="iLH-Xx-UYf" firstAttribute="top" secondItem="txa-r4-tVR" secondAttribute="bottom" constant="8" id="3Ar-Ec-lch"/>
                                                 <constraint firstItem="qM4-Mu-2va" firstAttribute="trailing" secondItem="tFN-8J-MwA" secondAttribute="trailingMargin" id="4Nl-ko-pqI"/>
                                                 <constraint firstItem="qM4-Mu-2va" firstAttribute="top" secondItem="tFN-8J-MwA" secondAttribute="topMargin" id="6g4-NO-IAu"/>
-                                                <constraint firstItem="ZFe-hU-0jJ" firstAttribute="bottom" secondItem="tFN-8J-MwA" secondAttribute="bottomMargin" id="768-8M-woI"/>
+                                                <constraint firstItem="ZFe-hU-0jJ" firstAttribute="bottom" secondItem="tFN-8J-MwA" secondAttribute="bottomMargin" constant="5" id="768-8M-woI"/>
                                                 <constraint firstItem="TS6-uW-S5Z" firstAttribute="leading" secondItem="tFN-8J-MwA" secondAttribute="leadingMargin" id="7oS-h6-HSO"/>
                                                 <constraint firstItem="gdg-55-imQ" firstAttribute="top" secondItem="iLH-Xx-UYf" secondAttribute="bottom" constant="8" id="7tP-3g-W9W"/>
                                                 <constraint firstItem="qM4-Mu-2va" firstAttribute="leading" secondItem="tFN-8J-MwA" secondAttribute="leadingMargin" id="B5B-fg-NC5"/>
@@ -356,7 +356,7 @@
                                                     <variation key="widthClass=compact" constant="8.5"/>
                                                 </constraint>
                                                 <constraint firstAttribute="trailing" secondItem="txa-r4-tVR" secondAttribute="trailing" constant="8" id="hzl-iy-sKD"/>
-                                                <constraint firstItem="m0X-zy-dWx" firstAttribute="top" secondItem="TS6-uW-S5Z" secondAttribute="bottom" constant="3" id="iFp-b8-e15">
+                                                <constraint firstItem="m0X-zy-dWx" firstAttribute="top" secondItem="TS6-uW-S5Z" secondAttribute="bottom" constant="2" id="iFp-b8-e15">
                                                     <variation key="widthClass=compact" constant="9"/>
                                                 </constraint>
                                                 <constraint firstItem="m0X-zy-dWx" firstAttribute="leading" secondItem="tFN-8J-MwA" secondAttribute="leadingMargin" id="lUJ-H8-Mic"/>
