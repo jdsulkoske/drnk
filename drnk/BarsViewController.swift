@@ -19,11 +19,12 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var myTableView: UITableView!
    
     var selected:[Bool] = Array(count: 100, repeatedValue: false)
-    
+    var data : DataConnection?
     override func viewDidLoad() {
       
         super.viewDidLoad()
-        
+        data = DataConnection()
+        data?.requestData()
 
         let date = NSDate()
         var formatter = NSDateFormatter()
