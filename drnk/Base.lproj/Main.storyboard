@@ -256,7 +256,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cFb-tw-DLi" id="tFN-8J-MwA">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m0X-zy-dWx">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m0X-zy-dWx">
                                                     <rect key="frame" x="8" y="40" width="57" height="53"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="53" id="2qJ-M2-Orl"/>
@@ -264,7 +264,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TS6-uW-S5Z">
-                                                    <rect key="frame" x="8" y="35.5" width="584" height="2"/>
+                                                    <rect key="frame" x="8" y="36" width="584" height="2"/>
                                                     <color key="backgroundColor" red="0.47552423747296296" green="0.12941176469999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="2" id="x8r-sa-btt">
@@ -273,19 +273,19 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Bar Goes here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qM4-Mu-2va">
-                                                    <rect key="frame" x="8" y="8" width="584" height="27.5"/>
+                                                    <rect key="frame" x="8" y="8" width="584" height="28"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
                                                     <color key="textColor" red="0.015686274510000001" green="0.12941176469999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address of liquore store" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwW-3b-HAk">
-                                                    <rect key="frame" x="73" y="40.5" width="519" height="14.5"/>
+                                                    <rect key="frame" x="73" y="41" width="519" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featured Specials:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZJ-CX-5RD">
-                                                    <rect key="frame" x="73" y="63.5" width="519" height="21"/>
+                                                    <rect key="frame" x="73" y="64" width="519" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="zpg-1t-8r2"/>
                                                     </constraints>
@@ -294,7 +294,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Penny Pitchers: Coors &amp; Miller Lite" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLH-Xx-UYf">
-                                                    <rect key="frame" x="120" y="120.5" width="472" height="20"/>
+                                                    <rect key="frame" x="120" y="121" width="472" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="1xR-vB-Xup"/>
                                                     </constraints>
@@ -310,7 +310,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2 Double Wells" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txa-r4-tVR">
-                                                    <rect key="frame" x="120" y="92.5" width="472" height="20"/>
+                                                    <rect key="frame" x="120" y="93" width="472" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="2Wu-FA-Cbj"/>
                                                     </constraints>
@@ -319,7 +319,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2.50 Bud Lite" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdg-55-imQ">
-                                                    <rect key="frame" x="120" y="148.5" width="472" height="20"/>
+                                                    <rect key="frame" x="120" y="149" width="472" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="bTE-Rh-zMj"/>
                                                     </constraints>
