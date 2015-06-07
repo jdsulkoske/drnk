@@ -273,15 +273,9 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Bar Goes here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qM4-Mu-2va">
-                                                    <rect key="frame" x="8" y="8" width="584" height="27.5"/>
+                                                    <rect key="frame" x="8" y="8" width="584" height="28"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
                                                     <color key="textColor" red="0.015686274510000001" green="0.12941176469999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address of liquore store" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwW-3b-HAk">
-                                                    <rect key="frame" x="73" y="40" width="519" height="14.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featured Specials:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZJ-CX-5RD">
@@ -328,39 +322,45 @@
                                                     <color key="textColor" red="0.015686274509803921" green="0.12941176470588234" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iP-sB-zQy">
+                                                    <rect key="frame" x="73" y="35" width="164" height="30"/>
+                                                    <state key="normal" title="Address of liquore store">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="assignIndexRowToButtonInLiqourStoreView:" destination="mqb-NF-X7A" eventType="touchUpInside" id="Cnb-FD-yOa"/>
+                                                        <segue destination="aFS-wp-g30" kind="show" identifier="showLocationForLiquorStore" id="eBB-SS-nCt"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="uZJ-CX-5RD" firstAttribute="top" secondItem="RwW-3b-HAk" secondAttribute="bottom" constant="8.5" id="0yd-p1-5yf">
-                                                    <variation key="widthClass=compact" constant="1.5"/>
-                                                </constraint>
                                                 <constraint firstItem="iLH-Xx-UYf" firstAttribute="top" secondItem="txa-r4-tVR" secondAttribute="bottom" constant="8" id="3Ar-Ec-lch"/>
                                                 <constraint firstItem="qM4-Mu-2va" firstAttribute="trailing" secondItem="tFN-8J-MwA" secondAttribute="trailingMargin" id="4Nl-ko-pqI"/>
+                                                <constraint firstItem="1iP-sB-zQy" firstAttribute="top" secondItem="tFN-8J-MwA" secondAttribute="topMargin" constant="27" id="56d-HT-B1L"/>
                                                 <constraint firstItem="qM4-Mu-2va" firstAttribute="top" secondItem="tFN-8J-MwA" secondAttribute="topMargin" id="6g4-NO-IAu"/>
-                                                <constraint firstItem="ZFe-hU-0jJ" firstAttribute="bottom" secondItem="tFN-8J-MwA" secondAttribute="bottomMargin" constant="5" id="768-8M-woI"/>
+                                                <constraint firstItem="ZFe-hU-0jJ" firstAttribute="bottom" secondItem="tFN-8J-MwA" secondAttribute="bottomMargin" constant="3" id="768-8M-woI"/>
                                                 <constraint firstItem="TS6-uW-S5Z" firstAttribute="leading" secondItem="tFN-8J-MwA" secondAttribute="leadingMargin" id="7oS-h6-HSO"/>
                                                 <constraint firstItem="gdg-55-imQ" firstAttribute="top" secondItem="iLH-Xx-UYf" secondAttribute="bottom" constant="8" id="7tP-3g-W9W"/>
                                                 <constraint firstItem="qM4-Mu-2va" firstAttribute="leading" secondItem="tFN-8J-MwA" secondAttribute="leadingMargin" id="B5B-fg-NC5"/>
                                                 <constraint firstItem="TS6-uW-S5Z" firstAttribute="trailing" secondItem="tFN-8J-MwA" secondAttribute="trailingMargin" id="BRL-PU-n9n"/>
-                                                <constraint firstItem="TS6-uW-S5Z" firstAttribute="top" secondItem="qM4-Mu-2va" secondAttribute="bottom" id="Dju-aQ-kQN">
+                                                <constraint firstItem="TS6-uW-S5Z" firstAttribute="top" secondItem="qM4-Mu-2va" secondAttribute="bottom" constant="-1" id="Dju-aQ-kQN">
                                                     <variation key="widthClass=compact" constant="-6"/>
                                                 </constraint>
                                                 <constraint firstItem="uZJ-CX-5RD" firstAttribute="leading" secondItem="m0X-zy-dWx" secondAttribute="trailing" constant="8" id="FbJ-wT-hkl"/>
+                                                <constraint firstItem="txa-r4-tVR" firstAttribute="top" secondItem="1iP-sB-zQy" secondAttribute="bottom" constant="27" id="IUL-vi-Zih"/>
                                                 <constraint firstItem="txa-r4-tVR" firstAttribute="leading" secondItem="ZFe-hU-0jJ" secondAttribute="trailing" constant="8" id="Qqr-qK-o6y"/>
                                                 <constraint firstItem="uZJ-CX-5RD" firstAttribute="trailing" secondItem="tFN-8J-MwA" secondAttribute="trailingMargin" id="VEm-BF-Ua0"/>
                                                 <constraint firstAttribute="trailing" secondItem="gdg-55-imQ" secondAttribute="trailing" constant="8" id="XmG-gN-A1W"/>
                                                 <constraint firstItem="iLH-Xx-UYf" firstAttribute="leading" secondItem="ZFe-hU-0jJ" secondAttribute="trailing" constant="8" id="Y6s-mD-ihl"/>
-                                                <constraint firstItem="RwW-3b-HAk" firstAttribute="leading" secondItem="m0X-zy-dWx" secondAttribute="trailing" constant="8" id="YDI-hp-VZO"/>
-                                                <constraint firstItem="RwW-3b-HAk" firstAttribute="trailing" secondItem="tFN-8J-MwA" secondAttribute="trailingMargin" id="eB1-2X-6wZ"/>
                                                 <constraint firstAttribute="trailing" secondItem="iLH-Xx-UYf" secondAttribute="trailing" constant="8" id="fcl-nO-1Vb"/>
                                                 <constraint firstItem="gdg-55-imQ" firstAttribute="leading" secondItem="ZFe-hU-0jJ" secondAttribute="trailing" constant="8" id="g83-bq-qfp"/>
-                                                <constraint firstItem="RwW-3b-HAk" firstAttribute="top" secondItem="TS6-uW-S5Z" secondAttribute="bottom" constant="3" id="hHl-W0-Xfc">
-                                                    <variation key="widthClass=compact" constant="8.5"/>
-                                                </constraint>
+                                                <constraint firstItem="1iP-sB-zQy" firstAttribute="top" secondItem="TS6-uW-S5Z" secondAttribute="top" id="hlz-w9-st6"/>
                                                 <constraint firstAttribute="trailing" secondItem="txa-r4-tVR" secondAttribute="trailing" constant="8" id="hzl-iy-sKD"/>
-                                                <constraint firstItem="m0X-zy-dWx" firstAttribute="top" secondItem="TS6-uW-S5Z" secondAttribute="bottom" constant="2" id="iFp-b8-e15">
+                                                <constraint firstItem="m0X-zy-dWx" firstAttribute="top" secondItem="TS6-uW-S5Z" secondAttribute="bottom" constant="3" id="iFp-b8-e15">
                                                     <variation key="widthClass=compact" constant="9"/>
                                                 </constraint>
                                                 <constraint firstItem="m0X-zy-dWx" firstAttribute="leading" secondItem="tFN-8J-MwA" secondAttribute="leadingMargin" id="lUJ-H8-Mic"/>
+                                                <constraint firstItem="1iP-sB-zQy" firstAttribute="leading" secondItem="uZJ-CX-5RD" secondAttribute="leading" id="rWN-Gy-0eC"/>
                                                 <constraint firstItem="ZFe-hU-0jJ" firstAttribute="top" secondItem="m0X-zy-dWx" secondAttribute="bottom" constant="8" id="sDA-YQ-Qhs"/>
                                                 <constraint firstItem="ZFe-hU-0jJ" firstAttribute="leading" secondItem="tFN-8J-MwA" secondAttribute="leadingMargin" id="v6P-g6-gBD"/>
                                                 <constraint firstItem="txa-r4-tVR" firstAttribute="top" secondItem="uZJ-CX-5RD" secondAttribute="bottom" constant="8" id="yd4-pX-RD7">
@@ -369,7 +369,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="addressOfLiquorStore" destination="RwW-3b-HAk" id="EDj-6J-e8b"/>
+                                            <outlet property="addressOfLiquorStore" destination="1iP-sB-zQy" id="vG0-22-laL"/>
                                             <outlet property="imageOfLiquorStore" destination="m0X-zy-dWx" id="07r-Iq-6sV"/>
                                             <outlet property="nameOfLiquorStore" destination="qM4-Mu-2va" id="IQg-w0-wcC"/>
                                         </connections>
@@ -407,11 +407,11 @@
                         <viewControllerLayoutGuide type="bottom" id="NlW-AY-fIu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6Os-Q2-i0c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZX6-Tr-JzZ">
-                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.36670278280000002" alpha="0.70999999999999996" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="aFS-wp-g30" id="Ri3-lt-8Xp"/>
@@ -474,7 +474,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pjb-rF-ovs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3241.5" y="-525"/>
+            <point key="canvasLocation" x="1881" y="-52"/>
         </scene>
         <!--More-->
         <scene sceneID="Rdo-MM-GIo">
@@ -592,6 +592,6 @@
         <image name="liquorstore (1)" width="60" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Jip-si-LOY"/>
+        <segue reference="eBB-SS-nCt"/>
     </inferredMetricsTieBreakers>
 </document>

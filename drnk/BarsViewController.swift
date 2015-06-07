@@ -24,9 +24,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
       
         super.viewDidLoad()
         
-        //myTableView.reloadData()
-//        myTableView.estimatedRowHeight = 121
-//        myTableView.rowHeight = UITableViewAutomaticDimension
+
         let date = NSDate()
         var formatter = NSDateFormatter()
         formatter.dateFormat = "EEEE"

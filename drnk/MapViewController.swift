@@ -8,7 +8,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
     
     @IBOutlet weak var mapView: MKMapView!
     var locationManager: CLLocationManager!
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager = CLLocationManager()
@@ -20,8 +20,8 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
             locationManager.requestWhenInUseAuthorization()
             locationManager.startUpdatingLocation()
             
-        } else {
-            activePlace = 1
+        }
+        else{
             findAddressOnMap()
         }
         
@@ -32,7 +32,16 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
     
     
     func findAddressOnMap(){
-        var address = arrayOfBars[index].address
+        var address : String?
+            if activePlace == 2{
+                address  = arrayOfLiquorStores[index].address
+                activePlace = 1
+            }
+            else{
+                address = arrayOfBars[index].address
+                activePlace = 1
+        }
+        
         var annotation = MKPointAnnotation()
         var geocoder = CLGeocoder()
         geocoder.geocodeAddressString(address, completionHandler: {(placemarks: [AnyObject]!, error: NSError!) -> Void in

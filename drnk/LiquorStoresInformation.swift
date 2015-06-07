@@ -10,12 +10,12 @@ import Foundation
 
 class LiquorStoresInformation {
     var liquorStoreName = ""
-    var liquorStoreAddress = ""
+    var address = ""
     var liquorStoreImage = ""
     
-    init(lsName: String, lsAddress: String, lsImage: String) {
+    init(lsName: String, address: String, lsImage: String) {
         self.liquorStoreName = lsName
-        self.liquorStoreAddress = lsAddress
+        self.address = address
         self.liquorStoreImage = lsImage
     }
 }

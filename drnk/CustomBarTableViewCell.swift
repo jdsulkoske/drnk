@@ -33,7 +33,7 @@ class CustomBarTableViewCell: UITableViewCell {
         self.nameOfBar.text = nameOfBarText
         self.addressOfBar.setTitle(addressOfBarText, forState: UIControlState.Normal)
     
-        index = addressOfBar.tag
+        
         
         
     }

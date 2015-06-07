@@ -7,12 +7,12 @@
 //
 
 import UIKit
+var arrayOfLiquorStores: [LiquorStoresInformation] = [LiquorStoresInformation]()
 
 class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var liquorStoreTableVIew: UITableView!
-    
-    var arrayOfLiquorStores: [LiquorStoresInformation] = [LiquorStoresInformation]()
+    var selected:[Bool] = Array(count: 100, repeatedValue: false)
     
     
     override func viewDidLoad() {
@@ -28,16 +28,21 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
     }
 
     func setUpLiquorStore(){
-        var ls1 = LiquorStoresInformation(lsName: "Muncie Liquors", lsAddress: "1110 West Neely Avenue", lsImage: "drnklogo.png")
-        var ls2 = LiquorStoresInformation(lsName: "Friendly Package", lsAddress: "10213 Nicole Drive", lsImage: "Headphones.png")
-        var ls3 = LiquorStoresInformation(lsName: "Muncie Liquors", lsAddress: "909 West Riverside", lsImage: "redsolocupicon.png")
-        var ls4 = LiquorStoresInformation(lsName: "Another Liquor Store", lsAddress: "505 North EverWood Dr.", lsImage: "VCImage.png")
+        var ls1 = LiquorStoresInformation(lsName: "Muncie Liquors", address: "1110 West Neely Avenue", lsImage: "drnklogo.png")
+        var ls2 = LiquorStoresInformation(lsName: "Friendly Package", address: "10213 Nicole Drive", lsImage: "Headphones.png")
+        var ls3 = LiquorStoresInformation(lsName: "Muncie Liquors", address: "909 West Riverside", lsImage: "redsolocupicon.png")
+        var ls4 = LiquorStoresInformation(lsName: "Another Liquor Store", address: "505 North EverWood Dr.", lsImage: "VCImage.png")
         
         arrayOfLiquorStores.append(ls1)
         arrayOfLiquorStores.append(ls2)
         arrayOfLiquorStores.append(ls3)
         arrayOfLiquorStores.append(ls4)
 
+    }
+    @IBAction func assignIndexRowToButtonInLiqourStoreView(sender: AnyObject) {
+        let row = sender.tag
+        selected[row] = true
+        index = sender.tag
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrayOfLiquorStores.count
@@ -48,11 +53,30 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
         
         let liquorStore = arrayOfLiquorStores[indexPath.row]
         
-        cell.setLiquorStoreCell(liquorStore.liquorStoreName, addressLabel: liquorStore.liquorStoreAddress, image: liquorStore.liquorStoreImage)
+        index = cell.tag
+        cell.addressOfLiquorStore.tag = indexPath.row
+        if selected[indexPath.row] {
+            cell.addressOfLiquorStore.enabled = false
+        }
+        else{
+            cell.addressOfLiquorStore.enabled = true
+        }
+        
+
+        
+        cell.setLiquorStoreCell(liquorStore.liquorStoreName, addressLabel: liquorStore.address, image: liquorStore.liquorStoreImage)
         
         return cell
         
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showLocationForLiquorStore" {
+            
+            activePlace = 2
+            
+        }
+            }
 
 }
 

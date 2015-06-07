@@ -12,7 +12,8 @@ class CustomLiquorStoresTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameOfLiquorStore: UILabel!
     @IBOutlet weak var imageOfLiquorStore: UIImageView!
-    @IBOutlet weak var addressOfLiquorStore: UILabel!
+   
+    @IBOutlet weak var addressOfLiquorStore: UIButton!
     
     
     override func awakeFromNib() {
@@ -28,7 +29,8 @@ class CustomLiquorStoresTableViewCell: UITableViewCell {
     
     func setLiquorStoreCell(nameLabel: String, addressLabel: String, image: String) {
         self.nameOfLiquorStore.text = nameLabel
-        self.addressOfLiquorStore.text = addressLabel
+        self.addressOfLiquorStore.setTitle(addressLabel, forState: UIControlState.Normal)
+
         self.imageOfLiquorStore.image = UIImage(named: image)
         
     }
