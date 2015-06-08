@@ -411,60 +411,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZX6-Tr-JzZ">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.36670278280000002" alpha="0.70999999999999996" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="aFS-wp-g30" id="Ri3-lt-8Xp"/>
                                 </connections>
                             </mapView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CWE-e9-TZh">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" red="0.5725490196078431" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="23" id="kq6-T7-0BC"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="kq6-T7-0BC"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="kq6-T7-0BC"/>
-                                    </mask>
-                                </variation>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ZX6-Tr-JzZ" firstAttribute="leading" secondItem="6Os-Q2-i0c" secondAttribute="leading" id="3Co-gl-dkR"/>
                             <constraint firstAttribute="trailing" secondItem="ZX6-Tr-JzZ" secondAttribute="trailing" id="9vc-jf-tGO"/>
-                            <constraint firstItem="CWE-e9-TZh" firstAttribute="top" secondItem="6Os-Q2-i0c" secondAttribute="topMargin" id="AYE-RI-xJ5"/>
-                            <constraint firstItem="ZX6-Tr-JzZ" firstAttribute="top" secondItem="eVg-Ei-4IX" secondAttribute="bottom" id="Hej-iJ-IPl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CWE-e9-TZh" secondAttribute="trailing" constant="-16" id="Vj8-fU-A2W"/>
-                            <constraint firstItem="CWE-e9-TZh" firstAttribute="leading" secondItem="6Os-Q2-i0c" secondAttribute="leadingMargin" constant="-16" id="bn4-JO-GO1"/>
+                            <constraint firstItem="ZX6-Tr-JzZ" firstAttribute="top" secondItem="eVg-Ei-4IX" secondAttribute="bottom" constant="-64" id="Hej-iJ-IPl"/>
                             <constraint firstItem="ZX6-Tr-JzZ" firstAttribute="bottom" secondItem="NlW-AY-fIu" secondAttribute="top" id="qpQ-oD-ZCG"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="CWE-e9-TZh"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="AYE-RI-xJ5"/>
-                                <exclude reference="Vj8-fU-A2W"/>
-                                <exclude reference="bn4-JO-GO1"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="CWE-e9-TZh"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="AYE-RI-xJ5"/>
-                                <include reference="Vj8-fU-A2W"/>
-                                <include reference="bn4-JO-GO1"/>
-                            </mask>
-                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="america" id="6Xe-Cn-VVD"/>
                     <navigationItem key="navigationItem" id="j5j-yR-PGI"/>
