@@ -20,7 +20,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tC1-b1-PNE">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barsimg.png" translatesAutoresizingMaskIntoConstraints="NO" id="jIA-fe-hPa">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="barsimg.png" translatesAutoresizingMaskIntoConstraints="NO" id="jIA-fe-hPa">
                                         <rect key="frame" x="-17" y="-287" width="414" height="736"/>
                                     </imageView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="161" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ziq-L7-Kao">
@@ -407,11 +407,11 @@
                         <viewControllerLayoutGuide type="bottom" id="NlW-AY-fIu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6Os-Q2-i0c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZX6-Tr-JzZ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.36670278280000002" alpha="0.70999999999999996" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="aFS-wp-g30" id="Ri3-lt-8Xp"/>
@@ -671,6 +671,6 @@
         <image name="new.png" width="592" height="942"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Jip-si-LOY"/>
+        <segue reference="rpb-cZ-YeA"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class NavigationViewController: UINavigationController {
+class NavigationViewController: ENSideMenuNavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
