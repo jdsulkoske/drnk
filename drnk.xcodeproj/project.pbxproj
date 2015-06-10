@@ -10,7 +10,6 @@
 		DE2E1EF81B23A2B100C73295 /* CustomLiquorStoresTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2E1EF71B23A2B100C73295 /* CustomLiquorStoresTableViewCell.swift */; };
 		DE2E1EFC1B23A5A300C73295 /* LiquorStoresInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2E1EFB1B23A5A300C73295 /* LiquorStoresInformation.swift */; };
 		DE4C116A1B28AD3700CCB54D /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4C11691B28AD3700CCB54D /* Day.swift */; };
-		DE4C116C1B28B3E400CCB54D /* barsimg.png in Resources */ = {isa = PBXBuildFile; fileRef = DE4C116B1B28B3E400CCB54D /* barsimg.png */; };
 		DE5C83E61B1435DA00ED4255 /* BarInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5C83E51B1435DA00ED4255 /* BarInformationViewController.swift */; };
 		DE5FB7871B14F73D00C9EC44 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE5FB7861B14F73D00C9EC44 /* CoreLocation.framework */; };
 		DE8377F61B13F30D00CD8435 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8377F51B13F30D00CD8435 /* AppDelegate.swift */; };
@@ -23,10 +22,6 @@
 		DE83781A1B13F56E00CD8435 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8378191B13F56E00CD8435 /* MapViewController.swift */; };
 		DE83781E1B13F6C000CD8435 /* BarsInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83781D1B13F6C000CD8435 /* BarsInformation.swift */; };
 		DE8378201B13F72F00CD8435 /* CustomBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83781F1B13F72F00CD8435 /* CustomBarTableViewCell.swift */; };
-		DE88DF051B26B09100F7262E /* new.png in Resources */ = {isa = PBXBuildFile; fileRef = DE88DF041B26B09100F7262E /* new.png */; };
-		DE88DF071B26B09C00F7262E /* america.png in Resources */ = {isa = PBXBuildFile; fileRef = DE88DF061B26B09C00F7262E /* america.png */; };
-		DE88DF091B26B0A000F7262E /* barglass.png in Resources */ = {isa = PBXBuildFile; fileRef = DE88DF081B26B0A000F7262E /* barglass.png */; };
-		DE88DF0B1B26B0AC00F7262E /* liquorstore (1).png in Resources */ = {isa = PBXBuildFile; fileRef = DE88DF0A1B26B0AC00F7262E /* liquorstore (1).png */; };
 		DE88DF0D1B26B10100F7262E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE88DF0C1B26B10100F7262E /* MainViewController.swift */; };
 		DE9D2E541B15FD970099253D /* DataConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D2E531B15FD970099253D /* DataConnection.swift */; };
 		DEEB90AE1B27532800253196 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEB90AD1B27532800253196 /* Parser.swift */; };
@@ -63,7 +58,6 @@
 		DE2E1EF71B23A2B100C73295 /* CustomLiquorStoresTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLiquorStoresTableViewCell.swift; sourceTree = "<group>"; };
 		DE2E1EFB1B23A5A300C73295 /* LiquorStoresInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiquorStoresInformation.swift; sourceTree = "<group>"; };
 		DE4C11691B28AD3700CCB54D /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
-		DE4C116B1B28B3E400CCB54D /* barsimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barsimg.png; sourceTree = "<group>"; };
 		DE5C83E51B1435DA00ED4255 /* BarInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarInformationViewController.swift; sourceTree = "<group>"; };
 		DE5FB7861B14F73D00C9EC44 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DE8377F01B13F30D00CD8435 /* drnk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = drnk.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,10 +74,6 @@
 		DE8378191B13F56E00CD8435 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DE83781D1B13F6C000CD8435 /* BarsInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarsInformation.swift; sourceTree = "<group>"; };
 		DE83781F1B13F72F00CD8435 /* CustomBarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBarTableViewCell.swift; sourceTree = "<group>"; };
-		DE88DF041B26B09100F7262E /* new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new.png; sourceTree = "<group>"; };
-		DE88DF061B26B09C00F7262E /* america.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = america.png; sourceTree = "<group>"; };
-		DE88DF081B26B0A000F7262E /* barglass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barglass.png; sourceTree = "<group>"; };
-		DE88DF0A1B26B0AC00F7262E /* liquorstore (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "liquorstore (1).png"; sourceTree = "<group>"; };
 		DE88DF0C1B26B10100F7262E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DE9D2E531B15FD970099253D /* DataConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataConnection.swift; sourceTree = "<group>"; };
 		DEEB90AD1B27532800253196 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
@@ -183,11 +173,6 @@
 				DE8377FB1B13F30D00CD8435 /* Main.storyboard */,
 				DEFB18201B1A5CCB0091622C /* NavigationViewController.swift */,
 				DE8377F51B13F30D00CD8435 /* AppDelegate.swift */,
-				DE88DF081B26B0A000F7262E /* barglass.png */,
-				DE88DF0A1B26B0AC00F7262E /* liquorstore (1).png */,
-				DE4C116B1B28B3E400CCB54D /* barsimg.png */,
-				DE88DF041B26B09100F7262E /* new.png */,
-				DE88DF061B26B09C00F7262E /* america.png */,
 				DE8377FE1B13F30E00CD8435 /* Images.xcassets */,
 				DE8378001B13F30E00CD8435 /* LaunchScreen.xib */,
 				DE8377F31B13F30D00CD8435 /* Supporting Files */,
@@ -305,13 +290,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE88DF051B26B09100F7262E /* new.png in Resources */,
-				DE88DF071B26B09C00F7262E /* america.png in Resources */,
 				DE8377FD1B13F30D00CD8435 /* Main.storyboard in Resources */,
 				DE8378021B13F30E00CD8435 /* LaunchScreen.xib in Resources */,
-				DE88DF0B1B26B0AC00F7262E /* liquorstore (1).png in Resources */,
-				DE88DF091B26B0A000F7262E /* barglass.png in Resources */,
-				DE4C116C1B28B3E400CCB54D /* barsimg.png in Resources */,
 				DE8377FF1B13F30E00CD8435 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
