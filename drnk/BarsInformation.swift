@@ -9,13 +9,21 @@
 import Foundation
 
 class BarsInformation{
-    
+    var barArray: [BarsInformation] = [BarsInformation]()
     var name = "Brother's Bar and Grill"
     var address = "Adress of Brother's Bar and Grill, Muncie, IN"
     
     init(name: String, address: String){
         self.name = name
         self.address = address
+    }
+    
+    func appendBar(bar:BarsInformation){
+        barArray.append(bar)
+    }
+    
+    func getBarArray()->NSArray{
+        return barArray
     }
     
 }
