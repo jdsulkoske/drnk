@@ -5,13 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>22CA6CD5-1775-476F-80EC-3A99817133B3</string>
+	<string>A7A5584D-3F7A-46EA-84D6-C1D4E23A94AE</string>
 	<key>IDESourceControlProjectName</key>
 	<string>drnk</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>00A2A3B396C85A2C79340A87202356A2C4132DF6</key>
-		<string>https://github.com/jdsulkoske/drnk</string>
+		<string>https://github.com/jdsulkoske/drnk.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>drnk.xcworkspace</string>
@@ -21,7 +21,7 @@
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/jdsulkoske/drnk</string>
+	<string>https://github.com/jdsulkoske/drnk.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
