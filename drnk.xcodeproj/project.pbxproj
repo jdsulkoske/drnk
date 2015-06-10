@@ -24,6 +24,7 @@
 		DE83781E1B13F6C000CD8435 /* BarsInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83781D1B13F6C000CD8435 /* BarsInformation.swift */; };
 		DE8378201B13F72F00CD8435 /* CustomBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83781F1B13F72F00CD8435 /* CustomBarTableViewCell.swift */; };
 		DE9D2E541B15FD970099253D /* DataConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D2E531B15FD970099253D /* DataConnection.swift */; };
+		DEEB90AE1B27532800253196 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEB90AD1B27532800253196 /* Parser.swift */; };
 		DEFB18211B1A5CCB0091622C /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFB18201B1A5CCB0091622C /* NavigationViewController.swift */; };
 		F7EEF1F2DE862DD730501D98 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD23C2C83349B6BF9967B7C /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -75,6 +76,7 @@
 		DE83781D1B13F6C000CD8435 /* BarsInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarsInformation.swift; sourceTree = "<group>"; };
 		DE83781F1B13F72F00CD8435 /* CustomBarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBarTableViewCell.swift; sourceTree = "<group>"; };
 		DE9D2E531B15FD970099253D /* DataConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataConnection.swift; sourceTree = "<group>"; };
+		DEEB90AD1B27532800253196 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		DEFB18201B1A5CCB0091622C /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		E362FCE936A38E1295DBCD7F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,6 +163,7 @@
 		DE8377F21B13F30D00CD8435 /* drnk */ = {
 			isa = PBXGroup;
 			children = (
+				DEEB90AD1B27532800253196 /* Parser.swift */,
 				DE2E1EFA1B23A2D800C73295 /* Liquor Stores */,
 				DE2E1EF91B23A2B600C73295 /* Bars */,
 				DE11AE3B1B14E47B00999AE0 /* TheTabBarViewController.swift */,
@@ -360,6 +363,7 @@
 				DE8377FA1B13F30D00CD8435 /* LiquorStoresViewController.swift in Sources */,
 				DE9D2E541B15FD970099253D /* DataConnection.swift in Sources */,
 				DE5C83E61B1435DA00ED4255 /* BarInformationViewController.swift in Sources */,
+				DEEB90AE1B27532800253196 /* Parser.swift in Sources */,
 				DE11AE3C1B14E47B00999AE0 /* TheTabBarViewController.swift in Sources */,
 				DE8377F61B13F30D00CD8435 /* AppDelegate.swift in Sources */,
 				DE2E1EFC1B23A5A300C73295 /* LiquorStoresInformation.swift in Sources */,

@@ -13,22 +13,31 @@ var activePlace = 1
 var index : Int!
 var bar : BarsInformation!
 class BarsViewController: UIViewController, UITableViewDelegate {
-    var counter = 1
-    var timer = NSTimer()
-  
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var myTableView: UITableView!
-
+    
+    var counter = 1
+    var timer = NSTimer()
     var post : NSArray!
     var selected:[Bool] = Array(count: 100, repeatedValue: false)
     let data = DataConnection()
     
+    
     override func viewDidLoad() {
-      
+    
         super.viewDidLoad()
         self.data.getData { (responseObject, error) -> Void in
-                self.initializeValues(responseObject!)
+               
+            
+                var parser = Parser(jsonFile: responseObject!)
+                parser.parseBarInfo()
+            
+            
+                dispatch_async(dispatch_get_main_queue()){
+                self.myTableView.reloadData()
+            }
                 return
+            
 
         }
         let date = NSDate()
@@ -37,19 +46,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
         let day = formatter.stringFromDate(date)
         self.setUpBar()
     }
- func initializeValues(post:NSArray){
-        for posts in post {
-            var address = posts["address"] as! String
-            var name = posts["name"] as! String
-            bar = BarsInformation(name: name, address: address)
-            arrayOfBars.append(bar)
-            dispatch_async(dispatch_get_main_queue()){
-                self.myTableView.reloadData()
-        }
-        
-    }
-    
-}
+
 
 
     override func didReceiveMemoryWarning() {
