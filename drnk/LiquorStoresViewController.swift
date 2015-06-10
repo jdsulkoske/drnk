@@ -11,6 +11,9 @@ var arrayOfLiquorStores: [LiquorStoresInformation] = [LiquorStoresInformation]()
 
 class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBAction func showSlideMenu(sender: UIBarButtonItem) {
+        toggleSideMenuView()
+    }
     @IBOutlet weak var liquorStoreTableVIew: UITableView!
     var selected:[Bool] = Array(count: 100, repeatedValue: false)
     

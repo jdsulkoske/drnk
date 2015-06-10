@@ -6,6 +6,9 @@ import CoreLocation
 
 class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManagerDelegate {
     
+    @IBAction func showSlideMenu(sender: UIBarButtonItem) {
+        toggleSideMenuView()
+    }
     @IBOutlet weak var mapView: MKMapView!
     var locationManager: CLLocationManager!
  
@@ -16,6 +19,8 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
         locationManager.delegate = self
         locationManager.desiredAccuracy - kCLLocationAccuracyBest
           mapView.showsUserLocation = true
+        
+        
         
         if activePlace == 1 {
             locationManager.requestWhenInUseAuthorization()

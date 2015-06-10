@@ -15,6 +15,9 @@ var bar : BarsInformation!
 class BarsViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var myTableView: UITableView!
+    @IBAction func showSlideMenu(sender: UIBarButtonItem) {
+        toggleSideMenuView()
+    }
     
     var counter = 1
     var timer = NSTimer()

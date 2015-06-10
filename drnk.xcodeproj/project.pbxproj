@@ -26,6 +26,7 @@
 		DE8378201B13F72F00CD8435 /* CustomBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83781F1B13F72F00CD8435 /* CustomBarTableViewCell.swift */; };
 		DE88DF0D1B26B10100F7262E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE88DF0C1B26B10100F7262E /* MainViewController.swift */; };
 		DE9D2E541B15FD970099253D /* DataConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D2E531B15FD970099253D /* DataConnection.swift */; };
+		DE9DA4DC1B28E02600AD8A2C /* SlideTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9DA4DB1B28E02600AD8A2C /* SlideTableViewController.swift */; };
 		DEEB90AE1B27532800253196 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEB90AD1B27532800253196 /* Parser.swift */; };
 		DEFB18211B1A5CCB0091622C /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFB18201B1A5CCB0091622C /* NavigationViewController.swift */; };
 		F7EEF1F2DE862DD730501D98 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD23C2C83349B6BF9967B7C /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -80,6 +81,7 @@
 		DE83781F1B13F72F00CD8435 /* CustomBarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBarTableViewCell.swift; sourceTree = "<group>"; };
 		DE88DF0C1B26B10100F7262E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DE9D2E531B15FD970099253D /* DataConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataConnection.swift; sourceTree = "<group>"; };
+		DE9DA4DB1B28E02600AD8A2C /* SlideTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideTableViewController.swift; sourceTree = "<group>"; };
 		DEEB90AD1B27532800253196 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		DEFB18201B1A5CCB0091622C /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		E362FCE936A38E1295DBCD7F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				DE8377FE1B13F30E00CD8435 /* Images.xcassets */,
 				DE8378001B13F30E00CD8435 /* LaunchScreen.xib */,
 				DE8377F31B13F30D00CD8435 /* Supporting Files */,
+				DE9DA4DB1B28E02600AD8A2C /* SlideTableViewController.swift */,
 			);
 			path = drnk;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				DE4C116A1B28AD3700CCB54D /* Day.swift in Sources */,
 				DEFB18211B1A5CCB0091622C /* NavigationViewController.swift in Sources */,
 				DE8378201B13F72F00CD8435 /* CustomBarTableViewCell.swift in Sources */,
+				DE9DA4DC1B28E02600AD8A2C /* SlideTableViewController.swift in Sources */,
 				DE8377FA1B13F30D00CD8435 /* LiquorStoresViewController.swift in Sources */,
 				DE88DF0D1B26B10100F7262E /* MainViewController.swift in Sources */,
 				DE9D2E541B15FD970099253D /* DataConnection.swift in Sources */,
