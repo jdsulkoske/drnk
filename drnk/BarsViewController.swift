@@ -26,6 +26,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
       
         super.viewDidLoad()
+        self.navigationController?.navigationBarHidden = false
         self.data.getData { (responseObject, error) -> Void in
                 self.initializeValues(responseObject!)
                 return

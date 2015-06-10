@@ -23,6 +23,12 @@
 		DE83781C1B13F5CB00CD8435 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83781B1B13F5CB00CD8435 /* MoreViewController.swift */; };
 		DE83781E1B13F6C000CD8435 /* BarsInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83781D1B13F6C000CD8435 /* BarsInformation.swift */; };
 		DE8378201B13F72F00CD8435 /* CustomBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83781F1B13F72F00CD8435 /* CustomBarTableViewCell.swift */; };
+		DE88DF051B26B09100F7262E /* new.png in Resources */ = {isa = PBXBuildFile; fileRef = DE88DF041B26B09100F7262E /* new.png */; };
+		DE88DF071B26B09C00F7262E /* america.png in Resources */ = {isa = PBXBuildFile; fileRef = DE88DF061B26B09C00F7262E /* america.png */; };
+		DE88DF091B26B0A000F7262E /* barglass.png in Resources */ = {isa = PBXBuildFile; fileRef = DE88DF081B26B0A000F7262E /* barglass.png */; };
+		DE88DF0B1B26B0AC00F7262E /* liquorstore (1).png in Resources */ = {isa = PBXBuildFile; fileRef = DE88DF0A1B26B0AC00F7262E /* liquorstore (1).png */; };
+		DE88DF0D1B26B10100F7262E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE88DF0C1B26B10100F7262E /* ViewController.swift */; };
+		DE88DF131B27447400F7262E /* barsimg.png in Resources */ = {isa = PBXBuildFile; fileRef = DE88DF121B27447400F7262E /* barsimg.png */; };
 		DE9D2E541B15FD970099253D /* DataConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D2E531B15FD970099253D /* DataConnection.swift */; };
 		DEFB18211B1A5CCB0091622C /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFB18201B1A5CCB0091622C /* NavigationViewController.swift */; };
 		F7EEF1F2DE862DD730501D98 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD23C2C83349B6BF9967B7C /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -74,6 +80,12 @@
 		DE83781B1B13F5CB00CD8435 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		DE83781D1B13F6C000CD8435 /* BarsInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarsInformation.swift; sourceTree = "<group>"; };
 		DE83781F1B13F72F00CD8435 /* CustomBarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBarTableViewCell.swift; sourceTree = "<group>"; };
+		DE88DF041B26B09100F7262E /* new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new.png; sourceTree = "<group>"; };
+		DE88DF061B26B09C00F7262E /* america.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = america.png; sourceTree = "<group>"; };
+		DE88DF081B26B0A000F7262E /* barglass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barglass.png; sourceTree = "<group>"; };
+		DE88DF0A1B26B0AC00F7262E /* liquorstore (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "liquorstore (1).png"; sourceTree = "<group>"; };
+		DE88DF0C1B26B10100F7262E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DE88DF121B27447400F7262E /* barsimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = barsimg.png; path = ../../../barsimg.png; sourceTree = "<group>"; };
 		DE9D2E531B15FD970099253D /* DataConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataConnection.swift; sourceTree = "<group>"; };
 		DEFB18201B1A5CCB0091622C /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		E362FCE936A38E1295DBCD7F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,9 +179,15 @@
 				DE9D2E531B15FD970099253D /* DataConnection.swift */,
 				DE8378191B13F56E00CD8435 /* MapViewController.swift */,
 				DE83781B1B13F5CB00CD8435 /* MoreViewController.swift */,
+				DE88DF0C1B26B10100F7262E /* ViewController.swift */,
 				DE8377FB1B13F30D00CD8435 /* Main.storyboard */,
 				DEFB18201B1A5CCB0091622C /* NavigationViewController.swift */,
+				DE88DF081B26B0A000F7262E /* barglass.png */,
 				DE8377F51B13F30D00CD8435 /* AppDelegate.swift */,
+				DE88DF0A1B26B0AC00F7262E /* liquorstore (1).png */,
+				DE88DF041B26B09100F7262E /* new.png */,
+				DE88DF121B27447400F7262E /* barsimg.png */,
+				DE88DF061B26B09C00F7262E /* america.png */,
 				DE8377FE1B13F30E00CD8435 /* Images.xcassets */,
 				DE8378001B13F30E00CD8435 /* LaunchScreen.xib */,
 				DE8377F31B13F30D00CD8435 /* Supporting Files */,
@@ -287,8 +305,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE88DF131B27447400F7262E /* barsimg.png in Resources */,
+				DE88DF051B26B09100F7262E /* new.png in Resources */,
+				DE88DF071B26B09C00F7262E /* america.png in Resources */,
 				DE8377FD1B13F30D00CD8435 /* Main.storyboard in Resources */,
 				DE8378021B13F30E00CD8435 /* LaunchScreen.xib in Resources */,
+				DE88DF0B1B26B0AC00F7262E /* liquorstore (1).png in Resources */,
+				DE88DF091B26B0A000F7262E /* barglass.png in Resources */,
 				DE8377FF1B13F30E00CD8435 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +382,7 @@
 				DEFB18211B1A5CCB0091622C /* NavigationViewController.swift in Sources */,
 				DE8378201B13F72F00CD8435 /* CustomBarTableViewCell.swift in Sources */,
 				DE8377FA1B13F30D00CD8435 /* LiquorStoresViewController.swift in Sources */,
+				DE88DF0D1B26B10100F7262E /* ViewController.swift in Sources */,
 				DE9D2E541B15FD970099253D /* DataConnection.swift in Sources */,
 				DE5C83E61B1435DA00ED4255 /* BarInformationViewController.swift in Sources */,
 				DE11AE3C1B14E47B00999AE0 /* TheTabBarViewController.swift in Sources */,

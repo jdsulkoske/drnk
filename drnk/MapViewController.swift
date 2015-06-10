@@ -11,6 +11,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBarHidden = false
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy - kCLLocationAccuracyBest

@@ -14,11 +14,11 @@ class NavigationViewController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
       //  self.navigationBar.tintColor = UIColor.whiteColor()
-        self.navigationBar.barTintColor = UIColor(red: 146/225, green: 18/225, blue: 18/225, alpha: 1)
+        self.navigationBar.barTintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
         self.navigationBar.translucent = false
-        self.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Avenir", size: 20)! , NSForegroundColorAttributeName: UIColor.whiteColor()]
-        self.navigationBar.tintColor = UIColor.whiteColor()
-        
+        self.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Avenir", size: 20)! , NSForegroundColorAttributeName: UIColor(red: 0/255, green: 178/255, blue: 255/255, alpha: 1)]
+        self.navigationBar.tintColor = UIColor(red: 0/255, green: 178/255, blue: 255/255, alpha: 1)
+        self.navigationController?.navigationBarHidden = true
 
     }
 
