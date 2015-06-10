@@ -436,7 +436,7 @@
         <!--drnk.-->
         <scene sceneID="BtP-H5-gCh">
             <objects>
-                <viewController id="tMn-3v-r6N" customClass="ViewController" customModule="drnk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tMn-3v-r6N" customClass="MainViewController" customModule="drnk" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KPb-lt-2LX"/>
                         <viewControllerLayoutGuide type="bottom" id="4bj-Ma-DhJ"/>
