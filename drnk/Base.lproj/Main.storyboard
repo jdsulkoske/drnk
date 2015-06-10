@@ -20,8 +20,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tC1-b1-PNE">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="barsimg.png" translatesAutoresizingMaskIntoConstraints="NO" id="jIA-fe-hPa">
-                                        <rect key="frame" x="-17" y="-287" width="414" height="736"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barsimg" translatesAutoresizingMaskIntoConstraints="NO" id="jIA-fe-hPa">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                     </imageView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="161" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ziq-L7-Kao">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -407,11 +407,11 @@
                         <viewControllerLayoutGuide type="bottom" id="NlW-AY-fIu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6Os-Q2-i0c">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZX6-Tr-JzZ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.36670278280000002" alpha="0.70999999999999996" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="aFS-wp-g30" id="Ri3-lt-8Xp"/>
@@ -448,13 +448,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new.png" translatesAutoresizingMaskIntoConstraints="NO" id="bu2-m4-ZDI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new" translatesAutoresizingMaskIntoConstraints="NO" id="bu2-m4-ZDI">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <view alpha="0.89999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aiM-UG-Slr">
                                 <rect key="frame" x="16" y="102" width="568" height="127"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barglass.png" translatesAutoresizingMaskIntoConstraints="NO" id="qw7-jf-sWP">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barglass" translatesAutoresizingMaskIntoConstraints="NO" id="qw7-jf-sWP">
                                         <rect key="frame" x="8" y="32" width="74" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="74" id="uGi-cT-pcC"/>
@@ -497,7 +497,7 @@
                             <view alpha="0.89999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEv-FO-02e">
                                 <rect key="frame" x="16" y="249" width="568" height="127"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="liquorstore (1).png" translatesAutoresizingMaskIntoConstraints="NO" id="vJ9-Nd-rnx">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="liquorstore (1)" translatesAutoresizingMaskIntoConstraints="NO" id="vJ9-Nd-rnx">
                                         <rect key="frame" x="8" y="30" width="74" height="56"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="74" id="fey-kR-B3q"/>
@@ -540,7 +540,7 @@
                             <view alpha="0.89999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPB-Fg-G9C">
                                 <rect key="frame" x="16" y="398" width="568" height="127"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="america.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ihb-jr-9y6">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="america" translatesAutoresizingMaskIntoConstraints="NO" id="Ihb-jr-9y6">
                                         <rect key="frame" x="8" y="26" width="74" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="74" id="7c3-Ae-n8m"/>
@@ -664,13 +664,12 @@
         <image name="Brothers" width="128" height="128"/>
         <image name="ThinLine" width="355" height="83"/>
         <image name="america" width="60" height="60"/>
-        <image name="america.png" width="60" height="60"/>
-        <image name="barglass.png" width="60" height="60"/>
-        <image name="barsimg.png" width="722" height="878"/>
-        <image name="liquorstore (1).png" width="60" height="60"/>
-        <image name="new.png" width="592" height="942"/>
+        <image name="barglass" width="60" height="60"/>
+        <image name="barsimg" width="722" height="878"/>
+        <image name="liquorstore (1)" width="60" height="60"/>
+        <image name="new" width="592" height="942"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rpb-cZ-YeA"/>
+        <segue reference="Jip-si-LOY"/>
     </inferredMetricsTieBreakers>
 </document>
