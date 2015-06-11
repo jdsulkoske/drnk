@@ -560,7 +560,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="mqb-NF-X7A" kind="showDetail" id="H7e-wB-kN8"/>
+                                            <segue destination="mqb-NF-X7A" kind="show" id="H7e-wB-kN8"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="lZj-Bw-uOf" rowHeight="70" style="IBUITableViewCellStyleDefault" id="BXt-jW-qEm">
