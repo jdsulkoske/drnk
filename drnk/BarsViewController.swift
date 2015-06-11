@@ -29,6 +29,11 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
     
         super.viewDidLoad()
+        
+        
+        if self.revealViewController() != nil {
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
         self.navigationController?.navigationBarHidden = false
         self.data.getData { (responseObject, error) -> Void in
                

@@ -15,6 +15,10 @@ class MainViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+ 
+        if self.revealViewController() != nil {
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
 //        self.navigationController?.navigationBarHidden = false
         
         // Do any additional setup after loading the view, typically from a nib.

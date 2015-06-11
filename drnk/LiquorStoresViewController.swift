@@ -20,7 +20,9 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if self.revealViewController() != nil {
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
         // Do any additional setup after loading the view, typically from a nib.
         self.setUpLiquorStore()
     }
