@@ -21,23 +21,23 @@ class SlideTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        var destinationVC: UIViewController!
-        
-        if indexPath.row == 1{
-            destinationVC = storyboard.instantiateViewControllerWithIdentifier("MapViewController") as! MapViewController?
-            
-        } else if indexPath.row == 2{
-            destinationVC = storyboard.instantiateViewControllerWithIdentifier("MapViewController") as! MapViewController?
-        } else if indexPath.row == 3{
-            destinationVC = storyboard.instantiateViewControllerWithIdentifier("MapViewController") as! MapViewController?
-        } else if indexPath.row == 4{
-            destinationVC = storyboard.instantiateViewControllerWithIdentifier("MapViewController") as! MapViewController?
-        }
-        
-        sideMenuController()?.setContentViewController(destinationVC)
-    }
+//    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        var destinationVC: UIViewController!
+//        
+//        if indexPath.row == 1{
+//            destinationVC = storyboard.instantiateViewControllerWithIdentifier("MapViewController") as! MapViewController?
+//            
+//        } else if indexPath.row == 2{
+//            destinationVC = storyboard.instantiateViewControllerWithIdentifier("MapViewController") as! MapViewController?
+//        } else if indexPath.row == 3{
+//            destinationVC = storyboard.instantiateViewControllerWithIdentifier("MapViewController") as! MapViewController?
+//        } else if indexPath.row == 4{
+//            destinationVC = storyboard.instantiateViewControllerWithIdentifier("MapViewController") as! MapViewController?
+//        }
+//        
+//        sideMenuController()?.setContentViewController(destinationVC)
+//    }
     
 
 

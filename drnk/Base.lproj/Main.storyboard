@@ -20,8 +20,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tC1-b1-PNE">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="barsimg.png" translatesAutoresizingMaskIntoConstraints="NO" id="jIA-fe-hPa">
-                                        <rect key="frame" x="-17" y="-287" width="414" height="736"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barsimg" translatesAutoresizingMaskIntoConstraints="NO" id="jIA-fe-hPa">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                     </imageView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="161" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ziq-L7-Kao">
                                         <rect key="frame" x="0.0" y="64" width="414" height="672"/>
@@ -75,7 +75,7 @@
                                                             <connections>
                                                                 <action selector="addressOfBarPressed:" destination="fDo-VJ-Csh" eventType="touchUpInside" id="tI4-Qb-UnH"/>
                                                                 <action selector="assignRowIndexToButton:" destination="yvX-hM-S0D" eventType="touchUpInside" id="x7f-Qu-zJE"/>
-                                                                <segue destination="aFS-wp-g30" kind="show" identifier="newPlace" id="Jip-si-LOY"/>
+                                                                <segue destination="aFS-wp-g30" kind="show" identifier="newPlace" id="Z7a-UY-SB5"/>
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2 Double Wells " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.70000000000000018" translatesAutoresizingMaskIntoConstraints="NO" id="lp6-Sv-0bj">
@@ -409,7 +409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jPp-U1-gu3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1168" y="-146"/>
+            <point key="canvasLocation" x="1163" y="-152"/>
         </scene>
         <!--map.-->
         <scene sceneID="oLp-kv-9eP">
@@ -420,11 +420,11 @@
                         <viewControllerLayoutGuide type="bottom" id="NlW-AY-fIu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6Os-Q2-i0c">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZX6-Tr-JzZ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.36670278280000002" alpha="0.70999999999999996" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="aFS-wp-g30" id="Ri3-lt-8Xp"/>
@@ -497,8 +497,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="yvX-hM-S0D" kind="show" identifier="barsSegue" id="oDU-O5-og6"/>
-                        <segue destination="mqb-NF-X7A" kind="show" identifier="liquorSegue" id="54Q-eT-F1s"/>
                         <segue destination="aFS-wp-g30" kind="show" identifier="mapSegue" id="AB0-Jv-v1F"/>
                     </connections>
                 </viewController>
@@ -525,7 +523,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="drnk." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yYy-dr-BQN">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -539,11 +537,14 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="bars." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8Ef-UM-bvk">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="yvX-hM-S0D" kind="show" id="ejy-fp-JPD"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="e5g-zG-uVB" rowHeight="70" style="IBUITableViewCellStyleDefault" id="Itt-Am-sd5">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -553,11 +554,14 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="liquor stores." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e5g-zG-uVB">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="mqb-NF-X7A" kind="showDetail" id="H7e-wB-kN8"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="lZj-Bw-uOf" rowHeight="70" style="IBUITableViewCellStyleDefault" id="BXt-jW-qEm">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -567,11 +571,14 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="map." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lZj-Bw-uOf">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="aFS-wp-g30" kind="show" id="dq4-4F-JPO"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -613,6 +620,6 @@
         <image name="new" width="592" height="942"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AB0-Jv-v1F"/>
+        <segue reference="Z7a-UY-SB5"/>
     </inferredMetricsTieBreakers>
 </document>
