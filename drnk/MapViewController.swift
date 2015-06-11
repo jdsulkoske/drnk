@@ -14,6 +14,9 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        if self.revealViewController() != nil {
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
         self.navigationController?.navigationBarHidden = false
         locationManager = CLLocationManager()
         locationManager.delegate = self

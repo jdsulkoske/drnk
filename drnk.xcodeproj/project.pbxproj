@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DE2E1EF81B23A2B100C73295 /* CustomLiquorStoresTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2E1EF71B23A2B100C73295 /* CustomLiquorStoresTableViewCell.swift */; };
 		DE2E1EFC1B23A5A300C73295 /* LiquorStoresInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2E1EFB1B23A5A300C73295 /* LiquorStoresInformation.swift */; };
+		DE4667091B29E96F0033C1C3 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4667081B29E96F0033C1C3 /* SWRevealViewController.m */; };
 		DE4C116A1B28AD3700CCB54D /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4C11691B28AD3700CCB54D /* Day.swift */; };
 		DE4C116F1B28C70B00CCB54D /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4C116D1B28C70B00CCB54D /* ENSideMenu.swift */; };
 		DE4C11701B28C70B00CCB54D /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4C116E1B28C70B00CCB54D /* ENSideMenuNavigationController.swift */; };
@@ -60,8 +61,11 @@
 		CE7E4B028E49A6FCEA94D4A6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DE2E1EF71B23A2B100C73295 /* CustomLiquorStoresTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLiquorStoresTableViewCell.swift; sourceTree = "<group>"; };
 		DE2E1EFB1B23A5A300C73295 /* LiquorStoresInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiquorStoresInformation.swift; sourceTree = "<group>"; };
+		DE4667061B29E96E0033C1C3 /* drnk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "drnk-Bridging-Header.h"; sourceTree = "<group>"; };
+		DE4667071B29E96F0033C1C3 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		DE4667081B29E96F0033C1C3 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		DE4C11691B28AD3700CCB54D /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
-		DE4C116D1B28C70B00CCB54D /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenu.swift; sourceTree = "<group>"; };
+		DE4C116D1B28C70B00CCB54D /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenu.swift; sourceTree = "<group>"; };
 		DE4C116E1B28C70B00CCB54D /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenuNavigationController.swift; sourceTree = "<group>"; };
 		DE5C83E51B1435DA00ED4255 /* BarInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarInformationViewController.swift; sourceTree = "<group>"; };
 		DE5FB7861B14F73D00C9EC44 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -192,7 +196,10 @@
 		DE8377F31B13F30D00CD8435 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DE4667071B29E96F0033C1C3 /* SWRevealViewController.h */,
+				DE4667081B29E96F0033C1C3 /* SWRevealViewController.m */,
 				DE8377F41B13F30D00CD8435 /* Info.plist */,
+				DE4667061B29E96E0033C1C3 /* drnk-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -372,6 +379,7 @@
 				DEFB18211B1A5CCB0091622C /* NavigationViewController.swift in Sources */,
 				DE8378201B13F72F00CD8435 /* CustomBarTableViewCell.swift in Sources */,
 				DE9DA4DC1B28E02600AD8A2C /* SlideTableViewController.swift in Sources */,
+				DE4667091B29E96F0033C1C3 /* SWRevealViewController.m in Sources */,
 				DE8377FA1B13F30D00CD8435 /* LiquorStoresViewController.swift in Sources */,
 				DE88DF0D1B26B10100F7262E /* MainViewController.swift in Sources */,
 				DE9D2E541B15FD970099253D /* DataConnection.swift in Sources */,
@@ -509,12 +517,15 @@
 			baseConfigurationReference = CE7E4B028E49A6FCEA94D4A6 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = drnk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "drnk/drnk-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -524,12 +535,14 @@
 			baseConfigurationReference = E362FCE936A38E1295DBCD7F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = drnk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "drnk/drnk-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
