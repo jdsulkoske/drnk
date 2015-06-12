@@ -11,6 +11,7 @@ var arrayOfLiquorStores: [LiquorStoresInformation] = [LiquorStoresInformation]()
 
 class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBAction func showSlideMenu(sender: UIBarButtonItem) {
         toggleSideMenuView()
     }
@@ -21,6 +22,8 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         // Do any additional setup after loading the view, typically from a nib.
