@@ -22,11 +22,11 @@ class NavigationViewController: ENSideMenuNavigationController {
 //        self.navigationController?.navigationBarHidden = true
 
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let menu = storyboard.instantiateViewControllerWithIdentifier("SlideTableViewController") as! SlideTableViewController
-        sideMenu = ENSideMenu(sourceView: self.view, menuViewController: menu, menuPosition: ENSideMenuPosition.Left)
-        sideMenu?.menuWidth = 180
-        view.bringSubviewToFront(navigationBar)
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let menu = storyboard.instantiateViewControllerWithIdentifier("SlideTableViewController") as! SlideTableViewController
+//        sideMenu = ENSideMenu(sourceView: self.view, menuViewController: menu, menuPosition: ENSideMenuPosition.Left)
+//        sideMenu?.menuWidth = 180
+//        view.bringSubviewToFront(navigationBar)
         
         
     }

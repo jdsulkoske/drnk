@@ -11,7 +11,8 @@ import UIKit
 class MainViewController: UIViewController {
 
     @IBAction func showSlideMenu(sender: UIBarButtonItem) {
-        toggleSideMenuView()
+            self.revealViewController()
+
     }
     override func viewDidLoad() {
         super.viewDidLoad()
