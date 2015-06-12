@@ -29,8 +29,6 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
     
         super.viewDidLoad()
-        
-        
         if self.revealViewController() != nil {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
