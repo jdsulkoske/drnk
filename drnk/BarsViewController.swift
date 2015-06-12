@@ -13,6 +13,8 @@ var activePlace = 1
 var index : Int!
 var bar : BarsInformation!
 class BarsViewController: UIViewController, UITableViewDelegate {
+   
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var myTableView: UITableView!
     @IBAction func showSlideMenu(sender: UIBarButtonItem) {
@@ -29,9 +31,11 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
     
         super.viewDidLoad()
-        
+    
         
         if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         self.navigationController?.navigationBarHidden = false

@@ -6,6 +6,7 @@ import CoreLocation
 
 class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManagerDelegate {
     
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBAction func showSlideMenu(sender: UIBarButtonItem) {
         toggleSideMenuView()
     }
@@ -15,6 +16,8 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
     override func viewDidLoad() {
         super.viewDidLoad()
         if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         self.navigationController?.navigationBarHidden = false

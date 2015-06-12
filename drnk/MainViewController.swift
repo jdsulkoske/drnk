@@ -10,6 +10,7 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBAction func showSlideMenu(sender: UIBarButtonItem) {
             self.revealViewController()
 
@@ -18,6 +19,8 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
  
         if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
 //        self.navigationController?.navigationBarHidden = false
