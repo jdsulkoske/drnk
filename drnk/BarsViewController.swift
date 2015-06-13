@@ -17,6 +17,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var myTableView: UITableView!
+    @IBOutlet weak var showMenuButton: UIBarButtonItem!
     @IBAction func showSlideMenu(sender: UIBarButtonItem) {
         toggleSideMenuView()
     }
@@ -31,12 +32,14 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
     
         super.viewDidLoad()
+        self.navigationController?.toolbar.barTintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+        self.navigationController?.toolbar.tintColor = UIColor(red: 0/255, green: 178/255, blue: 255/255, alpha: 1)
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-        self.navigationController?.navigationBarHidden = false
+        self.navigationController?.navigationBarHidden = true
         self.data.getData { (responseObject, error) -> Void in
                
             

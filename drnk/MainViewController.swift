@@ -10,12 +10,15 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    @IBAction func showMenu(sender: UIBarButtonItem) {
-        revealViewController().tapGestureRecognizer()
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    @IBAction func showSlideMenu(sender: UIBarButtonItem) {
+            self.revealViewController()
+
     }
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        self.navigationController?.toolbar.barTintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+        self.navigationController?.navigationBarHidden = true
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"

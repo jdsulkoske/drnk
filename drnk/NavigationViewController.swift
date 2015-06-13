@@ -19,7 +19,7 @@ class NavigationViewController: ENSideMenuNavigationController {
         self.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Avenir", size: 20)! , NSForegroundColorAttributeName: UIColor(red: 0/255, green: 178/255, blue: 255/255, alpha: 1)]
         self.navigationBar.tintColor = UIColor(red: 0/255, green: 178/255, blue: 255/255, alpha: 1)
         self.navigationController?.navigationBarHidden = false
-
+        
         
         
     }
