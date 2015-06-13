@@ -12,7 +12,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
     }
     @IBOutlet weak var mapView: MKMapView!
     var locationManager: CLLocationManager!
-   
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         revealToggle()
