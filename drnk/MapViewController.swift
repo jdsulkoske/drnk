@@ -12,18 +12,14 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
     }
     @IBOutlet weak var mapView: MKMapView!
     var locationManager: CLLocationManager!
- 
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        if self.revealViewController() != nil {
-            menuButton.target = self.revealViewController()
-            menuButton.action = "revealToggle:"
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
+        revealToggle()
         self.navigationController?.navigationBarHidden = false
         locationManager = CLLocationManager()
         locationManager.delegate = self
-        locationManager.desiredAccuracy - kCLLocationAccuracyBest
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
           mapView.showsUserLocation = true
         
         
@@ -42,6 +38,13 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
         mapView.addGestureRecognizer(uilpgr)
     }
     
+    func revealToggle(){
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+    }
     
     func findAddressOnMap(){
         var address : String?
