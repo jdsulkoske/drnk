@@ -234,21 +234,19 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Brothers" translatesAutoresizingMaskIntoConstraints="NO" id="Ojo-mi-KOz">
-                                <rect key="frame" x="0.0" y="64" width="414" height="122"/>
-                                <color key="tintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Ojo-mi-KOz" secondAttribute="trailing" id="Hze-cF-ad1"/>
-                            <constraint firstItem="Ojo-mi-KOz" firstAttribute="leading" secondItem="xRQ-0W-gYE" secondAttribute="leading" id="IcL-Nd-Y75"/>
-                            <constraint firstItem="bwV-CA-0iE" firstAttribute="top" secondItem="Ojo-mi-KOz" secondAttribute="bottom" constant="22" id="MSG-Oz-4sK"/>
                             <constraint firstItem="bwV-CA-0iE" firstAttribute="leading" secondItem="xRQ-0W-gYE" secondAttribute="leading" constant="121" id="Qaa-Xs-Pza"/>
                             <constraint firstItem="5fi-4X-USy" firstAttribute="top" secondItem="bwV-CA-0iE" secondAttribute="bottom" constant="463" id="Tx0-LD-9KC"/>
-                            <constraint firstItem="Ojo-mi-KOz" firstAttribute="top" secondItem="pkp-nD-2pR" secondAttribute="bottom" constant="44" id="aMa-wf-Qkc"/>
                         </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="back" id="yRD-mO-VeU"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="y5u-Kg-R0U"/>
+                    <connections>
+                        <outlet property="menu" destination="yRD-mO-VeU" id="dvm-GR-mDM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEY-Iv-tkf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -440,11 +438,11 @@
                         <viewControllerLayoutGuide type="bottom" id="NlW-AY-fIu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6Os-Q2-i0c">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZX6-Tr-JzZ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="702"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.36670278280000002" alpha="0.70999999999999996" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="aFS-wp-g30" id="Ri3-lt-8Xp"/>
@@ -453,10 +451,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="ZX6-Tr-JzZ" secondAttribute="trailing" id="5KB-3a-TNi"/>
-                            <constraint firstItem="ZX6-Tr-JzZ" firstAttribute="leading" secondItem="6Os-Q2-i0c" secondAttribute="leading" id="gay-cp-XP5"/>
-                            <constraint firstItem="ZX6-Tr-JzZ" firstAttribute="bottom" secondItem="NlW-AY-fIu" secondAttribute="top" id="hWG-le-Rqu"/>
-                            <constraint firstItem="ZX6-Tr-JzZ" firstAttribute="top" secondItem="6Os-Q2-i0c" secondAttribute="top" id="ish-tc-CxT"/>
+                            <constraint firstItem="ZX6-Tr-JzZ" firstAttribute="top" secondItem="6Os-Q2-i0c" secondAttribute="top" id="YUh-eK-Idf"/>
+                            <constraint firstAttribute="trailing" secondItem="ZX6-Tr-JzZ" secondAttribute="trailing" id="b5A-57-k3G"/>
+                            <constraint firstItem="ZX6-Tr-JzZ" firstAttribute="leading" secondItem="6Os-Q2-i0c" secondAttribute="leading" id="ky7-hC-2XN"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ZX6-Tr-JzZ" secondAttribute="bottom" constant="34" id="qpQ-30-KX4"/>
                         </constraints>
                     </view>
                     <toolbarItems>
@@ -717,7 +715,7 @@
         <image name="new" width="592" height="942"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eBB-SS-nCt"/>
         <segue reference="DDe-9Z-W1v"/>
+        <segue reference="Z7a-UY-SB5"/>
     </inferredMetricsTieBreakers>
 </document>
