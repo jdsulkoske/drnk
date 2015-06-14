@@ -17,7 +17,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var myTableView: UITableView!
-    @IBOutlet weak var showMenuButton: UIBarButtonItem!
+
     @IBAction func showSlideMenu(sender: UIBarButtonItem) {
         toggleSideMenuView()
     }
