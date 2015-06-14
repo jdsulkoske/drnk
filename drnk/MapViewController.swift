@@ -17,7 +17,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
         self.navigationController?.toolbar.barTintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
         super.viewDidLoad()
         revealToggle()
-        self.navigationController?.navigationBarHidden = false
+        self.navigationController?.navigationBarHidden = true
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
