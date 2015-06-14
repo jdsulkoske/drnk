@@ -199,9 +199,8 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="menuButton" destination="ugP-Gq-zzW" id="KUy-Bw-cdF"/>
+                        <outlet property="menuButton" destination="8nq-aS-2Gk" id="ngy-fA-AXy"/>
                         <outlet property="myTableView" destination="Ziq-L7-Kao" id="qh8-jK-wyv"/>
-                        <outlet property="showMenuButton" destination="8nq-aS-2Gk" id="fT9-cj-Hz4"/>
                         <segue destination="XBf-wS-PsZ" kind="show" identifier="showBarInformationSegue" id="AbQ-O9-hi3"/>
                     </connections>
                 </viewController>
@@ -227,7 +226,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information for bar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwV-CA-0iE">
-                                <rect key="frame" x="121" y="208" width="134.5" height="21"/>
+                                <rect key="frame" x="121" y="208" width="135" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="eFm-zP-9SJ"/>
                                 </constraints>
@@ -425,7 +424,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="liquorStoreTableVIew" destination="Ppe-9m-1f2" id="rae-CO-bWZ"/>
-                        <outlet property="menuButton" destination="UkH-df-Peo" id="6rj-I3-hZ6"/>
+                        <outlet property="menuButton" destination="iFZ-aM-zrV" id="Yhw-fB-Uu3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jPp-U1-gu3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -454,28 +453,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ZX6-Tr-JzZ" firstAttribute="leading" secondItem="6Os-Q2-i0c" secondAttribute="leading" id="7AJ-xP-gGB"/>
-                            <constraint firstItem="ZX6-Tr-JzZ" firstAttribute="top" secondItem="6Os-Q2-i0c" secondAttribute="top" id="RRV-XW-kiC"/>
-                            <constraint firstItem="ZX6-Tr-JzZ" firstAttribute="bottom" secondItem="NlW-AY-fIu" secondAttribute="top" id="iDO-DY-bmd"/>
-                            <constraint firstAttribute="trailing" secondItem="ZX6-Tr-JzZ" secondAttribute="trailing" id="jAQ-St-Lfa"/>
+                            <constraint firstAttribute="trailing" secondItem="ZX6-Tr-JzZ" secondAttribute="trailing" id="5KB-3a-TNi"/>
+                            <constraint firstItem="ZX6-Tr-JzZ" firstAttribute="leading" secondItem="6Os-Q2-i0c" secondAttribute="leading" id="gay-cp-XP5"/>
+                            <constraint firstItem="ZX6-Tr-JzZ" firstAttribute="bottom" secondItem="NlW-AY-fIu" secondAttribute="top" id="hWG-le-Rqu"/>
+                            <constraint firstItem="ZX6-Tr-JzZ" firstAttribute="top" secondItem="6Os-Q2-i0c" secondAttribute="top" id="ish-tc-CxT"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="america" id="6Xe-Cn-VVD"/>
                     <toolbarItems>
                         <barButtonItem title="menu." width="70" id="RoI-x1-gqI">
                             <color key="tintColor" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="map." id="j5j-yR-PGI">
-                        <barButtonItem key="leftBarButtonItem" title="menu." id="WtO-KW-7vO">
-                            <connections>
-                                <action selector="showSlideMenu:" destination="aFS-wp-g30" id="meF-ru-Qqp"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="map." id="o7O-7j-9Pa"/>
                     <connections>
                         <outlet property="mapView" destination="ZX6-Tr-JzZ" id="hDg-X9-Omk"/>
-                        <outlet property="menuButton" destination="WtO-KW-7vO" id="DZQ-pF-Kjw"/>
+                        <outlet property="menuButton" destination="RoI-x1-gqI" id="Sut-vC-LhW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pjb-rF-ovs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -529,7 +521,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="menuButton" destination="hQh-Ix-NmW" id="aF0-nw-DBz"/>
+                        <outlet property="menuButton" destination="IE2-69-Tva" id="WXF-SA-O5C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f3t-nD-Xyo" sceneMemberID="firstResponder"/>
@@ -566,6 +558,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <imageView key="tableFooterView" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barsimg" id="gBT-K9-BaQ">
+                            <rect key="frame" x="0.0" y="280" width="600" height="314"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <sections>
                             <tableViewSection id="4d5-ud-djk">
                                 <cells>
@@ -717,12 +713,11 @@
     <resources>
         <image name="Brothers" width="128" height="128"/>
         <image name="ThinLine" width="355" height="83"/>
-        <image name="america" width="60" height="60"/>
         <image name="barsimg" width="722" height="878"/>
         <image name="new" width="592" height="942"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="eBB-SS-nCt"/>
         <segue reference="DDe-9Z-W1v"/>
-        <segue reference="ohu-0x-7EJ"/>
     </inferredMetricsTieBreakers>
 </document>
