@@ -234,18 +234,34 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ott-XJ-Nwa">
+                                <rect key="frame" x="16" y="128" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="5fi-4X-USy" firstAttribute="top" secondItem="ott-XJ-Nwa" secondAttribute="bottom" constant="543" id="FDt-7I-FEq"/>
                             <constraint firstItem="bwV-CA-0iE" firstAttribute="leading" secondItem="xRQ-0W-gYE" secondAttribute="leading" constant="121" id="Qaa-Xs-Pza"/>
                             <constraint firstItem="5fi-4X-USy" firstAttribute="top" secondItem="bwV-CA-0iE" secondAttribute="bottom" constant="463" id="Tx0-LD-9KC"/>
+                            <constraint firstItem="ott-XJ-Nwa" firstAttribute="top" secondItem="pkp-nD-2pR" secondAttribute="bottom" constant="64" id="a4K-yh-Ff4"/>
+                            <constraint firstItem="ott-XJ-Nwa" firstAttribute="leading" secondItem="xRQ-0W-gYE" secondAttribute="leadingMargin" id="aSu-QU-Zf1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ott-XJ-Nwa" secondAttribute="trailing" constant="340" id="fcc-lq-ZVA"/>
                         </constraints>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="back" id="yRD-mO-VeU"/>
+                        <barButtonItem title="&lt; back" width="70" id="yRD-mO-VeU">
+                            <connections>
+                                <action selector="hey:" destination="XBf-wS-PsZ" id="3Uc-SH-dga"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="y5u-Kg-R0U"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="menu" destination="yRD-mO-VeU" id="dvm-GR-mDM"/>
+                        <outlet property="nameOfBar" destination="ott-XJ-Nwa" id="4Sw-Ua-M0G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEY-Iv-tkf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -455,7 +471,7 @@
                             <constraint firstItem="ZX6-Tr-JzZ" firstAttribute="top" secondItem="6Os-Q2-i0c" secondAttribute="top" id="YUh-eK-Idf"/>
                             <constraint firstAttribute="trailing" secondItem="ZX6-Tr-JzZ" secondAttribute="trailing" id="b5A-57-k3G"/>
                             <constraint firstItem="ZX6-Tr-JzZ" firstAttribute="leading" secondItem="6Os-Q2-i0c" secondAttribute="leading" id="ky7-hC-2XN"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="ZX6-Tr-JzZ" secondAttribute="bottom" constant="34" id="qpQ-30-KX4"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ZX6-Tr-JzZ" secondAttribute="bottom" id="qpQ-30-KX4"/>
                         </constraints>
                     </view>
                     <toolbarItems>

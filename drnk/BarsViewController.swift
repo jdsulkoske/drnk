@@ -120,7 +120,6 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        
     }
     
      func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {

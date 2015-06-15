@@ -12,12 +12,16 @@ class BarInformationViewController: UIViewController {
     @IBOutlet weak var collectionviewCell: UICollectionView!
 
     @IBOutlet weak var menu: UIBarButtonItem!
+    @IBOutlet weak var nameOfBar: UILabel!
+    @IBAction func hey(sender: UIBarButtonItem) {
+        navigationController?.popViewControllerAnimated(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if self.revealViewController() != nil {
-            menu.target = self.revealViewController()
-            menu.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+
         }
         // Do any additional setup after loading the view.
     }
@@ -38,5 +42,6 @@ class BarInformationViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
 
 }
