@@ -145,7 +145,6 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
 
         self.mapView.setRegion(region, animated: true)
         
-        
     }
 
 
