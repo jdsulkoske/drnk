@@ -475,6 +475,12 @@
                         </constraints>
                     </view>
                     <toolbarItems>
+                        <barButtonItem title="&lt; back" width="70" id="IvQ-DO-Vd3">
+                            <color key="tintColor" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="backButton:" destination="aFS-wp-g30" id="g34-La-mxx"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem title="menu." width="70" id="RoI-x1-gqI">
                             <color key="tintColor" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
@@ -488,7 +494,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pjb-rF-ovs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="740" y="-2521"/>
+            <point key="canvasLocation" x="740" y="-2485"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="BtP-H5-gCh">
@@ -736,6 +742,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DDe-9Z-W1v"/>
-        <segue reference="ohu-0x-7EJ"/>
+        <segue reference="eBB-SS-nCt"/>
     </inferredMetricsTieBreakers>
 </document>

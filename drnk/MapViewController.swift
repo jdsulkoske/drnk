@@ -5,6 +5,9 @@ import UIKit
 import CoreLocation
 
 class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManagerDelegate {
+    @IBAction func backButton(sender: AnyObject) {
+        navigationController?.popToRootViewControllerAnimated(true)
+    }
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBAction func showSlideMenu(sender: UIBarButtonItem) {

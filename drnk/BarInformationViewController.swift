@@ -14,7 +14,7 @@ class BarInformationViewController: UIViewController {
     @IBOutlet weak var menu: UIBarButtonItem!
     @IBOutlet weak var nameOfBar: UILabel!
     @IBAction func hey(sender: UIBarButtonItem) {
-        navigationController?.popViewControllerAnimated(true)
+        navigationController?.popToRootViewControllerAnimated(true)
     }
     
     override func viewDidLoad() {
