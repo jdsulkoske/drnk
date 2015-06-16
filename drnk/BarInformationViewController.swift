@@ -11,15 +11,8 @@ import UIKit
 class BarInformationViewController: UIViewController {
     @IBOutlet weak var collectionviewCell: UICollectionView!
 
-    @IBOutlet weak var menu: UIBarButtonItem!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        if self.revealViewController() != nil {
-            menu.target = self.revealViewController()
-            menu.action = "revealToggle:"
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
-        // Do any additional setup after loading the view.
+       override func viewDidLoad() {
+                // Do any additional setup after loading the view.
     }
 
     
