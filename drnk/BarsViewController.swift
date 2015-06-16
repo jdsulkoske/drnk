@@ -13,7 +13,7 @@ var activePlace = 1
 var index : Int!
 var bar : BarsInformation!
 class BarsViewController: UIViewController, UITableViewDelegate {
-   
+    var valueToPass : String?
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var myTableView: UITableView!
@@ -60,8 +60,14 @@ class BarsViewController: UIViewController, UITableViewDelegate {
         let day = formatter.stringFromDate(date)
         self.setUpBar()
     }
+    
+    
 
-
+    override func viewDidAppear(animated: Bool) {
+        if self.revealViewController() != nil {
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -120,17 +126,20 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+//        let indexPath = tableView.indexPathForSelectedRow();
+//        let currentCell = tableView.cellForRowAtIndexPath(indexPath!) as UITableViewCell!;
+        
+        valueToPass = arrayOfBars[indexPath.row].name
+        performSegueWithIdentifier("showBarInformationSegue", sender: self)
+        println(indexPath.row)
+        
     }
     
-     func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-        
-        
-        return indexPath
-        
-    }
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showBarInformationSegue"{
             let barInformationViewController = segue.destinationViewController as! BarInformationViewController
+            barInformationViewController.passedValue = valueToPass
             
         }
         if segue.identifier == "newPlace" {
