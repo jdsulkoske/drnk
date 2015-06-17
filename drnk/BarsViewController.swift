@@ -10,7 +10,7 @@ import UIKit
 
 var arrayOfBars: [BarsInformation] = [BarsInformation]()
 var activePlace = 1
-var index : Int!
+var index : Int?
 var bar : BarsInformation!
 class BarsViewController: UIViewController, UITableViewDelegate {
     var valueToPass : String?
@@ -18,61 +18,59 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var myTableView: UITableView!
 
-    @IBAction func showSlideMenu(sender: UIBarButtonItem) {
-        toggleSideMenuView()
-    }
+  
     
-    var counter = 1
     var timer = NSTimer()
     var post : NSArray!
     var selected:[Bool] = Array(count: 100, repeatedValue: false)
     let data = DataConnection()
     
     
+    
     override func viewDidLoad() {
     
         super.viewDidLoad()
+       
         self.navigationController?.toolbar.barTintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
         self.navigationController?.toolbar.tintColor = UIColor(red: 0/255, green: 178/255, blue: 255/255, alpha: 1)
-        if self.revealViewController() != nil {
-            menuButton.target = self.revealViewController()
-            menuButton.action = "revealToggle:"
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
+     
         self.navigationController?.navigationBarHidden = true
+        
         self.data.getData { (responseObject, error) -> Void in
-               
-            
                 var parser = Parser(jsonFile: responseObject!)
                 parser.parseBarInfo()
-            
-            
                 dispatch_async(dispatch_get_main_queue()){
+                    self.setUpBar()
                 self.myTableView.reloadData()
+               
             }
-                return
-            
-
+            return
         }
+        
         let date = NSDate()
         var formatter = NSDateFormatter()
         formatter.dateFormat = "EEEE"
         let day = formatter.stringFromDate(date)
-        self.setUpBar()
+       
     }
     
     
 
     override func viewDidAppear(animated: Bool) {
         if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-    }
+           }
 
+    override func viewDidDisappear(animated: Bool) {
+       arrayOfBars.removeAll(keepCapacity: true)
+        println("view did dissapear")
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+          }
     
     func setUpBar(){
         
@@ -125,10 +123,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
         
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-//        let indexPath = tableView.indexPathForSelectedRow();
-//        let currentCell = tableView.cellForRowAtIndexPath(indexPath!) as UITableViewCell!;
-        
+ 
         valueToPass = arrayOfBars[indexPath.row].name
         performSegueWithIdentifier("showBarInformationSegue", sender: self)
         println(indexPath.row)

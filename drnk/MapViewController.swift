@@ -52,11 +52,11 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
     func findAddressOnMap(){
         var address : String?
             if activePlace == 2{
-                address  = arrayOfLiquorStores[index].address
+                address  = arrayOfLiquorStores[index!].address
                 activePlace = 1
             }
             else{
-                address = arrayOfBars[index].address
+                address = arrayOfBars[index!].address
                 activePlace = 1
         }
         
