@@ -9,17 +9,19 @@
 import UIKit
 
 var arrayOfBars: [BarsInformation] = [BarsInformation]()
+
 var activePlace = 1
 var index : Int?
 var bar : BarsInformation!
 class BarsViewController: UIViewController, UITableViewDelegate {
     var valueToPass : String?
+    var cellIndex : Int?
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var myTableView: UITableView!
 
   
-    
+    var flag : Bool = true
     var timer = NSTimer()
     var post : NSArray!
     var selected:[Bool] = Array(count: 100, repeatedValue: false)
@@ -35,18 +37,8 @@ class BarsViewController: UIViewController, UITableViewDelegate {
         self.navigationController?.toolbar.tintColor = UIColor(red: 0/255, green: 178/255, blue: 255/255, alpha: 1)
      
         self.navigationController?.navigationBarHidden = true
-        
-        self.data.getData { (responseObject, error) -> Void in
-                var parser = Parser(jsonFile: responseObject!)
-                parser.parseBarInfo()
-                dispatch_async(dispatch_get_main_queue()){
-                    self.setUpBar()
-                self.myTableView.reloadData()
-               
-            }
-            return
-        }
-        
+        updateData()
+    
         let date = NSDate()
         var formatter = NSDateFormatter()
         formatter.dateFormat = "EEEE"
@@ -55,7 +47,26 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     }
     
     
-
+   
+  
+    func updateData(){
+        if arrayOfBars.isEmpty{
+        self.data.getData { (responseObject, error) -> Void in
+            var parser = Parser(jsonFile: responseObject!)
+            parser.parseBarInfo()
+            dispatch_async(dispatch_get_main_queue()){
+                self.setUpBar()
+                self.myTableView.reloadData()
+                
+            }
+            return
+        }
+        }
+        else{
+            println("do nothing")
+        }
+        
+    }
     override func viewDidAppear(animated: Bool) {
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
@@ -65,13 +76,14 @@ class BarsViewController: UIViewController, UITableViewDelegate {
            }
 
     override func viewDidDisappear(animated: Bool) {
-       arrayOfBars.removeAll(keepCapacity: true)
-        println("view did dissapear")
+
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
           }
     
+    
+   
     func setUpBar(){
         
         bar = BarsInformation(name: "Brother's Bar and Grill", address: "1601 W University Ave Muncie, USA")
@@ -105,6 +117,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
     {
         let cell: CustomBarTableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell") as! CustomBarTableViewCell
+        cellIndex = indexPath.row
         
         let bar = arrayOfBars[indexPath.row]
         index = cell.tag
