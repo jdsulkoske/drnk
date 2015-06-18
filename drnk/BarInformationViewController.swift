@@ -9,9 +9,11 @@
 import UIKit
 
 class BarInformationViewController: UIViewController {
-    var passedValue : String!
+    var barPassedValue : String!
+    var imagePassedValue : String!
     @IBOutlet weak var collectionviewCell: UICollectionView!
 
+    @IBOutlet weak var barImage: UIImageView!
     @IBOutlet weak var menu: UIBarButtonItem!
     @IBOutlet weak var nameOfBar: UILabel!
     @IBAction func hey(sender: UIBarButtonItem) {
@@ -23,7 +25,8 @@ class BarInformationViewController: UIViewController {
         if self.revealViewController() != nil {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-        nameOfBar.text = passedValue
+        nameOfBar.text = barPassedValue
+        barImage.image = UIImage(named: imagePassedValue)
         // Do any additional setup after loading the view.
     }
 

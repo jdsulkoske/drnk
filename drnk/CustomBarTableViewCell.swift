@@ -14,9 +14,8 @@ class CustomBarTableViewCell: UITableViewCell {
    
     @IBOutlet weak var addressOfBar: UIButton!
    
-    @IBAction func addressOfBarPressed(sender: AnyObject) {
-   
-    }
+    @IBOutlet weak var barImage: UIImageView!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,11 +28,12 @@ class CustomBarTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setCell(nameOfBarText: String, addressOfBarText: String){
+    func setCell(nameOfBarText: String, addressOfBarText: String, image: String){
         self.nameOfBar.text = nameOfBarText
         self.addressOfBar.setTitle(addressOfBarText, forState: UIControlState.Normal)
     
-        
+        self.barImage.image = UIImage(named: image)
+
         
         
     }

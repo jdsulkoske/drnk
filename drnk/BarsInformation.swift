@@ -12,10 +12,12 @@ class BarsInformation{
     var barArray: [BarsInformation] = [BarsInformation]()
     var name = "Brother's Bar and Grill"
     var address = "Adress of Brother's Bar and Grill, Muncie, IN"
+    var barImage = ""
     
-    init(name: String, address: String){
+    init(name: String, address: String, barImage: String){
         self.name = name
         self.address = address
+        self.barImage = barImage
     }
     
     func appendBar(bar:BarsInformation){

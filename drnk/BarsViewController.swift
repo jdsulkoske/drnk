@@ -14,19 +14,18 @@ var activePlace = 1
 var index : Int?
 var bar : BarsInformation!
 class BarsViewController: UIViewController, UITableViewDelegate {
-    var valueToPass : String?
-    var cellIndex : Int?
+   
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var myTableView: UITableView!
 
-  
-    var flag : Bool = true
     var timer = NSTimer()
-    var post : NSArray!
+   
     var selected:[Bool] = Array(count: 100, repeatedValue: false)
     let data = DataConnection()
-    
+    var barNameToPass : String?
+    var cellIndex : Int?
+    var barImageToPass : String?
     
     
     override func viewDidLoad() {
@@ -86,19 +85,19 @@ class BarsViewController: UIViewController, UITableViewDelegate {
    
     func setUpBar(){
         
-        bar = BarsInformation(name: "Brother's Bar and Grill", address: "1601 W University Ave Muncie, USA")
+        bar = BarsInformation(name: "Brother's Bar and Grill", address: "1601 W University Ave Muncie, USA", barImage:"drnklogo.png")
         arrayOfBars.append(bar)
        
-        bar = BarsInformation(name: "Cleo's Burboun Bar and Shit", address: "1625 W University Ave, Muncie, USA")
+        bar = BarsInformation(name: "Cleo's Burboun Bar and Shit", address: "1625 W University Ave, Muncie, USA", barImage:"drnklogo.png")
         arrayOfBars.append(bar)
 
-        bar = BarsInformation(name: "Pop's Lovely Bar", address: "10799 East County Road 750 North, Brownsburg")
+        bar = BarsInformation(name: "Pop's Lovely Bar", address: "10799 East County Road 750 North, Brownsburg", barImage:"drnklogo.png")
         arrayOfBars.append(bar)
 
-        bar = BarsInformation(name: "Jake Sulks Wet & Wild Pub", address: "140 Ulen Boulevard Muncie")
+        bar = BarsInformation(name: "Jake Sulks Wet & Wild Pub", address: "140 Ulen Boulevard Muncie", barImage:"drnklogo.png")
         arrayOfBars.append(bar)
 
-        bar = BarsInformation(name: "David's Bar", address: "1110 West Neely Avenue Muncie")
+        bar = BarsInformation(name: "David's Bar", address: "1110 West Neely Avenue Muncie", barImage:"drnklogo.png")
         arrayOfBars.append(bar)
         
     }
@@ -122,14 +121,9 @@ class BarsViewController: UIViewController, UITableViewDelegate {
         let bar = arrayOfBars[indexPath.row]
         index = cell.tag
         cell.addressOfBar.tag = indexPath.row
-        if selected[indexPath.row] {
-            cell.addressOfBar.enabled = false
-        }
-        else{
-            cell.addressOfBar.enabled = true
-        }
+
         
-        cell.setCell(bar.name, addressOfBarText: bar.address)
+        cell.setCell(bar.name, addressOfBarText: bar.address, image: bar.barImage)
         cell.detailTextLabel?.text = bar.name
 
         return cell
@@ -137,7 +131,8 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
  
-        valueToPass = arrayOfBars[indexPath.row].name
+        barNameToPass = arrayOfBars[indexPath.row].name
+        barImageToPass = arrayOfBars[indexPath.row].barImage
         performSegueWithIdentifier("showBarInformationSegue", sender: self)
         println(indexPath.row)
         
@@ -147,8 +142,8 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showBarInformationSegue"{
             let barInformationViewController = segue.destinationViewController as! BarInformationViewController
-            barInformationViewController.passedValue = valueToPass
-            
+            barInformationViewController.barPassedValue = barNameToPass
+            barInformationViewController.imagePassedValue = barImageToPass
         }
         if segue.identifier == "newPlace" {
             

@@ -65,12 +65,7 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
         
         index = cell.tag
         cell.addressOfLiquorStore.tag = indexPath.row
-        if selected[indexPath.row] {
-            cell.addressOfLiquorStore.enabled = false
-        }
-        else{
-            cell.addressOfLiquorStore.enabled = true
-        }
+   
         
 
         
