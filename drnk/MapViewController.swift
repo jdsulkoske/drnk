@@ -5,9 +5,14 @@ import UIKit
 import CoreLocation
 
 class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManagerDelegate {
+    
+    @IBOutlet weak var back: UIBarButtonItem!
+    
     @IBAction func backButton(sender: AnyObject) {
         navigationController?.popToRootViewControllerAnimated(true)
+    
     }
+    
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBAction func showSlideMenu(sender: UIBarButtonItem) {
@@ -16,6 +21,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
     @IBOutlet weak var mapView: MKMapView!
     var locationManager: CLLocationManager!
  
+    
     override func viewDidLoad() {
         self.navigationController?.toolbar.barTintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
         super.viewDidLoad()
@@ -30,6 +36,9 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
         if activePlace == 1 {
             locationManager.requestWhenInUseAuthorization()
             locationManager.startUpdatingLocation()
+            self.back.title = ""
+            self.back.enabled = false
+            
             
         }
         else{

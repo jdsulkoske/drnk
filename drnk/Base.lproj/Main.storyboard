@@ -184,7 +184,8 @@
                         </constraints>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="menu" width="70" id="8nq-aS-2Gk">
+                        <barButtonItem width="287" style="plain" systemItem="fixedSpace" id="xPR-GK-4XI"/>
+                        <barButtonItem title="menu." width="70" id="8nq-aS-2Gk">
                             <color key="tintColor" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </toolbarItems>
@@ -240,31 +241,31 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ott-XJ-Nwa">
-                                <rect key="frame" x="120" y="64" width="163" height="21"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="31" y="64" width="334" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="163" id="CJX-iI-0jM"/>
-                                    <constraint firstAttribute="height" constant="21" id="ktG-oB-dFY"/>
+                                    <constraint firstAttribute="height" constant="21" id="BGR-5t-3bh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.2470588386" green="0.2470588386" blue="0.2470588386" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="KnQ-zc-nuH" firstAttribute="top" secondItem="ott-XJ-Nwa" secondAttribute="bottom" constant="6" id="0CD-qc-wcS"/>
-                            <constraint firstItem="bwV-CA-0iE" firstAttribute="top" secondItem="xRQ-0W-gYE" secondAttribute="top" constant="234" id="2Mj-Du-D5D"/>
+                            <constraint firstItem="KnQ-zc-nuH" firstAttribute="top" secondItem="ott-XJ-Nwa" secondAttribute="bottom" constant="6" id="6CS-yh-cOH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ott-XJ-Nwa" secondAttribute="trailing" constant="33" id="Anl-j9-dgP"/>
+                            <constraint firstItem="ott-XJ-Nwa" firstAttribute="leading" secondItem="xRQ-0W-gYE" secondAttribute="leadingMargin" constant="15" id="GON-UI-6TC"/>
                             <constraint firstItem="GoD-Sh-SjQ" firstAttribute="bottom" secondItem="5fi-4X-USy" secondAttribute="top" id="KWn-2D-BdD"/>
+                            <constraint firstItem="ott-XJ-Nwa" firstAttribute="top" secondItem="pkp-nD-2pR" secondAttribute="bottom" id="Od5-aO-kgr"/>
                             <constraint firstItem="GoD-Sh-SjQ" firstAttribute="leading" secondItem="KnQ-zc-nuH" secondAttribute="leading" id="T6X-yR-Ufb"/>
                             <constraint firstItem="KnQ-zc-nuH" firstAttribute="leading" secondItem="xRQ-0W-gYE" secondAttribute="leading" id="TGR-FA-e6a"/>
-                            <constraint firstItem="bwV-CA-0iE" firstAttribute="leading" secondItem="ott-XJ-Nwa" secondAttribute="leading" id="YW6-Gn-fC1"/>
-                            <constraint firstItem="ott-XJ-Nwa" firstAttribute="top" secondItem="pkp-nD-2pR" secondAttribute="bottom" id="ZhD-6u-uRQ"/>
-                            <constraint firstItem="ott-XJ-Nwa" firstAttribute="leading" secondItem="xRQ-0W-gYE" secondAttribute="leading" constant="120" id="eY1-sN-iG3"/>
+                            <constraint firstItem="bwV-CA-0iE" firstAttribute="leading" secondItem="xRQ-0W-gYE" secondAttribute="leading" constant="120" id="gS5-nk-77G"/>
                             <constraint firstItem="GoD-Sh-SjQ" firstAttribute="trailing" secondItem="KnQ-zc-nuH" secondAttribute="trailing" id="n4x-qy-uu0"/>
+                            <constraint firstItem="bwV-CA-0iE" firstAttribute="top" secondItem="KnQ-zc-nuH" secondAttribute="bottom" constant="7" id="nRt-Bt-hv9"/>
                             <constraint firstAttribute="trailing" secondItem="KnQ-zc-nuH" secondAttribute="trailing" id="vPL-gR-FDb"/>
-                            <constraint firstItem="bwV-CA-0iE" firstAttribute="top" secondItem="KnQ-zc-nuH" secondAttribute="bottom" constant="7" id="vU2-z6-FVi"/>
+                            <constraint firstItem="bwV-CA-0iE" firstAttribute="top" secondItem="xRQ-0W-gYE" secondAttribute="top" constant="234" id="wGf-ad-YFC"/>
                         </constraints>
                     </view>
                     <toolbarItems>
@@ -443,6 +444,7 @@
                         </constraints>
                     </view>
                     <toolbarItems>
+                        <barButtonItem width="287" style="plain" systemItem="fixedSpace" id="pan-Br-hjb"/>
                         <barButtonItem title="menu." width="70" id="iFZ-aM-zrV">
                             <color key="tintColor" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
@@ -499,6 +501,7 @@
                                 <action selector="backButton:" destination="aFS-wp-g30" id="g34-La-mxx"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem width="210" style="plain" systemItem="fixedSpace" id="9i2-7T-F5s"/>
                         <barButtonItem title="menu." width="70" id="RoI-x1-gqI">
                             <color key="tintColor" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
@@ -506,6 +509,7 @@
                     <navigationItem key="navigationItem" title="map." id="o7O-7j-9Pa"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="back" destination="IvQ-DO-Vd3" id="g9y-ih-4h9"/>
                         <outlet property="mapView" destination="ZX6-Tr-JzZ" id="hDg-X9-Omk"/>
                         <outlet property="menuButton" destination="RoI-x1-gqI" id="Sut-vC-LhW"/>
                     </connections>
@@ -549,6 +553,7 @@
                         </constraints>
                     </view>
                     <toolbarItems>
+                        <barButtonItem width="287" style="plain" systemItem="fixedSpace" id="XUi-Qc-7Ge"/>
                         <barButtonItem title="menu." width="70" id="IE2-69-Tva">
                             <color key="tintColor" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
@@ -760,7 +765,7 @@
         <image name="new" width="592" height="942"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Z7a-UY-SB5"/>
         <segue reference="DDe-9Z-W1v"/>
+        <segue reference="Z7a-UY-SB5"/>
     </inferredMetricsTieBreakers>
 </document>
