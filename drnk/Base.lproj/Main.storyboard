@@ -49,7 +49,7 @@
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="161" id="fDo-VJ-Csh" customClass="CustomBarTableViewCell" customModule="drnk" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fDo-VJ-Csh" id="yUR-3y-lh1">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="fDo-VJ-Csh" id="yUR-3y-lh1">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view alpha="0.70000000000000018" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MiG-hP-fOC">
@@ -162,7 +162,6 @@
                                             <outlet property="addressOfBar" destination="Ow8-x7-744" id="hJx-qh-eRl"/>
                                             <outlet property="barImage" destination="apt-1o-nhm" id="9do-q5-gbh"/>
                                             <outlet property="nameOfBar" destination="9CW-uQ-Oxb" id="WYD-CX-fcb"/>
-                                            <outletCollection property="gestureRecognizers" destination="kfX-Jq-Bhs" appends="YES" id="a7O-xU-gwT"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -761,7 +760,7 @@
         <image name="new" width="592" height="942"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DDe-9Z-W1v"/>
         <segue reference="Z7a-UY-SB5"/>
+        <segue reference="DDe-9Z-W1v"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -137,6 +137,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
         barImageToPass = arrayOfBars[indexPath.row].barImage
         performSegueWithIdentifier("showBarInformationSegue", sender: self)
         println(indexPath.row)
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
     }
     
@@ -152,17 +153,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
             activePlace = -1
             
         }
-
         
     }
-    
-    @IBAction func showBarInformation(sender: AnyObject) {
-        performSegueWithIdentifier("showBarInformationSegue", sender: sender)
-        
-    }
-    
-        
-    
-    
 }
 
