@@ -28,16 +28,18 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     var barImageToPass : String?
     
     
+    override func loadView() {
+        super.loadView()
+        updateData()
+    }
+    
     override func viewDidLoad() {
     
         super.viewDidLoad()
-       
         self.navigationController?.toolbar.barTintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
         self.navigationController?.toolbar.tintColor = UIColor(red: 0/255, green: 178/255, blue: 255/255, alpha: 1)
      
         self.navigationController?.navigationBarHidden = true
-        updateData()
-    
         let date = NSDate()
         var formatter = NSDateFormatter()
         formatter.dateFormat = "EEEE"
