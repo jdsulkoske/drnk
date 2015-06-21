@@ -534,7 +534,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="drnk." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLn-cY-pdp">
-                                <rect key="frame" x="16" y="227" width="382" height="193"/>
+                                <rect key="frame" x="120" y="292" width="175" height="107"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="78"/>
                                 <color key="textColor" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -543,12 +543,10 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bu2-m4-ZDI" firstAttribute="bottom" secondItem="4bj-Ma-DhJ" secondAttribute="top" constant="44" id="1cC-10-nOi"/>
+                            <constraint firstAttribute="centerX" secondItem="bLn-cY-pdp" secondAttribute="centerX" id="2JA-0S-88f"/>
                             <constraint firstItem="bu2-m4-ZDI" firstAttribute="top" secondItem="MIB-dT-bSG" secondAttribute="top" id="3a3-YU-3Of"/>
-                            <constraint firstItem="bLn-cY-pdp" firstAttribute="top" secondItem="KPb-lt-2LX" secondAttribute="bottom" constant="207" id="5Ox-yo-Pby"/>
-                            <constraint firstItem="bLn-cY-pdp" firstAttribute="trailing" secondItem="MIB-dT-bSG" secondAttribute="trailingMargin" id="ApV-0f-Ytq"/>
-                            <constraint firstItem="bLn-cY-pdp" firstAttribute="leading" secondItem="MIB-dT-bSG" secondAttribute="leadingMargin" id="Q8k-QH-Ol3"/>
+                            <constraint firstAttribute="centerY" secondItem="bLn-cY-pdp" secondAttribute="centerY" id="Ioh-En-Akd"/>
                             <constraint firstItem="bu2-m4-ZDI" firstAttribute="leading" secondItem="MIB-dT-bSG" secondAttribute="leading" id="VXp-BT-da1"/>
-                            <constraint firstItem="4bj-Ma-DhJ" firstAttribute="top" secondItem="bLn-cY-pdp" secondAttribute="bottom" constant="272" id="Xvd-JD-ezB"/>
                             <constraint firstAttribute="trailing" secondItem="bu2-m4-ZDI" secondAttribute="trailing" id="n5G-7u-Aaa"/>
                         </constraints>
                     </view>
