@@ -12,9 +12,8 @@ class CustomLiquorStoresTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameOfLiquorStore: UILabel!
     @IBOutlet weak var imageOfLiquorStore: UIImageView!
-   
-    @IBOutlet weak var addressOfLiquorStore: UIButton!
     
+    @IBOutlet weak var addressOfLiquorStore: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
