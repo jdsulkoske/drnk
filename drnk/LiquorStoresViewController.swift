@@ -80,8 +80,12 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
             
             activePlace = 2
             
+        } else if segue.identifier == "ShowLSInfoSegue" {
+            let lsInformationViewController = segue.destinationViewController as! LiquorStoresInformationViewController
+            
+            
         }
-            }
+    }
 
 }
 

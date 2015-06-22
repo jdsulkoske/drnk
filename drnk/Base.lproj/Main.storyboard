@@ -229,7 +229,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KnQ-zc-nuH">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KnQ-zc-nuH">
                                 <rect key="frame" x="0.0" y="91" width="414" height="136"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="city" translatesAutoresizingMaskIntoConstraints="NO" id="GoD-Sh-SjQ">
@@ -283,7 +283,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEY-Iv-tkf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1277" y="-1621"/>
+            <point key="canvasLocation" x="1275" y="-1650"/>
         </scene>
         <!--drnk.-->
         <scene sceneID="FCo-Wt-G42">
@@ -311,10 +311,16 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cFb-tw-DLi" id="tFN-8J-MwA">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Bar Goes here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qM4-Mu-2va">
-                                                    <rect key="frame" x="26" y="8" width="347" height="21"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ThinLine" translatesAutoresizingMaskIntoConstraints="NO" id="7K1-Kv-ywT">
+                                                    <rect key="frame" x="16" y="27" width="357" height="17"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="Oa5-I1-0LE"/>
+                                                        <constraint firstAttribute="height" constant="17" id="Zl9-jH-x6d"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Bar Goes here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qM4-Mu-2va">
+                                                    <rect key="frame" x="26" y="8" width="347" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="Oa5-I1-0LE"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="21"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -363,12 +369,6 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ThinLine" translatesAutoresizingMaskIntoConstraints="NO" id="7K1-Kv-ywT">
-                                                    <rect key="frame" x="16" y="27" width="357" height="17"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="17" id="Zl9-jH-x6d"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m0X-zy-dWx">
                                                     <rect key="frame" x="8" y="70" width="71" height="61"/>
                                                     <constraints>
@@ -412,10 +412,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
                                         <connections>
                                             <outlet property="addressOfLiquorStore" destination="U5u-9O-Z3D" id="pwR-2u-FsT"/>
                                             <outlet property="imageOfLiquorStore" destination="m0X-zy-dWx" id="07r-Iq-6sV"/>
                                             <outlet property="nameOfLiquorStore" destination="qM4-Mu-2va" id="IQg-w0-wcC"/>
+                                            <outletCollection property="gestureRecognizers" destination="h3a-i1-tos" appends="YES" id="XWt-4c-Vwm"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -453,11 +455,32 @@
                     <connections>
                         <outlet property="liquorStoreTableVIew" destination="Ppe-9m-1f2" id="rae-CO-bWZ"/>
                         <outlet property="menuButton" destination="iFZ-aM-zrV" id="Yhw-fB-Uu3"/>
+                        <segue destination="wB4-ay-tEe" kind="show" identifier="ShowLSInfoSegue" id="PGo-i7-4hQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jPp-U1-gu3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="h3a-i1-tos"/>
             </objects>
             <point key="canvasLocation" x="740" y="-3316"/>
+        </scene>
+        <!--Liquor Stores Information View Controller-->
+        <scene sceneID="tL1-Ya-kIp">
+            <objects>
+                <viewController id="wB4-ay-tEe" customClass="LiquorStoresInformationViewController" customModule="drnk" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2NU-t9-adE"/>
+                        <viewControllerLayoutGuide type="bottom" id="lkw-pf-nFB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Glx-AD-rYF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iLI-AJ-QYi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1315" y="-3316"/>
         </scene>
         <!--map.-->
         <scene sceneID="oLp-kv-9eP">
