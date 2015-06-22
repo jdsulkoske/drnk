@@ -136,7 +136,6 @@ class BarsViewController: UIViewController, UITableViewDelegate {
         barNameToPass = arrayOfBars[indexPath.row].name
         barImageToPass = arrayOfBars[indexPath.row].barImage
         performSegueWithIdentifier("showBarInformationSegue", sender: self)
-        println(indexPath.row)
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
     }
