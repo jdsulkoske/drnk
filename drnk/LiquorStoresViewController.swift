@@ -86,6 +86,11 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
             
         }
     }
+    
+    @IBAction func showLSDetail(sender: UITapGestureRecognizer) {
+        performSegueWithIdentifier("LSDetailViewSegue", sender: sender)
+    }
+    
 
 }
 
