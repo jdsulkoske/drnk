@@ -16,7 +16,7 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var barImage: UIImageView!
    
     @IBOutlet weak var nameOfBar: UILabel!
-    @IBAction func hey(sender: UIBarButtonItem) {
+    @IBAction func backButton(sender: UIBarButtonItem) {
         navigationController?.popToRootViewControllerAnimated(true)
     }
     

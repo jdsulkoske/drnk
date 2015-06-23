@@ -13,6 +13,8 @@ class LiquorStoresInformationViewController: UIViewController {
     @IBAction func backButton(sender: UIBarButtonItem) {
         navigationController?.popToRootViewControllerAnimated(true)
     }
+    @IBOutlet weak var nameOfBar: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if self.revealViewController() != nil {
