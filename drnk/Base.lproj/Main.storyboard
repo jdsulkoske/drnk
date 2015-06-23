@@ -183,7 +183,7 @@
                         </constraints>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="menu." width="70" id="8nq-aS-2Gk">
+                        <barButtonItem image="redsolocupnobackground copy.png" width="70" id="8nq-aS-2Gk">
                             <color key="tintColor" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </toolbarItems>
@@ -382,10 +382,11 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.24999999999999967" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barsimg" translatesAutoresizingMaskIntoConstraints="NO" id="8ve-vF-BkX">
                                 <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="161" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ppe-9m-1f2">
                                 <rect key="frame" x="0.0" y="20" width="414" height="672"/>
-                                <color key="backgroundColor" red="0.029495412631789678" green="0.12033045041775989" blue="0.23497571166378362" alpha="0.35000000000000003" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.35000000000000003" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="161" id="cFb-tw-DLi" customClass="CustomLiquorStoresTableViewCell" customModule="drnk" customModuleProvider="target">
@@ -449,6 +450,7 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
                                                     <state key="normal" title="Address of ls goes here">
+                                                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
@@ -511,6 +513,7 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="8ve-vF-BkX" secondAttribute="trailing" constant="-16" id="FvO-ht-jzl"/>
                             <constraint firstAttribute="trailing" secondItem="Ppe-9m-1f2" secondAttribute="trailing" id="HXv-Eu-afQ"/>
@@ -523,7 +526,7 @@
                         </constraints>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="menu." width="70" id="iFZ-aM-zrV">
+                        <barButtonItem image="redsolocupnobackground copy.png" width="70" id="iFZ-aM-zrV">
                             <color key="tintColor" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </toolbarItems>
@@ -562,22 +565,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Headphones" translatesAutoresizingMaskIntoConstraints="NO" id="RpH-gU-Zal">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Headphones" translatesAutoresizingMaskIntoConstraints="NO" id="RpH-gU-Zal">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="325"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="jMz-NY-baT"/>
-                                    <constraint firstAttribute="height" constant="325" id="xNA-al-N7W"/>
-                                </constraints>
                             </imageView>
-                            <view alpha="0.49999999999999961" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ga-Vi-Tux">
+                            <view alpha="0.49999999999999961" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ga-Vi-Tux">
                                 <rect key="frame" x="16" y="20" width="382" height="652"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of the liquor store" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRI-NU-OhN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name of the liquor store" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRI-NU-OhN">
                                 <rect key="frame" x="16" y="20" width="382" height="33"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="Oy1-xi-svV"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -596,18 +592,6 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="RpH-gU-Zal" firstAttribute="top" secondItem="Glx-AD-rYF" secondAttribute="topMargin" id="4xY-Tr-1mV"/>
-                            <constraint firstItem="7ga-Vi-Tux" firstAttribute="top" secondItem="2NU-t9-adE" secondAttribute="bottom" id="6sb-64-T7c"/>
-                            <constraint firstItem="rRI-NU-OhN" firstAttribute="trailing" secondItem="Glx-AD-rYF" secondAttribute="trailingMargin" id="Hy4-20-ZuZ"/>
-                            <constraint firstItem="rRI-NU-OhN" firstAttribute="top" secondItem="2NU-t9-adE" secondAttribute="bottom" id="Jzn-mn-Tlo"/>
-                            <constraint firstItem="7ga-Vi-Tux" firstAttribute="leading" secondItem="Glx-AD-rYF" secondAttribute="leadingMargin" id="OUP-f0-uVO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RpH-gU-Zal" secondAttribute="trailing" constant="-16" id="OfS-XH-cF5"/>
-                            <constraint firstItem="RpH-gU-Zal" firstAttribute="leading" secondItem="Glx-AD-rYF" secondAttribute="leadingMargin" constant="-16" id="aeq-eU-gJX"/>
-                            <constraint firstItem="lkw-pf-nFB" firstAttribute="top" secondItem="7ga-Vi-Tux" secondAttribute="bottom" constant="20" id="fdd-Yq-i24"/>
-                            <constraint firstItem="rRI-NU-OhN" firstAttribute="leading" secondItem="Glx-AD-rYF" secondAttribute="leadingMargin" id="mcs-fD-x4X"/>
-                            <constraint firstItem="7ga-Vi-Tux" firstAttribute="trailing" secondItem="Glx-AD-rYF" secondAttribute="trailingMargin" id="zdr-Wx-RjO"/>
-                        </constraints>
                     </view>
                     <toolbarItems>
                         <barButtonItem title="&lt;" width="43" id="eq6-SD-G2O">
@@ -663,7 +647,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="fixedSpace" id="9i2-7T-F5s"/>
-                        <barButtonItem title="menu." width="69" id="RoI-x1-gqI">
+                        <barButtonItem image="redsolocupnobackground copy.png" width="57" id="RoI-x1-gqI">
                             <color key="tintColor" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </toolbarItems>
@@ -712,7 +696,7 @@
                         </constraints>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="menu." width="70" id="IE2-69-Tva">
+                        <barButtonItem image="redsolocupnobackground copy.png" id="IE2-69-Tva">
                             <color key="tintColor" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </toolbarItems>
@@ -921,6 +905,7 @@
         <image name="ThinLine" width="355" height="83"/>
         <image name="barsimg" width="722" height="878"/>
         <image name="new" width="592" height="942"/>
+        <image name="redsolocupnobackground copy.png" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DDe-9Z-W1v"/>
