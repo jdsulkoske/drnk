@@ -31,6 +31,13 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
         // Do any additional setup after loading the view, typically from a nib.
         self.setUpLiquorStore()
     }
+    override func viewDidAppear(animated: Bool) {
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
