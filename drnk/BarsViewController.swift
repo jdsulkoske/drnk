@@ -74,7 +74,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-           }
+    }
 
     override func viewDidDisappear(animated: Bool) {
 
