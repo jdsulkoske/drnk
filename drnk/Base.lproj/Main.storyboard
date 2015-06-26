@@ -515,7 +515,6 @@
                                             <outlet property="addressOfLiquorStore" destination="U5u-9O-Z3D" id="pwR-2u-FsT"/>
                                             <outlet property="imageOfLiquorStore" destination="m0X-zy-dWx" id="07r-Iq-6sV"/>
                                             <outlet property="nameOfLiquorStore" destination="qM4-Mu-2va" id="IQg-w0-wcC"/>
-                                            <outletCollection property="gestureRecognizers" destination="yrm-ui-or2" appends="YES" id="Pew-zQ-ijw"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -560,7 +559,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jPp-U1-gu3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="yrm-ui-or2">
                     <connections>
-                        <action selector="showLSDetail:" destination="mqb-NF-X7A" id="hB5-yZ-zf4"/>
+                        <action selector="showLSDetail:" destination="mqb-NF-X7A" id="Eqf-eh-uUG"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -617,6 +616,9 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="liqoureStoreAddrress" destination="JRB-t3-I5w" id="Sdq-5x-AGw"/>
+                        <outlet property="liqoureStoreImage" destination="RpH-gU-Zal" id="iOd-0R-bJD"/>
+                        <outlet property="liquoreStoreName" destination="rRI-NU-OhN" id="6gt-hc-V1r"/>
                         <outlet property="nameOfBar" destination="rRI-NU-OhN" id="cd8-KU-XBP"/>
                     </connections>
                 </viewController>

@@ -10,7 +10,10 @@ import UIKit
 var arrayOfLiquorStores: [LiquorStoresInformation] = [LiquorStoresInformation]()
 
 class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    var liquoreStoreAddressToPass : String!
+    var liqoureStoreNameToPass : String!
+    var liqoureStoreImageToPass : String!
+   
     @IBOutlet weak var menuButton: UIBarButtonItem!
 //    @IBAction func showSlideMenu(sender: UIBarButtonItem) {
 //        toggleSideMenuView()
@@ -23,13 +26,9 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = true
         self.navigationController?.toolbar.barTintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
-        if self.revealViewController() != nil {
-            menuButton.target = self.revealViewController()
-            menuButton.action = "revealToggle:"
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
-        // Do any additional setup after loading the view, typically from a nib.
-        self.setUpLiquorStore()
+
+       
+       updateData()
     }
     override func viewDidAppear(animated: Bool) {
         if self.revealViewController() != nil {
@@ -37,6 +36,17 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+    }
+    
+    func updateData(){
+        if arrayOfBars.isEmpty{
+            self.setUpLiquorStore()
+            
+        }
+        else{
+            println("do nothing")
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -81,22 +91,29 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
         return cell
         
     }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        liqoureStoreNameToPass = arrayOfLiquorStores[indexPath.row].liquorStoreName
+        liqoureStoreImageToPass = arrayOfLiquorStores[indexPath.row].liquorStoreImage
+        liquoreStoreAddressToPass = arrayOfLiquorStores[indexPath.row].address
+        performSegueWithIdentifier("LSDetailViewSegue", sender: self)
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showLocationForLiquorStore" {
             
             activePlace = 2
             
-        } else if segue.identifier == "ShowLSInfoSegue" {
+        } else if segue.identifier == "LSDetailViewSegue" {
             let lsInformationViewController = segue.destinationViewController as! LiquorStoresInformationViewController
-            
+            lsInformationViewController.liquoreStoreNamePasssedValue = liqoureStoreNameToPass
+            lsInformationViewController.liquoreStoreImagePassedValue = liqoureStoreImageToPass
+            lsInformationViewController.liquoreStoreAddressPassed = liquoreStoreAddressToPass
             
         }
     }
     
-    @IBAction func showLSDetail(sender: UITapGestureRecognizer) {
-        performSegueWithIdentifier("LSDetailViewSegue", sender: sender)
-    }
+
     
 
 }

@@ -50,7 +50,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     
    
   
-    func updateData(){
+    private func updateData(){
         if arrayOfBars.isEmpty{
         self.data.getData { (responseObject, error) -> Void in
             var parser = Parser(jsonFile: responseObject!)

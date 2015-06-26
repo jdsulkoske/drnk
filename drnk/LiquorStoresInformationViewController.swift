@@ -9,7 +9,12 @@
 import UIKit
 
 class LiquorStoresInformationViewController: UIViewController {
-
+    var liquoreStoreNamePasssedValue : String!
+    var liquoreStoreImagePassedValue : String!
+    var liquoreStoreAddressPassed : String!
+    @IBOutlet weak var liqoureStoreImage: UIImageView!
+    @IBOutlet weak var liquoreStoreName: UILabel!
+    @IBOutlet weak var liqoureStoreAddrress: UILabel!
     @IBAction func backButton(sender: UIBarButtonItem) {
         navigationController?.popToRootViewControllerAnimated(true)
     }
@@ -20,6 +25,9 @@ class LiquorStoresInformationViewController: UIViewController {
         if self.revealViewController() != nil {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        liquoreStoreName.text = liquoreStoreNamePasssedValue
+        liqoureStoreAddrress.text = liquoreStoreAddressPassed
+        liqoureStoreImage.image = UIImage(named: liquoreStoreImagePassedValue)
         // Do any additional setup after loading the view.
     }
 
