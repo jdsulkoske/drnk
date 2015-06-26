@@ -21,14 +21,12 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var liquorStoreTableVIew: UITableView!
     var selected:[Bool] = Array(count: 100, repeatedValue: false)
     
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = true
         self.navigationController?.toolbar.barTintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
-
-       
-       updateData()
+         self.updateData()
     }
     override func viewDidAppear(animated: Bool) {
         if self.revealViewController() != nil {
@@ -39,7 +37,7 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func updateData(){
-        if arrayOfBars.isEmpty{
+        if arrayOfLiquorStores.isEmpty{
             self.setUpLiquorStore()
             
         }
