@@ -703,20 +703,29 @@
                             <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new" translatesAutoresizingMaskIntoConstraints="NO" id="bu2-m4-ZDI">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="drnk." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLn-cY-pdp">
-                                <rect key="frame" x="120" y="292" width="175" height="107"/>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="78"/>
-                                <color key="textColor" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PoP-aB-DMe">
+                                <rect key="frame" x="121" y="287" width="173" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="118" id="5MB-bI-fze"/>
+                                    <constraint firstAttribute="width" constant="173" id="7pN-Kv-gvH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="77"/>
+                                <state key="normal" title="drnk.">
+                                    <color key="titleColor" red="0.0" green="0.83514703739999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="drnk:" destination="tMn-3v-r6N" eventType="touchUpInside" id="7E4-Mv-8nV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bu2-m4-ZDI" firstAttribute="bottom" secondItem="4bj-Ma-DhJ" secondAttribute="top" constant="44" id="1cC-10-nOi"/>
-                            <constraint firstAttribute="centerX" secondItem="bLn-cY-pdp" secondAttribute="centerX" id="2JA-0S-88f"/>
                             <constraint firstItem="bu2-m4-ZDI" firstAttribute="top" secondItem="MIB-dT-bSG" secondAttribute="top" id="3a3-YU-3Of"/>
-                            <constraint firstAttribute="centerY" secondItem="bLn-cY-pdp" secondAttribute="centerY" id="Ioh-En-Akd"/>
+                            <constraint firstAttribute="centerY" secondItem="PoP-aB-DMe" secondAttribute="centerY" id="Ag1-Nk-l1k"/>
                             <constraint firstItem="bu2-m4-ZDI" firstAttribute="leading" secondItem="MIB-dT-bSG" secondAttribute="leading" id="VXp-BT-da1"/>
+                            <constraint firstAttribute="centerX" secondItem="PoP-aB-DMe" secondAttribute="centerX" id="ZbE-cY-GBo"/>
                             <constraint firstAttribute="trailing" secondItem="bu2-m4-ZDI" secondAttribute="trailing" id="n5G-7u-Aaa"/>
                         </constraints>
                     </view>
@@ -864,10 +873,10 @@
             </objects>
             <point key="canvasLocation" x="-796" y="-2609"/>
         </scene>
-        <!--Navigation View Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="FM0-OP-JsC">
             <objects>
-                <navigationController storyboardIdentifier="NavigationViewController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" toolbarHidden="NO" id="uuK-Dh-2uW" customClass="NavigationViewController" customModule="drnk" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" toolbarHidden="NO" id="uuK-Dh-2uW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="F5E-DO-zWk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

@@ -18,10 +18,16 @@ class Parser{
     
     
     func parseBarInfo(){
+        if jsonFile != nil{
         for posts in jsonFile {
             var address = posts["company_street"] as! String
             var name = posts["company_name"] as! String
             bar = BarsInformation(name: name, address: address,barImage:"VCImage.png")
+            arrayOfBars.append(bar)
+        }
+        } else {
+            var error = "Could not connect to server!"
+            bar = BarsInformation(name: error, address: "NA", barImage: "redsolocupicon.png")
             arrayOfBars.append(bar)
         }
         

@@ -12,8 +12,6 @@
 		DE2E1EFC1B23A5A300C73295 /* LiquorStoresInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2E1EFB1B23A5A300C73295 /* LiquorStoresInformation.swift */; };
 		DE4667091B29E96F0033C1C3 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4667081B29E96F0033C1C3 /* SWRevealViewController.m */; };
 		DE4C116A1B28AD3700CCB54D /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4C11691B28AD3700CCB54D /* Day.swift */; };
-		DE4C116F1B28C70B00CCB54D /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4C116D1B28C70B00CCB54D /* ENSideMenu.swift */; };
-		DE4C11701B28C70B00CCB54D /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4C116E1B28C70B00CCB54D /* ENSideMenuNavigationController.swift */; };
 		DE5C83E61B1435DA00ED4255 /* BarInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5C83E51B1435DA00ED4255 /* BarInformationViewController.swift */; };
 		DE5FB7871B14F73D00C9EC44 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE5FB7861B14F73D00C9EC44 /* CoreLocation.framework */; };
 		DE7F9DC81B38ED6500C96535 /* redsolocupnobackground copy.png in Resources */ = {isa = PBXBuildFile; fileRef = DE7F9DC71B38ED6500C96535 /* redsolocupnobackground copy.png */; };
@@ -31,10 +29,11 @@
 		DE9893C51B3606670086ACE2 /* CustomBarInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9893C41B3606670086ACE2 /* CustomBarInfoCell.swift */; };
 		DE9D2E541B15FD970099253D /* DataConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D2E531B15FD970099253D /* DataConnection.swift */; };
 		DE9DA4DC1B28E02600AD8A2C /* SlideTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9DA4DB1B28E02600AD8A2C /* SlideTableViewController.swift */; };
+		DEC065081B4334830087EE30 /* friendly.png in Resources */ = {isa = PBXBuildFile; fileRef = DEC065071B4334830087EE30 /* friendly.png */; };
+		DEC0650A1B4334880087EE30 /* municeLiquors.png in Resources */ = {isa = PBXBuildFile; fileRef = DEC065091B4334880087EE30 /* municeLiquors.png */; };
 		DEC34D711B2A87FB00217731 /* redsolocupicon.png in Resources */ = {isa = PBXBuildFile; fileRef = DEC34D701B2A87FB00217731 /* redsolocupicon.png */; };
 		DEDCE9AC1B3C91F20027C108 /* icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = DEDCE9AB1B3C91F20027C108 /* icon.gif */; };
 		DEEB90AE1B27532800253196 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEB90AD1B27532800253196 /* Parser.swift */; };
-		DEFB18211B1A5CCB0091622C /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFB18201B1A5CCB0091622C /* NavigationViewController.swift */; };
 		F7EEF1F2DE862DD730501D98 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD23C2C83349B6BF9967B7C /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -71,8 +70,6 @@
 		DE4667071B29E96F0033C1C3 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		DE4667081B29E96F0033C1C3 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		DE4C11691B28AD3700CCB54D /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
-		DE4C116D1B28C70B00CCB54D /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenu.swift; sourceTree = "<group>"; };
-		DE4C116E1B28C70B00CCB54D /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenuNavigationController.swift; sourceTree = "<group>"; };
 		DE5C83E51B1435DA00ED4255 /* BarInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarInformationViewController.swift; sourceTree = "<group>"; };
 		DE5FB7861B14F73D00C9EC44 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DE7F9DC71B38ED6500C96535 /* redsolocupnobackground copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redsolocupnobackground copy.png"; sourceTree = "<group>"; };
@@ -94,10 +91,11 @@
 		DE9893C41B3606670086ACE2 /* CustomBarInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBarInfoCell.swift; sourceTree = "<group>"; };
 		DE9D2E531B15FD970099253D /* DataConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataConnection.swift; sourceTree = "<group>"; };
 		DE9DA4DB1B28E02600AD8A2C /* SlideTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideTableViewController.swift; sourceTree = "<group>"; };
+		DEC065071B4334830087EE30 /* friendly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friendly.png; sourceTree = "<group>"; };
+		DEC065091B4334880087EE30 /* municeLiquors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = municeLiquors.png; sourceTree = "<group>"; };
 		DEC34D701B2A87FB00217731 /* redsolocupicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redsolocupicon.png; sourceTree = "<group>"; };
 		DEDCE9AB1B3C91F20027C108 /* icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = icon.gif; sourceTree = "<group>"; };
 		DEEB90AD1B27532800253196 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		DEFB18201B1A5CCB0091622C /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		E362FCE936A38E1295DBCD7F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,16 +190,15 @@
 				DE8378191B13F56E00CD8435 /* MapViewController.swift */,
 				DE88DF0C1B26B10100F7262E /* MainViewController.swift */,
 				DE9D2E531B15FD970099253D /* DataConnection.swift */,
-				DE4C116D1B28C70B00CCB54D /* ENSideMenu.swift */,
-				DE4C116E1B28C70B00CCB54D /* ENSideMenuNavigationController.swift */,
 				DE8377FB1B13F30D00CD8435 /* Main.storyboard */,
-				DEFB18201B1A5CCB0091622C /* NavigationViewController.swift */,
 				DE9DA4DB1B28E02600AD8A2C /* SlideTableViewController.swift */,
 				DE8377F51B13F30D00CD8435 /* AppDelegate.swift */,
 				DE8377FE1B13F30E00CD8435 /* Images.xcassets */,
 				DE7F9DC71B38ED6500C96535 /* redsolocupnobackground copy.png */,
 				DEC34D701B2A87FB00217731 /* redsolocupicon.png */,
 				DEDCE9AB1B3C91F20027C108 /* icon.gif */,
+				DEC065091B4334880087EE30 /* municeLiquors.png */,
+				DEC065071B4334830087EE30 /* friendly.png */,
 				DE8378001B13F30E00CD8435 /* LaunchScreen.xib */,
 				DE8377F31B13F30D00CD8435 /* Supporting Files */,
 			);
@@ -323,7 +320,9 @@
 			files = (
 				DE7F9DC81B38ED6500C96535 /* redsolocupnobackground copy.png in Resources */,
 				DEDCE9AC1B3C91F20027C108 /* icon.gif in Resources */,
+				DEC065081B4334830087EE30 /* friendly.png in Resources */,
 				DE8377FD1B13F30D00CD8435 /* Main.storyboard in Resources */,
+				DEC0650A1B4334880087EE30 /* municeLiquors.png in Resources */,
 				DE8378021B13F30E00CD8435 /* LaunchScreen.xib in Resources */,
 				DEC34D711B2A87FB00217731 /* redsolocupicon.png in Resources */,
 				DE8377FF1B13F30E00CD8435 /* Images.xcassets in Resources */,
@@ -392,9 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE4C11701B28C70B00CCB54D /* ENSideMenuNavigationController.swift in Sources */,
 				DE4C116A1B28AD3700CCB54D /* Day.swift in Sources */,
-				DEFB18211B1A5CCB0091622C /* NavigationViewController.swift in Sources */,
 				DE8378201B13F72F00CD8435 /* CustomBarTableViewCell.swift in Sources */,
 				DE9DA4DC1B28E02600AD8A2C /* SlideTableViewController.swift in Sources */,
 				DE4667091B29E96F0033C1C3 /* SWRevealViewController.m in Sources */,
@@ -409,7 +406,6 @@
 				DE9893C51B3606670086ACE2 /* CustomBarInfoCell.swift in Sources */,
 				DE8377F81B13F30D00CD8435 /* BarsViewController.swift in Sources */,
 				DE83781E1B13F6C000CD8435 /* BarsInformation.swift in Sources */,
-				DE4C116F1B28C70B00CCB54D /* ENSideMenu.swift in Sources */,
 				DE2E1EF81B23A2B100C73295 /* CustomLiquorStoresTableViewCell.swift in Sources */,
 				DE83781A1B13F56E00CD8435 /* MapViewController.swift in Sources */,
 			);
