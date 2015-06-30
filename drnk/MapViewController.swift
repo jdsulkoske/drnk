@@ -15,9 +15,6 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
     
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    @IBAction func showSlideMenu(sender: UIBarButtonItem) {
-        toggleSideMenuView()
-    }
     @IBOutlet weak var mapView: MKMapView!
     var locationManager: CLLocationManager!
  

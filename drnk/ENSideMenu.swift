@@ -54,11 +54,11 @@ public extension UIViewController {
      * rotates.
      * A convenient way to do it might be creating a subclass of UIViewController that does precisely that and then subclassing your view controllers from it.
      */
-    func fixSideMenuSize() {
-        if let navController = self.navigationController as? ENSideMenuNavigationController {
-            navController.sideMenu?.updateFrame()
-        }
-    }
+//    func fixSideMenuSize() {
+//        if let navController = self.navigationController as? ENSideMenuNavigationController {
+//            navController.sideMenu?.updateFrame()
+//        }
+//    }
     
     public func sideMenuController () -> ENSideMenuProtocol? {
         var iteration : UIViewController? = self.parentViewController
