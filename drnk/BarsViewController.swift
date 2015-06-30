@@ -15,6 +15,8 @@ var index : Int?
 var bar : BarsInformation!
 class BarsViewController: UIViewController, UITableViewDelegate {
    
+    var refresher : UIRefreshControl!
+    @IBOutlet weak var networkMessage: UILabel!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var myTableView: UITableView!
@@ -22,7 +24,8 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     var timer = NSTimer()
    
     var selected:[Bool] = Array(count: 100, repeatedValue: false)
-    let data = DataConnection()
+    
+   let data = DataConnection(typeOfBusiness: "bars")
     var barNameToPass : String?
     var cellIndex : Int?
     var barImageToPass : String?
@@ -30,16 +33,26 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     
     override func loadView() {
         super.loadView()
-        updateData()
+        
     }
     
     override func viewDidLoad() {
     
         super.viewDidLoad()
+        
+        refresher = UIRefreshControl()
+        
+        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refresher.backgroundColor = UIColor.whiteColor()
+        refresher.addTarget(self, action: "updateData", forControlEvents: UIControlEvents.ValueChanged)
+        
+        self.myTableView.addSubview(refresher)
         self.navigationController?.toolbar.barTintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
         self.navigationController?.toolbar.tintColor = UIColor(red: 0/255, green: 178/255, blue: 255/255, alpha: 1)
      
         self.navigationController?.navigationBarHidden = true
+        
+        self.updateData()
         let date = NSDate()
         var formatter = NSDateFormatter()
         formatter.dateFormat = "EEEE"
@@ -50,23 +63,30 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     
    
   
-    private func updateData(){
-        if arrayOfBars.isEmpty{
-        self.data.getData { (responseObject, error) -> Void in
-            var parser = Parser(jsonFile: responseObject!)
-            parser.parseBarInfo()
-            dispatch_async(dispatch_get_main_queue()){
-                self.setUpBar()
-                self.myTableView.reloadData()
-                
-            }
-            return
-        }
+    func updateData(){
+       
+            data.getData { (responseObject, error) -> Void in
+        if  responseObject == nil{
+            self.networkMessage.hidden = false
+            self.networkMessage.text = "Network is unavailable"
         }
         else{
-            println("do nothing")
+            self.networkMessage.hidden = true
+            var parser = Parser(jsonFile: responseObject!)
+            arrayOfBars.removeAll(keepCapacity: true)
+            parser.parseBarInfo()
+            dispatch_async(dispatch_get_main_queue()){
+                
+                self.setUpBar()
+                self.myTableView.reloadData()
+               self.refresher.endRefreshing()
+            }
+            
+            }
+                
+            return
         }
-        
+    
     }
     override func viewDidAppear(animated: Bool) {
         if self.revealViewController() != nil {

@@ -19,8 +19,8 @@ class Parser{
     
     func parseBarInfo(){
         for posts in jsonFile {
-            var address = posts["address"] as! String
-            var name = posts["name"] as! String
+            var address = posts["company_street"] as! String
+            var name = posts["company_name"] as! String
             bar = BarsInformation(name: name, address: address,barImage:"VCImage.png")
             arrayOfBars.append(bar)
         }
