@@ -19,6 +19,7 @@ class DataConnection {
                     self.post = nil
                 }
                 else{
+                    println(self.post)
                     self.post = json as! NSArray
                 
                 }

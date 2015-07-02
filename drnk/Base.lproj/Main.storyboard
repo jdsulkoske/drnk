@@ -158,6 +158,9 @@
                                             <outlet property="addressOfBar" destination="Ow8-x7-744" id="hJx-qh-eRl"/>
                                             <outlet property="barImage" destination="apt-1o-nhm" id="9do-q5-gbh"/>
                                             <outlet property="nameOfBar" destination="9CW-uQ-Oxb" id="WYD-CX-fcb"/>
+                                            <outlet property="special1" destination="jZd-FG-jrV" id="tF3-L4-wAi"/>
+                                            <outlet property="special2" destination="fIO-FJ-4tO" id="Ww7-CL-Bsw"/>
+                                            <outlet property="special3" destination="lp6-Sv-0bj" id="eYz-Cf-iCl"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

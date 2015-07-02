@@ -10,26 +10,42 @@ import Foundation
 
 class Parser{
     var jsonFile:NSArray!
-    
+    var barSpecialArray = [String]()
+    var address = " "
+    var name = ""
+    var results : NSDictionary!
     init(jsonFile:NSArray){
         self.jsonFile = jsonFile
+       
     }
     
     
     
     func parseBarInfo(){
-        if jsonFile != nil{
-        for posts in jsonFile {
-            var address = posts["company_street"] as! String
-            var name = posts["company_name"] as! String
-            bar = BarsInformation(name: name, address: address,barImage:"VCImage.png")
-            arrayOfBars.append(bar)
-        }
-        } else {
-            var error = "Could not connect to server!"
-            bar = BarsInformation(name: error, address: "NA", barImage: "redsolocupicon.png")
-            arrayOfBars.append(bar)
-        }
         
+      
+        for posts in jsonFile {
+            address = posts["company_street"] as! String
+            name = posts["company_name"] as! String
+            results = (posts["deals"] as? NSDictionary)!
+            //println(results)
+        
+        }
+        self.parseForSpecial()
     }
+    func parseForSpecial(){
+     var days = results["friday"] as! NSArray
+        println(days)
+        for posts in days{
+                var barspecial = posts["deal_name"] as! String
+                barSpecialArray.append(barspecial)
+      
+            }
+         bar = BarsInformation(name: name, address: address,barImage:"VCImage.png",special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
+        arrayOfBars.append(bar)
+        }
+//        
+        
+    
+
 }
