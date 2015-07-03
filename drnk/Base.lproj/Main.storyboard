@@ -534,6 +534,9 @@
                                         <connections>
                                             <outlet property="addressOfLiquorStore" destination="U5u-9O-Z3D" id="pwR-2u-FsT"/>
                                             <outlet property="imageOfLiquorStore" destination="m0X-zy-dWx" id="07r-Iq-6sV"/>
+                                            <outlet property="lsSpecialOne" destination="txa-r4-tVR" id="7Lr-hu-6GV"/>
+                                            <outlet property="lsSpecialThree" destination="gdg-55-imQ" id="Dzc-d4-xgT"/>
+                                            <outlet property="lsSpecialTwo" destination="iLH-Xx-UYf" id="V2h-7b-Yuh"/>
                                             <outlet property="nameOfLiquorStore" destination="qM4-Mu-2va" id="IQg-w0-wcC"/>
                                         </connections>
                                     </tableViewCell>

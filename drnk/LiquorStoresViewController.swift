@@ -110,7 +110,8 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
         
 
         
-        cell.setLiquorStoreCell(liquorStore.liquorStoreName, addressLabel: liquorStore.address, image: liquorStore.liquorStoreImage)
+        cell.setLiquorStoreCell(liquorStore.liquorStoreName, addressLabel: liquorStore.address, image: liquorStore.liquorStoreImage,special1: liquorStore.special1,special2: liquorStore.special2,special3: liquorStore.special3)
+        cell.detailTextLabel?.text = liquorStore.liquorStoreName
         
         return cell
         
