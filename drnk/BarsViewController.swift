@@ -43,7 +43,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
         refresher = UIRefreshControl()
         
         refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        refresher.backgroundColor = UIColor.whiteColor()
+        refresher.backgroundColor = UIColor(red: 0, green: 182, blue: 255, alpha: 1)
         refresher.addTarget(self, action: "updateData", forControlEvents: UIControlEvents.ValueChanged)
         
         self.myTableView.addSubview(refresher)
@@ -78,13 +78,12 @@ class BarsViewController: UIViewController, UITableViewDelegate {
             parser.parseBarInfo()
             dispatch_async(dispatch_get_main_queue()){
                 
-                self.setUpBar()
+                //self.setUpBar()
                 self.myTableView.reloadData()
-               self.refresher.endRefreshing()
             }
             
             }
-                
+             self.refresher.endRefreshing()   
             return
         }
     
@@ -105,25 +104,25 @@ class BarsViewController: UIViewController, UITableViewDelegate {
           }
     
     
-   
-    func setUpBar(){
-        
-        bar = BarsInformation(name: "Brother's Bar and Grill", address: "1601 W University Ave Muncie, USA", barImage:"drnklogo.png")
-        arrayOfBars.append(bar)
-       
-        bar = BarsInformation(name: "Cleo's Burboun Bar and Shit", address: "1625 W University Ave, Muncie, USA", barImage:"drnklogo.png")
-        arrayOfBars.append(bar)
-
-        bar = BarsInformation(name: "Pop's Lovely Bar", address: "10799 East County Road 750 North, Brownsburg", barImage:"drnklogo.png")
-        arrayOfBars.append(bar)
-
-        bar = BarsInformation(name: "Jake Sulks Wet & Wild Pub", address: "140 Ulen Boulevard Muncie", barImage:"drnklogo.png")
-        arrayOfBars.append(bar)
-
-        bar = BarsInformation(name: "David's Bar", address: "1110 West Neely Avenue Muncie", barImage:"drnklogo.png")
-        arrayOfBars.append(bar)
-        
-    }
+//   
+//    func setUpBar(){
+//        
+//        bar = BarsInformation(name: "Brother's Bar and Grill", address: "1601 W University Ave Muncie, USA", barImage:"drnklogo.png")
+//        arrayOfBars.append(bar)
+//       
+//        bar = BarsInformation(name: "Cleo's Burboun Bar and Shit", address: "1625 W University Ave, Muncie, USA", barImage:"drnklogo.png")
+//        arrayOfBars.append(bar)
+//
+//        bar = BarsInformation(name: "Pop's Lovely Bar", address: "10799 East County Road 750 North, Brownsburg", barImage:"drnklogo.png")
+//        arrayOfBars.append(bar)
+//
+//        bar = BarsInformation(name: "Jake Sulks Wet & Wild Pub", address: "140 Ulen Boulevard Muncie", barImage:"drnklogo.png")
+//        arrayOfBars.append(bar)
+//
+//        bar = BarsInformation(name: "David's Bar", address: "1110 West Neely Avenue Muncie", barImage:"drnklogo.png")
+//        arrayOfBars.append(bar)
+//        
+//    }
     
     @IBAction func assignRowIndexToButton(sender: UIButton) {
             let row = sender.tag
@@ -146,7 +145,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
         cell.addressOfBar.tag = indexPath.row
 
         
-        cell.setCell(bar.name, addressOfBarText: bar.address, image: bar.barImage)
+        cell.setCell(bar.name, addressOfBarText: bar.address, image: bar.barImage,special1: bar.special1,special2: bar.special2,special3: bar.special3)
         cell.detailTextLabel?.text = bar.name
 
         return cell
