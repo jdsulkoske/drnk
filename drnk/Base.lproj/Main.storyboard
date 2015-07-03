@@ -403,6 +403,15 @@
                                 <rect key="frame" x="0.0" y="20" width="414" height="672"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Network Unavailable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUv-2S-T2v">
+                                <rect key="frame" x="0.0" y="20" width="414" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="xDD-uE-wA7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="161" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ppe-9m-1f2">
                                 <rect key="frame" x="0.0" y="20" width="414" height="672"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -538,10 +547,13 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ZUv-2S-T2v" firstAttribute="top" secondItem="jCg-eJ-j3t" secondAttribute="bottom" id="4JY-qC-mOv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8ve-vF-BkX" secondAttribute="trailing" constant="-16" id="FvO-ht-jzl"/>
                             <constraint firstAttribute="trailing" secondItem="Ppe-9m-1f2" secondAttribute="trailing" id="HXv-Eu-afQ"/>
                             <constraint firstItem="Ppe-9m-1f2" firstAttribute="top" secondItem="h4N-vx-T2p" secondAttribute="top" constant="20" id="Ots-D9-n07"/>
+                            <constraint firstItem="ZUv-2S-T2v" firstAttribute="leading" secondItem="h4N-vx-T2p" secondAttribute="leadingMargin" constant="-16" id="Ozc-5H-zXM"/>
                             <constraint firstItem="8ve-vF-BkX" firstAttribute="leading" secondItem="h4N-vx-T2p" secondAttribute="leadingMargin" constant="-16" id="fSi-9o-Vs7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZUv-2S-T2v" secondAttribute="trailing" constant="-16" id="fzy-2H-4aU"/>
                             <constraint firstItem="8ve-vF-BkX" firstAttribute="top" secondItem="jCg-eJ-j3t" secondAttribute="bottom" id="h1w-wO-jAd"/>
                             <constraint firstItem="Ppe-9m-1f2" firstAttribute="leading" secondItem="h4N-vx-T2p" secondAttribute="leading" id="lMF-b8-Sz6"/>
                             <constraint firstAttribute="bottom" secondItem="Ppe-9m-1f2" secondAttribute="bottom" id="vvb-Fs-BG9"/>
@@ -564,6 +576,7 @@
                     <connections>
                         <outlet property="liquorStoreTableVIew" destination="Ppe-9m-1f2" id="rae-CO-bWZ"/>
                         <outlet property="menuButton" destination="iFZ-aM-zrV" id="Yhw-fB-Uu3"/>
+                        <outlet property="networkMessage" destination="ZUv-2S-T2v" id="Fb2-Rk-V6L"/>
                         <segue destination="wB4-ay-tEe" kind="show" identifier="LSDetailViewSegue" id="Itc-PC-Oaf"/>
                     </connections>
                 </viewController>
@@ -648,11 +661,11 @@
                         <viewControllerLayoutGuide type="bottom" id="NlW-AY-fIu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6Os-Q2-i0c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" translatesAutoresizingMaskIntoConstraints="NO" id="ZX6-Tr-JzZ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.36670278280000002" alpha="0.70999999999999996" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="aFS-wp-g30" id="Ri3-lt-8Xp"/>
@@ -945,6 +958,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DDe-9Z-W1v"/>
-        <segue reference="Z7a-UY-SB5"/>
+        <segue reference="tP1-6s-IEs"/>
     </inferredMetricsTieBreakers>
 </document>

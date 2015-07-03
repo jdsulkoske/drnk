@@ -8,12 +8,17 @@
 
 import UIKit
 var arrayOfLiquorStores: [LiquorStoresInformation] = [LiquorStoresInformation]()
+var liquorStore : LiquorStoresInformation!
 
 class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var liquoreStoreAddressToPass : String!
     var liqoureStoreNameToPass : String!
     var liqoureStoreImageToPass : String!
-   
+    @IBOutlet weak var networkMessage: UILabel!
+    
+    
+    let data = DataConnection(typeOfBusiness: "liquorstores")
+    var refresher: UIRefreshControl!
     @IBOutlet weak var menuButton: UIBarButtonItem!
 //    @IBAction func showSlideMenu(sender: UIBarButtonItem) {
 //        toggleSideMenuView()
@@ -24,6 +29,13 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        refresher = UIRefreshControl()
+        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refresher.addTarget(self, action: "updateData", forControlEvents: UIControlEvents.ValueChanged)
+        self.liquorStoreTableVIew.addSubview(refresher)
+        refresher.backgroundColor = UIColor(red: 0, green: 182, blue: 255, alpha: 1)
+        
         self.navigationController?.navigationBarHidden = true
         self.navigationController?.toolbar.barTintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
          self.updateData()
@@ -37,12 +49,26 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func updateData(){
-        if arrayOfLiquorStores.isEmpty{
-            self.setUpLiquorStore()
-            
-        }
-        else{
-            println("do nothing")
+        data.getData { (responseObject, error) -> Void in
+            if  responseObject == nil{
+                self.networkMessage.hidden = false
+                self.networkMessage.text = "Network is unavailable"
+                self.refresher.endRefreshing()
+            }
+            else{
+                self.networkMessage.hidden = true
+                var parser = Parser(jsonFile: responseObject!)
+                arrayOfLiquorStores.removeAll(keepCapacity: true)
+                parser.parseLSInfo()
+                dispatch_async(dispatch_get_main_queue()){
+                    
+                    //self.setUpBar()
+                    self.liquorStoreTableVIew.reloadData()
+                }
+                
+            }
+            self.refresher.endRefreshing()
+            return
         }
         
     }
@@ -53,15 +79,15 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
     }
 
     func setUpLiquorStore(){
-        var ls1 = LiquorStoresInformation(lsName: "Muncie Liquors", address: "1110 West Neely Avenue", lsImage: "municeLiquors.png")
-        var ls2 = LiquorStoresInformation(lsName: "Friendly Package", address: "10213 Nicole Drive", lsImage: "friendly.png")
-        var ls3 = LiquorStoresInformation(lsName: "Muncie Liquors", address: "909 West Riverside", lsImage: "municeLiquors.png")
-        var ls4 = LiquorStoresInformation(lsName: "Another Liquor Store", address: "505 North EverWood Dr.", lsImage: "VCImage.png")
+//        var ls1 = LiquorStoresInformation(lsName: "Muncie Liquors", address: "1110 West Neely Avenue", lsImage: "municeLiquors.png")
+//        var ls2 = LiquorStoresInformation(lsName: "Friendly Package", address: "10213 Nicole Drive", lsImage: "friendly.png")
+//        var ls3 = LiquorStoresInformation(lsName: "Muncie Liquors", address: "909 West Riverside", lsImage: "municeLiquors.png")
+//        var ls4 = LiquorStoresInformation(lsName: "Another Liquor Store", address: "505 North EverWood Dr.", lsImage: "VCImage.png")
         
-        arrayOfLiquorStores.append(ls1)
-        arrayOfLiquorStores.append(ls2)
-        arrayOfLiquorStores.append(ls3)
-        arrayOfLiquorStores.append(ls4)
+//        arrayOfLiquorStores.append(ls1)
+//        arrayOfLiquorStores.append(ls2)
+//        arrayOfLiquorStores.append(ls3)
+//        arrayOfLiquorStores.append(ls4)
 
     }
     @IBAction func assignIndexRowToButtonInLiqourStoreView(sender: AnyObject) {
