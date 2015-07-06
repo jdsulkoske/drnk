@@ -230,11 +230,11 @@
                                     <constraint firstAttribute="height" constant="224" id="5fy-aY-66C"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="201" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="h7v-GH-4jG">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="189" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="h7v-GH-4jG">
                                 <rect key="frame" x="0.0" y="306" width="414" height="386"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="201" id="9mG-6l-Q1j" customClass="CustomBarInfoCell" customModule="drnk" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="189" id="9mG-6l-Q1j" customClass="CustomBarInfoCell" customModule="drnk" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="9mG-6l-Q1j" id="2Vt-aL-49f">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -400,12 +400,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barsimg" translatesAutoresizingMaskIntoConstraints="NO" id="8ve-vF-BkX">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main.png" translatesAutoresizingMaskIntoConstraints="NO" id="8ve-vF-BkX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
+                            <visualEffectView opaque="NO" alpha="0.84999999999999987" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWS-II-vkB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="PXS-sf-4HW">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Network Unavailable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUv-2S-T2v">
+                                <rect key="frame" x="0.0" y="20" width="414" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="xDD-uE-wA7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="161" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ppe-9m-1f2">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="664"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="161" id="cFb-tw-DLi" customClass="CustomLiquorStoresTableViewCell" customModule="drnk" customModuleProvider="target">
@@ -526,6 +543,9 @@
                                         <connections>
                                             <outlet property="addressOfLiquorStore" destination="U5u-9O-Z3D" id="pwR-2u-FsT"/>
                                             <outlet property="imageOfLiquorStore" destination="m0X-zy-dWx" id="07r-Iq-6sV"/>
+                                            <outlet property="lsSpecialOne" destination="txa-r4-tVR" id="7Lr-hu-6GV"/>
+                                            <outlet property="lsSpecialThree" destination="gdg-55-imQ" id="Dzc-d4-xgT"/>
+                                            <outlet property="lsSpecialTwo" destination="iLH-Xx-UYf" id="V2h-7b-Yuh"/>
                                             <outlet property="nameOfLiquorStore" destination="qM4-Mu-2va" id="IQg-w0-wcC"/>
                                         </connections>
                                     </tableViewCell>
@@ -539,11 +559,18 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ZUv-2S-T2v" firstAttribute="top" secondItem="jCg-eJ-j3t" secondAttribute="bottom" id="4JY-qC-mOv"/>
+                            <constraint firstItem="6JF-0X-bDc" firstAttribute="top" secondItem="IWS-II-vkB" secondAttribute="bottom" id="7O3-Q2-aP8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IWS-II-vkB" secondAttribute="trailing" constant="-16" id="Aif-GW-ikq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8ve-vF-BkX" secondAttribute="trailing" constant="-16" id="FvO-ht-jzl"/>
                             <constraint firstAttribute="trailing" secondItem="Ppe-9m-1f2" secondAttribute="trailing" id="HXv-Eu-afQ"/>
-                            <constraint firstItem="Ppe-9m-1f2" firstAttribute="top" secondItem="h4N-vx-T2p" secondAttribute="top" constant="20" id="Ots-D9-n07"/>
+                            <constraint firstItem="IWS-II-vkB" firstAttribute="top" secondItem="h4N-vx-T2p" secondAttribute="topMargin" id="Mq0-43-e3W"/>
+                            <constraint firstItem="Ppe-9m-1f2" firstAttribute="top" secondItem="h4N-vx-T2p" secondAttribute="top" constant="28" id="Ots-D9-n07"/>
+                            <constraint firstItem="ZUv-2S-T2v" firstAttribute="leading" secondItem="h4N-vx-T2p" secondAttribute="leadingMargin" constant="-16" id="Ozc-5H-zXM"/>
+                            <constraint firstItem="IWS-II-vkB" firstAttribute="leading" secondItem="h4N-vx-T2p" secondAttribute="leadingMargin" constant="-16" id="UvD-9L-pvc"/>
                             <constraint firstItem="8ve-vF-BkX" firstAttribute="leading" secondItem="h4N-vx-T2p" secondAttribute="leadingMargin" constant="-16" id="fSi-9o-Vs7"/>
-                            <constraint firstItem="8ve-vF-BkX" firstAttribute="top" secondItem="jCg-eJ-j3t" secondAttribute="bottom" id="h1w-wO-jAd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZUv-2S-T2v" secondAttribute="trailing" constant="-16" id="fzy-2H-4aU"/>
+                            <constraint firstItem="8ve-vF-BkX" firstAttribute="top" secondItem="jCg-eJ-j3t" secondAttribute="bottom" constant="-20" id="h1w-wO-jAd"/>
                             <constraint firstItem="Ppe-9m-1f2" firstAttribute="leading" secondItem="h4N-vx-T2p" secondAttribute="leading" id="lMF-b8-Sz6"/>
                             <constraint firstAttribute="bottom" secondItem="Ppe-9m-1f2" secondAttribute="bottom" id="vvb-Fs-BG9"/>
                             <constraint firstItem="6JF-0X-bDc" firstAttribute="top" secondItem="8ve-vF-BkX" secondAttribute="bottom" id="xzl-WV-G2o"/>
@@ -565,6 +592,7 @@
                     <connections>
                         <outlet property="liquorStoreTableVIew" destination="Ppe-9m-1f2" id="rae-CO-bWZ"/>
                         <outlet property="menuButton" destination="iFZ-aM-zrV" id="Yhw-fB-Uu3"/>
+                        <outlet property="networkMessage" destination="ZUv-2S-T2v" id="Fb2-Rk-V6L"/>
                         <segue destination="wB4-ay-tEe" kind="show" identifier="LSDetailViewSegue" id="Itc-PC-Oaf"/>
                     </connections>
                 </viewController>
@@ -575,7 +603,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="740" y="-3316"/>
+            <point key="canvasLocation" x="727" y="-3304"/>
         </scene>
         <!--Liquor Stores Information View Controller-->
         <scene sceneID="tL1-Ya-kIp">
@@ -649,11 +677,11 @@
                         <viewControllerLayoutGuide type="bottom" id="NlW-AY-fIu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6Os-Q2-i0c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" translatesAutoresizingMaskIntoConstraints="NO" id="ZX6-Tr-JzZ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.36670278280000002" alpha="0.70999999999999996" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="aFS-wp-g30" id="Ri3-lt-8Xp"/>
@@ -941,11 +969,12 @@
         <image name="Brothers" width="128" height="128"/>
         <image name="ThinLine" width="355" height="83"/>
         <image name="barsimg" width="722" height="878"/>
+        <image name="main.png" width="446" height="876"/>
         <image name="new" width="592" height="942"/>
         <image name="redsolocupnobackground copy.png" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DDe-9Z-W1v"/>
-        <segue reference="Z7a-UY-SB5"/>
+        <segue reference="tP1-6s-IEs"/>
     </inferredMetricsTieBreakers>
 </document>

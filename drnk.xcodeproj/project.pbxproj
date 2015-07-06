@@ -26,6 +26,7 @@
 		DE83781E1B13F6C000CD8435 /* BarsTableInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83781D1B13F6C000CD8435 /* BarsTableInfo.swift */; };
 		DE8378201B13F72F00CD8435 /* CustomBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83781F1B13F72F00CD8435 /* CustomBarTableViewCell.swift */; };
 		DE88DF0D1B26B10100F7262E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE88DF0C1B26B10100F7262E /* MainViewController.swift */; };
+		DE8DEF241B48BEDE0077C7A4 /* main.png in Resources */ = {isa = PBXBuildFile; fileRef = DE8DEF231B48BEDE0077C7A4 /* main.png */; };
 		DE9893C51B3606670086ACE2 /* CustomBarInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9893C41B3606670086ACE2 /* CustomBarInfoCell.swift */; };
 		DE9D2E541B15FD970099253D /* DataConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D2E531B15FD970099253D /* DataConnection.swift */; };
 		DE9DA4DC1B28E02600AD8A2C /* SlideTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9DA4DB1B28E02600AD8A2C /* SlideTableViewController.swift */; };
@@ -89,6 +90,7 @@
 		DE83781D1B13F6C000CD8435 /* BarsTableInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarsTableInfo.swift; sourceTree = "<group>"; };
 		DE83781F1B13F72F00CD8435 /* CustomBarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBarTableViewCell.swift; sourceTree = "<group>"; };
 		DE88DF0C1B26B10100F7262E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DE8DEF231B48BEDE0077C7A4 /* main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main.png; sourceTree = "<group>"; };
 		DE9893C41B3606670086ACE2 /* CustomBarInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBarInfoCell.swift; sourceTree = "<group>"; };
 		DE9D2E531B15FD970099253D /* DataConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataConnection.swift; sourceTree = "<group>"; };
 		DE9DA4DB1B28E02600AD8A2C /* SlideTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideTableViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				DE7F9DC71B38ED6500C96535 /* redsolocupnobackground copy.png */,
 				DEC34D701B2A87FB00217731 /* redsolocupicon.png */,
 				DEDCE9AB1B3C91F20027C108 /* icon.gif */,
+				DE8DEF231B48BEDE0077C7A4 /* main.png */,
 				DEC065091B4334880087EE30 /* municeLiquors.png */,
 				DEC065071B4334830087EE30 /* friendly.png */,
 				DE8378001B13F30E00CD8435 /* LaunchScreen.xib */,
@@ -323,6 +326,7 @@
 			files = (
 				DE7F9DC81B38ED6500C96535 /* redsolocupnobackground copy.png in Resources */,
 				DEDCE9AC1B3C91F20027C108 /* icon.gif in Resources */,
+				DE8DEF241B48BEDE0077C7A4 /* main.png in Resources */,
 				DEC065081B4334830087EE30 /* friendly.png in Resources */,
 				DE8377FD1B13F30D00CD8435 /* Main.storyboard in Resources */,
 				DEC0650A1B4334880087EE30 /* municeLiquors.png in Resources */,

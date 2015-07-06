@@ -12,8 +12,10 @@ class CustomLiquorStoresTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameOfLiquorStore: UILabel!
     @IBOutlet weak var imageOfLiquorStore: UIImageView!
-    
     @IBOutlet weak var addressOfLiquorStore: UIButton!
+    @IBOutlet weak var lsSpecialOne: UILabel!
+    @IBOutlet weak var lsSpecialTwo: UILabel!
+    @IBOutlet weak var lsSpecialThree: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,10 +28,13 @@ class CustomLiquorStoresTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setLiquorStoreCell(nameLabel: String, addressLabel: String, image: String) {
+    func setLiquorStoreCell(nameLabel: String, addressLabel: String, image: String,special1:String,special2:String,special3:String) {
         self.nameOfLiquorStore.text = nameLabel
         self.addressOfLiquorStore.setTitle(addressLabel, forState: UIControlState.Normal)
 
+        self.lsSpecialOne.text = special1
+        self.lsSpecialTwo.text = special2
+        self.lsSpecialThree.text = special3
         self.imageOfLiquorStore.image = UIImage(named: image)
         
     }

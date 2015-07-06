@@ -17,6 +17,11 @@ class Parser{
     var address = " "
     var name = ""
     
+    var lsjsonFile:NSArray!
+    var lsSpecialArray = [String]()
+    var lsAddress = " "
+    var lsName = ""
+    
     var dayOfTheWeek : Day = Day()
     
     var deals : NSDictionary!
@@ -31,8 +36,18 @@ class Parser{
       
        
     }
-    
-    
+    var lsDeals : NSDictionary!
+    init(lsjsonFile:NSArray){
+        self.lsjsonFile = lsjsonFile
+        let date = NSDate()
+        var formatter = NSDateFormatter()
+        formatter.dateFormat = "EEEE"
+        let day = formatter.stringFromDate(date)
+        dayOfTheWeek.findDay(day)
+        dayOfTheWeek.intValueToDayString(dayOfTheWeek.getIntValueOfDay())
+        
+        
+    }
     
     func parseBarInfo(type:String){
    
