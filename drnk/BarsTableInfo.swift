@@ -8,8 +8,8 @@
 
 import Foundation
 
-class BarsInformation{
-    var barArray: [BarsInformation] = [BarsInformation]()
+class BarsTableInfo{
+    var barArray: [BarsTableInfo] = [BarsTableInfo]()
     var name = "Brother's Bar and Grill"
     var address = "Adress of Brother's Bar and Grill, Muncie, IN"
     var barImage = ""
@@ -26,7 +26,7 @@ class BarsInformation{
         self.special3 = special3
     }
     
-    func appendBar(bar:BarsInformation){
+    func appendBar(bar:BarsTableInfo){
         barArray.append(bar)
     }
     

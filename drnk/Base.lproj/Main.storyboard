@@ -380,6 +380,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="barImage" destination="KnQ-zc-nuH" id="Bzz-uo-vfy"/>
+                        <outlet property="detailTableView" destination="h7v-GH-4jG" id="tZo-1R-s3T"/>
                         <outlet property="nameOfBar" destination="ott-XJ-Nwa" id="4Sw-Ua-M0G"/>
                     </connections>
                 </viewController>

@@ -10,7 +10,10 @@ import Foundation
 
 class Parser{
     var jsonFile:NSArray!
+    var bar : BarsTableInfo!
+    var special : BarInfo!
     var barSpecialArray = [String]()
+    var barInfoArray = [String]()
     var address = " "
     var name = ""
     
@@ -31,26 +34,66 @@ class Parser{
     
     
     
-    func parseBarInfo(){
-        for posts in jsonFile {
+    func parseBarInfo(type:String){
+   
+        for posts in jsonFile{
             address = posts["company_street"] as! String
             name = posts["company_name"] as! String
             deals = (posts["deals"] as? NSDictionary)!
-            self.parseForSpecial()
-
+            if type == "barView"{
+                self.parseForSpecial()
+            }
+            else{
+            println("get it")
+            parseSpecialForWeek()
+            }
+            
+            
+            
         }
         
     }
+    
+    func parseSpecialForWeek(){
+        if let file = jsonFile[detailViewIndex!]["deals"] as? NSDictionary{
+    
+    for(var i = 0; i<daysOfWeek.count; i++){
+        var days = file[daysOfWeek[i].lowercaseString] as! NSArray
+        for deal in days{
+            var specialForDay = deal["deal_name"] as! String
+            barInfoArray.append(specialForDay)
+            if barInfoArray.count >= 5{
+                special = BarInfo(special1: barInfoArray[0], special2:barInfoArray[1], special3: barInfoArray[2], special4: barInfoArray[3], special5: barInfoArray[4])
+            }
+          
+            }
+            detailTableViewArray.append(special)
+            barInfoArray.removeAll(keepCapacity: true)
+        }
+            
+            
+        
+        
+        }
+
+        }
+    
     func parseForSpecial(){
-     var days = deals[dayOfTheWeek.getDayAsString().lowercaseString] as! NSArray
+        var days = deals[dayOfTheWeek.getDayAsString().lowercaseString] as! NSArray
+
         for posts in days{
                 var barspecial = posts["deal_name"] as! String
                 barSpecialArray.append(barspecial)
+
             }
-         bar = BarsInformation(name: name, address: address,barImage:"VCImage.png",special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
+        bar = BarsTableInfo(name: name, address: address,barImage:"VCImage.png",special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
+        
         arrayOfBars.append(bar)
-        }
-//        
+        barSpecialArray.removeAll(keepCapacity: true)
+        
+
+                }
+        
         
     
 

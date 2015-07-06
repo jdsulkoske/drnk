@@ -8,47 +8,88 @@
 
 import UIKit
 
+var detailTableViewArray : [BarInfo] = [BarInfo]()
+let daysOfWeek = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+
+var detailViewIndex : Int!
 class BarInformationViewController: UIViewController, UITableViewDelegate {
     var barPassedValue : String!
     var imagePassedValue : String!
-    let daysOfWeek = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+    
+    var data = DataConnection(typeOfBusiness: "bars")
     var selectedIndexPath : NSIndexPath?
     @IBOutlet weak var barImage: UIImageView!
+  
+    @IBOutlet weak var detailTableView: UITableView!
    
     @IBOutlet weak var nameOfBar: UILabel!
     @IBAction func backButton(sender: UIBarButtonItem) {
         navigationController?.popToRootViewControllerAnimated(true)
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
+        //detailTableView.dataSource = self
         if self.revealViewController() != nil {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         nameOfBar.text = barPassedValue
         barImage.image = UIImage(named: imagePassedValue)
+        println("viewDidLoad")
+        self.updateData()
+             }
 
-    }
-
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-            }
     
-     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+
+    
+    func updateData(){
+        data.getData { (responseObject, error) -> Void in
+            if  responseObject == nil{
+                    println("nothing")
+            }
+            else{
+                let parser = Parser(jsonFile: responseObject!)
+                parser.parseBarInfo("barInfo")
+                
+               dispatch_async(dispatch_get_main_queue()){
+                
+                    self.detailTableView.reloadData()
+            }
+        
+                
+            }
+           // self.refresher.endRefreshing()
+            
+        }
+        
     }
+
      func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return daysOfWeek.count
+        if detailTableViewArray.count > 0{
+            println(detailViewIndex)
+            return daysOfWeek.count
+        }
+        else{
+            return 0
+        }
     }
-     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!{
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! CustomBarInfoCell
         cell.date.text = daysOfWeek[indexPath.row]
+      
         
+        let special = detailTableViewArray[indexPath.row]
+        
+     cell.setCell(special.special1, special2: special.special2, special3: special.special3, special4: special.special4, special5: special.special5)
+      
         return cell
     }
      func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let previousIndexPath = selectedIndexPath
+        
         if indexPath == selectedIndexPath {
             selectedIndexPath = nil
         }

@@ -23,7 +23,22 @@ class CustomBarInfoCell : UITableViewCell{
 
     
 
+    override func setSelected(selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
+    }
     
+    func setCell(special1: String, special2: String, special3: String,special4:String,special5:String){
+        self.special1.text = special1
+        self.special2.text = special2
+        
+        self.special3.text = special3
+        self.special4.text = special4
+        self.special5.text = special5
+        
+        
+    }
     func checkHeight(){
         special1.hidden = (frame.size.height < CustomBarInfoCell.expandingHeight)
         special2.hidden = (frame.size.height < CustomBarInfoCell.expandingHeight)

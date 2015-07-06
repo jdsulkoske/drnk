@@ -8,11 +8,12 @@
 
 import UIKit
 
-var arrayOfBars: [BarsInformation] = [BarsInformation]()
+var arrayOfBars: [BarsTableInfo] = [BarsTableInfo]()
 
 var activePlace = 1
 var index : Int?
-var bar : BarsInformation!
+
+
 class BarsViewController: UIViewController, UITableViewDelegate {
    
     var refresher : UIRefreshControl!
@@ -25,23 +26,18 @@ class BarsViewController: UIViewController, UITableViewDelegate {
    
     var selected:[Bool] = Array(count: 100, repeatedValue: false)
     
-   let data = DataConnection(typeOfBusiness: "bars")
+   var data = DataConnection(typeOfBusiness: "bars")
     var barNameToPass : String?
     var cellIndex : Int?
     var barImageToPass : String?
     
-    
-    override func loadView() {
-        super.loadView()
-        
-    }
     
     override func viewDidLoad() {
     
         super.viewDidLoad()
         
         refresher = UIRefreshControl()
-        
+      
         refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refresher.backgroundColor = UIColor(red: 0, green: 182, blue: 255, alpha: 1)
         refresher.addTarget(self, action: "updateData", forControlEvents: UIControlEvents.ValueChanged)
@@ -51,34 +47,27 @@ class BarsViewController: UIViewController, UITableViewDelegate {
         self.navigationController?.toolbar.tintColor = UIColor(red: 0/255, green: 178/255, blue: 255/255, alpha: 1)
      
         self.navigationController?.navigationBarHidden = true
-        
         self.updateData()
-        let date = NSDate()
-        var formatter = NSDateFormatter()
-        formatter.dateFormat = "EEEE"
-        let day = formatter.stringFromDate(date)
-       
+        
     }
     
     
    
   
     func updateData(){
-       
-            data.getData { (responseObject, error) -> Void in
-        if  responseObject == nil{
-            self.networkMessage.hidden = false
-            self.networkMessage.text = "Network is unavailable"
-            self.refresher.endRefreshing()
+        data.getData { (responseObject, error) -> Void in
+            if  responseObject == nil{
+                self.networkMessage.hidden = false
+                self.networkMessage.text = "Network is unavailable"
+                self.refresher.endRefreshing()
         }
-        else{
-            self.networkMessage.hidden = true
-            var parser = Parser(jsonFile: responseObject!)
-            arrayOfBars.removeAll(keepCapacity: true)
-            parser.parseBarInfo()
-            dispatch_async(dispatch_get_main_queue()){
-                
-                //self.setUpBar()
+            else{
+                self.networkMessage.hidden = true
+                var parser = Parser(jsonFile: responseObject!)
+                arrayOfBars.removeAll(keepCapacity: true)
+                dispatch_async(dispatch_get_main_queue()){
+                    parser.parseBarInfo("barView")
+
                 self.myTableView.reloadData()
             }
             
@@ -97,7 +86,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     }
 
     override func viewDidDisappear(animated: Bool) {
-
+       
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -139,7 +128,6 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     {
         let cell: CustomBarTableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell") as! CustomBarTableViewCell
         cellIndex = indexPath.row
-        
         let bar = arrayOfBars[indexPath.row]
         index = cell.tag
         cell.addressOfBar.tag = indexPath.row
@@ -156,7 +144,10 @@ class BarsViewController: UIViewController, UITableViewDelegate {
         barNameToPass = arrayOfBars[indexPath.row].name
         barImageToPass = arrayOfBars[indexPath.row].barImage
         performSegueWithIdentifier("showBarInformationSegue", sender: self)
+       
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+         detailViewIndex = indexPath.row
+     
         
     }
     
@@ -166,6 +157,8 @@ class BarsViewController: UIViewController, UITableViewDelegate {
             let barInformationViewController = segue.destinationViewController as! BarInformationViewController
             barInformationViewController.barPassedValue = barNameToPass
             barInformationViewController.imagePassedValue = barImageToPass
+           
+            
         }
         if segue.identifier == "newPlace" {
             
