@@ -118,8 +118,7 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-       
-        (cell as! CustomBarInfoCell).ignoreFrameChanges()
+
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -131,7 +130,6 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
             return CustomBarInfoCell.defaultHeight
         }
     }
-   
     
     
 }
