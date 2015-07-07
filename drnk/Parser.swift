@@ -109,9 +109,15 @@ class Parser{
     func parseForSpecial(){
         var days = deals[dayOfTheWeek.getDayAsString().lowercaseString] as! NSArray
         for posts in days{
+            
                 var barspecial = posts["deal_name"] as! String
-                barSpecialArray.append(barspecial)
-
+                var specialPrice = posts["price"] as! String
+            if specialPrice == "0.00" {
+                specialPrice = ""
+            } else {
+                specialPrice = "$" + specialPrice
+            }
+                barSpecialArray.append(specialPrice + " " + barspecial)
             }
         bar = BarsTableInfo(name: name, address: address,barImage:"brothersbar",special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
         
