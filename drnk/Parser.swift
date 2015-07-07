@@ -72,16 +72,16 @@ class Parser{
     }
     
     func parseSpecialForWeek(){
-        if let file = jsonFile[detailViewIndex!]["deals"] as? NSDictionary{
+    if let file = jsonFile[detailViewIndex!]["deals"] as? NSDictionary{
     
-    for(var i = 0; i<daysOfWeek.count; i++){
-        var days = file[daysOfWeek[i].lowercaseString] as! NSArray
-        for deal in days{
-            var specialForDay = deal["deal_name"] as! String
-            barInfoArray.append(specialForDay)
-            if barInfoArray.count >= 5{
-                special = BarInfo(special1: barInfoArray[0], special2:barInfoArray[1], special3: barInfoArray[2], special4: barInfoArray[3], special5: barInfoArray[4])
-            }
+        for(var i = 0; i<daysOfWeek.count; i++){
+            var days = file[daysOfWeek[i].lowercaseString] as! NSArray
+                for deal in days{
+                    var specialForDay = deal["deal_name"] as! String
+                    barInfoArray.append(specialForDay)
+                        if barInfoArray.count >= 5{
+                            special = BarInfo(special1: barInfoArray[0], special2:barInfoArray[1], special3: barInfoArray[2], special4: barInfoArray[3], special5: barInfoArray[4])
+                    }
           
             }
             detailTableViewArray.append(special)
@@ -108,13 +108,12 @@ class Parser{
     
     func parseForSpecial(){
         var days = deals[dayOfTheWeek.getDayAsString().lowercaseString] as! NSArray
-
         for posts in days{
                 var barspecial = posts["deal_name"] as! String
                 barSpecialArray.append(barspecial)
 
             }
-        bar = BarsTableInfo(name: name, address: address,barImage:"VCImage.png",special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
+        bar = BarsTableInfo(name: name, address: address,barImage:"brothersbar",special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
         
         arrayOfBars.append(bar)
         barSpecialArray.removeAll(keepCapacity: true)
