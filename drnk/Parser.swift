@@ -49,6 +49,8 @@ class Parser{
         
     }
     
+    
+    
     func parseBarInfo(type:String){
    
         for posts in jsonFile{
@@ -87,11 +89,22 @@ class Parser{
         }
             
             
-        
+          
         
         }
 
         }
+    
+    func parseLSInfo(){
+        for posts in jsonFile {
+            lsAddress = posts["company_street"] as! String
+            lsName = posts["company_name"] as! String
+            lsDeals = (posts["deals"] as? NSDictionary)!
+            self.parseForLSSpecial()
+            
+        }
+        
+    }
     
     func parseForSpecial(){
         var days = deals[dayOfTheWeek.getDayAsString().lowercaseString] as! NSArray
@@ -109,7 +122,17 @@ class Parser{
 
                 }
         
-        
+    func parseForLSSpecial(){
+        var days = lsDeals["everyday"] as! NSArray
+        for posts in days{
+            var lsSpecial = posts["deal_name"] as! String
+            lsSpecialArray.append(lsSpecial)
+        }
+        liquorStore = LiquorStoresInformation(lsName: lsName, address: lsAddress, lsImage: "VCImage.png", special1: lsSpecialArray[0], special2: lsSpecialArray[1], special3: lsSpecialArray[2])
+        arrayOfLiquorStores.append(liquorStore)
+    }
+    
+  
     
 
 }

@@ -15,7 +15,7 @@ var detailViewIndex : Int!
 class BarInformationViewController: UIViewController, UITableViewDelegate {
     var barPassedValue : String!
     var imagePassedValue : String!
-    
+    var refresher : UIRefreshControl!
     var data = DataConnection(typeOfBusiness: "bars")
     var selectedIndexPath : NSIndexPath?
     @IBOutlet weak var barImage: UIImageView!
@@ -30,7 +30,13 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        refresher = UIRefreshControl()
         
+        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refresher.backgroundColor = UIColor(red: 0, green: 182, blue: 255, alpha: 1)
+        refresher.addTarget(self, action: "updateData", forControlEvents: UIControlEvents.ValueChanged)
+        
+        self.detailTableView.addSubview(refresher)
        
         //detailTableView.dataSource = self
         if self.revealViewController() != nil {
@@ -52,13 +58,12 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
             }
             else{
                 let parser = Parser(jsonFile: responseObject!)
-                parser.parseBarInfo("barInfo")
-                
-               dispatch_async(dispatch_get_main_queue()){
-                
+                detailTableViewArray.removeAll(keepCapacity: true)
+                dispatch_async(dispatch_get_main_queue()){
+                    parser.parseBarInfo("barInfo")
                     self.detailTableView.reloadData()
             }
-        
+        self.refresher.endRefreshing()
                 
             }
            // self.refresher.endRefreshing()
@@ -85,6 +90,7 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
         
      cell.setCell(special.special1, special2: special.special2, special3: special.special3, special4: special.special4, special5: special.special5)
       
+       
         return cell
     }
      func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
