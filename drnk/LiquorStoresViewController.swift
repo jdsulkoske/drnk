@@ -59,9 +59,9 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
                 self.networkMessage.hidden = true
                 var parser = Parser(jsonFile: responseObject!)
                 arrayOfLiquorStores.removeAll(keepCapacity: true)
-//                parser.parseLSInfo()
+               
                 dispatch_async(dispatch_get_main_queue()){
-                    
+                    parser.parseLSInfo()
                     //self.setUpBar()
                     self.liquorStoreTableVIew.reloadData()
                 }
