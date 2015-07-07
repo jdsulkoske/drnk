@@ -72,14 +72,14 @@ class Parser{
     
     
     private func parseSpecialForCurrentDay(){
-        findBarDeals()
+        findSpecials()
         bar = BarsTableInfo(name: name, address: address,barImage:"brothersbar",special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
         
         arrayOfBars.append(bar)
         barSpecialArray.removeAll(keepCapacity: true)
     }
     
-    private func findBarDeals(){
+    private func findSpecials(){
         var days = deals[dayOfTheWeek.getDayAsString().lowercaseString] as! NSArray
         for posts in days{
             var barspecial = posts["deal_name"] as! String
