@@ -52,10 +52,10 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
             }
             else{
                 let parser = Parser(jsonFile: responseObject!)
-                parser.parseBarInfo("barInfo")
-                
-               dispatch_async(dispatch_get_main_queue()){
-                
+                detailTableViewArray.removeAll(keepCapacity: true)
+                dispatch_async(dispatch_get_main_queue()){
+                    parser.parseBarInfo("barInfo")
+
                     self.detailTableView.reloadData()
             }
         
@@ -85,6 +85,7 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
         
      cell.setCell(special.special1, special2: special.special2, special3: special.special3, special4: special.special4, special5: special.special5)
       
+       
         return cell
     }
      func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
