@@ -58,7 +58,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
         data.getData { (responseObject, error) -> Void in
             if  responseObject == nil{
                 self.networkMessage.hidden = false
-                self.networkMessage.text = "Network is unavailable"
+                self.networkMessage.text = "Network Unavailable"
                 self.refresher.endRefreshing()
         }
             else{

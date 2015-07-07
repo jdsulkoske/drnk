@@ -224,6 +224,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Th1-Fy-9wl" userLabel="NetworkMessage">
+                                <rect key="frame" x="-7" y="25" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KnQ-zc-nuH">
                                 <rect key="frame" x="0.0" y="74" width="414" height="224"/>
                                 <constraints>
@@ -382,11 +388,12 @@
                         <outlet property="barImage" destination="KnQ-zc-nuH" id="Bzz-uo-vfy"/>
                         <outlet property="detailTableView" destination="h7v-GH-4jG" id="tZo-1R-s3T"/>
                         <outlet property="nameOfBar" destination="ott-XJ-Nwa" id="4Sw-Ua-M0G"/>
+                        <outlet property="networkMessage" destination="Th1-Fy-9wl" id="o7B-DZ-frk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEY-Iv-tkf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1275" y="-1650"/>
+            <point key="canvasLocation" x="1278" y="-1616"/>
         </scene>
         <!--drnk.-->
         <scene sceneID="FCo-Wt-G42">

@@ -20,6 +20,7 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
     var selectedIndexPath : NSIndexPath?
     @IBOutlet weak var barImage: UIImageView!
   
+    @IBOutlet weak var networkMessage: UILabel!
     @IBOutlet weak var detailTableView: UITableView!
    
     @IBOutlet weak var nameOfBar: UILabel!
@@ -54,9 +55,12 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
     func updateData(){
         data.getData { (responseObject, error) -> Void in
             if  responseObject == nil{
-                    println("nothing")
+                self.networkMessage.hidden = false
+                self.networkMessage.text = "Network Unavailable"
+                self.refresher.endRefreshing()
             }
             else{
+                self.networkMessage.hidden = true
                 let parser = Parser(jsonFile: responseObject!)
                 detailTableViewArray.removeAll(keepCapacity: true)
                 dispatch_async(dispatch_get_main_queue()){
@@ -74,7 +78,6 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
 
      func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if detailTableViewArray.count > 0{
-            println(detailViewIndex)
             return daysOfWeek.count
         }
         else{
