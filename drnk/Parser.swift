@@ -78,7 +78,13 @@ class Parser{
         var days = file[daysOfWeek[i].lowercaseString] as! NSArray
         for deal in days{
             var specialForDay = deal["deal_name"] as! String
-            barInfoArray.append(specialForDay)
+            var specialPriceForDay = deal["price"] as! String
+            if specialPriceForDay == "0.00" {
+                specialPriceForDay = ""
+            } else {
+                specialPriceForDay = "$" + specialPriceForDay
+            }
+            barInfoArray.append(specialPriceForDay + " " + specialForDay)
             if barInfoArray.count >= 5{
                 special = BarInfo(special1: barInfoArray[0], special2:barInfoArray[1], special3: barInfoArray[2], special4: barInfoArray[3], special5: barInfoArray[4])
             }
@@ -110,9 +116,15 @@ class Parser{
         var days = deals[dayOfTheWeek.getDayAsString().lowercaseString] as! NSArray
 
         for posts in days{
+            
                 var barspecial = posts["deal_name"] as! String
-                barSpecialArray.append(barspecial)
-
+                var specialPrice = posts["price"] as! String
+            if specialPrice == "0.00" {
+                specialPrice = ""
+            } else {
+                specialPrice = "$" + specialPrice
+            }
+                barSpecialArray.append(specialPrice + " " + barspecial)
             }
         bar = BarsTableInfo(name: name, address: address,barImage:"VCImage.png",special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
         
