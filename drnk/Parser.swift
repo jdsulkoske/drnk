@@ -57,7 +57,13 @@ class Parser{
                 var days = file[daysOfWeek[i].lowercaseString] as! NSArray
                     for deal in days{
                         var specialForDay = deal["deal_name"] as! String
-                        barInfoArray.append(specialForDay)
+                        var specialPrice = deal["price"] as! String
+                        if specialPrice == "0.00" {
+                            specialPrice = ""
+                        } else {
+                            specialPrice = "$" + specialPrice
+                        }
+                        barInfoArray.append(specialPrice + " " + specialForDay)
                         if barInfoArray.count >= 5{
                             special = BarInfo(special1: barInfoArray[0], special2:barInfoArray[1], special3: barInfoArray[2], special4: barInfoArray[3], special5: barInfoArray[4])
                     }
