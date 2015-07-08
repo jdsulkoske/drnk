@@ -31,6 +31,9 @@
 		DE9D2E541B15FD970099253D /* DataConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D2E531B15FD970099253D /* DataConnection.swift */; };
 		DE9DA4DC1B28E02600AD8A2C /* SlideTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9DA4DB1B28E02600AD8A2C /* SlideTableViewController.swift */; };
 		DEA360831B45DE46001F4FBD /* BarInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA360821B45DE46001F4FBD /* BarInfo.swift */; };
+		DEA46E6D1B4CB793006751A5 /* space.png in Resources */ = {isa = PBXBuildFile; fileRef = DEA46E6C1B4CB793006751A5 /* space.png */; };
+		DEA46E6F1B4CB799006751A5 /* space2.png in Resources */ = {isa = PBXBuildFile; fileRef = DEA46E6E1B4CB799006751A5 /* space2.png */; };
+		DEA46E711B4CB79E006751A5 /* space3.png in Resources */ = {isa = PBXBuildFile; fileRef = DEA46E701B4CB79E006751A5 /* space3.png */; };
 		DEC065081B4334830087EE30 /* friendly.png in Resources */ = {isa = PBXBuildFile; fileRef = DEC065071B4334830087EE30 /* friendly.png */; };
 		DEC0650A1B4334880087EE30 /* municeLiquors.png in Resources */ = {isa = PBXBuildFile; fileRef = DEC065091B4334880087EE30 /* municeLiquors.png */; };
 		DEC34D711B2A87FB00217731 /* redsolocupicon.png in Resources */ = {isa = PBXBuildFile; fileRef = DEC34D701B2A87FB00217731 /* redsolocupicon.png */; };
@@ -96,6 +99,9 @@
 		DE9D2E531B15FD970099253D /* DataConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataConnection.swift; sourceTree = "<group>"; };
 		DE9DA4DB1B28E02600AD8A2C /* SlideTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideTableViewController.swift; sourceTree = "<group>"; };
 		DEA360821B45DE46001F4FBD /* BarInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarInfo.swift; sourceTree = "<group>"; };
+		DEA46E6C1B4CB793006751A5 /* space.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = space.png; sourceTree = "<group>"; };
+		DEA46E6E1B4CB799006751A5 /* space2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = space2.png; sourceTree = "<group>"; };
+		DEA46E701B4CB79E006751A5 /* space3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = space3.png; sourceTree = "<group>"; };
 		DEC065071B4334830087EE30 /* friendly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friendly.png; sourceTree = "<group>"; };
 		DEC065091B4334880087EE30 /* municeLiquors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = municeLiquors.png; sourceTree = "<group>"; };
 		DEC34D701B2A87FB00217731 /* redsolocupicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redsolocupicon.png; sourceTree = "<group>"; };
@@ -202,9 +208,12 @@
 				DE8377F51B13F30D00CD8435 /* AppDelegate.swift */,
 				DE8377FE1B13F30E00CD8435 /* Images.xcassets */,
 				DE7F9DC71B38ED6500C96535 /* redsolocupnobackground copy.png */,
+				DEA46E6E1B4CB799006751A5 /* space2.png */,
 				DEC34D701B2A87FB00217731 /* redsolocupicon.png */,
+				DEA46E701B4CB79E006751A5 /* space3.png */,
 				DEDCE9AB1B3C91F20027C108 /* icon.gif */,
 				DEFE750E1B4B712100866D2A /* brothersbar.png */,
+				DEA46E6C1B4CB793006751A5 /* space.png */,
 				DE8DEF231B48BEDE0077C7A4 /* main.png */,
 				DEC065091B4334880087EE30 /* municeLiquors.png */,
 				DEC065071B4334830087EE30 /* friendly.png */,
@@ -329,12 +338,15 @@
 			files = (
 				DE7F9DC81B38ED6500C96535 /* redsolocupnobackground copy.png in Resources */,
 				DEDCE9AC1B3C91F20027C108 /* icon.gif in Resources */,
+				DEA46E711B4CB79E006751A5 /* space3.png in Resources */,
 				DE8DEF241B48BEDE0077C7A4 /* main.png in Resources */,
+				DEA46E6F1B4CB799006751A5 /* space2.png in Resources */,
 				DEC065081B4334830087EE30 /* friendly.png in Resources */,
 				DE8377FD1B13F30D00CD8435 /* Main.storyboard in Resources */,
 				DEC0650A1B4334880087EE30 /* municeLiquors.png in Resources */,
 				DE8378021B13F30E00CD8435 /* LaunchScreen.xib in Resources */,
 				DEC34D711B2A87FB00217731 /* redsolocupicon.png in Resources */,
+				DEA46E6D1B4CB793006751A5 /* space.png in Resources */,
 				DEFE750F1B4B712100866D2A /* brothersbar.png in Resources */,
 				DE8377FF1B13F30E00CD8435 /* Images.xcassets in Resources */,
 			);

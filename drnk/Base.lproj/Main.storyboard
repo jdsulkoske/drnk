@@ -751,15 +751,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new" translatesAutoresizingMaskIntoConstraints="NO" id="bu2-m4-ZDI">
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new" translatesAutoresizingMaskIntoConstraints="NO" id="bu2-m4-ZDI">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PoP-aB-DMe">
-                                <rect key="frame" x="121" y="287" width="173" height="118"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="118" id="5MB-bI-fze"/>
-                                    <constraint firstAttribute="width" constant="173" id="7pN-Kv-gvH"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PoP-aB-DMe">
+                                <rect key="frame" x="16" y="59" width="382" height="76"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="77"/>
                                 <state key="normal" title="drnk.">
                                     <color key="titleColor" red="0.0" green="0.83514703739999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -769,16 +765,41 @@
                                     <action selector="drnk:" destination="tMn-3v-r6N" eventType="touchUpInside" id="7E4-Mv-8nV"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="space.png" translatesAutoresizingMaskIntoConstraints="NO" id="SlE-sj-0qf">
+                                <rect key="frame" x="16" y="210" width="119" height="111"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WmF-p1-bJL">
+                                <rect key="frame" x="16" y="143" width="382" height="59"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n61-jF-a8W">
+                                <rect key="frame" x="16" y="329" width="119" height="355"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G6O-ES-uTA">
+                                <rect key="frame" x="144" y="503" width="127" height="181"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iik-X4-CMR">
+                                <rect key="frame" x="279" y="210" width="119" height="355"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dYY-RM-eVt">
+                                <rect key="frame" x="143" y="210" width="128" height="166"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="space3.png" translatesAutoresizingMaskIntoConstraints="NO" id="yZz-4k-esi">
+                                <rect key="frame" x="279" y="573" width="119" height="111"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mc6-UO-6Cf">
+                                <rect key="frame" x="16" y="20" width="382" height="31"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="space2.png" translatesAutoresizingMaskIntoConstraints="NO" id="E5W-CC-h3e">
+                                <rect key="frame" x="148" y="384" width="119" height="111"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="bu2-m4-ZDI" firstAttribute="bottom" secondItem="4bj-Ma-DhJ" secondAttribute="top" constant="44" id="1cC-10-nOi"/>
-                            <constraint firstItem="bu2-m4-ZDI" firstAttribute="top" secondItem="MIB-dT-bSG" secondAttribute="top" id="3a3-YU-3Of"/>
-                            <constraint firstAttribute="centerY" secondItem="PoP-aB-DMe" secondAttribute="centerY" id="Ag1-Nk-l1k"/>
-                            <constraint firstItem="bu2-m4-ZDI" firstAttribute="leading" secondItem="MIB-dT-bSG" secondAttribute="leading" id="VXp-BT-da1"/>
-                            <constraint firstAttribute="centerX" secondItem="PoP-aB-DMe" secondAttribute="centerX" id="ZbE-cY-GBo"/>
-                            <constraint firstAttribute="trailing" secondItem="bu2-m4-ZDI" secondAttribute="trailing" id="n5G-7u-Aaa"/>
-                        </constraints>
                     </view>
                     <toolbarItems>
                         <barButtonItem image="redsolocupnobackground copy.png" id="IE2-69-Tva">
@@ -991,6 +1012,9 @@
         <image name="main.png" width="446" height="876"/>
         <image name="new" width="592" height="942"/>
         <image name="redsolocupnobackground copy.png" width="40" height="40"/>
+        <image name="space.png" width="1406" height="770"/>
+        <image name="space2.png" width="1368" height="676"/>
+        <image name="space3.png" width="1406" height="604"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DDe-9Z-W1v"/>
