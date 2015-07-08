@@ -36,7 +36,7 @@
 		DEC34D711B2A87FB00217731 /* redsolocupicon.png in Resources */ = {isa = PBXBuildFile; fileRef = DEC34D701B2A87FB00217731 /* redsolocupicon.png */; };
 		DEDCE9AC1B3C91F20027C108 /* icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = DEDCE9AB1B3C91F20027C108 /* icon.gif */; };
 		DEEB90AE1B27532800253196 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEB90AD1B27532800253196 /* Parser.swift */; };
-		DEFE750F1B4B712100866D2A /* brothersbar.png in Resources */ = {isa = PBXBuildFile; fileRef = DEFE750E1B4B712100866D2A /* brothersbar.png */; };
+		DEFE75111B4C9A6F00866D2A /* brothersbar.png in Resources */ = {isa = PBXBuildFile; fileRef = DEFE75101B4C9A6F00866D2A /* brothersbar.png */; };
 		F7EEF1F2DE862DD730501D98 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD23C2C83349B6BF9967B7C /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -101,7 +101,7 @@
 		DEC34D701B2A87FB00217731 /* redsolocupicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redsolocupicon.png; sourceTree = "<group>"; };
 		DEDCE9AB1B3C91F20027C108 /* icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = icon.gif; sourceTree = "<group>"; };
 		DEEB90AD1B27532800253196 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		DEFE750E1B4B712100866D2A /* brothersbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brothersbar.png; sourceTree = "<group>"; };
+		DEFE75101B4C9A6F00866D2A /* brothersbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brothersbar.png; sourceTree = "<group>"; };
 		E362FCE936A38E1295DBCD7F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,8 +204,8 @@
 				DE7F9DC71B38ED6500C96535 /* redsolocupnobackground copy.png */,
 				DEC34D701B2A87FB00217731 /* redsolocupicon.png */,
 				DEDCE9AB1B3C91F20027C108 /* icon.gif */,
-				DEFE750E1B4B712100866D2A /* brothersbar.png */,
 				DE8DEF231B48BEDE0077C7A4 /* main.png */,
+				DEFE75101B4C9A6F00866D2A /* brothersbar.png */,
 				DEC065091B4334880087EE30 /* municeLiquors.png */,
 				DEC065071B4334830087EE30 /* friendly.png */,
 				DE8378001B13F30E00CD8435 /* LaunchScreen.xib */,
@@ -335,7 +335,7 @@
 				DEC0650A1B4334880087EE30 /* municeLiquors.png in Resources */,
 				DE8378021B13F30E00CD8435 /* LaunchScreen.xib in Resources */,
 				DEC34D711B2A87FB00217731 /* redsolocupicon.png in Resources */,
-				DEFE750F1B4B712100866D2A /* brothersbar.png in Resources */,
+				DEFE75111B4C9A6F00866D2A /* brothersbar.png in Resources */,
 				DE8377FF1B13F30E00CD8435 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
