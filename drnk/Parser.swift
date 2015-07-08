@@ -117,7 +117,13 @@ class Parser{
         var days = lsDeals["everyday"] as! NSArray
         for posts in days{
             var lsSpecial = posts["deal_name"] as! String
-            lsSpecialArray.append(lsSpecial)
+            var lsSpecialPrice = posts["price"] as! String
+            if lsSpecialPrice == "0.00" {
+                lsSpecialPrice = ""
+            } else {
+                lsSpecialPrice = "$" + lsSpecialPrice
+            }
+            lsSpecialArray.append(lsSpecialPrice + " " + lsSpecial)
         }
         liquorStore = LiquorStoresInformation(lsName: lsName, address: lsAddress, lsImage: "VCImage.png", special1: lsSpecialArray[0], special2: lsSpecialArray[1], special3: lsSpecialArray[2])
         arrayOfLiquorStores.append(liquorStore)

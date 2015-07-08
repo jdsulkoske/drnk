@@ -7,11 +7,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new" translatesAutoresizingMaskIntoConstraints="NO" id="K4s-I0-DQB">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main.png" translatesAutoresizingMaskIntoConstraints="NO" id="K4s-I0-DQB">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -22,11 +22,12 @@
                 <constraint firstItem="K4s-I0-DQB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="thM-bN-3rD"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
+            <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
     <resources>
-        <image name="new" width="592" height="942"/>
+        <image name="main.png" width="446" height="876"/>
     </resources>
 </document>

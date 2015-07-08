@@ -9,7 +9,7 @@
 import UIKit
 
 var detailTableViewArray : [BarInfo] = [BarInfo]()
-let daysOfWeek = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+let daysOfWeek = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"]
 
 var detailViewIndex : Int!
 class BarInformationViewController: UIViewController, UITableViewDelegate {

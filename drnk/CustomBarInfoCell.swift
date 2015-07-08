@@ -13,6 +13,7 @@ class CustomBarInfoCell : UITableViewCell{
     
     @IBOutlet weak var date: UILabel!
     
+    @IBOutlet weak var showIndicator: UILabel!
     @IBOutlet weak var special1: UILabel!
     @IBOutlet weak var special2: UILabel!
     @IBOutlet weak var special3: UILabel!
@@ -32,7 +33,6 @@ class CustomBarInfoCell : UITableViewCell{
     func setCell(special1: String, special2: String, special3: String,special4:String,special5:String){
         self.special1.text = special1
         self.special2.text = special2
-        
         self.special3.text = special3
         self.special4.text = special4
         self.special5.text = special5
@@ -58,15 +58,14 @@ class CustomBarInfoCell : UITableViewCell{
     
     func ignoreFrameChanges(){
         NSNotificationCenter.defaultCenter().removeObserver(self, forKeyPath: "frame")
-
     }
 
     override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
         if keyPath == "frame"{
             checkHeight()
+            
     }
 }
-
     
         
 }
