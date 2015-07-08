@@ -63,18 +63,27 @@ class Parser{
                         } else {
                             specialPrice = "$" + specialPrice
                         }
-                        barInfoArray.append(specialPrice + " " + specialForDay)
+                        if specialForDay != ""{
+                            barInfoArray.append(specialPrice + " " + specialForDay)
+                        }
                         if barInfoArray.count >= 5{
                             special = BarInfo(special1: barInfoArray[0], special2:barInfoArray[1], special3: barInfoArray[2], special4: barInfoArray[3], special5: barInfoArray[4])
+                        }
+                        
                     }
-          
-            }
+                if barInfoArray.count < 5 {
+                    var number = 5 - barInfoArray.count
+                    for numbers in 0...number{
+                        barInfoArray.append("")
+                    }
+                    special = BarInfo(special1: barInfoArray[0], special2:barInfoArray[1], special3: barInfoArray[2], special4: barInfoArray[3], special5: barInfoArray[4])
+                }
             detailTableViewArray.append(special)
             barInfoArray.removeAll(keepCapacity: true)
-        }
+            }
         }
 
-        }
+    }
     
     
     private func parseSpecialForCurrentDay(){
