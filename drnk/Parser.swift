@@ -8,6 +8,7 @@
 
 import Foundation
 
+var addressArray = [String]()
 class Parser{
     private var jsonFile:NSArray!
     private var bar : BarsTableInfo!
@@ -167,52 +168,19 @@ class Parser{
         
     }
     
-    func checkLiquorDealCount(array:NSArray){
-        if array.count == 0
-        {
-            liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName, address: lsAddress, lsImage: lsName, special1: "Currently no specials", special2: "echo", special3: "echo")
-            
-            arrayOfLiquorStores.append(liquorStore)
+     func parseForStreet(){
+        for posts in jsonFile{
+            var street = posts["company_street"] as! String
+            println(street)
+            //var city = posts["company_city"] as! String
+            //let address = street + city
+            let address = "224 S College Ave Muncie"
+            addressArray.append(address)
+            let add = "1515 N Mckinley Ave Muncie"
+            addressArray.append(add)
+            let ad = "713 W Ashland Muncie"
+            addressArray.append(ad)
         }
-        else
-        {
-            addMoreLiquorSpecials(lsSpecialArray)
-            
-            liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName, address: lsAddress, lsImage: lsName, special1: lsSpecialArray[0], special2: lsSpecialArray[1], special3: lsSpecialArray[2])
-            
-            arrayOfLiquorStores.append(liquorStore)
-        }
-        
-    }
-    
-    
-    func addMoreLiquorSpecials(array:NSArray){
-        if array.count <= 3 {
-            
-            for numbers in 0...5{
-                
-                lsSpecialArray.append("-")
-                
-            }
-            
-        }
-        
-    }
-    
-    func addMoreBarSpecials(array:NSArray) {
-        if array.count == 0 {
-            
-        }
-        if array.count < 5 {
-            
-            for numbers in 0...5{
-                
-                barSpecialArray.append("-")
-                
-            }
-            
-        }
-        
     }
     
 
