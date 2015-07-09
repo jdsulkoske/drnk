@@ -75,9 +75,8 @@ class Parser{
                         
                     }
                 if barInfoArray.count < 5 {
-                    println(barInfoArray.count)
                     if barInfoArray.count == 0 {
-                        special = BarInfo(special1: "Sorry, no specials", special2: "", special3: "", special4: "", special5: "")
+                        special = BarInfo(special1: "Sorry, no specials", special2: "-", special3: "-", special4: "-", special5: "-")
                     
                     } else {
                     var number = 10 - barInfoArray.count
@@ -120,7 +119,12 @@ class Parser{
                 }
             }
         }
-        addMoreBarSpecials(barSpecialArray)
+        if barSpecialArray.count == 0{
+            bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: "Currently no specials", special2:"",special3: "")
+        } else {
+            addMoreBarSpecials(barSpecialArray)
+        }
+        
         
     }
     
@@ -196,7 +200,9 @@ class Parser{
     }
     
     func addMoreBarSpecials(array:NSArray) {
-        
+        if array.count == 0 {
+            
+        }
         if array.count < 5 {
             
             for numbers in 0...5{

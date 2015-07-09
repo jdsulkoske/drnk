@@ -77,7 +77,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2 Double Wells" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.70000000000000018" translatesAutoresizingMaskIntoConstraints="NO" id="jZd-FG-jrV">
-                                                    <rect key="frame" x="114" y="76" width="228" height="17"/>
+                                                    <rect key="frame" x="114" y="76" width="267" height="17"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -105,17 +105,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2 Double Wells " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.70000000000000018" translatesAutoresizingMaskIntoConstraints="NO" id="lp6-Sv-0bj">
-                                                    <rect key="frame" x="114" y="119" width="228" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Penny Pitcheers: Coors &amp; Miller Lite " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fIO-FJ-4tO">
-                                                    <rect key="frame" x="114" y="98" width="374" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="B8Z-7s-csS"/>
-                                                        <constraint firstAttribute="width" constant="374" id="YpX-6a-Z7C"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="114" y="119" width="267" height="21"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -129,11 +119,21 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Penny Pitcheers: Coors &amp; Miller Lite " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fIO-FJ-4tO">
+                                                    <rect key="frame" x="114" y="98" width="267" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="B8Z-7s-csS"/>
+                                                        <constraint firstAttribute="width" constant="267" id="YpX-6a-Z7C"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="lp6-Sv-0bj" firstAttribute="top" secondItem="fIO-FJ-4tO" secondAttribute="bottom" id="2Fd-qt-bzg"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="jZd-FG-jrV" secondAttribute="trailing" constant="31" id="38M-cA-mj8"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="jZd-FG-jrV" secondAttribute="trailing" constant="-8" id="38M-cA-mj8"/>
                                                 <constraint firstItem="jjp-y7-jBp" firstAttribute="top" secondItem="VjT-hq-8KW" secondAttribute="bottom" constant="12" id="4bG-SO-356"/>
                                                 <constraint firstItem="Ow8-x7-744" firstAttribute="leading" secondItem="yUR-3y-lh1" secondAttribute="leadingMargin" constant="4" id="6gV-Ic-bBV"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="lp6-Sv-0bj" secondAttribute="bottom" constant="13" id="8kZ-7x-x6L"/>
@@ -142,7 +142,7 @@
                                                 <constraint firstItem="Ow8-x7-744" firstAttribute="top" secondItem="yUR-3y-lh1" secondAttribute="topMargin" constant="24" id="9jS-3k-QRf"/>
                                                 <constraint firstItem="jZd-FG-jrV" firstAttribute="top" secondItem="Ow8-x7-744" secondAttribute="bottom" constant="11" id="ANU-oj-udv"/>
                                                 <constraint firstItem="VjT-hq-8KW" firstAttribute="leading" secondItem="yUR-3y-lh1" secondAttribute="leadingMargin" constant="8" id="La8-Dl-c3f"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="lp6-Sv-0bj" secondAttribute="trailing" constant="31" id="OpN-4H-u4W"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="lp6-Sv-0bj" secondAttribute="trailing" constant="-8" id="OpN-4H-u4W"/>
                                                 <constraint firstItem="jjp-y7-jBp" firstAttribute="leading" secondItem="yUR-3y-lh1" secondAttribute="leadingMargin" constant="65" id="Ql1-Jk-XRH"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="apt-1o-nhm" secondAttribute="bottom" constant="22" id="SZU-gP-jXM"/>
                                                 <constraint firstItem="fIO-FJ-4tO" firstAttribute="top" secondItem="jZd-FG-jrV" secondAttribute="bottom" constant="5" id="SoH-Pw-DE0"/>
