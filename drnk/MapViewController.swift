@@ -17,7 +17,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var mapView: MKMapView!
     var locationManager: CLLocationManager!
- 
+    var data : DataConnection!
     
     override func viewDidLoad() {
         self.navigationController?.toolbar.barTintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
@@ -32,14 +32,16 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
         
         if activePlace == 1 {
             locationManager.requestWhenInUseAuthorization()
-            locationManager.startUpdatingLocation()
+            //locationManager.startUpdatingLocation()
+            data = DataConnection(typeOfBusiness: "")
+            updateData()
             self.back.title = ""
             self.back.enabled = false
             
             
         }
         else{
-            findAddressOnMap()
+            findAddressFromClickedButtonOnViewController()
         }
         
         var uilpgr = UILongPressGestureRecognizer(target: self, action: "action:")
@@ -55,7 +57,45 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
         }
     }
     
-    func findAddressOnMap(){
+    func updateData(){
+        data.getData { (responseObject, error) -> Void in
+            if  responseObject == nil{
+                println("shit")
+            }
+            else{
+                var parser = Parser(jsonFile: responseObject!)
+                dispatch_async(dispatch_get_main_queue()){
+                    parser.parseForStreet()
+                    self.findAddressFromJsonFile()
+                   
+                }
+                
+            }
+            return
+        }
+        
+    }
+
+  
+    
+    func findAddressFromJsonFile(){
+        for (var i = 0; i<addressArray.count; i++){
+            var address = addressArray[i]
+            var annotation = MKPointAnnotation()
+            var geocoder = CLGeocoder()
+            geocoder.geocodeAddressString(address, completionHandler: {(placemarks: [AnyObject]!, error: NSError!) -> Void in
+                if let placemark = placemarks?[0] as? CLPlacemark {
+                    self.mapView.setRegion(MKCoordinateRegionMake(CLLocationCoordinate2DMake (placemark.location.coordinate.latitude, placemark.location.coordinate.longitude), MKCoordinateSpanMake(0.05, 0.05)), animated: true)
+                    self.mapView.addAnnotation(MKPlacemark(placemark: placemark))
+                    
+                }
+            })
+            
+            self.mapView.addAnnotation(annotation)
+        }
+    }
+    
+    func findAddressFromClickedButtonOnViewController(){
         var address : String?
             if activePlace == 2{
                 address  = arrayOfLiquorStores[index!].address
@@ -134,44 +174,29 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
     }
     
  
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        
-        var userLocation:CLLocation = locations[0] as! CLLocation
-        
-        var latitude = userLocation.coordinate.latitude
-        
-        var longitude = userLocation.coordinate.longitude
-        
-        var coordinate = CLLocationCoordinate2DMake(latitude, longitude)
-        
-        var latDelta:CLLocationDegrees = 0.01
-        
-        var lonDelta:CLLocationDegrees = 0.01
-        
-        var span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
-        
-        var region:MKCoordinateRegion = MKCoordinateRegionMake(coordinate, span)
+//    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+//        
+//        var userLocation:CLLocation = locations[0] as! CLLocation
+//        
+//        var latitude = userLocation.coordinate.latitude
+//        
+//        var longitude = userLocation.coordinate.longitude
+//        
+//        var coordinate = CLLocationCoordinate2DMake(latitude, longitude)
+//        
+//        var latDelta:CLLocationDegrees = 0.01
+//        
+//        var lonDelta:CLLocationDegrees = 0.01
+//        
+//        var span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
+//        
+//        var region:MKCoordinateRegion = MKCoordinateRegionMake(coordinate, span)
+//
+//        self.mapView.setRegion(region, animated: true)
+//        
+//    }
 
-        self.mapView.setRegion(region, animated: true)
-        
-    }
 
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

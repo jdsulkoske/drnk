@@ -8,6 +8,7 @@
 
 import Foundation
 
+var addressArray = [String]()
 class Parser{
     private var jsonFile:NSArray!
     private var bar : BarsTableInfo!
@@ -144,7 +145,20 @@ class Parser{
         arrayOfLiquorStores.append(liquorStore)
     }
     
-  
+     func parseForStreet(){
+        for posts in jsonFile{
+            var street = posts["company_street"] as! String
+            println(street)
+            //var city = posts["company_city"] as! String
+            //let address = street + city
+            let address = "224 S College Ave Muncie"
+            addressArray.append(address)
+            let add = "1515 N Mckinley Ave Muncie"
+            addressArray.append(add)
+            let ad = "713 W Ashland Muncie"
+            addressArray.append(ad)
+        }
+    }
     
 
 }
