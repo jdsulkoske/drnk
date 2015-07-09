@@ -16,6 +16,7 @@ class Parser{
     private var barInfoArray = [String]()
     private var address = " "
     private var name = ""
+    private var businessId = ""
     
     private var lsSpecialArray = [String]()
     private var lsAddress = " "
@@ -40,6 +41,7 @@ class Parser{
         for posts in jsonFile{
             address = posts["company_street"] as! String
             name = posts["company_name"] as! String
+            businessId = posts["id"] as! String
             deals = (posts["deals"] as? NSDictionary)!
             if type == "barView"{
                 parseSpecialForCurrentDay()
@@ -64,6 +66,7 @@ class Parser{
                             specialPrice = "$" + specialPrice
                         }
                         if specialForDay != ""{
+                            
                             barInfoArray.append(specialPrice + " " + specialForDay)
                         }
                         if barInfoArray.count >= 5{
@@ -94,7 +97,7 @@ class Parser{
     
     private func parseSpecialForCurrentDay(){
         findSpecials()
-        bar = BarsTableInfo(name: name, address: address,barImage:"brothersbar",special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
+        bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
         
         arrayOfBars.append(bar)
         barSpecialArray.removeAll(keepCapacity: true)
@@ -105,12 +108,22 @@ class Parser{
         for posts in days{
             var barspecial = posts["deal_name"] as! String
             var specialPrice = posts["price"] as! String
+            var isFeatured = posts["featured"] as! Int
             if specialPrice == "0.00" {
                 specialPrice = ""
             } else {
                 specialPrice = "$" + specialPrice
             }
-            barSpecialArray.append(specialPrice + " " + barspecial)
+            if isFeatured == 1 {
+                if specialPrice != ""{
+                    barSpecialArray.append(specialPrice + " " + barspecial)
+                }
+            }
+        }
+        if barSpecialArray.count < 4 {
+            for specials in 0...5{
+                barSpecialArray.append("")
+            }
         }
         
     }
@@ -119,6 +132,7 @@ class Parser{
         for posts in jsonFile {
             lsAddress = posts["company_street"] as! String
             lsName = posts["company_name"] as! String
+            businessId = posts["id"] as! String
             lsDeals = (posts["deals"] as? NSDictionary)!
             self.parseForLSSpecial()
             
@@ -133,18 +147,30 @@ class Parser{
         for posts in days{
             var lsSpecial = posts["deal_name"] as! String
             var lsSpecialPrice = posts["price"] as! String
+            var featuredSpecial = posts["featured"] as! Int
+            
+            
             if lsSpecialPrice == "0.00" {
                 lsSpecialPrice = ""
             } else {
                 lsSpecialPrice = "$" + lsSpecialPrice
             }
-            lsSpecialArray.append(lsSpecialPrice + " " + lsSpecial)
+            if featuredSpecial == 1 {
+                if lsSpecial != "" {
+                    lsSpecialArray.append(lsSpecialPrice + " " + lsSpecial)
+                }
+            }
+            
+            
         }
-        liquorStore = LiquorStoresInformation(lsName: lsName, address: lsAddress, lsImage: "VCImage.png", special1: lsSpecialArray[0], special2: lsSpecialArray[1], special3: lsSpecialArray[2])
+        if lsSpecialArray.count < 3 {
+            for numbers in 0...5{
+                lsSpecialArray.append("")
+            }
+        }
+        liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName, address: lsAddress, lsImage: lsName, special1: lsSpecialArray[0], special2: lsSpecialArray[1], special3: lsSpecialArray[2])
         arrayOfLiquorStores.append(liquorStore)
     }
-    
-  
     
 
 }
