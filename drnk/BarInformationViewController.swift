@@ -15,6 +15,7 @@ var detailViewIndex : Int!
 class BarInformationViewController: UIViewController, UITableViewDelegate {
     var barPassedValue : String!
     var imagePassedValue : String!
+    var addressPassedValie : String!
     var refresher : UIRefreshControl!
     var data = DataConnection(typeOfBusiness: "bars")
     var selectedIndexPath : NSIndexPath?
@@ -24,6 +25,7 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var detailTableView: UITableView!
    
     @IBOutlet weak var nameOfBar: UILabel!
+    @IBOutlet weak var addressOfBar: UILabel!
     @IBAction func backButton(sender: UIBarButtonItem) {
         navigationController?.popToRootViewControllerAnimated(true)
     }
@@ -45,6 +47,7 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
         }
         nameOfBar.text = barPassedValue
         barImage.image = UIImage(named: imagePassedValue)
+        addressOfBar.text = addressPassedValie
         println("viewDidLoad")
         self.updateData()
              }
