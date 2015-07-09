@@ -28,6 +28,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     
    var data = DataConnection(typeOfBusiness: "bars")
     var barNameToPass : String?
+    var barAddressToPass: String?
     var cellIndex : Int?
     var barImageToPass : String?
     
@@ -143,6 +144,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
  
         barNameToPass = arrayOfBars[indexPath.row].name
         barImageToPass = arrayOfBars[indexPath.row].barImage
+        barAddressToPass = arrayOfBars[indexPath.row].address
         performSegueWithIdentifier("showBarInformationSegue", sender: self)
        
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
@@ -157,6 +159,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
             let barInformationViewController = segue.destinationViewController as! BarInformationViewController
             barInformationViewController.barPassedValue = barNameToPass
             barInformationViewController.imagePassedValue = barImageToPass
+            barInformationViewController.addressPassedValie = barAddressToPass
            
             
         }
