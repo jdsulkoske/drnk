@@ -72,11 +72,17 @@ class Parser{
                         
                     }
                 if barInfoArray.count < 5 {
-                    var number = 5 - barInfoArray.count
+                    println(barInfoArray.count)
+                    if barInfoArray.count == 0 {
+                        special = BarInfo(special1: "Currently no deals on this day", special2: "", special3: "", special4: "", special5: "")
+                    
+                    } else {
+                    var number = 10 - barInfoArray.count
                     for numbers in 0...number{
                         barInfoArray.append("")
                     }
-                    special = BarInfo(special1: barInfoArray[0], special2:barInfoArray[1], special3: barInfoArray[2], special4: barInfoArray[3], special5: barInfoArray[4])
+                        special = BarInfo(special1: barInfoArray[0], special2:barInfoArray[1], special3: barInfoArray[2], special4: barInfoArray[3], special5: barInfoArray[4])
+                    }
                 }
             detailTableViewArray.append(special)
             barInfoArray.removeAll(keepCapacity: true)
