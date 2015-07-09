@@ -194,5 +194,39 @@ class Parser{
         }
     }
     
+    func addMoreLiquorSpecials(array:NSArray){
+        if array.count <= 3 {
+            
+            for numbers in 0...5{
+                
+                lsSpecialArray.append("-")
+                
+            }
+            
+        }
+        
+    }
+    
+    func addMoreBarSpecials(array:NSArray) {
+        if array.count == 0 {
+            
+        }
+        if array.count < 5 {
+            
+            for numbers in 0...5{
+                
+                barSpecialArray.append("-")
+                
+            }
+            
+        }
+        
+    }
 
+    
+    
+    
+    
+    
+    
 }
