@@ -167,7 +167,23 @@ class Parser{
         checkLiquorDealCount(lsSpecialArray)
         
     }
-    
+    func checkLiquorDealCount(array:NSArray){
+        if array.count == 0
+        {
+            liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName, address: lsAddress, lsImage: lsName, special1: "Currently no specials", special2: "echo", special3: "echo")
+            
+            arrayOfLiquorStores.append(liquorStore)
+        }
+        else
+        {
+            addMoreLiquorSpecials(lsSpecialArray)
+            
+            liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName, address: lsAddress, lsImage: lsName, special1: lsSpecialArray[0], special2: lsSpecialArray[1], special3: lsSpecialArray[2])
+            
+            arrayOfLiquorStores.append(liquorStore)
+        }
+        
+    }
      func parseForStreet(){
         for posts in jsonFile{
             var street = posts["company_street"] as! String
@@ -183,5 +199,39 @@ class Parser{
         }
     }
     
+    func addMoreLiquorSpecials(array:NSArray){
+        if array.count <= 3 {
+            
+            for numbers in 0...5{
+                
+                lsSpecialArray.append("-")
+                
+            }
+            
+        }
+        
+    }
+    
+    func addMoreBarSpecials(array:NSArray) {
+        if array.count == 0 {
+            
+        }
+        if array.count < 5 {
+            
+            for numbers in 0...5{
+                
+                barSpecialArray.append("-")
+                
+            }
+            
+        }
+        
+    }
 
+    
+    
+    
+    
+    
+    
 }
