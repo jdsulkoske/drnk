@@ -74,7 +74,7 @@ class Parser{
                 if barInfoArray.count < 5 {
                     println(barInfoArray.count)
                     if barInfoArray.count == 0 {
-                        special = BarInfo(special1: "No deals", special2: "", special3: "", special4: "", special5: "")
+                        special = BarInfo(special1: "Currently no deals on this day", special2: "", special3: "", special4: "", special5: "")
                     
                     } else {
                     var number = 10 - barInfoArray.count
