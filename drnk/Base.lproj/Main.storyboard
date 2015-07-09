@@ -679,7 +679,7 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="&lt;" width="43" id="eq6-SD-G2O">
+                        <barButtonItem title="◁ back" width="43" id="eq6-SD-G2O">
                             <color key="tintColor" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="backButton:" destination="wB4-ay-tEe" id="VfL-Dl-mY9"/>
