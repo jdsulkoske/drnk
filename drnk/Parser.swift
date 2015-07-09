@@ -81,7 +81,7 @@ class Parser{
                     } else {
                     var number = 10 - barInfoArray.count
                     for numbers in 0...number{
-                        barInfoArray.append("")
+                        barInfoArray.append("-")
                     }
                         special = BarInfo(special1: barInfoArray[0], special2:barInfoArray[1], special3: barInfoArray[2], special4: barInfoArray[3], special5: barInfoArray[4])
                     }
@@ -120,7 +120,7 @@ class Parser{
             }
         }
         if barSpecialArray.count == 0{
-            bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: "Currently no specials", special2:"",special3: "")
+            bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: "Currently no specials", special2:"-",special3: "-")
         } else {
             addMoreBarSpecials(barSpecialArray)
         }
@@ -170,7 +170,7 @@ class Parser{
     func checkLiquorDealCount(array:NSArray){
         if array.count == 0
         {
-            liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName, address: lsAddress, lsImage: lsName, special1: "Currently no specials", special2: "", special3: "")
+            liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName, address: lsAddress, lsImage: lsName, special1: "Currently no specials", special2: "echo", special3: "echo")
             
             arrayOfLiquorStores.append(liquorStore)
         }
@@ -191,7 +191,7 @@ class Parser{
             
             for numbers in 0...5{
                 
-                lsSpecialArray.append("")
+                lsSpecialArray.append("-")
                 
             }
             
@@ -207,7 +207,7 @@ class Parser{
             
             for numbers in 0...5{
                 
-                barSpecialArray.append("")
+                barSpecialArray.append("-")
                 
             }
             
