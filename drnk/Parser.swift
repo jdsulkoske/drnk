@@ -266,6 +266,8 @@ class Parser{
         
         checkLiquorDealCount(lsSpecialArray)
         
+        lsSpecialArray.removeAll(keepCapacity: true)
+        
     }
     
     func checkLiquorDealCount(array:NSArray){
@@ -274,7 +276,7 @@ class Parser{
             
         {
             
-            liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName, address: lsAddress, lsImage: lsName, special1: "Currently no specials", special2: "echo", special3: "echo")
+            liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName, address: lsAddress, lsImage: lsName, special1: "No featured specials today", special2: "-", special3: "-")
             
             arrayOfLiquorStores.append(liquorStore)
             
