@@ -36,8 +36,8 @@ class Parser{
         let day = formatter.stringFromDate(date)
         dayOfTheWeek.findDay(day)
         dayOfTheWeek.intValueToDayString(dayOfTheWeek.getIntValueOfDay())
-      
-       
+        
+        
     }
     
     //MARK: BARS FUNCTIONS
@@ -54,13 +54,13 @@ class Parser{
             if type == "barView"{
                 
                 findSpecials()
-            
+                
             } else {
                 
                 parseSpecialForWeek()
-            
+                
             }
-         
+            
         }
         
     }
@@ -73,46 +73,47 @@ class Parser{
                 
                 var days = file[daysOfWeek[i].lowercaseString] as! NSArray
                 
-                    for deal in days{
+                for deal in days{
+                    
+                    var specialForDay = deal["deal_name"] as! String
+                    var specialPrice = deal["price"] as! String
+                    
+                    if specialPrice == "0.00" {
                         
-                        var specialForDay = deal["deal_name"] as! String
-                        var specialPrice = deal["price"] as! String
+                        specialPrice = ""
                         
-                        if specialPrice == "0.00" {
-                            
-                            specialPrice = ""
+                    } else {
                         
-                        } else {
-                            
-                            specialPrice = "$" + specialPrice + " "
-                        
-                        }
-                        
-                        if specialForDay != ""{
-                            
-                            barInfoArray.append(specialPrice + specialForDay)
-                        
-                        }
+                        specialPrice = "$" + specialPrice
                         
                     }
+                    
+                    if specialForDay != ""{
+                        
+                        barInfoArray.append(specialPrice + " " + specialForDay)
+                        
+                    }
+                    
+                }
+                
                 if barInfoArray.count >= 5{
                     
                     special = BarInfo(special1: barInfoArray[0], special2:barInfoArray[1], special3: barInfoArray[2], special4: barInfoArray[3], special5: barInfoArray[4])
                     
                 } else {
                     
-                    self.restructureBarInfoTable()
+                    restructureBarInfoTable()
                     
                 }
-            
+                
                 detailTableViewArray.append(special)
-            
+                
                 barInfoArray.removeAll(keepCapacity: true)
-            
+                
             }
-        
+            
         }
-
+        
     }
     
     func restructureBarInfoTable(){
@@ -122,17 +123,17 @@ class Parser{
             
         } else {
             
-            for numbers in 0...5{
+            var number = 10 - barInfoArray.count
+            
+            for numbers in 0...number{
                 
                 barInfoArray.append("-")
                 
             }
             
+            special = BarInfo(special1: barInfoArray[0], special2:barInfoArray[1], special3: barInfoArray[2], special4: barInfoArray[3], special5: barInfoArray[4])
         }
         
-        special = BarInfo(special1: barInfoArray[0], special2:barInfoArray[1], special3: barInfoArray[2], special4: barInfoArray[3], special5: barInfoArray[4])
-        
-    
     }
     
     private func findSpecials(){
@@ -148,11 +149,11 @@ class Parser{
             if specialPrice == "0.00" {
                 
                 specialPrice = ""
-            
+                
             } else {
                 
                 specialPrice = "$" + specialPrice + " "
-            
+                
             }
             
             if isFeatured == 1 {
@@ -160,11 +161,11 @@ class Parser{
                 if specialPrice != ""{
                     
                     barSpecialArray.append(specialPrice + barspecial)
-                
+                    
                 }
-            
+                
             }
-        
+            
         }
         
         structureBarFeaturedArray(barSpecialArray)
@@ -190,11 +191,11 @@ class Parser{
     func rearrangeBarFeaturedArray(){
         
         if barSpecialArray.count == 0 {
-        
+            
             getNonFeaturedBarDeals()
             
             if barSpecialArray.count == 0 {
-            
+                
                 bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: "Sorry, no features today", special2:"-",special3: "-")
                 
             } else {
@@ -202,11 +203,11 @@ class Parser{
                 addMoreBarSpecials(barInfoArray)
                 
                 if barSpecialArray.count >= 3 {
-                
+                    
                     bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
                     
                 } else {
-                
+                    
                     bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: "Sorry, no features today", special2:"-",special3: "-")
                     
                 }
@@ -218,11 +219,11 @@ class Parser{
             getNonFeaturedBarDeals()
             
             if barSpecialArray.count >= 3 {
-            
+                
                 bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
                 
             } else {
-            
+                
                 addMoreBarSpecials(barSpecialArray)
                 
                 bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
@@ -268,17 +269,17 @@ class Parser{
     }
     
     func addMoreBarSpecials(array:NSArray){
-            
+        
         for numbers in 0...5{
-                
+            
             barSpecialArray.append("-")
             
         }
         
     }
     
-
-//MARK: LIQUOR STORES FUNCTIONS
+    
+    //MARK: LIQUOR STORES FUNCTIONS
     
     func parseLSInfo(){
         
@@ -324,7 +325,7 @@ class Parser{
                 }
                 
             }
-
+            
         }
         
         checkLiquorDealCount()
@@ -341,7 +342,7 @@ class Parser{
             checkRegularDeals()
             
             if lsSpecialArray.count == 0 {
-            
+                
                 liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName, address: lsAddress, lsImage: lsName, special1: "No specials", special2: "-", special3: "-")
                 
                 arrayOfLiquorStores.append(liquorStore)
@@ -361,11 +362,11 @@ class Parser{
             checkRegularDeals()
             
             if lsSpecialArray.count < 3 {
-            
+                
                 addMoreLiquorSpecials(lsSpecialArray)
-            
+                
                 liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName, address: lsAddress, lsImage: lsName, special1: lsSpecialArray[0], special2: lsSpecialArray[1], special3: lsSpecialArray[2])
-            
+                
                 arrayOfLiquorStores.append(liquorStore)
                 
             } else {
@@ -394,7 +395,7 @@ class Parser{
     }
     
     func checkRegularDeals(){
-    
+        
         var days = lsDeals["everyday"] as! NSArray
         
         for posts in days{
@@ -424,7 +425,7 @@ class Parser{
             }
             
         }
-    
+        
     }
     
     //MARK: MAP FUNCTIONS
