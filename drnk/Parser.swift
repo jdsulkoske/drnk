@@ -97,30 +97,12 @@ class Parser{
                             
                             special = BarInfo(special1: barInfoArray[0], special2:barInfoArray[1], special3: barInfoArray[2], special4: barInfoArray[3], special5: barInfoArray[4])
                         
+                        } else {
+                            
+                        restructureBarInfoTable()
+                        
                         }
-                        
                     }
-                
-                if barInfoArray.count < 5 {
-                    
-                    if barInfoArray.count == 0 {
-                        
-                        special = BarInfo(special1: "Sorry, no specials", special2: "-", special3: "-", special4: "-", special5: "-")
-                    
-                    } else {
-                    
-                        var number = 10 - barInfoArray.count
-                    
-                        for numbers in 0...number{
-                        
-                            barInfoArray.append("-")
-                    
-                        }
-                        
-                        special = BarInfo(special1: barInfoArray[0], special2:barInfoArray[1], special3: barInfoArray[2], special4: barInfoArray[3], special5: barInfoArray[4])
-                    }
-                
-                }
             
                 detailTableViewArray.append(special)
             
@@ -130,6 +112,27 @@ class Parser{
         
         }
 
+    }
+    
+    func restructureBarInfoTable(){
+        if barInfoArray.count == 0 {
+            
+            special = BarInfo(special1: "Sorry, no specials", special2: "-", special3: "-", special4: "-", special5: "-")
+            
+        } else {
+            
+            var number = 10 - barInfoArray.count
+            
+            for numbers in 0...number{
+                
+                barInfoArray.append("-")
+                
+            }
+            
+            special = BarInfo(special1: barInfoArray[0], special2:barInfoArray[1], special3: barInfoArray[2], special4: barInfoArray[3], special5: barInfoArray[4])
+        }
+        
+    
     }
     
     private func findSpecials(){
@@ -216,6 +219,7 @@ class Parser{
     func parseLSInfo(){
         
         for posts in jsonFile {
+            
             lsAddress = posts["company_street"] as! String
             lsName = posts["company_name"] as! String
             businessId = posts["id"] as! String
@@ -232,6 +236,7 @@ class Parser{
         var days = lsDeals["everyday"] as! NSArray
         
         for posts in days{
+            
             var lsSpecial = posts["deal_name"] as! String
             var lsSpecialPrice = posts["price"] as! String
             var featuredSpecial = posts["featured"] as! Int
