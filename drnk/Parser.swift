@@ -45,7 +45,7 @@ class Parser{
             businessId = posts["id"] as! String
             deals = (posts["deals"] as? NSDictionary)!
             if type == "barView"{
-                parseSpecialForCurrentDay()
+                findSpecials()
             }
             else{
                 parseSpecialForWeek()
@@ -95,13 +95,13 @@ class Parser{
     }
     
     
-    private func parseSpecialForCurrentDay(){
-        findSpecials()
-        bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
-        
-        arrayOfBars.append(bar)
-        barSpecialArray.removeAll(keepCapacity: true)
-    }
+//    private func parseSpecialForCurrentDay(){
+//        findSpecials()
+//        bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
+//        
+//        arrayOfBars.append(bar)
+//        barSpecialArray.removeAll(keepCapacity: true)
+//    }
     
     private func findSpecials(){
         var days = deals[dayOfTheWeek.getDayAsString().lowercaseString] as! NSArray
@@ -120,12 +120,38 @@ class Parser{
                 }
             }
         }
-        if barSpecialArray.count == 0{
-            bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: "Currently no specials", special2:"-",special3: "-")
-        } else {
-            addMoreBarSpecials(barSpecialArray)
+        if barSpecialArray.count >= 3{
+            bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
         }
+        if barSpecialArray.count < 3 {
+            if barInfoArray.count == 0 {
+                bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: "Sorry, no featured specials", special2:"",special3: "")
+                
+            } else {
+                var number = 10 - barSpecialArray.count
+                for numbers in 0...number{
+                    barSpecialArray.append("-")
+                }
+                bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
+            }
+        }
+                arrayOfBars.append(bar)
+                barSpecialArray.removeAll(keepCapacity: true)
         
+    }
+    
+    func addMoreBarSpecials(array:NSArray) {
+        if array.count == 0 {
+            bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: "Currently no specials", special2:"-",special3: "-")
+        }else{
+
+            for numbers in 0...5{
+                
+                barSpecialArray.append("-")
+                
+            }
+            
+        }
         
     }
     
@@ -211,25 +237,7 @@ class Parser{
         }
         
     }
-    
-    func addMoreBarSpecials(array:NSArray) {
-        if array.count == 0 {
-            
-        }
-        if array.count < 5 {
-            
-            for numbers in 0...5{
-                
-                barSpecialArray.append("-")
-                
-            }
-            
-        }
-        
-    }
 
-    
-    
     
     
     
