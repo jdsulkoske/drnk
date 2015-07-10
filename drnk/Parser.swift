@@ -193,7 +193,7 @@ class Parser{
             
             if barInfoArray.count == 0 {
                 
-                bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: "Sorry, no featured specials", special2:"",special3: "")
+                bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: "Sorry, no featured specials", special2:"-",special3: "-")
                 
                 
             } else {
