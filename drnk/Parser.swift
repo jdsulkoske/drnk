@@ -100,7 +100,7 @@ class Parser{
                         
                         } else {
                             
-                        restructureBarInfoTable()
+                            restructureBarInfoTable()
                         
                         }
                     }
@@ -132,7 +132,6 @@ class Parser{
             
             special = BarInfo(special1: barInfoArray[0], special2:barInfoArray[1], special3: barInfoArray[2], special4: barInfoArray[3], special5: barInfoArray[4])
         }
-        
     
     }
     
@@ -152,7 +151,7 @@ class Parser{
             
             } else {
                 
-                specialPrice = "$" + specialPrice
+                specialPrice = "$" + specialPrice + " "
             
             }
             
@@ -160,7 +159,7 @@ class Parser{
                 
                 if specialPrice != ""{
                     
-                    barSpecialArray.append(specialPrice + " " + barspecial)
+                    barSpecialArray.append(specialPrice + barspecial)
                 
                 }
             
@@ -190,25 +189,89 @@ class Parser{
     
     func rearrangeBarFeaturedArray(){
         
-        if barSpecialArray.count < 3 {
+        if barSpecialArray.count == 0 {
+        
+            getNonFeaturedBarDeals()
             
-            if barInfoArray.count == 0 {
-                
-                bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: "Sorry, no featured specials", special2:"-",special3: "-")
-                
+            if barSpecialArray.count == 0 {
+            
+                bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: "Sorry, no features today", special2:"-",special3: "-")
                 
             } else {
                 
-                var number = 10 - barSpecialArray.count
+                addMoreBarSpecials(barInfoArray)
                 
-                for numbers in 0...number{
+                if barSpecialArray.count >= 3 {
+                
+                    bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
                     
-                    barSpecialArray.append("-")
+                } else {
+                
+                    bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: "Sorry, no features today", special2:"-",special3: "-")
                     
                 }
                 
-                bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
             }
+            
+        } else {
+            
+            getNonFeaturedBarDeals()
+            
+            if barSpecialArray.count >= 3 {
+            
+                bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
+                
+            } else {
+            
+                addMoreBarSpecials(barSpecialArray)
+                
+                bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
+                
+                
+            }
+        }
+        
+    }
+    
+    func getNonFeaturedBarDeals(){
+        
+        var days = deals[dayOfTheWeek.getDayAsString().lowercaseString] as! NSArray
+        
+        for posts in days{
+            
+            var barspecial = posts["deal_name"] as! String
+            var specialPrice = posts["price"] as! String
+            var isFeatured = posts["featured"] as! Int
+            
+            if specialPrice == "0.00" {
+                
+                specialPrice = ""
+                
+            } else {
+                
+                specialPrice = "$" + specialPrice + " "
+                
+            }
+            
+            if isFeatured != 1 {
+                
+                if specialPrice != ""{
+                    
+                    barSpecialArray.append(specialPrice + barspecial)
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+    func addMoreBarSpecials(array:NSArray){
+            
+        for numbers in 0...5{
+                
+            barSpecialArray.append("-")
             
         }
         
