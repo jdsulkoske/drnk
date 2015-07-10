@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContainerViewController: UIViewController {
+class TodayContainerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

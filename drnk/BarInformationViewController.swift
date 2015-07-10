@@ -40,7 +40,7 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
         refresher = UIRefreshControl()
         
         firstView.hidden = true
-        secondView.hidden = true
+        secondView.hidden = false
         
         refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refresher.backgroundColor = UIColor(red: 0, green: 182, blue: 255, alpha: 1)
@@ -155,10 +155,10 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
         {
         case 0:
             firstView.hidden = true
-            secondView.hidden = true
+            secondView.hidden = false
         case 1:
             firstView.hidden = true
-            secondView.hidden = false
+            secondView.hidden = true
         case 2:
             firstView.hidden = false
             secondView.hidden = true
