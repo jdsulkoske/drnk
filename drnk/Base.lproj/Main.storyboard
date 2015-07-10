@@ -418,7 +418,8 @@
                         </constraints>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="&lt; " width="30" id="yRD-mO-VeU">
+                        <barButtonItem title="◁ back" width="65" id="yRD-mO-VeU">
+                            <color key="tintColor" red="0.0" green="0.71372549019999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="backButton:" destination="XBf-wS-PsZ" id="QEd-Vu-5WX"/>
                             </connections>
@@ -718,7 +719,7 @@
                         </constraints>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="◁ back" width="43" id="eq6-SD-G2O">
+                        <barButtonItem title="◁ back" width="65" id="eq6-SD-G2O">
                             <color key="tintColor" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="backButton:" destination="wB4-ay-tEe" id="VfL-Dl-mY9"/>
@@ -767,7 +768,7 @@
                         </constraints>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="&lt;" width="23" id="IvQ-DO-Vd3">
+                        <barButtonItem title="◁ back" id="IvQ-DO-Vd3">
                             <color key="tintColor" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="backButton:" destination="aFS-wp-g30" id="g34-La-mxx"/>
