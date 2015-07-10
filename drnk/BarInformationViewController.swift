@@ -159,7 +159,7 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
         case 1:
             firstView.hidden = true
             secondView.hidden = false
-        case 1:
+        case 2:
             firstView.hidden = false
             secondView.hidden = true
         default:
