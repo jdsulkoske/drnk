@@ -38,194 +38,255 @@ class Parser{
       
        
     }
+    
+    //MARK: BARS FUNCTIONS
+    
     func parseBarInfo(type:String){
+        
         for posts in jsonFile{
+            
             address = posts["company_street"] as! String
             name = posts["company_name"] as! String
             businessId = posts["id"] as! String
             deals = (posts["deals"] as? NSDictionary)!
+            
             if type == "barView"{
+                
                 findSpecials()
-            }
-            else{
+            
+            } else {
+                
                 parseSpecialForWeek()
+            
             }
-         }
+         
+        }
         
     }
     
     private func parseSpecialForWeek(){
+        
         if let file = jsonFile[detailViewIndex!]["deals"] as? NSDictionary{
+            
             for(var i = 0; i<daysOfWeek.count; i++){
+                
                 var days = file[daysOfWeek[i].lowercaseString] as! NSArray
+                
                     for deal in days{
+                        
                         var specialForDay = deal["deal_name"] as! String
                         var specialPrice = deal["price"] as! String
+                        
                         if specialPrice == "0.00" {
+                            
                             specialPrice = ""
+                        
                         } else {
+                            
                             specialPrice = "$" + specialPrice
+                        
                         }
+                        
                         if specialForDay != ""{
                             
                             barInfoArray.append(specialPrice + " " + specialForDay)
+                        
                         }
+                        
                         if barInfoArray.count >= 5{
+                            
                             special = BarInfo(special1: barInfoArray[0], special2:barInfoArray[1], special3: barInfoArray[2], special4: barInfoArray[3], special5: barInfoArray[4])
+                        
                         }
                         
                     }
+                
                 if barInfoArray.count < 5 {
+                    
                     if barInfoArray.count == 0 {
+                        
                         special = BarInfo(special1: "Sorry, no specials", special2: "-", special3: "-", special4: "-", special5: "-")
                     
                     } else {
-                    var number = 10 - barInfoArray.count
-                    for numbers in 0...number{
-                        barInfoArray.append("-")
-                    }
+                    
+                        var number = 10 - barInfoArray.count
+                    
+                        for numbers in 0...number{
+                        
+                            barInfoArray.append("-")
+                    
+                        }
+                        
                         special = BarInfo(special1: barInfoArray[0], special2:barInfoArray[1], special3: barInfoArray[2], special4: barInfoArray[3], special5: barInfoArray[4])
                     }
+                
                 }
-            detailTableViewArray.append(special)
-            barInfoArray.removeAll(keepCapacity: true)
+            
+                detailTableViewArray.append(special)
+            
+                barInfoArray.removeAll(keepCapacity: true)
+            
             }
+        
         }
 
     }
     
-    
-//    private func parseSpecialForCurrentDay(){
-//        findSpecials()
-//        bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
-//        
-//        arrayOfBars.append(bar)
-//        barSpecialArray.removeAll(keepCapacity: true)
-//    }
-    
     private func findSpecials(){
+        
         var days = deals[dayOfTheWeek.getDayAsString().lowercaseString] as! NSArray
+        
         for posts in days{
+            
             var barspecial = posts["deal_name"] as! String
             var specialPrice = posts["price"] as! String
             var isFeatured = posts["featured"] as! Int
+            
             if specialPrice == "0.00" {
-                specialPrice = ""
-            } else {
-                specialPrice = "$" + specialPrice
-            }
-            if isFeatured == 1 {
-                if specialPrice != ""{
-                    barSpecialArray.append(specialPrice + " " + barspecial)
-                }
-            }
-        }
-        if barSpecialArray.count >= 3{
-            bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
-        }
-        if barSpecialArray.count < 3 {
-            if barInfoArray.count == 0 {
-                bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: "Sorry, no featured specials", special2:"",special3: "")
                 
+                specialPrice = ""
+            
             } else {
-                var number = 10 - barSpecialArray.count
-                for numbers in 0...number{
-                    barSpecialArray.append("-")
-                }
-                bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
+                
+                specialPrice = "$" + specialPrice
+            
             }
+            
+            if isFeatured == 1 {
+                
+                if specialPrice != ""{
+                    
+                    barSpecialArray.append(specialPrice + " " + barspecial)
+                
+                }
+            
+            }
+        
         }
-                arrayOfBars.append(bar)
-                barSpecialArray.removeAll(keepCapacity: true)
+        
+        structureBarFeaturedArray(barSpecialArray)
+        arrayOfBars.append(bar)
+        barSpecialArray.removeAll(keepCapacity: true)
         
     }
     
-    func addMoreBarSpecials(array:NSArray) {
-        if array.count == 0 {
-            bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: "Currently no specials", special2:"-",special3: "-")
-        }else{
-
-            for numbers in 0...5{
+    func structureBarFeaturedArray(array:NSArray){
+        
+        if barSpecialArray.count >= 3{
+            
+            bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
+            
+        } else {
+            
+            rearrangeBarFeaturedArray()
+            
+        }
+        
+    }
+    
+    func rearrangeBarFeaturedArray(){
+        
+        if barSpecialArray.count < 3 {
+            
+            if barInfoArray.count == 0 {
                 
-                barSpecialArray.append("-")
+                bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: "Sorry, no featured specials", special2:"",special3: "")
                 
+                
+            } else {
+                
+                var number = 10 - barSpecialArray.count
+                
+                for numbers in 0...number{
+                    
+                    barSpecialArray.append("-")
+                    
+                }
+                
+                bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
             }
             
         }
         
     }
     
+
+//MARK: LIQUOR STORES FUNCTIONS
+    
     func parseLSInfo(){
+        
         for posts in jsonFile {
             lsAddress = posts["company_street"] as! String
             lsName = posts["company_name"] as! String
             businessId = posts["id"] as! String
             lsDeals = (posts["deals"] as? NSDictionary)!
+            
             self.parseForLSSpecial()
             
         }
         
     }
     
-  
-    
     private func parseForLSSpecial(){
+        
         var days = lsDeals["everyday"] as! NSArray
+        
         for posts in days{
             var lsSpecial = posts["deal_name"] as! String
             var lsSpecialPrice = posts["price"] as! String
             var featuredSpecial = posts["featured"] as! Int
             
-            
             if lsSpecialPrice == "0.00" {
+                
                 lsSpecialPrice = ""
+                
             } else {
+                
                 lsSpecialPrice = "$" + lsSpecialPrice
+                
             }
+            
             if featuredSpecial == 1 {
+                
                 if lsSpecial != "" {
+                    
                     lsSpecialArray.append(lsSpecialPrice + " " + lsSpecial)
+                    
                 }
+                
             }
             
             
         }
+        
         checkLiquorDealCount(lsSpecialArray)
         
     }
+    
     func checkLiquorDealCount(array:NSArray){
+        
         if array.count == 0
+            
         {
+            
             liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName, address: lsAddress, lsImage: lsName, special1: "Currently no specials", special2: "echo", special3: "echo")
             
             arrayOfLiquorStores.append(liquorStore)
-        }
-        else
-        {
+            
+        } else {
+            
             addMoreLiquorSpecials(lsSpecialArray)
             
             liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName, address: lsAddress, lsImage: lsName, special1: lsSpecialArray[0], special2: lsSpecialArray[1], special3: lsSpecialArray[2])
             
             arrayOfLiquorStores.append(liquorStore)
+            
         }
         
     }
-     func parseForStreet(){
-        for posts in jsonFile{
-            var street = posts["company_street"] as! String
-            println(street)
-            //var city = posts["company_city"] as! String
-            //let address = street + city
-            let address = "224 S College Ave Muncie"
-            addressArray.append(address)
-            let add = "1515 N Mckinley Ave Muncie"
-            addressArray.append(add)
-            let ad = "713 W Ashland Muncie"
-            addressArray.append(ad)
-        }
-    }
     
     func addMoreLiquorSpecials(array:NSArray){
+        
         if array.count <= 3 {
             
             for numbers in 0...5{
@@ -237,7 +298,32 @@ class Parser{
         }
         
     }
-
+    
+    //MARK: MAP FUNCTIONS
+    
+    func parseForStreet(){
+        
+        for posts in jsonFile{
+            
+            var street = posts["company_street"] as! String
+            println(street)
+            //var city = posts["company_city"] as! String
+            //let address = street + city
+            let address = "224 S College Ave Muncie"
+            addressArray.append(address)
+            let add = "1515 N Mckinley Ave Muncie"
+            addressArray.append(add)
+            let ad = "713 W Ashland Muncie"
+            addressArray.append(ad)
+            
+        }
+        
+    }
+    
+    
+    
+    
+    
     
     
     
