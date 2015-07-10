@@ -20,6 +20,7 @@ class Parser{
     private var businessId = ""
     
     private var lsSpecialArray = [String]()
+    private var lsAllArray = [String]()
     private var lsAddress = " "
     private var lsName = ""
     
@@ -247,7 +248,7 @@ class Parser{
                 
             } else {
                 
-                lsSpecialPrice = "$" + lsSpecialPrice
+                lsSpecialPrice = "$" + lsSpecialPrice + " "
                 
             }
             
@@ -255,38 +256,61 @@ class Parser{
                 
                 if lsSpecial != "" {
                     
-                    lsSpecialArray.append(lsSpecialPrice + " " + lsSpecial)
+                    lsSpecialArray.append(lsSpecialPrice + lsSpecial)
                     
                 }
                 
             }
-            
-            
+
         }
         
-        checkLiquorDealCount(lsSpecialArray)
+        checkLiquorDealCount()
         
         lsSpecialArray.removeAll(keepCapacity: true)
         
     }
     
-    func checkLiquorDealCount(array:NSArray){
+    func checkLiquorDealCount(){
         
-        if array.count == 0
-            
+        if lsSpecialArray.count == 0
         {
             
-            liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName, address: lsAddress, lsImage: lsName, special1: "No featured specials", special2: "-", special3: "-")
+            checkRegularDeals()
             
-            arrayOfLiquorStores.append(liquorStore)
+            if lsSpecialArray.count == 0 {
+            
+                liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName, address: lsAddress, lsImage: lsName, special1: "No specials", special2: "-", special3: "-")
+                
+                arrayOfLiquorStores.append(liquorStore)
+                
+            } else {
+                
+                addMoreLiquorSpecials(arrayOfLiquorStores)
+                
+                liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName, address: lsAddress, lsImage: lsName, special1: lsSpecialArray[0], special2: lsSpecialArray[1], special3: lsSpecialArray[2])
+                
+                arrayOfLiquorStores.append(liquorStore)
+                
+            }
             
         } else {
             
-            addMoreLiquorSpecials(lsSpecialArray)
+            checkRegularDeals()
             
-            liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName, address: lsAddress, lsImage: lsName, special1: lsSpecialArray[0], special2: lsSpecialArray[1], special3: lsSpecialArray[2])
+            if lsSpecialArray.count < 3 {
             
-            arrayOfLiquorStores.append(liquorStore)
+                addMoreLiquorSpecials(lsSpecialArray)
+            
+                liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName, address: lsAddress, lsImage: lsName, special1: lsSpecialArray[0], special2: lsSpecialArray[1], special3: lsSpecialArray[2])
+            
+                arrayOfLiquorStores.append(liquorStore)
+                
+            } else {
+                liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName, address: lsAddress, lsImage: lsName, special1: lsSpecialArray[0], special2: lsSpecialArray[1], special3: lsSpecialArray[2])
+                
+                arrayOfLiquorStores.append(liquorStore)
+                
+            }
             
         }
         
@@ -304,6 +328,40 @@ class Parser{
             
         }
         
+    }
+    
+    func checkRegularDeals(){
+    
+        var days = lsDeals["everyday"] as! NSArray
+        
+        for posts in days{
+            
+            var lsSpecial = posts["deal_name"] as! String
+            var lsSpecialPrice = posts["price"] as! String
+            var featuredSpecial = posts["featured"] as! Int
+            
+            if lsSpecialPrice == "0.00" {
+                
+                lsSpecialPrice = ""
+                
+            } else {
+                
+                lsSpecialPrice = "$" + lsSpecialPrice + " "
+                
+            }
+            
+            if featuredSpecial != 1 {
+                
+                if lsSpecial != "" {
+                    
+                    lsSpecialArray.append(lsSpecialPrice + lsSpecial)
+                    
+                }
+                
+            }
+            
+        }
+    
     }
     
     //MARK: MAP FUNCTIONS
