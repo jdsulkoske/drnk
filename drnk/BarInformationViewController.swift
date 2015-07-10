@@ -21,6 +21,10 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
     var selectedIndexPath : NSIndexPath?
     @IBOutlet weak var barImage: UIImageView!
   
+    @IBOutlet weak var secondView: UIView!
+    @IBOutlet weak var firstView: UIView!
+    @IBOutlet weak var barsController: UISegmentedControl!
+    
     @IBOutlet weak var networkMessage: UILabel!
     @IBOutlet weak var detailTableView: UITableView!
    
@@ -34,6 +38,9 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         refresher = UIRefreshControl()
+        
+        firstView.hidden = true
+        secondView.hidden = false
         
         refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refresher.backgroundColor = UIColor(red: 0, green: 182, blue: 255, alpha: 1)
@@ -143,5 +150,23 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
         }
     }
     
+    @IBAction func indexChanged(sender: UISegmentedControl) {
+        switch barsController.selectedSegmentIndex
+        {
+        case 0:
+            firstView.hidden = true
+            secondView.hidden = false
+        case 1:
+            firstView.hidden = true
+            secondView.hidden = true
+        case 2:
+            firstView.hidden = false
+            secondView.hidden = true
+        default:
+            break;
+        }
+        
+    }
+
     
 }

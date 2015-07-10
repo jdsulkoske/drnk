@@ -84,26 +84,26 @@ class Parser{
                         
                         } else {
                             
-                            specialPrice = "$" + specialPrice
+                            specialPrice = "$" + specialPrice + " "
                         
                         }
                         
                         if specialForDay != ""{
                             
-                            barInfoArray.append(specialPrice + " " + specialForDay)
+                            barInfoArray.append(specialPrice + specialForDay)
                         
                         }
                         
-                        if barInfoArray.count >= 5{
-                            
-                            special = BarInfo(special1: barInfoArray[0], special2:barInfoArray[1], special3: barInfoArray[2], special4: barInfoArray[3], special5: barInfoArray[4])
-                        
-                        } else {
-                            
-                            restructureBarInfoTable()
-                        
-                        }
                     }
+                if barInfoArray.count >= 5{
+                    
+                    special = BarInfo(special1: barInfoArray[0], special2:barInfoArray[1], special3: barInfoArray[2], special4: barInfoArray[3], special5: barInfoArray[4])
+                    
+                } else {
+                    
+                    self.restructureBarInfoTable()
+                    
+                }
             
                 detailTableViewArray.append(special)
             
@@ -122,16 +122,16 @@ class Parser{
             
         } else {
             
-            var number = 10 - barInfoArray.count
-            
-            for numbers in 0...number{
+            for numbers in 0...5{
                 
                 barInfoArray.append("-")
                 
             }
             
-            special = BarInfo(special1: barInfoArray[0], special2:barInfoArray[1], special3: barInfoArray[2], special4: barInfoArray[3], special5: barInfoArray[4])
         }
+        
+        special = BarInfo(special1: barInfoArray[0], special2:barInfoArray[1], special3: barInfoArray[2], special4: barInfoArray[3], special5: barInfoArray[4])
+        
     
     }
     
