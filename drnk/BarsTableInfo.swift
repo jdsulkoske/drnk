@@ -40,7 +40,7 @@ class BarsTableInfo{
         switch imageString{
         case "4":
             imageString = "friendly.png"
-            case "5":
+        case "5":
             imageString = "main.png"
         default:
             imageString = "drnklogo"
