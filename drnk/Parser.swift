@@ -276,7 +276,7 @@ class Parser{
             
         {
             
-            liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName, address: lsAddress, lsImage: lsName, special1: "No featured specials today", special2: "-", special3: "-")
+            liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName, address: lsAddress, lsImage: lsName, special1: "No featured specials", special2: "-", special3: "-")
             
             arrayOfLiquorStores.append(liquorStore)
             
