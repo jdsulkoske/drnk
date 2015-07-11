@@ -432,17 +432,35 @@ class Parser{
                     
                 }
             
-                if lsSpecialArray.count > 0{
-                    for (var i = 0; i < lsSpecialArray.count ; i++){
-                    lsSpecial = LiquorStoreDetail(special: lsSpecialArray[i])
+                if lsSpecialArray.count == 0{
+                    
+                    lsSpecial = LiquorStoreDetail(special: "No Specials")
+                    
+                    lsDetailArray.append(lsSpecial)
+                    
+                    for numbers in 1...5 {
+                    
+                        lsSpecial = LiquorStoreDetail(special: "-")
+                        
                         lsDetailArray.append(lsSpecial)
+                        
                     }
+                    
+                    
+                } else {
+                    
+                    for (var i = 0; i < lsSpecialArray.count ; i++){
+                
+                        lsSpecial = LiquorStoreDetail(special: lsSpecialArray[i])
+                        
+                        lsDetailArray.append(lsSpecial)
+                
+                    }
+                    
                 }
 
                 lsSpecialArray.removeAll(keepCapacity: true)
                 
-            
-            
         }
         
     }
