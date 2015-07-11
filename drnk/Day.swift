@@ -92,42 +92,42 @@ class Day: NSObject {
     
     func intValueToDayString(intValueOfDay:Int) -> String{
         
-        if intValueOfDay == 0 {
+        switch intValueOfDay {
+        case 0:
             
             return "Sunday"
-            
-        } else if intValueOfDay == 1{
+        
+        case 1:
             
             return "Monday"
-            
-        } else if intValueOfDay == 2 {
+        
+        case 2:
             
             return "Tuesday"
-            
-        } else if intValueOfDay == 3 {
+        
+        case 3:
             
             return "Wednesday"
             
-        } else if intValueOfDay == 4 {
+        case 4:
             
             return "Thursday"
             
-        } else if intValueOfDay == 5 {
+        case 5:
             
             return "Friday"
             
-        } else if intValueOfDay == 6 {
+        case 6:
             
             return "Saturday"
             
-        } else if intValueOfDay == 7 {
+        case 7:
             
             return "Sunday"
             
-        } else {
+        default:
             
-            return "Something went wrong!"
-            
+            return "Sunday"
         }
         
     }
