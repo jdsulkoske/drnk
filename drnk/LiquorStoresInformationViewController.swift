@@ -21,10 +21,15 @@ class LiquorStoresInformationViewController: UIViewController, UITableViewDelega
     @IBAction func backButton(sender: UIBarButtonItem) {
         navigationController?.popToRootViewControllerAnimated(true)
     }
+    @IBOutlet weak var secondView: UIView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var nameOfBar: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        secondView.hidden = true
+        
         if self.revealViewController() != nil {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
@@ -81,5 +86,20 @@ class LiquorStoresInformationViewController: UIViewController, UITableViewDelega
         return cell
         
     }
+    
+    @IBAction func indexChanged(sender: UISegmentedControl) {
+        
+        switch segmentedControl.selectedSegmentIndex
+        {
+        case 0:
+            secondView.hidden = true
+        case 1:
+            secondView.hidden = false
+        default:
+            break;
+        }
+        
+    }
+    
     
 }
