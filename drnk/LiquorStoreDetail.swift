@@ -7,11 +7,15 @@
 //
 
 import Foundation
+
 class LiquorStoreDetail{
+    
     var special = ""
     
     init(special: String) {
+        
         self.special = special
        
     }
+    
 }

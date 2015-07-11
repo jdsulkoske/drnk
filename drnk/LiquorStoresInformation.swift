@@ -9,6 +9,7 @@
 import Foundation
 
 class LiquorStoresInformation {
+    
     var lsArray: [LiquorStoresInformation] = [LiquorStoresInformation]()
     var liquorStoreName = ""
     var address = ""
@@ -19,6 +20,7 @@ class LiquorStoresInformation {
     var businessId = ""
     
     init(id: String, lsName: String, address: String, lsImage: String, special1:String,special2:String, special3:String) {
+        
         self.liquorStoreName = lsName
         self.address = address
         self.liquorStoreImage = generateImage(id)
@@ -27,23 +29,39 @@ class LiquorStoresInformation {
         self.special3 = special3
         
     }
+    
     func appendLS(ls:LiquorStoresInformation){
+        
         lsArray.append(ls)
+        
     }
     
     func getLSArray()->NSArray{
+        
         return lsArray
+        
     }
+    
     func generateImage(businessId: String)->String{
+        
         var imageString = businessId
+        
         switch imageString{
-            case "3":
+            
+        case "3":
+                
             imageString = "friendly.png"
+        
         default:
+            
             imageString = "drnklogo"
+            
         }
         
-        
         return imageString
+        
     }
+    
+    
+    
 }

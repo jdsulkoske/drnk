@@ -12,8 +12,10 @@ class DetailLiquoreStoreCustomCell: UITableViewCell{
     
     @IBOutlet weak var special: UILabel!
     
-    
     func setLiquorStoreCell(special: String){
+        
         self.special.text = special
+        
     }
+    
 }

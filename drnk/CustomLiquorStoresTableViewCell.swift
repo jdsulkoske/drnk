@@ -18,24 +18,26 @@ class CustomLiquorStoresTableViewCell: UITableViewCell {
     @IBOutlet weak var lsSpecialThree: UILabel!
     
     override func awakeFromNib() {
+        
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
+        
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
     func setLiquorStoreCell(nameLabel: String, addressLabel: String, image: String,special1:String,special2:String,special3:String) {
+        
         self.nameOfLiquorStore.text = nameLabel
         self.addressOfLiquorStore.setTitle(addressLabel, forState: UIControlState.Normal)
-
         self.lsSpecialOne.text = special1
         self.lsSpecialTwo.text = special2
         self.lsSpecialThree.text = special3
         self.imageOfLiquorStore.image = UIImage(named: image)
+        
         
     }
 
