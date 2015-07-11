@@ -10,10 +10,14 @@ import UIKit
 
 class AboutUsContainerViewController: UIViewController {
 
+    @IBOutlet weak var address: UIButton!
+    
+    var addressPassedValue : String!
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
+        
     }
 
     override func didReceiveMemoryWarning() {
