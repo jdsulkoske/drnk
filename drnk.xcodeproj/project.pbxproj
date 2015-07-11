@@ -15,7 +15,6 @@
 		DE4C116A1B28AD3700CCB54D /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4C11691B28AD3700CCB54D /* Day.swift */; };
 		DE5C83E61B1435DA00ED4255 /* BarInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5C83E51B1435DA00ED4255 /* BarInformationViewController.swift */; };
 		DE5FB7871B14F73D00C9EC44 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE5FB7861B14F73D00C9EC44 /* CoreLocation.framework */; };
-		DE7F9DC81B38ED6500C96535 /* redsolocupnobackground copy.png in Resources */ = {isa = PBXBuildFile; fileRef = DE7F9DC71B38ED6500C96535 /* redsolocupnobackground copy.png */; };
 		DE8377F61B13F30D00CD8435 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8377F51B13F30D00CD8435 /* AppDelegate.swift */; };
 		DE8377F81B13F30D00CD8435 /* BarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8377F71B13F30D00CD8435 /* BarsViewController.swift */; };
 		DE8377FA1B13F30D00CD8435 /* LiquorStoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8377F91B13F30D00CD8435 /* LiquorStoresViewController.swift */; };
@@ -27,21 +26,13 @@
 		DE83781E1B13F6C000CD8435 /* BarsTableInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83781D1B13F6C000CD8435 /* BarsTableInfo.swift */; };
 		DE8378201B13F72F00CD8435 /* CustomBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83781F1B13F72F00CD8435 /* CustomBarTableViewCell.swift */; };
 		DE88DF0D1B26B10100F7262E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE88DF0C1B26B10100F7262E /* MainViewController.swift */; };
-		DE8DEF241B48BEDE0077C7A4 /* main.png in Resources */ = {isa = PBXBuildFile; fileRef = DE8DEF231B48BEDE0077C7A4 /* main.png */; };
 		DE9893C51B3606670086ACE2 /* CustomBarInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9893C41B3606670086ACE2 /* CustomBarInfoCell.swift */; };
 		DE9D2E541B15FD970099253D /* DataConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D2E531B15FD970099253D /* DataConnection.swift */; };
 		DE9DA4DC1B28E02600AD8A2C /* SlideTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9DA4DB1B28E02600AD8A2C /* SlideTableViewController.swift */; };
 		DEA360831B45DE46001F4FBD /* BarInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA360821B45DE46001F4FBD /* BarInfo.swift */; };
-		DEA46E6F1B4CB799006751A5 /* space2.png in Resources */ = {isa = PBXBuildFile; fileRef = DEA46E6E1B4CB799006751A5 /* space2.png */; };
-		DEA46E711B4CB79E006751A5 /* space3.png in Resources */ = {isa = PBXBuildFile; fileRef = DEA46E701B4CB79E006751A5 /* space3.png */; };
-		DEC065081B4334830087EE30 /* friendly.png in Resources */ = {isa = PBXBuildFile; fileRef = DEC065071B4334830087EE30 /* friendly.png */; };
-		DEC0650A1B4334880087EE30 /* municeLiquors.png in Resources */ = {isa = PBXBuildFile; fileRef = DEC065091B4334880087EE30 /* municeLiquors.png */; };
-		DEC34D711B2A87FB00217731 /* redsolocupicon.png in Resources */ = {isa = PBXBuildFile; fileRef = DEC34D701B2A87FB00217731 /* redsolocupicon.png */; };
 		DED81B641B50530A0007E2BE /* TodayContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED81B631B50530A0007E2BE /* TodayContainerViewController.swift */; };
 		DED81B661B5065900007E2BE /* AboutUsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED81B651B5065900007E2BE /* AboutUsContainerViewController.swift */; };
-		DEDCE9AC1B3C91F20027C108 /* icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = DEDCE9AB1B3C91F20027C108 /* icon.gif */; };
 		DEEB90AE1B27532800253196 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEB90AD1B27532800253196 /* Parser.swift */; };
-		DEFE75111B4C9A6F00866D2A /* brothersbar.png in Resources */ = {isa = PBXBuildFile; fileRef = DEFE75101B4C9A6F00866D2A /* brothersbar.png */; };
 		DEFE75151B507AAE00866D2A /* DetailLiquorStoreCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFE75141B507AAE00866D2A /* DetailLiquorStoreCustomCell.swift */; };
 		F7EEF1F2DE862DD730501D98 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD23C2C83349B6BF9967B7C /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -82,7 +73,6 @@
 		DE4C11691B28AD3700CCB54D /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		DE5C83E51B1435DA00ED4255 /* BarInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarInformationViewController.swift; sourceTree = "<group>"; };
 		DE5FB7861B14F73D00C9EC44 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		DE7F9DC71B38ED6500C96535 /* redsolocupnobackground copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redsolocupnobackground copy.png"; sourceTree = "<group>"; };
 		DE8377F01B13F30D00CD8435 /* drnk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = drnk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE8377F41B13F30D00CD8435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE8377F51B13F30D00CD8435 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,21 +88,13 @@
 		DE83781D1B13F6C000CD8435 /* BarsTableInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarsTableInfo.swift; sourceTree = "<group>"; };
 		DE83781F1B13F72F00CD8435 /* CustomBarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBarTableViewCell.swift; sourceTree = "<group>"; };
 		DE88DF0C1B26B10100F7262E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		DE8DEF231B48BEDE0077C7A4 /* main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main.png; sourceTree = "<group>"; };
 		DE9893C41B3606670086ACE2 /* CustomBarInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBarInfoCell.swift; sourceTree = "<group>"; };
 		DE9D2E531B15FD970099253D /* DataConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataConnection.swift; sourceTree = "<group>"; };
 		DE9DA4DB1B28E02600AD8A2C /* SlideTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideTableViewController.swift; sourceTree = "<group>"; };
 		DEA360821B45DE46001F4FBD /* BarInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarInfo.swift; sourceTree = "<group>"; };
-		DEA46E6E1B4CB799006751A5 /* space2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = space2.png; sourceTree = "<group>"; };
-		DEA46E701B4CB79E006751A5 /* space3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = space3.png; sourceTree = "<group>"; };
-		DEC065071B4334830087EE30 /* friendly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friendly.png; sourceTree = "<group>"; };
-		DEC065091B4334880087EE30 /* municeLiquors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = municeLiquors.png; sourceTree = "<group>"; };
-		DEC34D701B2A87FB00217731 /* redsolocupicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redsolocupicon.png; sourceTree = "<group>"; };
 		DED81B631B50530A0007E2BE /* TodayContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayContainerViewController.swift; sourceTree = "<group>"; };
 		DED81B651B5065900007E2BE /* AboutUsContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsContainerViewController.swift; sourceTree = "<group>"; };
-		DEDCE9AB1B3C91F20027C108 /* icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = icon.gif; sourceTree = "<group>"; };
 		DEEB90AD1B27532800253196 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		DEFE75101B4C9A6F00866D2A /* brothersbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brothersbar.png; sourceTree = "<group>"; };
 		DEFE75141B507AAE00866D2A /* DetailLiquorStoreCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailLiquorStoreCustomCell.swift; sourceTree = "<group>"; };
 		E362FCE936A38E1295DBCD7F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,6 +164,24 @@
 			name = "Liquor Stores";
 			sourceTree = "<group>";
 		};
+		DE7202A11B5196140052FE64 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DEEB90AD1B27532800253196 /* Parser.swift */,
+				DE9D2E531B15FD970099253D /* DataConnection.swift */,
+				DE4C11691B28AD3700CCB54D /* Day.swift */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		DE7202A21B5196330052FE64 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				DE8378191B13F56E00CD8435 /* MapViewController.swift */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
 		DE8377E71B13F30D00CD8435 = {
 			isa = PBXGroup;
 			children = (
@@ -206,27 +206,15 @@
 		DE8377F21B13F30D00CD8435 /* drnk */ = {
 			isa = PBXGroup;
 			children = (
-				DEEB90AD1B27532800253196 /* Parser.swift */,
-				DE4C11691B28AD3700CCB54D /* Day.swift */,
+				DEF5B6D11B5196C600FD95AA /* Universal */,
+				DE7202A11B5196140052FE64 /* Data */,
 				DE2E1EFA1B23A2D800C73295 /* Liquor Stores */,
+				DE7202A21B5196330052FE64 /* Map */,
 				DE2E1EF91B23A2B600C73295 /* Bars */,
-				DE8378191B13F56E00CD8435 /* MapViewController.swift */,
 				DE88DF0C1B26B10100F7262E /* MainViewController.swift */,
-				DE9D2E531B15FD970099253D /* DataConnection.swift */,
 				DE8377FB1B13F30D00CD8435 /* Main.storyboard */,
-				DE9DA4DB1B28E02600AD8A2C /* SlideTableViewController.swift */,
-				DE8377F51B13F30D00CD8435 /* AppDelegate.swift */,
-				DE8377FE1B13F30E00CD8435 /* Images.xcassets */,
-				DE7F9DC71B38ED6500C96535 /* redsolocupnobackground copy.png */,
-				DEA46E6E1B4CB799006751A5 /* space2.png */,
-				DEC34D701B2A87FB00217731 /* redsolocupicon.png */,
-				DEA46E701B4CB79E006751A5 /* space3.png */,
-				DEDCE9AB1B3C91F20027C108 /* icon.gif */,
-				DE8DEF231B48BEDE0077C7A4 /* main.png */,
-				DEFE75101B4C9A6F00866D2A /* brothersbar.png */,
-				DEC065091B4334880087EE30 /* municeLiquors.png */,
-				DEC065071B4334830087EE30 /* friendly.png */,
 				DE8378001B13F30E00CD8435 /* LaunchScreen.xib */,
+				DE8377FE1B13F30E00CD8435 /* Images.xcassets */,
 				DE8377F31B13F30D00CD8435 /* Supporting Files */,
 			);
 			path = drnk;
@@ -258,6 +246,15 @@
 				DE83780C1B13F30E00CD8435 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DEF5B6D11B5196C600FD95AA /* Universal */ = {
+			isa = PBXGroup;
+			children = (
+				DE8377F51B13F30D00CD8435 /* AppDelegate.swift */,
+				DE9DA4DB1B28E02600AD8A2C /* SlideTableViewController.swift */,
+			);
+			name = Universal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,17 +342,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE7F9DC81B38ED6500C96535 /* redsolocupnobackground copy.png in Resources */,
-				DEDCE9AC1B3C91F20027C108 /* icon.gif in Resources */,
-				DEA46E711B4CB79E006751A5 /* space3.png in Resources */,
-				DE8DEF241B48BEDE0077C7A4 /* main.png in Resources */,
-				DEA46E6F1B4CB799006751A5 /* space2.png in Resources */,
-				DEC065081B4334830087EE30 /* friendly.png in Resources */,
 				DE8377FD1B13F30D00CD8435 /* Main.storyboard in Resources */,
-				DEC0650A1B4334880087EE30 /* municeLiquors.png in Resources */,
 				DE8378021B13F30E00CD8435 /* LaunchScreen.xib in Resources */,
-				DEC34D711B2A87FB00217731 /* redsolocupicon.png in Resources */,
-				DEFE75111B4C9A6F00866D2A /* brothersbar.png in Resources */,
 				DE8377FF1B13F30E00CD8435 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

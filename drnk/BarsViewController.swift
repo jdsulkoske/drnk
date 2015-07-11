@@ -111,11 +111,11 @@ class BarsViewController: UIViewController, UITableViewDelegate {
         let bar = arrayOfBars[indexPath.row]
         index = cell.tag
         cell.addressOfBar.tag = indexPath.row
-//        if ( indexPath.row % 2 == 0 ) {
-//            cell.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
-//        }else{
-//            cell.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
-//        }
+        if ( indexPath.row % 2 == 0 ) {
+            
+        }else{
+            cell.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.20)
+        }
         
         cell.setCell(bar.name, addressOfBarText: bar.address, image: bar.barImage,special1: bar.special1,special2: bar.special2,special3: bar.special3)
         cell.detailTextLabel?.text = bar.name

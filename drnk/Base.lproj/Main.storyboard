@@ -403,7 +403,7 @@
                                 <segments>
                                     <segment title="Today"/>
                                     <segment title="All Specials"/>
-                                    <segment title="About us"/>
+                                    <segment title="Info"/>
                                 </segments>
                                 <color key="tintColor" red="1" green="1" blue="0.19976507869999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
