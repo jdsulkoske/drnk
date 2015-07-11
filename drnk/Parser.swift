@@ -48,7 +48,9 @@ class Parser{
         for posts in jsonFile{
             
             address = posts["company_street"] as! String
+            address.capitalizedString
             name = posts["company_name"] as! String
+            name.capitalizedString
             businessId = posts["id"] as! String
             deals = (posts["deals"] as? NSDictionary)!
             
@@ -179,7 +181,7 @@ class Parser{
         
         if barSpecialArray.count >= 3{
             
-            bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
+            bar = BarsTableInfo(id: businessId, name: name.capitalizedString, address: address.capitalizedString,barImage:name,special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
             
         } else {
             
@@ -197,7 +199,7 @@ class Parser{
             
             if barSpecialArray.count == 0 {
                 
-                bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: "Sorry, no features today", special2:"-",special3: "-")
+                bar = BarsTableInfo(id: businessId, name: name.capitalizedString, address: address.capitalizedString,barImage:name,special1: "Sorry, no features today", special2:"-",special3: "-")
                 
             } else {
                 
@@ -205,11 +207,11 @@ class Parser{
                 
                 if barSpecialArray.count >= 3 {
                     
-                    bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
+                    bar = BarsTableInfo(id: businessId, name: name.capitalizedString, address: address.capitalizedString,barImage:name,special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
                     
                 } else {
                     
-                    bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: "Sorry, no features today", special2:"-",special3: "-")
+                    bar = BarsTableInfo(id: businessId, name: name.capitalizedString, address: address.capitalizedString,barImage:name,special1: "Sorry, no features today", special2:"-",special3: "-")
                     
                 }
                 
@@ -221,13 +223,13 @@ class Parser{
             
             if barSpecialArray.count >= 3 {
                 
-                bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
+                bar = BarsTableInfo(id: businessId, name: name, address: address.capitalizedString,barImage:name.capitalizedString,special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
                 
             } else {
                 
                 addMoreBarSpecials(barSpecialArray)
                 
-                bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
+                bar = BarsTableInfo(id: businessId, name: name.capitalizedString, address: address.capitalizedString,barImage:name,special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
                 
                 
             }
@@ -287,7 +289,9 @@ class Parser{
         for posts in jsonFile {
         
             lsAddress = posts["company_street"] as! String
+            lsAddress.capitalizedString
             lsName = posts["company_name"] as! String
+            lsName.capitalizedString
             businessId = posts["id"] as! String
             lsDeals = (posts["deals"] as? NSDictionary)!
             
@@ -350,7 +354,7 @@ class Parser{
             
             if lsSpecialArray.count == 0 {
                 
-                liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName, address: lsAddress, lsImage: lsName, special1: "No specials", special2: "-", special3: "-")
+                liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName.capitalizedString, address: lsAddress.capitalizedString, lsImage: lsName, special1: "No specials", special2: "-", special3: "-")
                 
                 arrayOfLiquorStores.append(liquorStore)
                 
@@ -358,7 +362,7 @@ class Parser{
                 
                 addMoreLiquorSpecials(arrayOfLiquorStores)
                 
-                liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName, address: lsAddress, lsImage: lsName, special1: lsSpecialArray[0], special2: lsSpecialArray[1], special3: lsSpecialArray[2])
+                liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName.capitalizedString, address: lsAddress.capitalizedString, lsImage: lsName, special1: lsSpecialArray[0], special2: lsSpecialArray[1], special3: lsSpecialArray[2])
                 
                 arrayOfLiquorStores.append(liquorStore)
                 
@@ -372,12 +376,12 @@ class Parser{
                 
                 addMoreLiquorSpecials(lsSpecialArray)
                 
-                liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName, address: lsAddress, lsImage: lsName, special1: lsSpecialArray[0], special2: lsSpecialArray[1], special3: lsSpecialArray[2])
+                liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName.capitalizedString, address: lsAddress.capitalizedString, lsImage: lsName, special1: lsSpecialArray[0], special2: lsSpecialArray[1], special3: lsSpecialArray[2])
                 
                 arrayOfLiquorStores.append(liquorStore)
                 
             } else {
-                liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName, address: lsAddress, lsImage: lsName, special1: lsSpecialArray[0], special2: lsSpecialArray[1], special3: lsSpecialArray[2])
+                liquorStore = LiquorStoresInformation(id: businessId, lsName: lsName.capitalizedString, address: lsAddress.capitalizedString, lsImage: lsName, special1: lsSpecialArray[0], special2: lsSpecialArray[1], special3: lsSpecialArray[2])
                 
                 arrayOfLiquorStores.append(liquorStore)
                 
@@ -526,7 +530,6 @@ class Parser{
         for posts in jsonFile{
             
             var street = posts["company_street"] as! String
-            println(street)
             //var city = posts["company_city"] as! String
             //let address = street + city
             let address = "224 S College Ave Muncie"
