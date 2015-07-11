@@ -102,8 +102,8 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
         let special = detailTableViewArray[indexPath.row]
         
      cell.setCell(special.special1, special2: special.special2, special3: special.special3, special4: special.special4, special5: special.special5)
-      
-       
+        
+        
         return cell
     }
      func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

@@ -83,6 +83,12 @@ class LiquorStoresInformationViewController: UIViewController, UITableViewDelega
         
         cell.setLiquorStoreCell(liquorStore.special)
         
+        if ( indexPath.row % 2 == 0 ) {
+            cell.backgroundColor = UIColor(red: 150/255, green: 150/255, blue: 150/255, alpha: 1)
+        }else{
+            cell.backgroundColor = UIColor(red: 125/255, green: 125/255, blue: 125/255, alpha: 1)
+        }
+        
         return cell
         
     }

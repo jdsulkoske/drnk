@@ -93,27 +93,6 @@ class BarsViewController: UIViewController, UITableViewDelegate {
         super.didReceiveMemoryWarning()
           }
     
-    
-//   
-//    func setUpBar(){
-//        
-//        bar = BarsInformation(name: "Brother's Bar and Grill", address: "1601 W University Ave Muncie, USA", barImage:"drnklogo.png")
-//        arrayOfBars.append(bar)
-//       
-//        bar = BarsInformation(name: "Cleo's Burboun Bar and Shit", address: "1625 W University Ave, Muncie, USA", barImage:"drnklogo.png")
-//        arrayOfBars.append(bar)
-//
-//        bar = BarsInformation(name: "Pop's Lovely Bar", address: "10799 East County Road 750 North, Brownsburg", barImage:"drnklogo.png")
-//        arrayOfBars.append(bar)
-//
-//        bar = BarsInformation(name: "Jake Sulks Wet & Wild Pub", address: "140 Ulen Boulevard Muncie", barImage:"drnklogo.png")
-//        arrayOfBars.append(bar)
-//
-//        bar = BarsInformation(name: "David's Bar", address: "1110 West Neely Avenue Muncie", barImage:"drnklogo.png")
-//        arrayOfBars.append(bar)
-//        
-//    }
-    
     @IBAction func assignRowIndexToButton(sender: UIButton) {
             let row = sender.tag
             selected[row] = true
@@ -132,7 +111,11 @@ class BarsViewController: UIViewController, UITableViewDelegate {
         let bar = arrayOfBars[indexPath.row]
         index = cell.tag
         cell.addressOfBar.tag = indexPath.row
-
+//        if ( indexPath.row % 2 == 0 ) {
+//            cell.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+//        }else{
+//            cell.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+//        }
         
         cell.setCell(bar.name, addressOfBarText: bar.address, image: bar.barImage,special1: bar.special1,special2: bar.special2,special3: bar.special3)
         cell.detailTextLabel?.text = bar.name
