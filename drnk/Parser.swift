@@ -18,6 +18,7 @@ class Parser{
     private var address = " "
     private var name = ""
     private var businessId = ""
+    private var lsSpecial : LiquorStoreDetail!
     
     private var lsSpecialArray = [String]()
     private var lsAllArray = [String]()
@@ -281,17 +282,23 @@ class Parser{
     
     //MARK: LIQUOR STORES FUNCTIONS
     
-    func parseLSInfo(){
+    func parseLSInfo(type:String){
         
         for posts in jsonFile {
-            
+        
             lsAddress = posts["company_street"] as! String
             lsName = posts["company_name"] as! String
             businessId = posts["id"] as! String
             lsDeals = (posts["deals"] as? NSDictionary)!
             
+            if type == "lsTableView"{
             self.parseForLSSpecial()
+            }
+          
             
+        }
+        if type == "lsDetail"{
+            parseSpecialForSpecificicLiquoreStore()
         }
         
     }
@@ -394,6 +401,72 @@ class Parser{
         
     }
     
+    
+    private func parseSpecialForSpecificicLiquoreStore(){
+        
+        if let file = jsonFile[lsIndex!]["deals"] as? NSDictionary{
+            println(file)
+      
+                var days = file["everyday"] as! NSArray
+                
+                for deal in days{
+                    
+                    var specialForDay = deal["deal_name"] as! String
+                    var specialPrice = deal["price"] as! String
+                    
+                    if specialPrice == "0.00" {
+                        
+                        specialPrice = ""
+                        
+                    } else {
+                        
+                        specialPrice = "$" + specialPrice
+                        
+                    }
+                    
+                    if specialForDay != ""{
+                        
+                        lsSpecialArray.append(specialPrice + " " + specialForDay)
+                        
+                    }
+                    
+                }
+            
+                if lsSpecialArray.count > 0{
+                    for (var i = 0; i < lsSpecialArray.count ; i++){
+                    lsSpecial = LiquorStoreDetail(special: lsSpecialArray[i])
+                        lsDetailArray.append(lsSpecial)
+                    }
+                }
+
+                lsSpecialArray.removeAll(keepCapacity: true)
+                
+            
+            
+        }
+        
+    }
+    
+    
+    func restructureLSInfoTable(){
+        if lsSpecialArray.count == 0 {
+            
+            lsSpecial = LiquorStoreDetail(special: "-")
+            
+        } else {
+            
+            var number = 10 - lsSpecialArray.count
+            
+            for numbers in 0...number{
+                
+                lsSpecialArray.append("-")
+                
+            }
+            
+            lsSpecial = LiquorStoreDetail(special: lsSpecialArray[0])
+        }
+        
+    }
     func checkRegularDeals(){
         
         var days = lsDeals["everyday"] as! NSArray

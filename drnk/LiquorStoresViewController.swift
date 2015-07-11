@@ -9,6 +9,7 @@
 import UIKit
 var arrayOfLiquorStores: [LiquorStoresInformation] = [LiquorStoresInformation]()
 var liquorStore : LiquorStoresInformation!
+var lsIndex : Int!
 
 class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var liquoreStoreAddressToPass : String!
@@ -61,7 +62,7 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
                 arrayOfLiquorStores.removeAll(keepCapacity: true)
                
                 dispatch_async(dispatch_get_main_queue()){
-                    parser.parseLSInfo()
+                    parser.parseLSInfo("lsTableView")
                     //self.setUpBar()
                     self.liquorStoreTableVIew.reloadData()
                 }
@@ -121,6 +122,7 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
         liqoureStoreImageToPass = arrayOfLiquorStores[indexPath.row].liquorStoreImage
         liquoreStoreAddressToPass = arrayOfLiquorStores[indexPath.row].address
         performSegueWithIdentifier("LSDetailViewSegue", sender: self)
+        lsIndex = indexPath.row
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
