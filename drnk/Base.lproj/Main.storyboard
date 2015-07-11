@@ -77,7 +77,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2 Double Wells" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.70000000000000018" translatesAutoresizingMaskIntoConstraints="NO" id="jZd-FG-jrV">
-                                                    <rect key="frame" x="114" y="76" width="267" height="17"/>
+                                                    <rect key="frame" x="114" y="76" width="267" height="21"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -104,12 +104,6 @@
                                                         <segue destination="aFS-wp-g30" kind="show" identifier="newPlace" id="Z7a-UY-SB5"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2 Double Wells " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.70000000000000018" translatesAutoresizingMaskIntoConstraints="NO" id="lp6-Sv-0bj">
-                                                    <rect key="frame" x="114" y="119" width="267" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ThinLine" translatesAutoresizingMaskIntoConstraints="NO" id="VjT-hq-8KW">
                                                     <rect key="frame" x="16" y="26" width="367" height="18"/>
                                                 </imageView>
@@ -120,7 +114,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Penny Pitcheers: Coors &amp; Miller Lite " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fIO-FJ-4tO">
-                                                    <rect key="frame" x="114" y="98" width="267" height="21"/>
+                                                    <rect key="frame" x="114" y="105" width="267" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="B8Z-7s-csS"/>
                                                         <constraint firstAttribute="width" constant="267" id="YpX-6a-Z7C"/>
@@ -129,29 +123,35 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2 Double Wells " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.70000000000000018" translatesAutoresizingMaskIntoConstraints="NO" id="lp6-Sv-0bj">
+                                                    <rect key="frame" x="114" y="134" width="267" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="lp6-Sv-0bj" firstAttribute="top" secondItem="fIO-FJ-4tO" secondAttribute="bottom" id="2Fd-qt-bzg"/>
+                                                <constraint firstItem="lp6-Sv-0bj" firstAttribute="top" secondItem="fIO-FJ-4tO" secondAttribute="bottom" constant="8" id="2Fd-qt-bzg"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="jZd-FG-jrV" secondAttribute="trailing" constant="-8" id="38M-cA-mj8"/>
                                                 <constraint firstItem="jjp-y7-jBp" firstAttribute="top" secondItem="VjT-hq-8KW" secondAttribute="bottom" constant="12" id="4bG-SO-356"/>
                                                 <constraint firstItem="Ow8-x7-744" firstAttribute="leading" secondItem="yUR-3y-lh1" secondAttribute="leadingMargin" constant="4" id="6gV-Ic-bBV"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="lp6-Sv-0bj" secondAttribute="bottom" constant="13" id="8kZ-7x-x6L"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="lp6-Sv-0bj" secondAttribute="bottom" constant="-2" id="8kZ-7x-x6L"/>
                                                 <constraint firstItem="apt-1o-nhm" firstAttribute="leading" secondItem="9CW-uQ-Oxb" secondAttribute="leading" constant="-18" id="91F-IN-ryh"/>
-                                                <constraint firstItem="fIO-FJ-4tO" firstAttribute="top" secondItem="jjp-y7-jBp" secondAttribute="bottom" constant="21" id="97u-kQ-Aoz"/>
+                                                <constraint firstItem="fIO-FJ-4tO" firstAttribute="top" secondItem="jjp-y7-jBp" secondAttribute="bottom" constant="28" id="97u-kQ-Aoz"/>
                                                 <constraint firstItem="Ow8-x7-744" firstAttribute="top" secondItem="yUR-3y-lh1" secondAttribute="topMargin" constant="24" id="9jS-3k-QRf"/>
                                                 <constraint firstItem="jZd-FG-jrV" firstAttribute="top" secondItem="Ow8-x7-744" secondAttribute="bottom" constant="11" id="ANU-oj-udv"/>
                                                 <constraint firstItem="VjT-hq-8KW" firstAttribute="leading" secondItem="yUR-3y-lh1" secondAttribute="leadingMargin" constant="8" id="La8-Dl-c3f"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="lp6-Sv-0bj" secondAttribute="trailing" constant="-8" id="OpN-4H-u4W"/>
                                                 <constraint firstItem="jjp-y7-jBp" firstAttribute="leading" secondItem="yUR-3y-lh1" secondAttribute="leadingMargin" constant="65" id="Ql1-Jk-XRH"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="apt-1o-nhm" secondAttribute="bottom" constant="22" id="SZU-gP-jXM"/>
-                                                <constraint firstItem="fIO-FJ-4tO" firstAttribute="top" secondItem="jZd-FG-jrV" secondAttribute="bottom" constant="5" id="SoH-Pw-DE0"/>
+                                                <constraint firstItem="fIO-FJ-4tO" firstAttribute="top" secondItem="jZd-FG-jrV" secondAttribute="bottom" constant="8" id="SoH-Pw-DE0"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="VjT-hq-8KW" secondAttribute="trailing" constant="-10" id="U7y-7t-X3s"/>
                                                 <constraint firstItem="9CW-uQ-Oxb" firstAttribute="top" secondItem="yUR-3y-lh1" secondAttribute="topMargin" constant="-5" id="UWp-ax-zuK"/>
                                                 <constraint firstItem="apt-1o-nhm" firstAttribute="leading" secondItem="yUR-3y-lh1" secondAttribute="leadingMargin" id="UwE-z2-V6d"/>
                                                 <constraint firstItem="jZd-FG-jrV" firstAttribute="leading" secondItem="apt-1o-nhm" secondAttribute="trailing" constant="35" id="V8q-Fu-04e"/>
                                                 <constraint firstItem="apt-1o-nhm" firstAttribute="top" secondItem="Ow8-x7-744" secondAttribute="bottom" constant="5" id="WkD-UM-NVR"/>
-                                                <constraint firstItem="fIO-FJ-4tO" firstAttribute="top" secondItem="yUR-3y-lh1" secondAttribute="top" constant="98" id="baI-vw-4vF"/>
+                                                <constraint firstItem="fIO-FJ-4tO" firstAttribute="top" secondItem="yUR-3y-lh1" secondAttribute="top" constant="105" id="baI-vw-4vF"/>
                                                 <constraint firstItem="fIO-FJ-4tO" firstAttribute="leading" secondItem="lp6-Sv-0bj" secondAttribute="leading" id="d03-Lp-hpu"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="9CW-uQ-Oxb" secondAttribute="trailing" constant="-67" id="fCy-IH-BXj"/>
                                                 <constraint firstItem="jjp-y7-jBp" firstAttribute="top" secondItem="9CW-uQ-Oxb" secondAttribute="bottom" constant="20" id="sAV-3P-cnj"/>
@@ -726,7 +726,7 @@
                                     <constraint firstAttribute="height" constant="182" id="aZV-aP-XjI"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="KD3-5A-rNZ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="KD3-5A-rNZ">
                                 <rect key="frame" x="16" y="341" width="382" height="343"/>
                                 <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -735,7 +735,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nG9-nv-spP" id="AdN-B5-BAC">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azQ-4d-KRl">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="azQ-4d-KRl">
                                                     <rect key="frame" x="8" y="8" width="366" height="35.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="1" blue="0.40073208041958036" alpha="1" colorSpace="calibratedRGB"/>
@@ -839,11 +839,11 @@
                         <viewControllerLayoutGuide type="bottom" id="NlW-AY-fIu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6Os-Q2-i0c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" translatesAutoresizingMaskIntoConstraints="NO" id="ZX6-Tr-JzZ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.36670278280000002" alpha="0.70999999999999996" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="aFS-wp-g30" id="Ri3-lt-8Xp"/>
@@ -1346,7 +1346,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All this liquor stores info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8M-eJ-Qpe">
-                                <rect key="frame" x="16" y="8" width="350" height="21"/>
+                                <rect key="frame" x="16" y="8" width="350" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -1380,6 +1380,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DDe-9Z-W1v"/>
-        <segue reference="tP1-6s-IEs"/>
+        <segue reference="Z7a-UY-SB5"/>
     </inferredMetricsTieBreakers>
 </document>
