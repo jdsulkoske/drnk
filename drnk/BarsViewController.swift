@@ -35,7 +35,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
         
         refresher = UIRefreshControl()
-        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh", attributes: [NSForegroundColorAttributeName: UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 1.0)])
         refresher.backgroundColor = UIColor(red: 75/255, green: 75/255, blue: 75/255
             , alpha: 1)
         refresher.addTarget(self, action: "updateData", forControlEvents: UIControlEvents.ValueChanged)
