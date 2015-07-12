@@ -47,7 +47,9 @@ class Parser{
     func parseBarInfo(type:String){
 
         for posts in jsonFile{
-            address = posts["company_street"] as! String
+            var street = posts["company_street"] as! String
+            var city = posts["company_city"] as! String
+            address = street + ", " + city
             address.capitalizedString
             name = posts["company_name"] as! String
             name.capitalizedString
@@ -575,14 +577,14 @@ class Parser{
         for posts in jsonFile{
             
             var street = posts["company_street"] as! String
-            //var city = posts["company_city"] as! String
-            //let address = street + city
-            let address = "224 S College Ave Muncie"
+            var city = posts["company_city"] as! String
+            let address = street + ", " + city
+            //let address = "224 S College Ave Muncie"
             addressArray.append(address)
-            let add = "1515 N Mckinley Ave Muncie"
-            addressArray.append(add)
-            let ad = "713 W Ashland Muncie"
-            addressArray.append(ad)
+            //let add = "1515 N Mckinley Ave Muncie"
+            //addressArray.append(add)
+            //let ad = "713 W Ashland Muncie"
+           // addressArray.append(ad)
             
         }
         
