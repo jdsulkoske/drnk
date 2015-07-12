@@ -175,7 +175,7 @@
                         </constraints>
                     </view>
                     <toolbarItems>
-                        <barButtonItem image="redsolocupnobackground copy.png" width="70" id="8nq-aS-2Gk">
+                        <barButtonItem title="drnk." width="70" id="8nq-aS-2Gk">
                             <color key="tintColor" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </toolbarItems>
@@ -631,7 +631,7 @@
                         </constraints>
                     </view>
                     <toolbarItems>
-                        <barButtonItem image="redsolocupnobackground copy.png" width="70" id="iFZ-aM-zrV">
+                        <barButtonItem title="drnk." width="70" id="iFZ-aM-zrV">
                             <color key="tintColor" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </toolbarItems>
@@ -817,11 +817,11 @@
                         <viewControllerLayoutGuide type="bottom" id="NlW-AY-fIu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6Os-Q2-i0c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" translatesAutoresizingMaskIntoConstraints="NO" id="ZX6-Tr-JzZ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.36670278280000002" alpha="0.70999999999999996" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="aFS-wp-g30" id="Ri3-lt-8Xp"/>
@@ -844,7 +844,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="fixedSpace" id="9i2-7T-F5s"/>
-                        <barButtonItem image="redsolocupnobackground copy.png" width="57" id="RoI-x1-gqI">
+                        <barButtonItem title="drnk." width="57" id="RoI-x1-gqI">
                             <color key="tintColor" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </toolbarItems>
@@ -1220,12 +1220,11 @@
         <image name="ThinLine" width="355" height="83"/>
         <image name="barsimg" width="722" height="878"/>
         <image name="new" width="592" height="942"/>
-        <image name="redsolocupnobackground copy.png" width="40" height="40"/>
         <image name="space2.png" width="1368" height="676"/>
         <image name="space3.png" width="1406" height="604"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YC6-LE-fXp"/>
-        <segue reference="Z7a-UY-SB5"/>
+        <segue reference="tP1-6s-IEs"/>
     </inferredMetricsTieBreakers>
 </document>

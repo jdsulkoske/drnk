@@ -60,6 +60,13 @@ class TodayContainerViewController: UIViewController,UITableViewDelegate {
         
     }
     
+    override func viewDidDisappear(animated: Bool) {
+        
+        todaysSpecialArray.removeAll(keepCapacity: true)
+        self.myTableView.reloadData()
+        
+    }
+    
      func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return todaysSpecialArray.count
     }
@@ -82,6 +89,7 @@ class TodayContainerViewController: UIViewController,UITableViewDelegate {
         
         cell.setCell(special.special)
         return cell
+        
     }
 
 }

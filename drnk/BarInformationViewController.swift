@@ -202,6 +202,13 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
         }
         
     }
+    
+    override func viewDidDisappear(animated: Bool) {
+        
+        detailTableViewArray.removeAll(keepCapacity: true)
+        self.detailTableView.reloadData()
+        
+    }
 
     @IBAction func backButton(sender: UIBarButtonItem) {
         

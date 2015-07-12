@@ -40,7 +40,6 @@ class Parser{
         dayOfTheWeek.findDay(day)
         dayOfTheWeek.intValueToDayString(dayOfTheWeek.getIntValueOfDay())
         
-        
     }
     
     //MARK: BARS FUNCTIONS

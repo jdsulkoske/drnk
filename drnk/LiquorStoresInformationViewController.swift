@@ -128,6 +128,13 @@ class LiquorStoresInformationViewController: UIViewController, UITableViewDelega
         
     }
     
+    override func viewDidDisappear(animated: Bool) {
+        
+        lsDetailArray.removeAll(keepCapacity: true)
+        self.myTableView.reloadData()
+        
+    }
+    
     @IBAction func backButton(sender: UIBarButtonItem) {
         
         navigationController?.popToRootViewControllerAnimated(true)

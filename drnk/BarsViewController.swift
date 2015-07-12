@@ -103,14 +103,6 @@ class BarsViewController: UIViewController, UITableViewDelegate {
         
     }
     
-    @IBAction func assignRowIndexToButton(sender: UIButton) {
-        
-        let row = sender.tag
-        selected[row] = true
-        index = sender.tag
-        
-    }
-    
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
         
         return arrayOfBars.count
@@ -169,6 +161,14 @@ class BarsViewController: UIViewController, UITableViewDelegate {
             activePlace = -1
             
         }
+        
+    }
+    
+    @IBAction func assignRowIndexToButton(sender: UIButton) {
+        
+        let row = sender.tag
+        selected[row] = true
+        index = sender.tag
         
     }
     
