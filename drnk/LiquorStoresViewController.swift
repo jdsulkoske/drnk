@@ -35,7 +35,7 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
         
         self.liquorStoreTableVIew.addSubview(refresher)
         
-        refresher.backgroundColor = UIColor(red: 0, green: 182, blue: 255, alpha: 1)
+        refresher.backgroundColor = UIColor(red: 75/255, green: 75/255, blue: 75/255, alpha: 1)
         
         self.navigationController?.navigationBarHidden = true
         self.navigationController?.toolbar.barTintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
