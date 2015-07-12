@@ -12,9 +12,6 @@ class TodayDealCustomCell: UITableViewCell{
     
     @IBOutlet weak var special: UILabel!
     
-    
-    
-    
     func setCell(special:String){
         self.special.text = special
     }

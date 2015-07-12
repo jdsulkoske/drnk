@@ -35,7 +35,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
         
         refresher = UIRefreshControl()
-        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh", attributes: [NSForegroundColorAttributeName: UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 1.0)])
         refresher.backgroundColor = UIColor(red: 75/255, green: 75/255, blue: 75/255
             , alpha: 1)
         refresher.addTarget(self, action: "updateData", forControlEvents: UIControlEvents.ValueChanged)
@@ -103,14 +103,6 @@ class BarsViewController: UIViewController, UITableViewDelegate {
         
     }
     
-    @IBAction func assignRowIndexToButton(sender: UIButton) {
-        
-        let row = sender.tag
-        selected[row] = true
-        index = sender.tag
-        
-    }
-    
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
         
         return arrayOfBars.count
@@ -169,6 +161,14 @@ class BarsViewController: UIViewController, UITableViewDelegate {
             activePlace = -1
             
         }
+        
+    }
+    
+    @IBAction func assignRowIndexToButton(sender: UIButton) {
+        
+        let row = sender.tag
+        selected[row] = true
+        index = sender.tag
         
     }
     

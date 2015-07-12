@@ -175,7 +175,7 @@
                         </constraints>
                     </view>
                     <toolbarItems>
-                        <barButtonItem image="redsolocupnobackground copy.png" width="70" id="8nq-aS-2Gk">
+                        <barButtonItem title="drnk." width="70" id="8nq-aS-2Gk">
                             <color key="tintColor" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </toolbarItems>
@@ -285,7 +285,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="39" id="gEt-S2-anw"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="26"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="26"/>
                                                     <color key="textColor" red="1" green="1" blue="0.19976507867132867" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -631,7 +631,7 @@
                         </constraints>
                     </view>
                     <toolbarItems>
-                        <barButtonItem image="redsolocupnobackground copy.png" width="70" id="iFZ-aM-zrV">
+                        <barButtonItem title="drnk." width="70" id="iFZ-aM-zrV">
                             <color key="tintColor" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </toolbarItems>
@@ -844,7 +844,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="fixedSpace" id="9i2-7T-F5s"/>
-                        <barButtonItem image="redsolocupnobackground copy.png" width="57" id="RoI-x1-gqI">
+                        <barButtonItem title="drnk." width="57" id="RoI-x1-gqI">
                             <color key="tintColor" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </toolbarItems>
@@ -1083,7 +1083,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="765-123-4567" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCs-R0-Vp7">
-                                <rect key="frame" x="97" y="36" width="269" height="21"/>
+                                <rect key="frame" x="97" y="36" width="269" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -1098,7 +1098,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 am - 3 am" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQS-YB-GGz">
-                                <rect key="frame" x="97" y="65" width="269" height="21"/>
+                                <rect key="frame" x="97" y="65" width="269" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -1154,13 +1154,19 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2YE-Xo-vIL" id="xDY-ND-cHw">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Deal 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51E-S2-Xeg">
-                                                    <rect key="frame" x="8" y="8" width="366" height="33"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deal 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51E-S2-Xeg">
+                                                    <rect key="frame" x="26" y="8" width="348" height="43"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="1" green="1" blue="0.19976507869999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="51E-S2-Xeg" firstAttribute="bottom" secondItem="xDY-ND-cHw" secondAttribute="bottomMargin" id="4cl-Pm-ja1"/>
+                                                <constraint firstItem="51E-S2-Xeg" firstAttribute="trailing" secondItem="xDY-ND-cHw" secondAttribute="trailingMargin" id="KQs-Lw-bv1"/>
+                                                <constraint firstItem="51E-S2-Xeg" firstAttribute="top" secondItem="xDY-ND-cHw" secondAttribute="topMargin" id="b1t-lj-phR"/>
+                                                <constraint firstItem="51E-S2-Xeg" firstAttribute="leading" secondItem="xDY-ND-cHw" secondAttribute="leadingMargin" constant="18" id="fup-yQ-F3s"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
@@ -1203,19 +1209,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="382" height="343"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All this liquor stores info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8M-eJ-Qpe">
-                                <rect key="frame" x="16" y="8" width="350" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="    address:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8M-eJ-Qpe">
+                                <rect key="frame" x="16" y="8" width="111" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="    phone:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rA-Ny-yFM">
+                                <rect key="frame" x="16" y="66" width="111" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="    hours:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ElI-Vg-oke">
+                                <rect key="frame" x="16" y="95" width="111" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1110 West Neely Avenue, Muncie IN 47303" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AC0-2l-ucs">
+                                <rect key="frame" x="135" y="8" width="231" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="317-339-6003" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eh3-OM-xJ8">
+                                <rect key="frame" x="135" y="124" width="231" height="199"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="317-339-6003" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgx-RV-brV">
+                                <rect key="frame" x="135" y="66" width="231" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10am - 3am " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vnk-TW-nCT">
+                                <rect key="frame" x="135" y="95" width="231" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="    about:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMq-hL-XlA">
+                                <rect key="frame" x="16" y="124" width="111" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="Q8M-eJ-Qpe" firstAttribute="top" secondItem="ZK9-rx-kTb" secondAttribute="bottom" constant="8" id="JXP-Ag-Lfc"/>
-                            <constraint firstItem="Q8M-eJ-Qpe" firstAttribute="trailing" secondItem="hKN-Cq-M34" secondAttribute="trailingMargin" id="bJW-yU-ROb"/>
-                            <constraint firstItem="Q8M-eJ-Qpe" firstAttribute="leading" secondItem="hKN-Cq-M34" secondAttribute="leadingMargin" id="oLl-zD-K3E"/>
-                        </constraints>
                     </view>
                     <toolbarItems/>
                 </viewController>
@@ -1229,7 +1272,6 @@
         <image name="ThinLine" width="355" height="83"/>
         <image name="barsimg" width="722" height="878"/>
         <image name="new" width="592" height="942"/>
-        <image name="redsolocupnobackground copy.png" width="40" height="40"/>
         <image name="space2.png" width="1368" height="676"/>
         <image name="space3.png" width="1406" height="604"/>
     </resources>

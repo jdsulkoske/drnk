@@ -60,6 +60,13 @@ class TodayContainerViewController: UIViewController,UITableViewDelegate {
         
     }
     
+    override func viewDidDisappear(animated: Bool) {
+        
+        todaysSpecialArray.removeAll(keepCapacity: true)
+        self.myTableView.reloadData()
+        
+    }
+    
      func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return todaysSpecialArray.count
     }
@@ -69,8 +76,20 @@ class TodayContainerViewController: UIViewController,UITableViewDelegate {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TodayDealCustomCell
         let special = todaysSpecialArray[indexPath.row]
         //println(todaysSpecialArray.count)
+        
+        if ( indexPath.row % 2 == 0 ) {
+            
+            cell.backgroundColor = UIColor(red: 150/255, green: 150/255, blue: 150/255, alpha: 1)
+            
+        } else {
+            
+            cell.backgroundColor = UIColor(red: 125/255, green: 125/255, blue: 125/255, alpha: 1)
+            
+        }
+        
         cell.setCell(special.special)
         return cell
+        
     }
 
 }
