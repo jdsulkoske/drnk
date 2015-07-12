@@ -10,6 +10,7 @@ import UIKit
 
 class SlideTableViewController: UITableViewController {
 
+    @IBOutlet var myTableView: UITableView!
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -20,6 +21,10 @@ class SlideTableViewController: UITableViewController {
         
         super.didReceiveMemoryWarning()
 
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 
 }
