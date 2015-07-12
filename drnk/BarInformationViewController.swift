@@ -73,7 +73,6 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
                 self.networkMessage.hidden = true
                 let parser = Parser(jsonFile: responseObject!)
                 detailTableViewArray.removeAll(keepCapacity: true)
-                
                 dispatch_async(dispatch_get_main_queue()){
                     parser.parseBarInfo("barInfo")
                     self.detailTableView.reloadData()

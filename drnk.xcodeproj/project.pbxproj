@@ -33,6 +33,8 @@
 		DED81B641B50530A0007E2BE /* TodayContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED81B631B50530A0007E2BE /* TodayContainerViewController.swift */; };
 		DED81B661B5065900007E2BE /* AboutUsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED81B651B5065900007E2BE /* AboutUsContainerViewController.swift */; };
 		DEEB90AE1B27532800253196 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEB90AD1B27532800253196 /* Parser.swift */; };
+		DEFDB5601B51B24300794C98 /* TodayDealCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFDB55F1B51B24300794C98 /* TodayDealCustomCell.swift */; };
+		DEFDB5621B51C1CB00794C98 /* TodaysDeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFDB5611B51C1CB00794C98 /* TodaysDeal.swift */; };
 		DEFE75151B507AAE00866D2A /* DetailLiquorStoreCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFE75141B507AAE00866D2A /* DetailLiquorStoreCustomCell.swift */; };
 		F7EEF1F2DE862DD730501D98 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD23C2C83349B6BF9967B7C /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -95,6 +97,8 @@
 		DED81B631B50530A0007E2BE /* TodayContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayContainerViewController.swift; sourceTree = "<group>"; };
 		DED81B651B5065900007E2BE /* AboutUsContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsContainerViewController.swift; sourceTree = "<group>"; };
 		DEEB90AD1B27532800253196 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		DEFDB55F1B51B24300794C98 /* TodayDealCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayDealCustomCell.swift; sourceTree = "<group>"; };
+		DEFDB5611B51C1CB00794C98 /* TodaysDeal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodaysDeal.swift; sourceTree = "<group>"; };
 		DEFE75141B507AAE00866D2A /* DetailLiquorStoreCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailLiquorStoreCustomCell.swift; sourceTree = "<group>"; };
 		E362FCE936A38E1295DBCD7F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,6 +150,8 @@
 				DEA360821B45DE46001F4FBD /* BarInfo.swift */,
 				DE9893C41B3606670086ACE2 /* CustomBarInfoCell.swift */,
 				DED81B631B50530A0007E2BE /* TodayContainerViewController.swift */,
+				DEFDB55F1B51B24300794C98 /* TodayDealCustomCell.swift */,
+				DEFDB5611B51C1CB00794C98 /* TodaysDeal.swift */,
 				DED81B651B5065900007E2BE /* AboutUsContainerViewController.swift */,
 			);
 			name = Bars;
@@ -417,11 +423,13 @@
 				DE8377FA1B13F30D00CD8435 /* LiquorStoresViewController.swift in Sources */,
 				DE88DF0D1B26B10100F7262E /* MainViewController.swift in Sources */,
 				DE4034991B50830300803C4E /* LiquorStoreDetail.swift in Sources */,
+				DEFDB5601B51B24300794C98 /* TodayDealCustomCell.swift in Sources */,
 				DE9D2E541B15FD970099253D /* DataConnection.swift in Sources */,
 				DE5C83E61B1435DA00ED4255 /* BarInformationViewController.swift in Sources */,
 				DEEB90AE1B27532800253196 /* Parser.swift in Sources */,
 				DE1E5E7A1B370E2A00978475 /* LiquorStoresInformationViewController.swift in Sources */,
 				DE8377F61B13F30D00CD8435 /* AppDelegate.swift in Sources */,
+				DEFDB5621B51C1CB00794C98 /* TodaysDeal.swift in Sources */,
 				DE2E1EFC1B23A5A300C73295 /* LiquorStoresInformation.swift in Sources */,
 				DED81B661B5065900007E2BE /* AboutUsContainerViewController.swift in Sources */,
 				DED81B641B50530A0007E2BE /* TodayContainerViewController.swift in Sources */,
