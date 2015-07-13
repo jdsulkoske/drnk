@@ -241,7 +241,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
             pinView = MKAnnotationView(annotation: annotation, reuseIdentifier: "pin")
             pinView!.canShowCallout = true
             pinView!.image = UIImage(named: "drnklogo")
-            pinView!.frame = CGRectMake(10, 10, 22, 22)
+            pinView!.frame = CGRectMake(10, 10, 25, 25)
             
             // Add image to left callout
             var mugIconView = UIImageView(image: UIImage(named: "drnklogo"))
