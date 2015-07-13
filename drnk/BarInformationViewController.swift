@@ -107,7 +107,6 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! CustomBarInfoCell
         let special = detailTableViewArray[indexPath.row]
-        
         cell.date.text = daysOfWeek[indexPath.row]
         cell.setCell(special.special1, special2: special.special2, special3: special.special3, special4: special.special4, special5: special.special5)
         
