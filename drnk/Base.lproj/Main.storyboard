@@ -233,7 +233,7 @@
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="189" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="h7v-GH-4jG">
                                 <rect key="frame" x="16" y="257" width="382" height="427"/>
-                                <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="189" id="9mG-6l-Q1j" customClass="CustomBarInfoCell" customModule="drnk" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -246,6 +246,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="oOZ-aF-Xx0"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Penny Pitcheers: Coors &amp; Miller Lite " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLP-im-33g">
@@ -254,6 +255,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="qu5-Oc-MeG"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Penny Pitcheers: Coors &amp; Miller Lite " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFT-3g-pHp">
@@ -262,6 +264,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="bmv-gh-m4s"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2 Double Wells" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwK-o7-NdG">
@@ -270,6 +273,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="Tis-vi-kOQ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2 Double Wells" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQ7-LG-RVb">
@@ -278,6 +282,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="YpQ-UY-Dre"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJE-Yi-OOV">
@@ -286,11 +291,11 @@
                                                         <constraint firstAttribute="height" constant="39" id="gEt-S2-anw"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="26"/>
-                                                    <color key="textColor" red="1" green="1" blue="0.19976507867132867" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.89019607840000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="VLP-im-33g" firstAttribute="trailing" secondItem="2Vt-aL-49f" secondAttribute="trailingMargin" id="0wk-8U-cRk"/>
                                                 <constraint firstItem="1IX-CM-uCm" firstAttribute="trailing" secondItem="2Vt-aL-49f" secondAttribute="trailingMargin" id="1u1-Eb-Utl"/>
@@ -335,7 +340,7 @@
                                 </connections>
                             </containerView>
                             <view alpha="0.79999999999999982" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mOk-Wg-lnw">
-                                <rect key="frame" x="16" y="57" width="382" height="137"/>
+                                <rect key="frame" x="16" y="57" width="382" height="156"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ott-XJ-Nwa">
                                         <rect key="frame" x="8" y="0.0" width="366" height="57"/>
@@ -352,7 +357,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="ott-XJ-Nwa" secondAttribute="trailing" constant="8" id="6Ms-oG-DfF"/>
-                                    <constraint firstAttribute="height" constant="137" id="9Qs-fH-UDb"/>
+                                    <constraint firstAttribute="height" constant="156" id="9Qs-fH-UDb"/>
                                     <constraint firstItem="ott-XJ-Nwa" firstAttribute="leading" secondItem="mOk-Wg-lnw" secondAttribute="leading" constant="8" id="ALm-uD-SmN"/>
                                     <constraint firstItem="ott-XJ-Nwa" firstAttribute="top" secondItem="mOk-Wg-lnw" secondAttribute="top" id="xLB-F9-02Y"/>
                                 </constraints>
@@ -364,7 +369,7 @@
                                     <segment title="All Specials"/>
                                     <segment title="Info"/>
                                 </segments>
-                                <color key="tintColor" red="1" green="1" blue="0.19976507869999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.79695694930000005" green="0.88158326050000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="indexChanged:" destination="XBf-wS-PsZ" eventType="valueChanged" id="eN6-ha-ks0"/>
                                 </connections>
@@ -683,8 +688,8 @@
                                     <constraint firstAttribute="height" constant="156" id="opN-0j-rjM"/>
                                 </constraints>
                             </imageView>
-                            <view alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ihP-Lr-dBw">
-                                <rect key="frame" x="16" y="57" width="382" height="137"/>
+                            <view alpha="0.80000000000000016" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ihP-Lr-dBw">
+                                <rect key="frame" x="16" y="57" width="382" height="156"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of the liquor store" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rRI-NU-OhN">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="48"/>
@@ -707,7 +712,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="137" id="FfG-pz-EDz"/>
+                                    <constraint firstAttribute="height" constant="156" id="FfG-pz-EDz"/>
                                     <constraint firstAttribute="trailing" secondItem="JRB-t3-I5w" secondAttribute="trailing" id="SCX-PF-wfb"/>
                                     <constraint firstAttribute="trailing" secondItem="rRI-NU-OhN" secondAttribute="trailing" id="VVo-Jf-cEk"/>
                                     <constraint firstItem="JRB-t3-I5w" firstAttribute="leading" secondItem="ihP-Lr-dBw" secondAttribute="leading" id="Yy5-yy-CWF"/>
@@ -718,7 +723,7 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="KD3-5A-rNZ">
                                 <rect key="frame" x="16" y="257" width="382" height="427"/>
-                                <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.13725490196078433" green="0.13725490196078433" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="427" id="22y-dg-a8O"/>
                                 </constraints>
@@ -731,7 +736,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="azQ-4d-KRl">
                                                     <rect key="frame" x="8" y="8" width="366" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.66666666666666663" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.89155375874125875" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -763,7 +768,7 @@
                                     <segment title="Current Specials"/>
                                     <segment title="Info"/>
                                 </segments>
-                                <color key="tintColor" red="1" green="0.20784313725490197" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.79695694930069927" green="0.88158326048951052" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="indexChanged:" destination="wB4-ay-tEe" eventType="valueChanged" id="wqw-9b-Shl"/>
                                 </connections>
@@ -1129,7 +1134,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ala-qp-gWg" firstAttribute="leading" secondItem="T6i-mb-RdB" secondAttribute="leadingMargin" id="2Y5-Es-OfJ"/>
                             <constraint firstItem="ala-qp-gWg" firstAttribute="top" secondItem="NBT-9X-dZR" secondAttribute="bottom" constant="8" id="Bub-lC-P1S"/>
@@ -1171,7 +1176,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="59" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="vF4-RB-ph8">
                                 <rect key="frame" x="0.0" y="0.0" width="382" height="427"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="59" id="2YE-Xo-vIL" customClass="TodayDealCustomCell" customModule="drnk" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="44"/>
@@ -1182,7 +1187,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deal 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51E-S2-Xeg">
                                                     <rect key="frame" x="26" y="8" width="348" height="43"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="1" blue="0.19976507869999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.8901960784313725" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
