@@ -10,6 +10,8 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var mapView: MKMapView!
     
+    let imageView = UIImageView(frame: CGRectMake(0, 0, 25, 25))
+    
     var locationManager: CLLocationManager!
     var data : DataConnection!
     
@@ -226,5 +228,36 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
         
     }
     
+    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+        
+        if annotation is MKUserLocation {
+            //return nil so map view draws "blue dot" for standard user location
+            return nil
+        }
+        
+        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier("pin")
+        
+        if pinView == nil {
+            pinView = MKAnnotationView(annotation: annotation, reuseIdentifier: "pin")
+            pinView!.canShowCallout = true
+            pinView!.image = UIImage(named: "BeerGlass")
+            pinView!.frame = CGRectMake(10, 10, 22, 22)
+            
+            // Add image to left callout
+            var mugIconView = UIImageView(image: UIImage(named: "BeerGlass"))
+            mugIconView.frame = CGRectMake(0, 0, 35, 35)
+            pinView!.leftCalloutAccessoryView = mugIconView
+
+            
+            // Add detail button to right callout
+            var calloutButton = UIButton.buttonWithType(.DetailDisclosure) as! UIButton
+            pinView!.rightCalloutAccessoryView = calloutButton
+        }
+        else {
+            pinView!.annotation = annotation
+        }
+        
+        return pinView
+    }
 
 }
