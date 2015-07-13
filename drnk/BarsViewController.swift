@@ -47,7 +47,8 @@ class BarsViewController: UIViewController, UITableViewDelegate {
         self.updateData()
         
     }
-
+    
+    
     func updateData(){
         
         data.getData { (responseObject, error) -> Void in
@@ -82,7 +83,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     }
     
     override func viewDidAppear(animated: Bool) {
-        
+        segue = "barViewController"
         if self.revealViewController() != nil {
             
             menuButton.target = self.revealViewController()

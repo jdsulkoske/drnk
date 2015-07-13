@@ -11,7 +11,7 @@ import UIKit
 var detailTableViewArray : [BarInfo] = [BarInfo]()
 let daysOfWeek = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"]
 var detailViewIndex : Int!
-
+var segue : String!
 class BarInformationViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var barImage: UIImageView!
@@ -33,7 +33,7 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+
         refresher = UIRefreshControl()
         firstView.hidden = true
         secondView.hidden = false
@@ -57,7 +57,9 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
         self.updateData()
         
     }
-    
+    override func viewDidAppear(animated: Bool) {
+        segue = "todaysVC"
+    }
     func updateData(){
         
         data.getData { (responseObject, error) -> Void in
