@@ -60,9 +60,8 @@ class Parser{
                 
                 findSpecials()
                 
-            }
-           
-            else {
+            } else {
+                
                 parseSpecialForWeek()
                 
             }
