@@ -45,7 +45,7 @@ class Parser{
     //MARK: BARS FUNCTIONS
     
     func parseBarInfo(type:String){
-
+        println(jsonFile)
         for posts in jsonFile{
             var street = posts["company_street"] as! String
             var city = posts["company_city"] as! String
@@ -69,6 +69,15 @@ class Parser{
         }
         
         
+    }
+    
+    func findInfoForBars(){
+        let json = jsonFile[detailViewIndex] as! NSDictionary
+            var currentdayHours = json[dayOfTheWeek.getDayAsString().lowercaseString+"_hours"] as! String
+            var phone  = json["company_phone"] as! String
+            var info = AboutUS(currentdayHours: currentdayHours, phone: phone)
+            aboutUsArray.append(info)
+           // println(aboutUsArray[0].phone)
     }
     
     private func findSpecials(){

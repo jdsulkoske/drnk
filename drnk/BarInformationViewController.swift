@@ -217,5 +217,12 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
     }
     
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "InfoSegue"{
+            
+            let aboutUSVC = segue.destinationViewController as! AboutUsContainerViewController
+            aboutUSVC.addressPassedValue = addressPassedValie
+
+    }
+    }
 }

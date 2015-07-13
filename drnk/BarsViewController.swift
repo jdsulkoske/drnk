@@ -67,7 +67,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
                 dispatch_async(dispatch_get_main_queue()){
                     
                     parser.parseBarInfo("barView")
-
+                    
                 self.myTableView.reloadData()
                     
                 }

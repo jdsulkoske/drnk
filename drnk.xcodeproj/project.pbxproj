@@ -30,6 +30,7 @@
 		DE9D2E541B15FD970099253D /* DataConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D2E531B15FD970099253D /* DataConnection.swift */; };
 		DE9DA4DC1B28E02600AD8A2C /* SlideTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9DA4DB1B28E02600AD8A2C /* SlideTableViewController.swift */; };
 		DEA360831B45DE46001F4FBD /* BarInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA360821B45DE46001F4FBD /* BarInfo.swift */; };
+		DEC341441B5449C50002A647 /* AboutUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC341431B5449C50002A647 /* AboutUs.swift */; };
 		DED81B641B50530A0007E2BE /* TodayContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED81B631B50530A0007E2BE /* TodayContainerViewController.swift */; };
 		DED81B661B5065900007E2BE /* AboutUsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED81B651B5065900007E2BE /* AboutUsContainerViewController.swift */; };
 		DEEB90AE1B27532800253196 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEB90AD1B27532800253196 /* Parser.swift */; };
@@ -94,6 +95,7 @@
 		DE9D2E531B15FD970099253D /* DataConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataConnection.swift; sourceTree = "<group>"; };
 		DE9DA4DB1B28E02600AD8A2C /* SlideTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideTableViewController.swift; sourceTree = "<group>"; };
 		DEA360821B45DE46001F4FBD /* BarInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarInfo.swift; sourceTree = "<group>"; };
+		DEC341431B5449C50002A647 /* AboutUs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUs.swift; sourceTree = "<group>"; };
 		DED81B631B50530A0007E2BE /* TodayContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayContainerViewController.swift; sourceTree = "<group>"; };
 		DED81B651B5065900007E2BE /* AboutUsContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsContainerViewController.swift; sourceTree = "<group>"; };
 		DEEB90AD1B27532800253196 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				DEFDB55F1B51B24300794C98 /* TodayDealCustomCell.swift */,
 				DEFDB5611B51C1CB00794C98 /* TodaysDeal.swift */,
 				DED81B651B5065900007E2BE /* AboutUsContainerViewController.swift */,
+				DEC341431B5449C50002A647 /* AboutUs.swift */,
 			);
 			name = Bars;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 			files = (
 				DE4C116A1B28AD3700CCB54D /* Day.swift in Sources */,
 				DE8378201B13F72F00CD8435 /* CustomBarTableViewCell.swift in Sources */,
+				DEC341441B5449C50002A647 /* AboutUs.swift in Sources */,
 				DE9DA4DC1B28E02600AD8A2C /* SlideTableViewController.swift in Sources */,
 				DE4667091B29E96F0033C1C3 /* SWRevealViewController.m in Sources */,
 				DE8377FA1B13F30D00CD8435 /* LiquorStoresViewController.swift in Sources */,
