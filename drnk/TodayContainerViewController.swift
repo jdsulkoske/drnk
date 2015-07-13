@@ -77,15 +77,15 @@ class TodayContainerViewController: UIViewController,UITableViewDelegate {
         let special = todaysSpecialArray[indexPath.row]
         //println(todaysSpecialArray.count)
         
-//        if ( indexPath.row % 2 == 0 ) {
-//            
-//            cell.backgroundColor = UIColor(red: 150/255, green: 150/255, blue: 150/255, alpha: 1)
-//            
-//        } else {
-//            
-//            cell.backgroundColor = UIColor(red: 125/255, green: 125/255, blue: 125/255, alpha: 1)
-//            
-//        }
+        if ( indexPath.row % 2 == 0 ) {
+            
+            cell.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+            
+        } else {
+            
+            cell.backgroundColor = UIColor(red: 125/255, green: 125/255, blue: 125/255, alpha: 1)
+            
+        }
         
         cell.setCell(special.special)
         return cell
