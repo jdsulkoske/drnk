@@ -45,7 +45,7 @@ class Parser{
     //MARK: BARS FUNCTIONS
     
     func parseBarInfo(type:String){
-        println(jsonFile)
+        
         for posts in jsonFile{
             var street = posts["company_street"] as! String
             var city = posts["company_city"] as! String
@@ -77,7 +77,7 @@ class Parser{
             var phone  = json["company_phone"] as! String
             var info = AboutUS(currentdayHours: currentdayHours, phone: phone)
             aboutUsArray.append(info)
-           // println(aboutUsArray[0].phone)
+
     }
     
     private func findSpecials(){
@@ -121,7 +121,7 @@ class Parser{
     }
     
     private func structureBarFeaturedArray(array:NSArray){
-        println(self.type)
+
         if barSpecialArray.count >= 3{
             bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
             
@@ -301,7 +301,6 @@ class Parser{
     
     func findTodaysSpecial(){
         if let file = jsonFile[detailViewIndex!]["deals"] as? NSDictionary{
-            println(file)
             var days = file[dayOfTheWeek.getDayAsString().lowercaseString] as! NSArray
             var special : String?
             for posts in days{
@@ -324,7 +323,6 @@ class Parser{
     
                 }
             
-            println(todayArray.count)
             for (var i = 0 ; i < 5; i++){
                 todaysSpecial = TodaysDeal(special: todayArray[i])
                 todaysSpecialArray.append(todaysSpecial)
@@ -464,7 +462,7 @@ class Parser{
     private func parseSpecialForSpecificicLiquoreStore(){
         
         if let file = jsonFile[lsIndex!]["deals"] as? NSDictionary{
-            println(file)
+           
       
                 var days = file["everyday"] as! NSArray
                 

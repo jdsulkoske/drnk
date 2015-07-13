@@ -65,7 +65,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
             
             if  responseObject == nil{
                 
-                println("shit")
+                println("nothing")
                 
             } else {
                 
