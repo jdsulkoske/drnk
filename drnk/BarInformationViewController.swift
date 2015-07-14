@@ -9,7 +9,7 @@
 import UIKit
 
 var detailTableViewArray : [BarInfo] = [BarInfo]()
-let daysOfWeek = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"]
+let daysOfWeek = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 var detailViewIndex : Int!
 var segue : String!
 class BarInformationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -33,6 +33,10 @@ class BarInformationViewController: UIViewController, UITableViewDelegate, UITab
     override func viewDidLoad() {
         
         super.viewDidLoad()
+
+        barsController.layer.cornerRadius = -0.5;
+        barsController.layer.borderWidth = 2.5;
+        barsController.layer.borderColor = UIColor(red: 25/255, green: 25/255, blue: 25/255, alpha: 1).CGColor
 
         refresher = UIRefreshControl()
         firstView.hidden = true
