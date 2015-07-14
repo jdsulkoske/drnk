@@ -271,6 +271,24 @@
                                                     <color key="textColor" red="0.89155375869999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJE-Yi-OOV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="39"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="39" id="gEt-S2-anw"/>
+                                                    </constraints>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Date">
+                                                            <attributes>
+                                                                <color key="NSColor" red="1" green="0.61106101320209794" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="26" name="Avenir-Medium"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" red="0.79118749262794619" green="0.43220222886126719" blue="0.030454444019313336" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2 Double Wells" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQ7-LG-RVb">
                                                     <rect key="frame" x="44" y="163" width="330" height="21"/>
                                                     <constraints>
@@ -278,15 +296,6 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                                     <color key="textColor" red="0.89155375869999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJE-Yi-OOV">
-                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="39"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="39" id="gEt-S2-anw"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="26"/>
-                                                    <color key="textColor" red="1" green="0.38425266530000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -312,7 +321,7 @@
                                                 <constraint firstItem="zwK-o7-NdG" firstAttribute="trailing" secondItem="2Vt-aL-49f" secondAttribute="trailingMargin" id="wpC-4D-dwp"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.13725490196078433" green="0.13725490196078433" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="date" destination="xJE-Yi-OOV" id="dRT-Pa-c6I"/>
                                             <outlet property="special1" destination="1IX-CM-uCm" id="kJv-zS-wvQ"/>
@@ -365,7 +374,7 @@
                                     <segment title="All Specials"/>
                                     <segment title="Info"/>
                                 </segments>
-                                <color key="tintColor" red="1" green="0.38425266530000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.89155375869999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="indexChanged:" destination="XBf-wS-PsZ" eventType="valueChanged" id="eN6-ha-ks0"/>
                                 </connections>
@@ -1300,6 +1309,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="hoP-Ax-9y1"/>
-        <segue reference="Z7a-UY-SB5"/>
+        <segue reference="O8m-Er-LLu"/>
     </inferredMetricsTieBreakers>
 </document>
