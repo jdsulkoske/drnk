@@ -43,7 +43,7 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
         
         self.detailTableView.addSubview(refresher)
        
-        //detailTableView.dataSource = self
+//        detailTableView.dataSource = self
         
         if self.revealViewController() != nil {
             
@@ -76,12 +76,12 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
                 
                 self.networkMessage.hidden = true
                 let parser = Parser(jsonFile: responseObject!)
-                detailTableViewArray.removeAll(keepCapacity: true)
-                dispatch_async(dispatch_get_main_queue()){
+                
+                self.data.getData({ (responseObject, error) -> () in
                     parser.parseBarInfo("barInfo")
                     self.detailTableView.reloadData()
-                    
-                }
+                })
+                
                 
                 self.refresher.endRefreshing()
                 
@@ -107,7 +107,7 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
         
     }
     
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!{
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! CustomBarInfoCell
         let special = detailTableViewArray[indexPath.row]
