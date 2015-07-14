@@ -22,7 +22,10 @@ class TodayContainerViewController: UIViewController,UITableViewDelegate {
     }
 
     override func viewDidAppear(animated: Bool) {
+        
+        
         updateData()
+    
     }
     
     override func didReceiveMemoryWarning() {

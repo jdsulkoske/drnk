@@ -58,13 +58,9 @@ class BarInformationViewController: UIViewController, UITableViewDelegate, UITab
         
     }
     
-    func checkAgain(){
-    
-        
-    
-    }
-    
     override func viewDidAppear(animated: Bool) {
+        
+        checkSegue()
         segue = "todaysVC"
         
     }
@@ -233,25 +229,25 @@ class BarInformationViewController: UIViewController, UITableViewDelegate, UITab
         }
     }
 
-//    override func viewWillDisappear(animated: Bool) {
-//        
-//        checkSegue()
-//        
-//    }
-//    
-//    func checkSegue(){
-//    
-//        if doNothing == false {
-//            
-//            doNothing = false
-//        
-//        } else {
-//        
-//            detailTableViewArray.removeAll(keepCapacity: true)
-//            self.detailTableView.reloadData()
-//        
-//        }
-//    
-//    }
+    override func viewDidDisappear(animated: Bool) {
+        
+        checkSegue()
+
+    }
+    
+    func checkSegue(){
+    
+        if doNothing == true {
+            
+            doNothing = false
+        
+        } else {
+        
+            detailTableViewArray.removeAll(keepCapacity: true)
+            self.detailTableView.reloadData()
+        
+        }
+    
+    }
     
 }
