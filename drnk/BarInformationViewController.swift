@@ -12,7 +12,7 @@ var detailTableViewArray : [BarInfo] = [BarInfo]()
 let daysOfWeek = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"]
 var detailViewIndex : Int!
 var segue : String!
-class BarInformationViewController: UIViewController, UITableViewDelegate {
+class BarInformationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var barImage: UIImageView!
     @IBOutlet weak var secondView: UIView!
@@ -43,7 +43,7 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
         
         self.detailTableView.addSubview(refresher)
        
-//        detailTableView.dataSource = self
+        detailTableView.dataSource = self
         
         if self.revealViewController() != nil {
             
