@@ -45,7 +45,7 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     override func viewDidAppear(animated: Bool) {
-        
+        segue = "lsViewController"
         if self.revealViewController() != nil {
             
             menuButton.target = self.revealViewController()

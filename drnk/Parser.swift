@@ -71,8 +71,15 @@ class Parser{
         
     }
     
-    func findInfoForBars(){
-        let json = jsonFile[detailViewIndex] as! NSDictionary
+    func findAboutUs(){
+        var index : Int!
+        if segue == "barViewController"{
+            index = detailViewIndex
+        }
+        else {
+            index = lsIndex
+        }
+        let json = jsonFile[index] as! NSDictionary
             var currentdayHours = json[dayOfTheWeek.getDayAsString().lowercaseString+"_hours"] as! String
             var phone  = json["company_phone"] as! String
             var info = AboutUS(currentdayHours: currentdayHours, phone: phone)

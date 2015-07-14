@@ -223,15 +223,19 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
 //    }
 
     @IBAction func backButton(sender: AnyObject) {
-        if segue == "todaysVC"{
+        if segue == "detailVC"{
         for controller in self.navigationController!.viewControllers as Array {
             if controller.isKindOfClass(BarInformationViewController) {
                 self.navigationController?.popToViewController(controller as! UIViewController, animated: true)
                 break
             }
+            else if controller.isKindOfClass(LiquorStoresInformationViewController){
+                self.navigationController?.popToViewController(controller as! UIViewController, animated: true)
+                break
+            }
         }
         }
-        else if segue == "barViewController"{
+        else {
             navigationController?.popToRootViewControllerAnimated(true)
         }
         

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-var doNothing = false
+
 var detailTableViewArray : [BarInfo] = [BarInfo]()
 let daysOfWeek = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"]
 var detailViewIndex : Int!
@@ -22,7 +22,7 @@ class BarInformationViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var detailTableView: UITableView!
     @IBOutlet weak var nameOfBar: UILabel!
     @IBOutlet weak var addressOfBar: UILabel!
-    
+    var doNothing = false
     var barPassedValue : String!
     var imagePassedValue : String!
     var addressPassedValie : String!
@@ -61,7 +61,7 @@ class BarInformationViewController: UIViewController, UITableViewDelegate, UITab
     override func viewDidAppear(animated: Bool) {
         
         checkSegue()
-        segue = "todaysVC"
+        segue = "detailVC"
         
     }
     

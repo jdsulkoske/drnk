@@ -17,7 +17,7 @@ class LiquorStoresInformationViewController: UIViewController, UITableViewDelega
     @IBOutlet weak var secondView: UIView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var nameOfBar: UILabel!
-    
+    var doNothing = false
     var liquoreStoreNamePasssedValue : String!
     var liquoreStoreImagePassedValue : String!
     var liquoreStoreAddressPassed : String!
@@ -80,7 +80,12 @@ class LiquorStoresInformationViewController: UIViewController, UITableViewDelega
         }
         
     }
-    
+    override func viewDidAppear(animated: Bool) {
+        
+        checkSegue()
+        segue = "detailVC"
+        
+    }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return lsDetailArray.count
@@ -128,12 +133,7 @@ class LiquorStoresInformationViewController: UIViewController, UITableViewDelega
         
     }
     
-    override func viewDidDisappear(animated: Bool) {
-        
-        lsDetailArray.removeAll(keepCapacity: true)
-        self.myTableView.reloadData()
-        
-    }
+
     
     @IBAction func backButton(sender: UIBarButtonItem) {
         
@@ -141,5 +141,34 @@ class LiquorStoresInformationViewController: UIViewController, UITableViewDelega
         
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "LSInfoSegue"{
+            
+            doNothing = true
+            
+            let aboutUSVC = segue.destinationViewController as! LSAboutUSViewController
+            aboutUSVC.addressPassed = liquoreStoreAddressPassed
+            
+        }
+    }
     
+    override func viewDidDisappear(animated: Bool) {
+        
+        checkSegue()
+        
+    }
+    
+    func checkSegue(){
+        
+        if doNothing == true {
+            
+            doNothing = false
+            
+        } else {
+            lsDetailArray.removeAll(keepCapacity: true)
+            self.myTableView.reloadData()
+            
+        }
+        
+    }
 }

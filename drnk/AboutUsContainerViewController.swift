@@ -49,9 +49,9 @@ class AboutUsContainerViewController: UIViewController {
                 
                // self.networkMessage.hidden = true
                 let parser = Parser(jsonFile: responseObject!)
-                detailTableViewArray.removeAll(keepCapacity: true)
+                    aboutUsArray.removeAll(keepCapacity: true)
                 dispatch_async(dispatch_get_main_queue()){
-                    parser.findInfoForBars()
+                    parser.findAboutUs()
                     let info = aboutUsArray[0]
                     self.phoneNumber.text = info.phone
                     self.todaysHours.text = info.currentdayHours
