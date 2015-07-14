@@ -26,6 +26,7 @@
 		DE83781E1B13F6C000CD8435 /* BarsTableInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83781D1B13F6C000CD8435 /* BarsTableInfo.swift */; };
 		DE8378201B13F72F00CD8435 /* CustomBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83781F1B13F72F00CD8435 /* CustomBarTableViewCell.swift */; };
 		DE88DF0D1B26B10100F7262E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE88DF0C1B26B10100F7262E /* MainViewController.swift */; };
+		DE90B2001B54B0850067F62C /* LSAboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90B1FF1B54B0850067F62C /* LSAboutUsViewController.swift */; };
 		DE9893C51B3606670086ACE2 /* CustomBarInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9893C41B3606670086ACE2 /* CustomBarInfoCell.swift */; };
 		DE9D2E541B15FD970099253D /* DataConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D2E531B15FD970099253D /* DataConnection.swift */; };
 		DE9DA4DC1B28E02600AD8A2C /* SlideTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9DA4DB1B28E02600AD8A2C /* SlideTableViewController.swift */; };
@@ -91,6 +92,7 @@
 		DE83781D1B13F6C000CD8435 /* BarsTableInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarsTableInfo.swift; sourceTree = "<group>"; };
 		DE83781F1B13F72F00CD8435 /* CustomBarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBarTableViewCell.swift; sourceTree = "<group>"; };
 		DE88DF0C1B26B10100F7262E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DE90B1FF1B54B0850067F62C /* LSAboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSAboutUsViewController.swift; sourceTree = "<group>"; };
 		DE9893C41B3606670086ACE2 /* CustomBarInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBarInfoCell.swift; sourceTree = "<group>"; };
 		DE9D2E531B15FD970099253D /* DataConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataConnection.swift; sourceTree = "<group>"; };
 		DE9DA4DB1B28E02600AD8A2C /* SlideTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideTableViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				DE4034981B50830300803C4E /* LiquorStoreDetail.swift */,
 				DE1E5E791B370E2A00978475 /* LiquorStoresInformationViewController.swift */,
 				DEFE75141B507AAE00866D2A /* DetailLiquorStoreCustomCell.swift */,
+				DE90B1FF1B54B0850067F62C /* LSAboutUsViewController.swift */,
 			);
 			name = "Liquor Stores";
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				DE5C83E61B1435DA00ED4255 /* BarInformationViewController.swift in Sources */,
 				DEEB90AE1B27532800253196 /* Parser.swift in Sources */,
 				DE1E5E7A1B370E2A00978475 /* LiquorStoresInformationViewController.swift in Sources */,
+				DE90B2001B54B0850067F62C /* LSAboutUsViewController.swift in Sources */,
 				DE8377F61B13F30D00CD8435 /* AppDelegate.swift in Sources */,
 				DEFDB5621B51C1CB00794C98 /* TodaysDeal.swift in Sources */,
 				DE2E1EFC1B23A5A300C73295 /* LiquorStoresInformation.swift in Sources */,
