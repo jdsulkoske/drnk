@@ -84,6 +84,11 @@ class LiquorStoresInformationViewController: UIViewController, UITableViewDelega
         
         checkSegue()
         segue = "detailVC"
+        if self.revealViewController() != nil {
+            
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            
+        }
         
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
