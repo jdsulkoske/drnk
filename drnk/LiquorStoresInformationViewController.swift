@@ -54,9 +54,6 @@ class LiquorStoresInformationViewController: UIViewController, UITableViewDelega
         data.getData { (responseObject, error) -> Void in
             if  responseObject == nil{
                 
-//                self.networkMessage.hidden = false
-//                self.networkMessage.text = "Network is unavailable"
-//                self.refresher.endRefreshing()
                 
             } else {
                 
@@ -66,10 +63,10 @@ class LiquorStoresInformationViewController: UIViewController, UITableViewDelega
                 
                 dispatch_async(dispatch_get_main_queue()){
                     
+                    self.data.getData { (responseObject, error) -> Void in
                     parser.parseLSInfo("lsDetail")
-                    //self.setUpBar()
                     self.myTableView.reloadData()
-                    
+                    }
                 }
                 
             }
@@ -82,7 +79,6 @@ class LiquorStoresInformationViewController: UIViewController, UITableViewDelega
     }
     override func viewDidAppear(animated: Bool) {
         
-        checkSegue()
         segue = "detailVC"
         if self.revealViewController() != nil {
             

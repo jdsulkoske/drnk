@@ -64,7 +64,6 @@ class BarInformationViewController: UIViewController, UITableViewDelegate, UITab
     
     override func viewDidAppear(animated: Bool) {
         
-        checkSegue()
         segue = "detailVC"
         if self.revealViewController() != nil {
             

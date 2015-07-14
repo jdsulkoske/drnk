@@ -389,7 +389,7 @@
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7sH-4s-IbM">
-                                <rect key="frame" x="16" y="257" width="370" height="1"/>
+                                <rect key="frame" x="16" y="257" width="382" height="1"/>
                                 <color key="backgroundColor" red="0.89155375869999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="BnZ-BT-y4k"/>
@@ -405,7 +405,7 @@
                             <constraint firstItem="Th1-Fy-9wl" firstAttribute="trailing" secondItem="xRQ-0W-gYE" secondAttribute="trailingMargin" id="Mal-DA-2z5"/>
                             <constraint firstItem="Wkt-zd-wi9" firstAttribute="trailing" secondItem="VDU-gq-FU4" secondAttribute="trailing" id="O2X-u2-CfJ"/>
                             <constraint firstItem="KnQ-zc-nuH" firstAttribute="top" secondItem="mOk-Wg-lnw" secondAttribute="bottom" constant="8" id="Pb2-rO-fub"/>
-                            <constraint firstItem="7sH-4s-IbM" firstAttribute="trailing" secondItem="xRQ-0W-gYE" secondAttribute="trailingMargin" constant="-12" id="Uw2-i9-jJq"/>
+                            <constraint firstItem="7sH-4s-IbM" firstAttribute="trailing" secondItem="xRQ-0W-gYE" secondAttribute="trailingMargin" id="Uw2-i9-jJq"/>
                             <constraint firstItem="mOk-Wg-lnw" firstAttribute="leading" secondItem="xRQ-0W-gYE" secondAttribute="leadingMargin" id="Vr4-eE-b4e"/>
                             <constraint firstItem="KnQ-zc-nuH" firstAttribute="trailing" secondItem="xRQ-0W-gYE" secondAttribute="trailingMargin" id="Wnf-uv-oJK"/>
                             <constraint firstItem="5fi-4X-USy" firstAttribute="top" secondItem="Wkt-zd-wi9" secondAttribute="bottom" constant="8" symbolic="YES" id="X9d-O8-G8K"/>
@@ -419,7 +419,7 @@
                             <constraint firstItem="Wkt-zd-wi9" firstAttribute="trailing" secondItem="h7v-GH-4jG" secondAttribute="trailing" id="mc6-1p-jpN"/>
                             <constraint firstItem="7sH-4s-IbM" firstAttribute="top" secondItem="JSo-XG-C89" secondAttribute="bottom" constant="8" id="rqu-gb-Jb2"/>
                             <constraint firstItem="Wkt-zd-wi9" firstAttribute="leading" secondItem="VDU-gq-FU4" secondAttribute="leading" id="tow-dz-oRa"/>
-                            <constraint firstAttribute="centerX" secondItem="7sH-4s-IbM" secondAttribute="centerX" constant="6" id="vdB-Gb-FOQ"/>
+                            <constraint firstAttribute="centerX" secondItem="7sH-4s-IbM" secondAttribute="centerX" id="vdB-Gb-FOQ"/>
                             <constraint firstItem="Th1-Fy-9wl" firstAttribute="leading" secondItem="xRQ-0W-gYE" secondAttribute="leadingMargin" id="x57-Id-iqv"/>
                             <constraint firstItem="h7v-GH-4jG" firstAttribute="top" secondItem="JSo-XG-C89" secondAttribute="bottom" constant="8" id="xUx-if-kgT"/>
                             <constraint firstItem="ktM-Um-edh" firstAttribute="trailing" secondItem="Th1-Fy-9wl" secondAttribute="trailing" id="xcT-XA-xj7"/>
