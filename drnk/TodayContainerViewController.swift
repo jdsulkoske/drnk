@@ -100,6 +100,8 @@ class TodayContainerViewController: UIViewController,UITableViewDelegate {
         
         if doNothing == true {
             
+            doNothing = false
+            
         } else {
             
             todaysSpecialArray.removeAll(keepCapacity: true)
