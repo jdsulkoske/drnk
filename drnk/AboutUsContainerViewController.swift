@@ -44,11 +44,6 @@ class AboutUsContainerViewController: UIViewController {
             
             if  responseObject == nil{
                 
-//                self.networkMessage.hidden = false
-//                self.networkMessage.text = "Network Unavailable"
-//                self.refresher.endRefreshing()
-                
-                println("nothing")
                 
             } else {
                 

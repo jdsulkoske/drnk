@@ -21,6 +21,10 @@ class TodayContainerViewController: UIViewController,UITableViewDelegate {
         updateData()
     }
 
+    override func viewDidAppear(animated: Bool) {
+        updateData()
+    }
+    
     override func didReceiveMemoryWarning() {
         
         super.didReceiveMemoryWarning()
@@ -33,11 +37,6 @@ class TodayContainerViewController: UIViewController,UITableViewDelegate {
             
             if  responseObject == nil{
                 
-//                self.networkMessage.hidden = false
-//                self.networkMessage.text = "Network Unavailable"
-//                self.refresher.endRefreshing()
-                println("nothing")
-                
             } else {
                 
                // self.networkMessage.hidden = true
@@ -45,8 +44,11 @@ class TodayContainerViewController: UIViewController,UITableViewDelegate {
                 todaysSpecialArray.removeAll(keepCapacity: true)
                 
                 dispatch_async(dispatch_get_main_queue()){
+                    
+                    self.data.getData { (responseObject, error) -> Void in
                     parser.findTodaysSpecial()
                     self.myTableView.reloadData()
+                    }
                     
                 }
                 
@@ -57,13 +59,6 @@ class TodayContainerViewController: UIViewController,UITableViewDelegate {
             // self.refresher.endRefreshing()
             
         }
-        
-    }
-    
-    override func viewDidDisappear(animated: Bool) {
-        
-        checkSegue()
-        
         
     }
     
@@ -96,19 +91,11 @@ class TodayContainerViewController: UIViewController,UITableViewDelegate {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
-    func checkSegue(){
+    override func viewDidDisappear(animated: Bool) {
         
-        if doNothing == true {
-            
-            doNothing = false
-            
-        } else {
-            
-            todaysSpecialArray.removeAll(keepCapacity: true)
-            self.myTableView.reloadData()
-            
-        }
+        todaysSpecialArray.removeAll(keepCapacity: true)
+        self.myTableView.reloadData()
         
     }
-
+    
 }
