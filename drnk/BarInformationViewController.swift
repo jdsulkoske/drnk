@@ -62,6 +62,12 @@ class BarInformationViewController: UIViewController, UITableViewDelegate, UITab
         
         checkSegue()
         segue = "todaysVC"
+        if self.revealViewController() != nil {
+            
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            
+        }
+        
         
     }
     
