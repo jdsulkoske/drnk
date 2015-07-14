@@ -54,7 +54,7 @@ class LSAboutUSViewController: UIViewController{
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "newPlace" {
             
-            activePlace = -1
+            activePlace = 2
             
         }
     }
