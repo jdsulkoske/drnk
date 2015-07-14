@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+var doNothing = false
 var detailTableViewArray : [BarInfo] = [BarInfo]()
 let daysOfWeek = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"]
 var detailViewIndex : Int!
@@ -59,7 +59,9 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
     }
     override func viewDidAppear(animated: Bool) {
         segue = "todaysVC"
+        
     }
+    
     func updateData(){
         
         data.getData { (responseObject, error) -> Void in
@@ -204,12 +206,7 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
         
     }
     
-    override func viewDidDisappear(animated: Bool) {
-        
-        detailTableViewArray.removeAll(keepCapacity: true)
-        self.detailTableView.reloadData()
-        
-    }
+    
 
     @IBAction func backButton(sender: UIBarButtonItem) {
         
@@ -221,9 +218,31 @@ class BarInformationViewController: UIViewController, UITableViewDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "InfoSegue"{
             
+            doNothing = true
+            
             let aboutUSVC = segue.destinationViewController as! AboutUsContainerViewController
             aboutUSVC.addressPassedValue = addressPassedValie
 
+        }
     }
+
+    override func viewDidDisappear(animated: Bool) {
+        
+        checkSegue()
+        
     }
+    
+    func checkSegue(){
+    
+        if doNothing == true {
+        
+        } else {
+        
+            detailTableViewArray.removeAll(keepCapacity: true)
+            self.detailTableView.reloadData()
+        
+        }
+    
+    }
+    
 }

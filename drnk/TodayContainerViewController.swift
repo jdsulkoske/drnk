@@ -62,8 +62,8 @@ class TodayContainerViewController: UIViewController,UITableViewDelegate {
     
     override func viewDidDisappear(animated: Bool) {
         
-        todaysSpecialArray.removeAll(keepCapacity: true)
-        self.myTableView.reloadData()
+        checkSegue()
+        
         
     }
     
@@ -94,6 +94,19 @@ class TodayContainerViewController: UIViewController,UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    func checkSegue(){
+        
+        if doNothing == true {
+            
+        } else {
+            
+            todaysSpecialArray.removeAll(keepCapacity: true)
+            self.myTableView.reloadData()
+            
+        }
+        
     }
 
 }
