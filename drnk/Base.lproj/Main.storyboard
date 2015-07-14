@@ -180,11 +180,7 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="bars." id="avK-2d-Wzs">
-                        <barButtonItem key="leftBarButtonItem" title="menu." id="ugP-Gq-zzW">
-                            <connections>
-                                <action selector="showSlideMenu:" destination="yvX-hM-S0D" id="7e3-Il-Dwh"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="menu." id="ugP-Gq-zzW"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
@@ -195,11 +191,7 @@
                         <segue destination="XBf-wS-PsZ" kind="show" identifier="showBarInformationSegue" id="AbQ-O9-hi3"/>
                     </connections>
                 </viewController>
-                <tapGestureRecognizer id="kfX-Jq-Bhs">
-                    <connections>
-                        <action selector="showBarInformation:" destination="yvX-hM-S0D" id="5Cl-y6-xWJ"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="kfX-Jq-Bhs"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIc-5b-NbA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-170" y="-812"/>
@@ -644,11 +636,7 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="drnk." id="GAB-bg-UFa">
-                        <barButtonItem key="leftBarButtonItem" title="menu." id="UkH-df-Peo">
-                            <connections>
-                                <action selector="showSlideMenu:" destination="mqb-NF-X7A" id="YOb-AT-Zkk"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="menu." id="UkH-df-Peo"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
@@ -659,11 +647,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jPp-U1-gu3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="yrm-ui-or2">
-                    <connections>
-                        <action selector="showLSDetail:" destination="mqb-NF-X7A" id="Eqf-eh-uUG"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="yrm-ui-or2"/>
             </objects>
             <point key="canvasLocation" x="727" y="-3304"/>
         </scene>
@@ -840,11 +824,11 @@
                         <viewControllerLayoutGuide type="bottom" id="NlW-AY-fIu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6Os-Q2-i0c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" translatesAutoresizingMaskIntoConstraints="NO" id="ZX6-Tr-JzZ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.36670278280000002" alpha="0.70999999999999996" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="aFS-wp-g30" id="Ri3-lt-8Xp"/>
@@ -1352,6 +1336,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="hoP-Ax-9y1"/>
-        <segue reference="Z7a-UY-SB5"/>
+        <segue reference="tP1-6s-IEs"/>
     </inferredMetricsTieBreakers>
 </document>
