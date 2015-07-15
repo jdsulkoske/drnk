@@ -43,7 +43,6 @@ class LiquorStoresInformationViewController: UIViewController, UITableViewDelega
         liquoreStoreName.text = liquoreStoreNamePasssedValue
         liqoureStoreAddrress.text = liquoreStoreAddressPassed
         liqoureStoreImage.image = UIImage(named: liquoreStoreImagePassedValue)
-        updateData()
    
     }
 
@@ -83,6 +82,7 @@ class LiquorStoresInformationViewController: UIViewController, UITableViewDelega
     }
     override func viewDidAppear(animated: Bool) {
         
+        updateData()
         segue = "detailVC"
         if self.revealViewController() != nil {
             
