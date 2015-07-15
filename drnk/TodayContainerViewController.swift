@@ -18,11 +18,12 @@ class TodayContainerViewController: UIViewController,UITableViewDelegate {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "segmentedControlTapped:", name: "SCTapped", object: nil)
         
         data = DataConnection(typeOfBusiness: "bars")
-        updateData()
+        
     }
 
     override func viewDidAppear(animated: Bool) {
         
+        updateData()
     
     }
     

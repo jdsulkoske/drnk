@@ -58,12 +58,12 @@ class BarInformationViewController: UIViewController, UITableViewDelegate, UITab
         nameOfBar.text = barPassedValue
         barImage.image = UIImage(named: imagePassedValue)
         addressOfBar.text = addressPassedValie
-        self.updateData()
         
     }
     
     override func viewDidAppear(animated: Bool) {
         
+        self.updateData()
         segue = "detailVC"
         if self.revealViewController() != nil {
             
