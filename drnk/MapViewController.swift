@@ -91,16 +91,19 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
         for (var i = 0; i<addressArray.count; i++){
             
             var address = addressArray[i]
+            var business = nameOfBusinessArray[i]
             var annotation = MKPointAnnotation()
             var geocoder = CLGeocoder()
             
             geocoder.geocodeAddressString(address, completionHandler: {(placemarks: [AnyObject]!, error: NSError!) -> Void in
-                
+               
                 if let placemark = placemarks?[0] as? CLPlacemark {
                     
                     self.mapView.setRegion(MKCoordinateRegionMake(CLLocationCoordinate2DMake (placemark.location.coordinate.latitude, placemark.location.coordinate.longitude), MKCoordinateSpanMake(0.05, 0.05)), animated: true)
-                    self.mapView.addAnnotation(MKPlacemark(placemark: placemark))
-                    
+                   annotation.coordinate = placemark.location.coordinate
+                    annotation.title = business
+                    annotation.subtitle = address
+                    self.mapView.addAnnotation(annotation)
                 }
                 
             })
@@ -114,15 +117,17 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
     func findAddressFromClickedButtonOnViewController(){
         
         var address : String?
-        
+        var business : String?
             if activePlace == 2{
                 
                 address  = arrayOfLiquorStores[index!].address
+                business = arrayOfLiquorStores[index!].liquorStoreName
                 activePlace = 1
                 
             } else {
                 
                 address = arrayOfBars[index!].address
+                business = arrayOfBars[index!].name
                 activePlace = 1
                 
         }
@@ -135,8 +140,11 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
             if let placemark = placemarks?[0] as? CLPlacemark {
                 
                 self.mapView.setRegion(MKCoordinateRegionMake(CLLocationCoordinate2DMake (placemark.location.coordinate.latitude, placemark.location.coordinate.longitude), MKCoordinateSpanMake(0.002, 0.002)), animated: true)
-                self.mapView.addAnnotation(MKPlacemark(placemark: placemark))
-                
+               // self.mapView.addAnnotation(MKPlacemark(placemark: placemark))
+                annotation.coordinate = placemark.location.coordinate
+                annotation.title = business
+                annotation.subtitle = address
+                self.mapView.addAnnotation(annotation)
             }
             
         })
@@ -264,8 +272,8 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
 
             
             // Add detail button to right callout
-            var calloutButton = UIButton.buttonWithType(.DetailDisclosure) as! UIButton
-            pinView!.rightCalloutAccessoryView = calloutButton
+//            var calloutButton = UIButton.buttonWithType(.DetailDisclosure) as! UIButton
+//            pinView!.rightCalloutAccessoryView = calloutButton
         }
         else {
             pinView!.annotation = annotation

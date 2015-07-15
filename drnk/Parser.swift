@@ -9,6 +9,7 @@
 import Foundation
 
 var addressArray = [String]()
+var nameOfBusinessArray = [String]()
 class Parser{
     private var jsonFile:NSArray!
     private var bar : BarsTableInfo!
@@ -24,6 +25,8 @@ class Parser{
     private var todaysSpecial: TodaysDeal!
     private var lsSpecialArray = [String]()
     private var lsAllArray = [String]()
+    
+    
     private var lsAddress = " "
     private var lsName = ""
     
@@ -591,13 +594,11 @@ class Parser{
             
             var street = posts["company_street"] as! String
             var city = posts["company_city"] as! String
+            name = posts["company_name"] as! String
             let address = street + ", " + city
-            //let address = "224 S College Ave Muncie"
             addressArray.append(address)
-            //let add = "1515 N Mckinley Ave Muncie"
-            //addressArray.append(add)
-            //let ad = "713 W Ashland Muncie"
-           // addressArray.append(ad)
+            nameOfBusinessArray.append(name)
+       
             
         }
         
