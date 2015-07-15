@@ -159,21 +159,9 @@ class LiquorStoresInformationViewController: UIViewController, UITableViewDelega
     
     override func viewDidDisappear(animated: Bool) {
         
-        checkSegue()
+        lsDetailArray.removeAll(keepCapacity: true)
+        self.myTableView.reloadData()
         
     }
     
-    func checkSegue(){
-        
-        if doNothing == true {
-            
-            doNothing = false
-            
-        } else {
-            lsDetailArray.removeAll(keepCapacity: true)
-            self.myTableView.reloadData()
-            
-        }
-        
-    }
 }

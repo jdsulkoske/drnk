@@ -245,19 +245,5 @@ class BarInformationViewController: UIViewController, UITableViewDelegate, UITab
 
     }
     
-    func checkSegue(){
-    
-        if doNothing == true {
-            
-            doNothing = false
-        
-        } else {
-        
-            detailTableViewArray.removeAll(keepCapacity: true)
-            self.detailTableView.reloadData()
-        
-        }
-    
-    }
     
 }
