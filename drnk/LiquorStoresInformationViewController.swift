@@ -29,7 +29,7 @@ class LiquorStoresInformationViewController: UIViewController, UITableViewDelega
         
         segmentedControl.layer.cornerRadius = -0.5;
         segmentedControl.layer.borderWidth = 2.5;
-        segmentedControl.layer.borderColor = UIColor(red: 25/255, green: 25/255, blue: 25/255, alpha: 1).CGColor
+        segmentedControl.layer.borderColor = UIColor(red: 15/255, green: 15/255, blue: 15/255, alpha: 1).CGColor
         
         secondView.hidden = true
         

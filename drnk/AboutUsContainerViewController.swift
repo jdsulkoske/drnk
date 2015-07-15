@@ -17,7 +17,7 @@ class AboutUsContainerViewController: UIViewController {
     @IBOutlet weak var todaysHours: UILabel!
     
     var addressPassedValue : String!
-   
+    
     var data : DataConnection!
     
     override func viewDidLoad() {

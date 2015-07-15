@@ -36,7 +36,7 @@ class BarInformationViewController: UIViewController, UITableViewDelegate, UITab
 
         barsController.layer.cornerRadius = -0.5;
         barsController.layer.borderWidth = 2.5;
-        barsController.layer.borderColor = UIColor(red: 25/255, green: 25/255, blue: 25/255, alpha: 1).CGColor
+        barsController.layer.borderColor = UIColor(red: 15/255, green: 15/255, blue: 15/255, alpha: 1).CGColor
 
         refresher = UIRefreshControl()
         firstView.hidden = true
