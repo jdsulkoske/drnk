@@ -63,7 +63,7 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
             if  responseObject == nil{
                 
                 self.networkMessage.hidden = false
-                self.networkMessage.text = "Network is unavailable"
+                self.networkMessage.text = "Network Unavailable"
                 self.refresher.endRefreshing()
                 
             } else {
