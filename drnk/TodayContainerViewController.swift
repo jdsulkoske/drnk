@@ -48,10 +48,8 @@ class TodayContainerViewController: UIViewController,UITableViewDelegate {
                 
                 dispatch_async(dispatch_get_main_queue()){
                     
-                    self.data.getData { (responseObject, error) -> Void in
                     parser.findTodaysSpecial()
                     self.myTableView.reloadData()
-                    }
                     
                 }
                 
