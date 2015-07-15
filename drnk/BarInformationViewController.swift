@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+var doNothing = false
 var detailTableViewArray : [BarInfo] = [BarInfo]()
 let daysOfWeek = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 var detailViewIndex : Int!
@@ -22,7 +22,7 @@ class BarInformationViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var detailTableView: UITableView!
     @IBOutlet weak var nameOfBar: UILabel!
     @IBOutlet weak var addressOfBar: UILabel!
-    var doNothing = false
+
     var barPassedValue : String!
     var imagePassedValue : String!
     var addressPassedValie : String!
@@ -240,7 +240,8 @@ class BarInformationViewController: UIViewController, UITableViewDelegate, UITab
 
     override func viewDidDisappear(animated: Bool) {
         
-        checkSegue()
+        detailTableViewArray.removeAll(keepCapacity: true)
+        self.detailTableView.reloadData()
 
     }
     
