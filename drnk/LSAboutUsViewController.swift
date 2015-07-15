@@ -37,13 +37,14 @@ class LSAboutUSViewController: UIViewController{
                 let parser = Parser(jsonFile: responseObject!)
                 aboutUsArray.removeAll(keepCapacity: true)
                 dispatch_async(dispatch_get_main_queue()){
+                    self.data.getData { (responseObject, error) -> Void in
                     parser.findAboutUs()
                     let info = aboutUsArray[0]
                     self.phoneButton.setTitle(info.phone, forState: UIControlState.Normal)
                     self.todaysHoursLabel.text = info.currentdayHours
                     self.phoneButton.titleLabel?.adjustsFontSizeToFitWidth = true
                     self.reloadInputViews()
-                    
+                    }
                 }
                 
                 //self.refresher.endRefreshing()
