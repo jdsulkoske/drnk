@@ -17,7 +17,7 @@ class AboutUsContainerViewController: UIViewController {
     @IBOutlet weak var todaysHours: UILabel!
     
     var addressPassedValue : String!
-   
+    
     var data : DataConnection!
     
     override func viewDidLoad() {
@@ -27,6 +27,7 @@ class AboutUsContainerViewController: UIViewController {
         self.updateData()
 
         address.setTitle(addressPassedValue, forState: UIControlState.Normal)
+        self.address.titleLabel?.adjustsFontSizeToFitWidth = true
         
         
     }
@@ -56,7 +57,9 @@ class AboutUsContainerViewController: UIViewController {
                     let info = aboutUsArray[0]
                     self.businessNumber.setTitle(info.phone, forState: UIControlState.Normal)
                     self.todaysHours.text = info.currentdayHours
+                    self.businessNumber.titleLabel?.adjustsFontSizeToFitWidth = true
                     self.reloadInputViews()
+                    
                     
                 }
                 }
@@ -80,7 +83,15 @@ class AboutUsContainerViewController: UIViewController {
     @IBAction func MakePhoneCall(sender: AnyObject) {
         
         var number = businessNumber.titleLabel?.text!
-        UIApplication.sharedApplication().openURL(NSURL(string: "tel://" + number!)!)
+        
+        if number == "Could not retrieve phone number" {
+            
+        } else {
+        
+            UIApplication.sharedApplication().openURL(NSURL(string: "tel://" + number!)!)
+            
+        }
+        
         
     }
     

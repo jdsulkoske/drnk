@@ -19,6 +19,7 @@ class LSAboutUSViewController: UIViewController{
         data = DataConnection(typeOfBusiness: "liquorstores")
 
         addressButton.setTitle(addressPassed, forState: UIControlState.Normal)
+        self.addressButton.titleLabel?.adjustsFontSizeToFitWidth = true
         updateData()
     }
     
@@ -40,6 +41,7 @@ class LSAboutUSViewController: UIViewController{
                     let info = aboutUsArray[0]
                     self.phoneButton.setTitle(info.phone, forState: UIControlState.Normal)
                     self.todaysHoursLabel.text = info.currentdayHours
+                    self.phoneButton.titleLabel?.adjustsFontSizeToFitWidth = true
                     self.reloadInputViews()
                     
                 }
@@ -62,30 +64,15 @@ class LSAboutUSViewController: UIViewController{
     @IBAction func PhoneButton(sender: AnyObject) {
         
         var number = phoneButton.titleLabel?.text!
-        UIApplication.sharedApplication().openURL(NSURL(string: "tel://" + number!)!)
+        if number == "Could not retrieve phone number" {
+            
+        } else {
+        
+            UIApplication.sharedApplication().openURL(NSURL(string: "tel://" + number!)!)
+        
+        }
         
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
