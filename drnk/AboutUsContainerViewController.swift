@@ -11,9 +11,9 @@ var aboutUsArray : [AboutUS]! = [AboutUS]()
 
 
 class AboutUsContainerViewController: UIViewController {
-
+    
+    @IBOutlet weak var businessNumber: UIButton!
     @IBOutlet weak var address: UIButton!
-    @IBOutlet weak var phoneNumber: UILabel!
     @IBOutlet weak var todaysHours: UILabel!
     
     var addressPassedValue : String!
@@ -51,12 +51,14 @@ class AboutUsContainerViewController: UIViewController {
                 let parser = Parser(jsonFile: responseObject!)
                     aboutUsArray.removeAll(keepCapacity: true)
                 dispatch_async(dispatch_get_main_queue()){
+                    self.data.getData { (responseObject, error) -> Void in
                     parser.findAboutUs()
                     let info = aboutUsArray[0]
-                    self.phoneNumber.text = info.phone
+                    self.businessNumber.setTitle(info.phone, forState: UIControlState.Normal)
                     self.todaysHours.text = info.currentdayHours
                     self.reloadInputViews()
                     
+                }
                 }
                 
                 //self.refresher.endRefreshing()
@@ -73,4 +75,13 @@ class AboutUsContainerViewController: UIViewController {
             
         }
     }
+    
+    
+    @IBAction func MakePhoneCall(sender: AnyObject) {
+        
+        var number = businessNumber.titleLabel?.text!
+        UIApplication.sharedApplication().openURL(NSURL(string: "tel://" + number!)!)
+        
+    }
+    
 }

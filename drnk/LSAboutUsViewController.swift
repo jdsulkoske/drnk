@@ -9,10 +9,10 @@
 import Foundation
 class LSAboutUSViewController: UIViewController{
     
+    @IBOutlet weak var phoneButton: UIButton!
     @IBOutlet weak var addressButton: UIButton!
     @IBOutlet weak var todaysHoursLabel: UILabel!
     var addressPassed : String!
-    @IBOutlet weak var phoneNumberLabel: UILabel!
     var data : DataConnection!
     
     override func viewDidLoad() {
@@ -38,7 +38,7 @@ class LSAboutUSViewController: UIViewController{
                 dispatch_async(dispatch_get_main_queue()){
                     parser.findAboutUs()
                     let info = aboutUsArray[0]
-                    self.phoneNumberLabel.text = info.phone
+                    self.phoneButton.setTitle(info.phone, forState: UIControlState.Normal)
                     self.todaysHoursLabel.text = info.currentdayHours
                     self.reloadInputViews()
                     
@@ -58,5 +58,35 @@ class LSAboutUSViewController: UIViewController{
             
         }
     }
+    
+    @IBAction func PhoneButton(sender: AnyObject) {
+        
+        var number = phoneButton.titleLabel?.text!
+        UIApplication.sharedApplication().openURL(NSURL(string: "tel://" + number!)!)
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 }

@@ -2,8 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ylo-vW-UbO">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -1086,13 +1084,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="382" height="427"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's Hours:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ala-qp-gWg">
-                                <rect key="frame" x="16" y="63" width="116" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Today's Hours:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ala-qp-gWg">
+                                <rect key="frame" x="16" y="37" width="116" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.89155375869999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzx-e2-Gjd">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzx-e2-Gjd">
                                 <rect key="frame" x="95" y="8" width="226" height="21"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1101,64 +1099,40 @@
                                     <segue destination="aFS-wp-g30" kind="show" identifier="newPlace" id="O8m-Er-LLu"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 am - 3 am" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQS-YB-GGz">
-                                <rect key="frame" x="140" y="65" width="226" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10 am - 3 am" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQS-YB-GGz">
+                                <rect key="frame" x="140" y="37" width="226" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBT-9X-dZR">
-                                <rect key="frame" x="16" y="35" width="116" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="116" id="IEL-C4-jkG"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMt-0j-UCg">
+                                <rect key="frame" x="16" y="8" width="116" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.89155375869999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="765-123-4567" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCs-R0-Vp7">
-                                <rect key="frame" x="95" y="37" width="226" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMt-0j-UCg">
-                                <rect key="frame" x="16" y="8" width="116" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cU-Or-IZy">
+                                <rect key="frame" x="95" y="61" width="271" height="26"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="MakePhoneCall:" destination="NVw-uX-HFG" eventType="touchUpInside" id="nqj-M5-nhI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBT-9X-dZR">
+                                <rect key="frame" x="16" y="66" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.89155375869999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.099329141420000003" green="0.099329141420000003" blue="0.099329141420000003" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="HCs-R0-Vp7" firstAttribute="leading" secondItem="T6i-mb-RdB" secondAttribute="leadingMargin" constant="79" id="8RN-4M-mSC"/>
-                            <constraint firstItem="HCs-R0-Vp7" firstAttribute="top" secondItem="bzx-e2-Gjd" secondAttribute="bottom" constant="8" symbolic="YES" id="BtQ-T3-mSH"/>
-                            <constraint firstItem="AMt-0j-UCg" firstAttribute="baseline" secondItem="bzx-e2-Gjd" secondAttribute="baseline" id="DkT-hU-71J"/>
-                            <constraint firstItem="ala-qp-gWg" firstAttribute="top" secondItem="HCs-R0-Vp7" secondAttribute="bottom" constant="5" id="DtD-ko-CA6"/>
-                            <constraint firstItem="NBT-9X-dZR" firstAttribute="top" secondItem="bzx-e2-Gjd" secondAttribute="bottom" constant="6" id="E1s-YY-fQC"/>
-                            <constraint firstItem="AMt-0j-UCg" firstAttribute="baseline" secondItem="bzx-e2-Gjd" secondAttribute="firstBaseline" id="Fhw-Lf-rbd"/>
-                            <constraint firstItem="AMt-0j-UCg" firstAttribute="top" secondItem="bzx-e2-Gjd" secondAttribute="top" id="HbU-Fn-dnA"/>
-                            <constraint firstItem="HCs-R0-Vp7" firstAttribute="leading" secondItem="bzx-e2-Gjd" secondAttribute="leading" id="I9v-Ub-lKy"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HCs-R0-Vp7" secondAttribute="trailing" constant="45" id="Plm-cG-fh9"/>
-                            <constraint firstItem="ZQS-YB-GGz" firstAttribute="top" secondItem="HCs-R0-Vp7" secondAttribute="bottom" constant="7" id="QWO-dx-Wy8"/>
-                            <constraint firstItem="AMt-0j-UCg" firstAttribute="trailing" secondItem="NBT-9X-dZR" secondAttribute="trailing" id="Qly-sS-Vuy"/>
-                            <constraint firstItem="bzx-e2-Gjd" firstAttribute="top" secondItem="8ml-AL-PPk" secondAttribute="bottom" constant="8" symbolic="YES" id="Stw-Gx-Uuc"/>
-                            <constraint firstItem="AMt-0j-UCg" firstAttribute="leading" secondItem="T6i-mb-RdB" secondAttribute="leadingMargin" id="Zor-yO-Dlt"/>
-                            <constraint firstItem="AMt-0j-UCg" firstAttribute="leading" secondItem="NBT-9X-dZR" secondAttribute="leading" id="aZ7-MN-cMs"/>
-                            <constraint firstItem="HCs-R0-Vp7" firstAttribute="top" secondItem="T6i-mb-RdB" secondAttribute="top" constant="37" id="apk-xo-SrV"/>
-                            <constraint firstItem="ZQS-YB-GGz" firstAttribute="leading" secondItem="ala-qp-gWg" secondAttribute="trailing" constant="8" symbolic="YES" id="dV4-df-XWj"/>
-                            <constraint firstItem="NBT-9X-dZR" firstAttribute="trailing" secondItem="ala-qp-gWg" secondAttribute="trailing" id="iBM-GH-wx6"/>
-                            <constraint firstItem="NBT-9X-dZR" firstAttribute="leading" secondItem="ala-qp-gWg" secondAttribute="leading" id="izS-OJ-p4l"/>
-                            <constraint firstItem="HCs-R0-Vp7" firstAttribute="top" secondItem="AMt-0j-UCg" secondAttribute="bottom" constant="8" symbolic="YES" id="oHl-Nd-blN"/>
-                            <constraint firstItem="AMt-0j-UCg" firstAttribute="firstBaseline" secondItem="bzx-e2-Gjd" secondAttribute="baseline" id="pbM-uO-c8a"/>
-                            <constraint firstItem="HCs-R0-Vp7" firstAttribute="trailing" secondItem="bzx-e2-Gjd" secondAttribute="trailing" id="sNW-de-5Wx"/>
-                            <constraint firstItem="ZQS-YB-GGz" firstAttribute="trailing" secondItem="T6i-mb-RdB" secondAttribute="trailingMargin" id="zRN-4q-QlD"/>
-                        </constraints>
                     </view>
                     <toolbarItems/>
                     <connections>
                         <outlet property="address" destination="bzx-e2-Gjd" id="Ro2-lp-y4R"/>
-                        <outlet property="phoneNumber" destination="HCs-R0-Vp7" id="ddb-ki-KcR"/>
+                        <outlet property="businessNumber" destination="3cU-Or-IZy" id="LjU-IH-aTj"/>
                         <outlet property="todaysHours" destination="ZQS-YB-GGz" id="AHy-5g-Mrf"/>
                     </connections>
                 </viewController>
@@ -1251,19 +1225,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Todays Hours:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GF9-US-4dZ">
-                                <rect key="frame" x="16" y="78" width="110" height="21"/>
+                                <rect key="frame" x="16" y="49" width="110" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.89155375869999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMt-Ns-kdK">
-                                <rect key="frame" x="145" y="49" width="209" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rkh-vJ-OZ5">
-                                <rect key="frame" x="145" y="78" width="209" height="21"/>
+                                <rect key="frame" x="145" y="49" width="209" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1278,18 +1246,27 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone Number:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gwd-ty-6m1">
-                                <rect key="frame" x="16" y="49" width="121" height="21"/>
+                                <rect key="frame" x="16" y="78" width="121" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.89155375869999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ssj-fv-PHp">
+                                <rect key="frame" x="145" y="78" width="221" height="21"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="PhoneButton:" destination="Kzg-gC-fga" eventType="touchUpInside" id="3Uz-EC-a8a"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <toolbarItems/>
                     <connections>
                         <outlet property="addressButton" destination="GGK-Ma-uQJ" id="Ytg-gF-DJa"/>
-                        <outlet property="phoneNumberLabel" destination="lMt-Ns-kdK" id="7QK-hn-F6g"/>
+                        <outlet property="phoneButton" destination="Ssj-fv-PHp" id="u6Q-cR-W3W"/>
                         <outlet property="todaysHoursLabel" destination="Rkh-vJ-OZ5" id="bHD-AO-M31"/>
                     </connections>
                 </viewController>
