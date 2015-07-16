@@ -34,6 +34,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
             updateData()
             self.back.title = ""
             self.back.enabled = false
+             mugIconView = UIImageView(image: UIImage(named: "cupIcon"))
             
         } else {
             
