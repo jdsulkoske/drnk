@@ -64,7 +64,7 @@ class BarInformationViewController: UIViewController, UITableViewDelegate, UITab
     override func viewDidAppear(animated: Bool) {
         
         self.updateData()
-        segue = "detailVC"
+        segue = "barDetailVC"
         if self.revealViewController() != nil {
             
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())

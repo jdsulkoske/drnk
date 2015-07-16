@@ -351,7 +351,9 @@ class Parser{
         
         for posts in jsonFile {
         
-            lsAddress = posts["company_street"] as! String
+            var street = posts["company_street"] as! String
+            var city = posts["company_city"] as! String
+            lsAddress = street + ", " + city
             lsAddress.capitalizedString
             lsName = posts["company_name"] as! String
             lsName.capitalizedString

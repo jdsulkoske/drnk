@@ -14,7 +14,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
     
     var locationManager: CLLocationManager!
     var data : DataConnection!
-    
+    var mugIconView : UIImageView!
     override func viewDidLoad() {
         
         self.navigationController?.toolbar.barTintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
@@ -103,6 +103,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
                    annotation.coordinate = placemark.location.coordinate
                     annotation.title = business
                     annotation.subtitle = address
+                    
                     self.mapView.addAnnotation(annotation)
                 }
                 
@@ -120,16 +121,33 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
         var business : String?
             if activePlace == 2{
                 
-                address  = arrayOfLiquorStores[index!].address
-                business = arrayOfLiquorStores[index!].liquorStoreName
+               
                 activePlace = 1
+                if segue == "lsDetailVC" {
+                mugIconView = UIImageView(image: UIImage(named:arrayOfLiquorStores[lsIndex].liquorStoreImage))
+                    address  = arrayOfLiquorStores[lsIndex].address
+                    business = arrayOfLiquorStores[lsIndex].liquorStoreName
+                }
+                else{
+                  mugIconView = UIImageView(image: UIImage(named:arrayOfLiquorStores[index!].liquorStoreImage))
+                    address  = arrayOfLiquorStores[index!].address
+                    business = arrayOfLiquorStores[index!].liquorStoreName
+                }
                 
             } else {
                 
-                address = arrayOfBars[index!].address
-                business = arrayOfBars[index!].name
-                activePlace = 1
                 
+                activePlace = 1
+                if segue == "barDetailVC" {
+                    mugIconView = UIImageView(image: UIImage(named:arrayOfBars[detailViewIndex].barImage))
+                    address = arrayOfBars[detailViewIndex].address
+                    business = arrayOfBars[detailViewIndex].name
+                }
+                else{
+                mugIconView = UIImageView(image: UIImage(named:arrayOfBars[index!].barImage))
+                    address = arrayOfBars[index!].address
+                    business = arrayOfBars[index!].name
+                }
         }
         
         var annotation = MKPointAnnotation()
@@ -231,7 +249,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
 //    }
 
     @IBAction func backButton(sender: AnyObject) {
-        if segue == "detailVC"{
+        if segue == "barDetailVC" || segue == "lsDetailVC"{
         for controller in self.navigationController!.viewControllers as Array {
             if controller.isKindOfClass(BarInformationViewController) {
                 self.navigationController?.popToViewController(controller as! UIViewController, animated: true)
@@ -266,10 +284,12 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
             pinView!.frame = CGRectMake(10, 10, 25, 25)
             
             // Add image to left callout
-            var mugIconView = UIImageView(image: UIImage(named: "drnklogo"))
+           
+            //var mugIconView = UIImageView(image: UIImage(named: arrayOfBars[index!].barImage))
+                
             mugIconView.frame = CGRectMake(0, 0, 35, 35)
             pinView!.leftCalloutAccessoryView = mugIconView
-
+            
             
             // Add detail button to right callout
 //            var calloutButton = UIButton.buttonWithType(.DetailDisclosure) as! UIButton

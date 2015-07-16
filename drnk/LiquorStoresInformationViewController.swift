@@ -10,6 +10,7 @@ import UIKit
 var lsDetailArray: [LiquorStoreDetail] = [LiquorStoreDetail]()
 class LiquorStoresInformationViewController: UIViewController, UITableViewDelegate {
     
+    @IBOutlet weak var networkMessage: UILabel!
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var liqoureStoreImage: UIImageView!
     @IBOutlet weak var liquoreStoreName: UILabel!
@@ -56,11 +57,12 @@ class LiquorStoresInformationViewController: UIViewController, UITableViewDelega
         
         data.getData { (responseObject, error) -> Void in
             if  responseObject == nil{
-                
+                self.networkMessage.hidden = false
+                self.networkMessage.text = "Network Unavailable"
                 
             } else {
                 
-                //self.networkMessage.hidden = true
+                self.networkMessage.hidden = true
                 var parser = Parser(jsonFile: responseObject!)
                 lsDetailArray.removeAll(keepCapacity: true)
                 
@@ -73,8 +75,7 @@ class LiquorStoresInformationViewController: UIViewController, UITableViewDelega
                 }
                 
             }
-            
-           // self.refresher.endRefreshing()
+    
             return
             
         }
@@ -83,7 +84,7 @@ class LiquorStoresInformationViewController: UIViewController, UITableViewDelega
     override func viewDidAppear(animated: Bool) {
         
         updateData()
-        segue = "detailVC"
+        segue = "lsDetailVC"
         if self.revealViewController() != nil {
             
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
