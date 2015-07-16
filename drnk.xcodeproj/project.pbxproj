@@ -26,6 +26,7 @@
 		DE83781E1B13F6C000CD8435 /* BarsTableInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83781D1B13F6C000CD8435 /* BarsTableInfo.swift */; };
 		DE8378201B13F72F00CD8435 /* CustomBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83781F1B13F72F00CD8435 /* CustomBarTableViewCell.swift */; };
 		DE90B2001B54B0850067F62C /* LSAboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90B1FF1B54B0850067F62C /* LSAboutUsViewController.swift */; };
+		DE90B2021B58299D0067F62C /* map.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DE90B2011B58299D0067F62C /* map.jpg */; };
 		DE9893C51B3606670086ACE2 /* CustomBarInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9893C41B3606670086ACE2 /* CustomBarInfoCell.swift */; };
 		DE9D2E541B15FD970099253D /* DataConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D2E531B15FD970099253D /* DataConnection.swift */; };
 		DE9DA4DC1B28E02600AD8A2C /* SlideTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9DA4DB1B28E02600AD8A2C /* SlideTableViewController.swift */; };
@@ -91,6 +92,7 @@
 		DE83781D1B13F6C000CD8435 /* BarsTableInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarsTableInfo.swift; sourceTree = "<group>"; };
 		DE83781F1B13F72F00CD8435 /* CustomBarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBarTableViewCell.swift; sourceTree = "<group>"; };
 		DE90B1FF1B54B0850067F62C /* LSAboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSAboutUsViewController.swift; sourceTree = "<group>"; };
+		DE90B2011B58299D0067F62C /* map.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = map.jpg; sourceTree = "<group>"; };
 		DE9893C41B3606670086ACE2 /* CustomBarInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBarInfoCell.swift; sourceTree = "<group>"; };
 		DE9D2E531B15FD970099253D /* DataConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataConnection.swift; sourceTree = "<group>"; };
 		DE9DA4DB1B28E02600AD8A2C /* SlideTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideTableViewController.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				DE2E1EF91B23A2B600C73295 /* Bars */,
 				DE8377FB1B13F30D00CD8435 /* Main.storyboard */,
 				DE8378001B13F30E00CD8435 /* LaunchScreen.xib */,
+				DE90B2011B58299D0067F62C /* map.jpg */,
 				DE8377FE1B13F30E00CD8435 /* Images.xcassets */,
 				DE8377F31B13F30D00CD8435 /* Supporting Files */,
 			);
@@ -351,6 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE90B2021B58299D0067F62C /* map.jpg in Resources */,
 				DE8377FD1B13F30D00CD8435 /* Main.storyboard in Resources */,
 				DE8378021B13F30E00CD8435 /* LaunchScreen.xib in Resources */,
 				DE8377FF1B13F30E00CD8435 /* Images.xcassets in Resources */,
