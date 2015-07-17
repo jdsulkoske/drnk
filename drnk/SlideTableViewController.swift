@@ -22,7 +22,9 @@ class SlideTableViewController: UITableViewController, CLLocationManagerDelegate
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
-
+        
+    
+   
         
     }
 
@@ -31,6 +33,8 @@ class SlideTableViewController: UITableViewController, CLLocationManagerDelegate
         super.didReceiveMemoryWarning()
 
     }
+    
+
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)

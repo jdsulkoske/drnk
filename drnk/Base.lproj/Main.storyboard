@@ -801,11 +801,11 @@
                         <viewControllerLayoutGuide type="bottom" id="NlW-AY-fIu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6Os-Q2-i0c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" translatesAutoresizingMaskIntoConstraints="NO" id="ZX6-Tr-JzZ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.36670278280000002" alpha="0.70999999999999996" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="aFS-wp-g30" id="Ri3-lt-8Xp"/>
@@ -886,7 +886,7 @@
                         <sections>
                             <tableViewSection id="4d5-ud-djk">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="bars." textLabel="8Ef-UM-bvk" rowHeight="70" style="IBUITableViewCellStyleDefault" id="wQz-wB-DKv">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="8Ef-UM-bvk" imageView="KOU-hx-D3t" rowHeight="68" style="IBUITableViewCellStyleDefault" id="wQz-wB-DKv">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wQz-wB-DKv" id="Y3L-8I-gFh">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -904,6 +904,9 @@
                                                     <color key="textColor" red="0.0" green="0.66666666666666663" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="barmartiniicon.png" id="KOU-hx-D3t">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="gBT-K9-BaQ" secondAttribute="trailing" constant="-41" id="Csx-x1-XzF"/>
@@ -916,7 +919,7 @@
                                             <segue destination="uuK-Dh-2uW" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="YC6-LE-fXp"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="liqour stores." textLabel="e5g-zG-uVB" rowHeight="70" style="IBUITableViewCellStyleDefault" id="Itt-Am-sd5">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="e5g-zG-uVB" imageView="cBE-uM-Vpz" rowHeight="42" style="IBUITableViewCellStyleDefault" id="Itt-Am-sd5">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Itt-Am-sd5" id="Aq4-Og-AUV">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -927,6 +930,9 @@
                                                     <color key="textColor" red="0.0" green="0.71372549019999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="liquorestore.png" id="cBE-uM-Vpz">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -934,7 +940,7 @@
                                             <segue destination="azA-YV-Brb" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSeguePushController" id="Cth-lk-Nd6"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="map." textLabel="lZj-Bw-uOf" rowHeight="70" style="IBUITableViewCellStyleDefault" id="BXt-jW-qEm">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="lZj-Bw-uOf" imageView="HgV-K3-9Fa" rowHeight="62" style="IBUITableViewCellStyleDefault" id="BXt-jW-qEm">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BXt-jW-qEm" id="UuE-g6-Cli">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -945,6 +951,9 @@
                                                     <color key="textColor" red="0.0" green="0.71372549019999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="newMap.png" id="HgV-K3-9Fa">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1218,13 +1227,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qm-uR-ygu">
-                                <rect key="frame" x="16" y="22" width="68" height="20.5"/>
+                                <rect key="frame" x="16" y="22" width="68" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.89155375869999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todays Hours:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GF9-US-4dZ">
-                                <rect key="frame" x="16" y="49" width="110" height="20.5"/>
+                                <rect key="frame" x="16" y="49" width="110" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.89155375869999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1240,7 +1249,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gwd-ty-6m1">
-                                <rect key="frame" x="16" y="77" width="68" height="20.5"/>
+                                <rect key="frame" x="16" y="77" width="68" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.89155375869999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1258,7 +1267,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Could not retrieve hours" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Rkh-vJ-OZ5">
-                                <rect key="frame" x="145" y="49" width="209" height="20.5"/>
+                                <rect key="frame" x="145" y="49" width="209" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="209" id="U95-Mh-uJD"/>
                                 </constraints>
@@ -1276,7 +1285,7 @@
                             <constraint firstItem="GF9-US-4dZ" firstAttribute="top" secondItem="1qm-uR-ygu" secondAttribute="bottom" constant="6" id="I08-ue-qgU"/>
                             <constraint firstItem="GGK-Ma-uQJ" firstAttribute="leading" secondItem="Ssj-fv-PHp" secondAttribute="leading" id="Pol-90-yEk"/>
                             <constraint firstItem="GGK-Ma-uQJ" firstAttribute="top" secondItem="ZK9-rx-kTb" secondAttribute="bottom" constant="18" id="QRz-dY-l3y"/>
-                            <constraint firstItem="Ssj-fv-PHp" firstAttribute="top" secondItem="GF9-US-4dZ" secondAttribute="bottom" constant="8" symbolic="YES" id="Vkc-qk-Ouo"/>
+                            <constraint firstItem="Ssj-fv-PHp" firstAttribute="top" secondItem="GF9-US-4dZ" secondAttribute="bottom" constant="7" id="Vkc-qk-Ouo"/>
                             <constraint firstItem="Ssj-fv-PHp" firstAttribute="leading" secondItem="Gwd-ty-6m1" secondAttribute="trailing" constant="8" symbolic="YES" id="ZKl-vw-4vI"/>
                             <constraint firstItem="1qm-uR-ygu" firstAttribute="leading" secondItem="GF9-US-4dZ" secondAttribute="leading" id="eBj-0g-PDb"/>
                             <constraint firstItem="Rkh-vJ-OZ5" firstAttribute="top" secondItem="GF9-US-4dZ" secondAttribute="top" id="fUR-dh-Ddm"/>
@@ -1301,13 +1310,16 @@
     <resources>
         <image name="Brothers" width="128" height="128"/>
         <image name="ThinLine" width="355" height="83"/>
+        <image name="barmartiniicon.png" width="757" height="762"/>
         <image name="barsimg" width="722" height="878"/>
         <image name="cupIcon" width="180" height="180"/>
+        <image name="liquorestore.png" width="827" height="464"/>
+        <image name="newMap.png" width="403" height="263"/>
         <image name="space2.png" width="446" height="876"/>
         <image name="space3.png" width="1406" height="604"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="hoP-Ax-9y1"/>
-        <segue reference="ZDi-U2-Wv6"/>
+        <segue reference="tP1-6s-IEs"/>
     </inferredMetricsTieBreakers>
 </document>
