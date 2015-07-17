@@ -1113,14 +1113,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="382" height="419"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Today's Hours:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ala-qp-gWg">
-                                <rect key="frame" x="16" y="37" width="116" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's Hours:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ala-qp-gWg">
+                                <rect key="frame" x="16" y="51" width="116" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ala-qp-gWg" secondAttribute="height" multiplier="116:21" id="eNV-ku-adZ"/>
+                                    <constraint firstAttribute="width" constant="116" id="t1b-lh-6mh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.89155375869999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="bzx-e2-Gjd">
-                                <rect key="frame" x="119" y="8" width="247" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="bzx-e2-Gjd">
+                                <rect key="frame" x="92" y="22" width="274" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ecV-q8-INa"/>
+                                    <constraint firstAttribute="width" secondItem="bzx-e2-Gjd" secondAttribute="height" multiplier="274:21" priority="999" id="i25-48-ozE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1129,14 +1137,42 @@
                                     <segue destination="aFS-wp-g30" kind="show" identifier="newPlace" id="O8m-Er-LLu"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMt-0j-UCg">
-                                <rect key="frame" x="16" y="8" width="95" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMt-0j-UCg">
+                                <rect key="frame" x="16" y="22" width="68" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AMt-0j-UCg" secondAttribute="height" multiplier="68:21" id="4eZ-Nk-xni"/>
+                                    <constraint firstAttribute="width" constant="68" id="RQc-kK-odr"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.89155375869999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3cU-Or-IZy">
-                                <rect key="frame" x="95" y="61" width="271" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBT-9X-dZR">
+                                <rect key="frame" x="16" y="80" width="68" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NBT-9X-dZR" secondAttribute="height" multiplier="68:21" id="PnQ-Ko-WND"/>
+                                    <constraint firstAttribute="width" constant="68" id="Wdn-cv-DWQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.89155375869999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Could not retrieve hours" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQS-YB-GGz">
+                                <rect key="frame" x="140" y="51" width="226" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="I2b-vt-Jkj"/>
+                                    <constraint firstAttribute="width" secondItem="ZQS-YB-GGz" secondAttribute="height" multiplier="226:21" priority="999" id="yfG-vH-vRS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3cU-Or-IZy">
+                                <rect key="frame" x="92" y="80" width="274" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3cU-Or-IZy" secondAttribute="height" multiplier="274:21" priority="999" id="XzM-jV-hn7"/>
+                                    <constraint firstAttribute="height" constant="21" id="dBo-iv-MMI"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Could not retrieve phone number">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1145,20 +1181,25 @@
                                     <action selector="MakePhoneCall:" destination="NVw-uX-HFG" eventType="touchUpInside" id="nqj-M5-nhI"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBT-9X-dZR">
-                                <rect key="frame" x="16" y="66" width="70" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.89155375869999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Could not retrieve hours" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQS-YB-GGz">
-                                <rect key="frame" x="140" y="37" width="226" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.058823529411764705" green="0.058823529411764705" blue="0.058823529411764705" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="NBT-9X-dZR" firstAttribute="top" secondItem="ala-qp-gWg" secondAttribute="bottom" constant="8" id="02A-Qm-VYv"/>
+                            <constraint firstItem="bzx-e2-Gjd" firstAttribute="top" secondItem="8ml-AL-PPk" secondAttribute="bottom" constant="22" id="24x-qa-e3Y"/>
+                            <constraint firstItem="ala-qp-gWg" firstAttribute="leading" secondItem="T6i-mb-RdB" secondAttribute="leadingMargin" id="CKw-On-TMH"/>
+                            <constraint firstItem="AMt-0j-UCg" firstAttribute="leading" secondItem="T6i-mb-RdB" secondAttribute="leadingMargin" id="DKS-3y-ROT"/>
+                            <constraint firstItem="AMt-0j-UCg" firstAttribute="top" secondItem="8ml-AL-PPk" secondAttribute="bottom" constant="22" id="HH6-T8-B8D"/>
+                            <constraint firstItem="ZQS-YB-GGz" firstAttribute="trailing" secondItem="T6i-mb-RdB" secondAttribute="trailingMargin" id="QfK-gs-IJl"/>
+                            <constraint firstItem="bzx-e2-Gjd" firstAttribute="trailing" secondItem="T6i-mb-RdB" secondAttribute="trailingMargin" id="U9v-ZO-nTd"/>
+                            <constraint firstItem="NBT-9X-dZR" firstAttribute="leading" secondItem="T6i-mb-RdB" secondAttribute="leadingMargin" id="Zim-dX-bw5"/>
+                            <constraint firstItem="3cU-Or-IZy" firstAttribute="top" secondItem="ZQS-YB-GGz" secondAttribute="bottom" constant="8" id="fLW-ch-W4c"/>
+                            <constraint firstItem="ZQS-YB-GGz" firstAttribute="top" secondItem="bzx-e2-Gjd" secondAttribute="bottom" constant="8" id="iyY-K6-lLI"/>
+                            <constraint firstItem="ala-qp-gWg" firstAttribute="top" secondItem="AMt-0j-UCg" secondAttribute="bottom" constant="8" id="tmC-wA-Zpv"/>
+                            <constraint firstItem="ZQS-YB-GGz" firstAttribute="leading" secondItem="ala-qp-gWg" secondAttribute="trailing" constant="8" id="vIA-UB-IeT"/>
+                            <constraint firstItem="3cU-Or-IZy" firstAttribute="leading" secondItem="NBT-9X-dZR" secondAttribute="trailing" constant="8" id="vdW-FF-O0M"/>
+                            <constraint firstItem="3cU-Or-IZy" firstAttribute="trailing" secondItem="T6i-mb-RdB" secondAttribute="trailingMargin" id="xOR-7E-HqY"/>
+                            <constraint firstItem="bzx-e2-Gjd" firstAttribute="leading" secondItem="AMt-0j-UCg" secondAttribute="trailing" constant="8" id="zyY-M1-Bdh"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <connections>
