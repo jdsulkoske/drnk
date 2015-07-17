@@ -50,7 +50,7 @@ class BarsTableInfo{
             
         case "4":
             
-            imageString = "friendly.png"
+            imageString = "brothersImage"
             
         case "5":
             
