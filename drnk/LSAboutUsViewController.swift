@@ -17,7 +17,7 @@ class LSAboutUSViewController: UIViewController{
     
     override func viewDidLoad() {
         data = DataConnection(typeOfBusiness: "liquorstores")
-
+        self.addressButton.titleLabel?.adjustsFontSizeToFitWidth = true
         addressButton.setTitle(addressPassed, forState: UIControlState.Normal)
         self.addressButton.titleLabel?.adjustsFontSizeToFitWidth = true
         updateData()
