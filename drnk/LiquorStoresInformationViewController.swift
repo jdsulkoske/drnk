@@ -14,7 +14,7 @@ class LiquorStoresInformationViewController: UIViewController, UITableViewDelega
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var liqoureStoreImage: UIImageView!
     @IBOutlet weak var liquoreStoreName: UILabel!
-    @IBOutlet weak var liqoureStoreAddrress: UILabel!
+   
     @IBOutlet weak var secondView: UIView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var nameOfBar: UILabel!
@@ -42,7 +42,6 @@ class LiquorStoresInformationViewController: UIViewController, UITableViewDelega
         
         data = DataConnection(typeOfBusiness: "liquorstores")
         liquoreStoreName.text = liquoreStoreNamePasssedValue
-        liqoureStoreAddrress.text = liquoreStoreAddressPassed
         liqoureStoreImage.image = UIImage(named: liquoreStoreImagePassedValue)
    
     }
