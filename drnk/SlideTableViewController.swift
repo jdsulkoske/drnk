@@ -12,6 +12,7 @@ var currentUserZip = ""
 
 class SlideTableViewController: UITableViewController, CLLocationManagerDelegate {
 
+    @IBOutlet weak var liquore: UIImageView!
     let locationManager = CLLocationManager()
     @IBOutlet var myTableView: UITableView!
     
@@ -23,6 +24,7 @@ class SlideTableViewController: UITableViewController, CLLocationManagerDelegate
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
         
+      
     
    
         
@@ -35,7 +37,7 @@ class SlideTableViewController: UITableViewController, CLLocationManagerDelegate
     }
     
 
-    
+
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         var selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
