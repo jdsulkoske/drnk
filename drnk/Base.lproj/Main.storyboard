@@ -655,7 +655,7 @@
                         </constraints>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="drnk." width="70" id="iFZ-aM-zrV">
+                        <barButtonItem enabled="NO" title="drnk." width="70" id="iFZ-aM-zrV">
                             <color key="tintColor" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </toolbarItems>
@@ -811,7 +811,6 @@
                             <constraint firstItem="7o9-Jm-Y7t" firstAttribute="top" secondItem="Glx-AD-rYF" secondAttribute="top" constant="257" id="W9j-di-qej"/>
                             <constraint firstItem="XtM-HE-PIT" firstAttribute="trailing" secondItem="KD3-5A-rNZ" secondAttribute="trailing" id="Y4h-zs-lLj"/>
                             <constraint firstItem="XtM-HE-PIT" firstAttribute="leading" secondItem="KD3-5A-rNZ" secondAttribute="leading" id="YKQ-RH-e17"/>
-                            <constraint firstItem="XtM-HE-PIT" firstAttribute="trailing" secondItem="8Wz-UB-PQ3" secondAttribute="trailing" id="YgB-9d-xPH"/>
                             <constraint firstItem="rzI-T9-pbt" firstAttribute="centerX" secondItem="95Q-xE-5gc" secondAttribute="centerX" id="ZpJ-Z8-MwB"/>
                             <constraint firstItem="RpH-gU-Zal" firstAttribute="trailing" secondItem="XtM-HE-PIT" secondAttribute="trailing" id="bjL-i6-551"/>
                             <constraint firstItem="7o9-Jm-Y7t" firstAttribute="leading" secondItem="KD3-5A-rNZ" secondAttribute="leading" id="huw-dM-TNH"/>
@@ -856,11 +855,11 @@
                         <viewControllerLayoutGuide type="bottom" id="NlW-AY-fIu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6Os-Q2-i0c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" translatesAutoresizingMaskIntoConstraints="NO" id="ZX6-Tr-JzZ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.36670278280000002" alpha="0.70999999999999996" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="aFS-wp-g30" id="Ri3-lt-8Xp"/>
@@ -1439,6 +1438,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="hoP-Ax-9y1"/>
-        <segue reference="O8m-Er-LLu"/>
+        <segue reference="tP1-6s-IEs"/>
     </inferredMetricsTieBreakers>
 </document>
