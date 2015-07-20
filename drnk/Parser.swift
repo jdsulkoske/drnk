@@ -11,7 +11,7 @@ import Foundation
 var addressArray = [String]()
 var nameOfBusinessArray = [String]()
 class Parser{
-    private var jsonFile:NSArray!
+    private var jsonFile : NSArray!
     private var bar : BarsTableInfo!
 
     private var special : BarInfo!
@@ -76,12 +76,15 @@ class Parser{
     
     func findAboutUs(){
         var index : Int!
-        if segue == "barViewController"{
+        if segue == "barViewController" || segue == "barDetailVC"{
             index = detailViewIndex
+
         }
         else {
+
             index = lsIndex
         }
+        //THE ERROR IS HAPPENING RIGHT AFTER THIS BELOW!!!
         let json = jsonFile[index] as! NSDictionary
             var currentdayHours = json[dayOfTheWeek.getDayAsString().lowercaseString+"_hours"] as! String
             var phone  = json["company_phone"] as! String

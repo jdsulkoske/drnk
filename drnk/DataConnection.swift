@@ -21,8 +21,9 @@ class DataConnection {
                 
                 if json == nil{
                     
-                    println("Right here")
+                    
                     self.post = nil
+                    println("Right here is nil")
                     
                 } else {
                     

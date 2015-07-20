@@ -58,6 +58,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
                 self.networkMessage.hidden = false
                 self.networkMessage.text = "Network Unavailable"
                 self.refresher.endRefreshing()
+
                 
             } else {
                 
@@ -90,7 +91,10 @@ class BarsViewController: UIViewController, UITableViewDelegate {
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             
+        } else {
+
         }
+        
         
     }
 

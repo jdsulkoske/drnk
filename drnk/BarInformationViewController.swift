@@ -53,6 +53,9 @@ class BarInformationViewController: UIViewController, UITableViewDelegate, UITab
             
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             
+        } else {
+        
+            
         }
         
         nameOfBar.text = barPassedValue
@@ -62,20 +65,20 @@ class BarInformationViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     override func viewDidAppear(animated: Bool) {
-        
-        self.updateData()
         segue = "barDetailVC"
+        self.updateData()
+        
         if self.revealViewController() != nil {
-            
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             
+        } else {
+        
         }
         
         
     }
     
     func updateData(){
-        
         data.getData { (responseObject, error) -> Void in
             
             if  responseObject == nil{
@@ -83,6 +86,7 @@ class BarInformationViewController: UIViewController, UITableViewDelegate, UITab
                 self.networkMessage.hidden = false
                 self.networkMessage.text = "Network Unavailable"
                 self.refresher.endRefreshing()
+
                 
             } else {
                 
