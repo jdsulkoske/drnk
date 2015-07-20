@@ -802,8 +802,6 @@
                             <constraint firstItem="rzI-T9-pbt" firstAttribute="leading" secondItem="RpH-gU-Zal" secondAttribute="leading" id="BY0-mB-AXj"/>
                             <constraint firstItem="RpH-gU-Zal" firstAttribute="leading" secondItem="XtM-HE-PIT" secondAttribute="leading" id="CQs-nM-GIH"/>
                             <constraint firstItem="RpH-gU-Zal" firstAttribute="top" secondItem="rRI-NU-OhN" secondAttribute="bottom" constant="8" symbolic="YES" id="E0J-4I-Qv8"/>
-                            <constraint firstItem="XtM-HE-PIT" firstAttribute="trailing" secondItem="Glx-AD-rYF" secondAttribute="trailingMargin" id="Fve-Yv-F6j"/>
-                            <constraint firstItem="rRI-NU-OhN" firstAttribute="top" secondItem="Glx-AD-rYF" secondAttribute="topMargin" constant="19" id="GaJ-Ah-VUa"/>
                             <constraint firstItem="XtM-HE-PIT" firstAttribute="leading" secondItem="Glx-AD-rYF" secondAttribute="leadingMargin" id="HNq-6o-9tj"/>
                             <constraint firstItem="XtM-HE-PIT" firstAttribute="top" secondItem="RpH-gU-Zal" secondAttribute="bottom" constant="8" symbolic="YES" id="HbF-nv-LNc"/>
                             <constraint firstItem="7o9-Jm-Y7t" firstAttribute="trailing" secondItem="KD3-5A-rNZ" secondAttribute="trailing" id="RZd-tv-bl7"/>
