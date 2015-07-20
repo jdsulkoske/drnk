@@ -54,7 +54,7 @@ class LiquorStoresInformation {
         
         default:
             
-            imageString = "drnklogo"
+            imageString = "cupIcon"
             
         }
         
