@@ -79,7 +79,7 @@ class SlideTableViewController: UITableViewController, CLLocationManagerDelegate
     }
     
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
-        println("Error: Bitch")
+        currentUserZip = "none"
     }
 
 }
