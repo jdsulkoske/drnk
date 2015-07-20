@@ -438,7 +438,7 @@
                     </view>
                     <toolbarItems>
                         <barButtonItem title="◁ back" width="65" style="plain" id="yRD-mO-VeU">
-                            <color key="tintColor" red="0.89019607840000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="0.0" green="0.72941176470588232" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="backButton:" destination="XBf-wS-PsZ" id="QEd-Vu-5WX"/>
                             </connections>
@@ -830,7 +830,7 @@
                     </view>
                     <toolbarItems>
                         <barButtonItem title="◁ back" width="65" id="eq6-SD-G2O">
-                            <color key="tintColor" red="0.89155375869999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.0" green="0.72941176470588232" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="backButton:" destination="wB4-ay-tEe" id="VfL-Dl-mY9"/>
                             </connections>
@@ -940,7 +940,7 @@
                             <rect key="frame" x="0.0" y="210" width="414" height="210"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="90"/>
-                            <color key="textColor" red="0.0" green="0.66666666666666663" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.0" green="0.72941176470588232" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <sections>
@@ -955,7 +955,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="1053"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </imageView>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="barmartiniicon.png" translatesAutoresizingMaskIntoConstraints="NO" id="GFl-C2-klX">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="barmartiniicon" translatesAutoresizingMaskIntoConstraints="NO" id="GFl-C2-klX">
                                                     <rect key="frame" x="0.0" y="0.0" width="70" height="68"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="GFl-C2-klX" secondAttribute="height" multiplier="35:34" id="ebd-qU-oA3"/>
@@ -964,7 +964,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="bars." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KsI-5v-8Uu">
                                                     <rect key="frame" x="78" y="0.0" width="303" height="68"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="30"/>
-                                                    <color key="textColor" red="0.0" green="0.71372549019999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.0" green="0.72941176470588232" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -994,7 +994,7 @@
                                                     <color key="textColor" red="0.0" green="0.71372549019999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="liquorestore.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vkl-LL-Tyd">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="liquorestore" translatesAutoresizingMaskIntoConstraints="NO" id="Vkl-LL-Tyd">
                                                     <rect key="frame" x="0.0" y="0.0" width="70" height="68"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Vkl-LL-Tyd" secondAttribute="height" multiplier="35:34" id="BGE-IC-5l4"/>
@@ -1021,7 +1021,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BXt-jW-qEm" id="UuE-g6-Cli">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="newMap.png" translatesAutoresizingMaskIntoConstraints="NO" id="d3d-OJ-fVq">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="newMap" translatesAutoresizingMaskIntoConstraints="NO" id="d3d-OJ-fVq">
                                                     <rect key="frame" x="0.0" y="0.0" width="70" height="68"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="d3d-OJ-fVq" secondAttribute="height" multiplier="35:34" id="jNs-kd-pBi"/>
@@ -1030,7 +1030,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="map." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRx-Xx-kjx">
                                                     <rect key="frame" x="78" y="0.0" width="303" height="68"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="30"/>
-                                                    <color key="textColor" red="0.0" green="0.71372549019999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.0" green="0.72941176470588232" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1422,11 +1422,11 @@
     <resources>
         <image name="Brothers" width="128" height="128"/>
         <image name="ThinLine" width="355" height="83"/>
-        <image name="barmartiniicon.png" width="757" height="762"/>
+        <image name="barmartiniicon" width="757" height="762"/>
         <image name="barsimg" width="722" height="878"/>
         <image name="cupIcon" width="180" height="180"/>
-        <image name="liquorestore.png" width="827" height="464"/>
-        <image name="newMap.png" width="403" height="263"/>
+        <image name="liquorestore" width="827" height="464"/>
+        <image name="newMap" width="403" height="263"/>
         <image name="space2.png" width="446" height="876"/>
         <image name="space3.png" width="1406" height="604"/>
     </resources>
