@@ -23,7 +23,6 @@ class DataConnection {
                     
                     
                     self.post = nil
-                    println("Right here is nil")
                     
                 } else {
                     

@@ -47,7 +47,7 @@ class SlideTableViewController: UITableViewController, CLLocationManagerDelegate
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         CLGeocoder().reverseGeocodeLocation(manager.location, completionHandler: { (placemarks, error) -> Void in
             if error != nil {
-                println("Error: ")
+
                 return
             
             }
@@ -59,7 +59,7 @@ class SlideTableViewController: UITableViewController, CLLocationManagerDelegate
                 
             } else {
             
-                println("Error with data")
+      
                 
             }
             
