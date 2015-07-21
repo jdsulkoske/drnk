@@ -339,10 +339,17 @@ class Parser{
                 
     
                 }
-            
+            if todayArray[0] == ""{
+                todaysSpecial = TodaysDeal(special: "Sorry, there are no specials for today.")
+                todaysSpecialArray.append(todaysSpecial)
+                var message = TodaysDeal(special: "Check out the specials for the rest of the week!")
+                todaysSpecialArray.append(message)
+            }
+            else{
             for (var i = 0 ; i < 5; i++){
                 todaysSpecial = TodaysDeal(special: todayArray[i])
                 todaysSpecialArray.append(todaysSpecial)
+                }
 
     }
             todayArray.removeAll(keepCapacity: true)

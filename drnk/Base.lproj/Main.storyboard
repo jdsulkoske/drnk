@@ -1264,7 +1264,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2YE-Xo-vIL" id="xDY-ND-cHw">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deal 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="51E-S2-Xeg">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deal 1" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="51E-S2-Xeg">
                                                     <rect key="frame" x="26" y="8" width="348" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="31" id="KVv-IS-ko6"/>
@@ -1420,13 +1420,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Brothers" width="128" height="128"/>
-        <image name="ThinLine" width="355" height="83"/>
-        <image name="barmartiniicon" width="757" height="762"/>
-        <image name="barsimg" width="722" height="878"/>
-        <image name="cupIcon" width="180" height="180"/>
-        <image name="liquorestore" width="827" height="464"/>
-        <image name="newMap" width="403" height="263"/>
+        <image name="Brothers" width="64" height="64"/>
+        <image name="ThinLine" width="177" height="41"/>
+        <image name="barmartiniicon" width="378" height="381"/>
+        <image name="barsimg" width="361" height="439"/>
+        <image name="cupIcon" width="90" height="90"/>
+        <image name="liquorestore" width="413" height="232"/>
+        <image name="newMap" width="201" height="131"/>
         <image name="space2.png" width="446" height="876"/>
         <image name="space3.png" width="1406" height="604"/>
     </resources>
