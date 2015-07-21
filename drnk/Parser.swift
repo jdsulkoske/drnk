@@ -50,13 +50,15 @@ class Parser{
     func parseBarInfo(type:String){
         
         for posts in jsonFile{
-            var street = posts["company_street"] as! String
+            if let street = posts["company_street"] as? String{
             var city = posts["company_city"] as! String
             address = street + ", " + city
+
             address.capitalizedString
             name = posts["company_name"] as! String
             name.capitalizedString
             businessId = posts["id"] as! String
+            
             deals = (posts["deals"] as? NSDictionary)!
             
             if type == "barView"{
@@ -67,6 +69,7 @@ class Parser{
                 
                 parseSpecialForWeek()
                 
+            }
             }
             
         }
@@ -86,10 +89,11 @@ class Parser{
         }
         //THE ERROR IS HAPPENING RIGHT AFTER THIS BELOW!!!
         let json = jsonFile[index] as! NSDictionary
-            var currentdayHours = json[dayOfTheWeek.getDayAsString().lowercaseString+"_hours"] as! String
+        if let currentdayHours = json[dayOfTheWeek.getDayAsString().lowercaseString+"_hours"] as? String{
             var phone  = json["company_phone"] as! String
             var info = AboutUS(currentdayHours: currentdayHours, phone: phone)
             aboutUsArray.append(info)
+        }
 
     }
     
@@ -354,7 +358,7 @@ class Parser{
         
         for posts in jsonFile {
         
-            var street = posts["company_street"] as! String
+            if let street = posts["company_street"] as? String{
             var city = posts["company_city"] as! String
             lsAddress = street + ", " + city
             lsAddress.capitalizedString
@@ -372,7 +376,7 @@ class Parser{
         if type == "lsDetail"{
             parseSpecialForSpecificicLiquoreStore()
         }
-        
+        }
     }
     
     private func parseForLSSpecial(){
