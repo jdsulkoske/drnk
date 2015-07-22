@@ -377,13 +377,13 @@ class Parser{
             if type == "lsTableView"{
             self.parseForLSSpecial()
             }
-          
-            
+        }
+        
         }
         if type == "lsDetail"{
             parseSpecialForSpecificicLiquoreStore()
         }
-        }
+        
     }
     
     private func parseForLSSpecial(){
