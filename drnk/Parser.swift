@@ -324,34 +324,39 @@ class Parser{
                 
                 var barspecial = posts["deal_name"] as! String
                 var specialPrice = posts["price"] as! String
+                if barspecial == ""{
+                    
                 
-                if specialPrice == "0.00" {
+                } else {
+                    if specialPrice == "0.00" {
                     
                     specialPrice = ""
-                     special = specialPrice + barspecial
-                    
-                } else {
+                    special = specialPrice + barspecial
+                    todayArray.append(special!)
+                    } else {
                     specialPrice = "$" + specialPrice + " "
-                     special = specialPrice + barspecial
+                    special = specialPrice + barspecial
+                    }
+                    todayArray.append(special!)
                 }
-               
-                todayArray.append(special!)
+
                 
     
                 }
-            if todayArray[0] == ""{
+            println(todayArray.count)
+            if todayArray.count == 0 {
                 todaysSpecial = TodaysDeal(special: "Sorry, there are no specials for today.")
                 todaysSpecialArray.append(todaysSpecial)
                 var message = TodaysDeal(special: "Check out the specials for the rest of the week!")
                 todaysSpecialArray.append(message)
             }
-            else{
-            for (var i = 0 ; i < 5; i++){
+            else {
+            for (var i = 0 ; i < todayArray.count; i++) {
                 todaysSpecial = TodaysDeal(special: todayArray[i])
                 todaysSpecialArray.append(todaysSpecial)
                 }
 
-    }
+            }
             todayArray.removeAll(keepCapacity: true)
         }
     }
