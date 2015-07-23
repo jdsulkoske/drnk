@@ -311,7 +311,18 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
         
         return pinView
     }
+
+    @IBAction func showDirections(sender: AnyObject) {
+        var dope = formatAddress()
+        dope = dope.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+        let url = NSURL(string: dope)
+        UIApplication.sharedApplication().openURL(url!)
+    }
     
- 
+    
+    func formatAddress()-> String{
+        var address = "http://maps.apple.com/?q=" + theAddress
+        return address
+    }
 }
 
