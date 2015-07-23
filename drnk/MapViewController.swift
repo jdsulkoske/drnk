@@ -3,9 +3,11 @@
 import MapKit
 import UIKit
 import CoreLocation
+var theAddress = ""
 
 class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManagerDelegate {
     
+    @IBOutlet weak var directionsButton: UIBarButtonItem!
     @IBOutlet weak var back: UIBarButtonItem!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var mapView: MKMapView!
@@ -15,6 +17,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
     var locationManager: CLLocationManager!
     var data : DataConnection!
     var mugIconView : UIImageView!
+    var destination :MKMapItem = MKMapItem()
     override func viewDidLoad() {
         
         self.navigationController?.toolbar.barTintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
@@ -149,7 +152,9 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
                     address = arrayOfBars[index!].address
                     business = arrayOfBars[index!].name
                 }
+    
         }
+        theAddress = address!
         
         var annotation = MKPointAnnotation()
         var geocoder = CLGeocoder()
@@ -260,6 +265,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
                 self.navigationController?.popToViewController(controller as! UIViewController, animated: true)
                 break
             }
+            
         }
         }
         else {
@@ -293,8 +299,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
             
             
             // Add detail button to right callout
-//            var calloutButton = UIButton.buttonWithType(.DetailDisclosure) as! UIButton
-//            pinView!.rightCalloutAccessoryView = calloutButton
+            
         }
         else {
             pinView!.annotation = annotation
@@ -303,4 +308,14 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
         return pinView
     }
 
+    @IBAction func showDirections(sender: AnyObject) {
+        
+        theAddress = "http://maps.apple.com/?q=111 " + theAddress
+        theAddress = theAddress.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+        let url = NSURL(string: theAddress)
+        UIApplication.sharedApplication().openURL(url!)
+        
+    }
+    
 }
+

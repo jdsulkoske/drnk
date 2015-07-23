@@ -891,11 +891,19 @@
                         <barButtonItem title="drnk." width="57" id="RoI-x1-gqI">
                             <color key="tintColor" red="0.0" green="0.72941176470000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="W7R-MR-zqj"/>
+                        <barButtonItem title="directions" id="ZCP-bP-Ra5">
+                            <color key="tintColor" red="0.0" green="0.70588235290000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="showDirections:" destination="aFS-wp-g30" id="DdE-cw-WV6"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="map." id="o7O-7j-9Pa"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="back" destination="IvQ-DO-Vd3" id="g9y-ih-4h9"/>
+                        <outlet property="directionsButton" destination="ZCP-bP-Ra5" id="XD8-JJ-VGC"/>
                         <outlet property="mapView" destination="ZX6-Tr-JzZ" id="hDg-X9-Omk"/>
                         <outlet property="menuButton" destination="RoI-x1-gqI" id="Sut-vC-LhW"/>
                     </connections>
