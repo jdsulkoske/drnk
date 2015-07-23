@@ -26,6 +26,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         mapView.showsUserLocation = true
         
+        
         if activePlace == 1 {
             
             locationManager.requestWhenInUseAuthorization()
@@ -101,6 +102,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
                 if let placemark = placemarks?[0] as? CLPlacemark {
                     
                     self.mapView.setRegion(MKCoordinateRegionMake(CLLocationCoordinate2DMake (placemark.location.coordinate.latitude, placemark.location.coordinate.longitude), MKCoordinateSpanMake(0.05, 0.05)), animated: true)
+                    
                    annotation.coordinate = placemark.location.coordinate
                     annotation.title = business
                     annotation.subtitle = address
@@ -302,5 +304,6 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
         
         return pinView
     }
-
+    
+ 
 }
