@@ -36,8 +36,9 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
             data = DataConnection(typeOfBusiness: "")
             updateData()
             self.back.title = ""
-            self.directionsButton.title = ""
             self.back.enabled = false
+            self.directionsButton.title = ""
+            self.directionsButton.enabled = false
              mugIconView = UIImageView(image: UIImage(named: "cupIcon"))
             
         } else {
