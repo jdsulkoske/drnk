@@ -343,7 +343,7 @@ class Parser{
                 
     
                 }
-            println(todayArray.count)
+
             if todayArray.count == 0 {
                 todaysSpecial = TodaysDeal(special: "Sorry, there are no specials for today.")
                 todaysSpecialArray.append(todaysSpecial)
