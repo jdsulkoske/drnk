@@ -51,6 +51,10 @@ class LiquorStoresInformation {
         case "3":
                 
             imageString = "friendly.png"
+            
+        case "6":
+            
+            imageString = "municeLiquors"
         
         default:
             
