@@ -58,7 +58,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2 Double Wells" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.70000000000000018" translatesAutoresizingMaskIntoConstraints="NO" id="jZd-FG-jrV">
-                                                    <rect key="frame" x="114" y="77.5" width="267" height="19.5"/>
+                                                    <rect key="frame" x="114" y="78" width="267" height="20"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
                                                     <color key="textColor" red="0.89155375869999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -125,7 +125,7 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="lp6-Sv-0bj" secondAttribute="trailing" constant="-8" id="OpN-4H-u4W"/>
                                                 <constraint firstItem="jjp-y7-jBp" firstAttribute="leading" secondItem="yUR-3y-lh1" secondAttribute="leadingMargin" constant="65" id="Ql1-Jk-XRH"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="apt-1o-nhm" secondAttribute="bottom" constant="22" id="SZU-gP-jXM"/>
-                                                <constraint firstItem="fIO-FJ-4tO" firstAttribute="top" secondItem="jZd-FG-jrV" secondAttribute="bottom" constant="8" id="SoH-Pw-DE0"/>
+                                                <constraint firstItem="fIO-FJ-4tO" firstAttribute="top" secondItem="jZd-FG-jrV" secondAttribute="bottom" constant="7" id="SoH-Pw-DE0"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="VjT-hq-8KW" secondAttribute="trailing" constant="-10" id="U7y-7t-X3s"/>
                                                 <constraint firstItem="9CW-uQ-Oxb" firstAttribute="top" secondItem="yUR-3y-lh1" secondAttribute="topMargin" constant="-5" id="UWp-ax-zuK"/>
                                                 <constraint firstItem="apt-1o-nhm" firstAttribute="leading" secondItem="yUR-3y-lh1" secondAttribute="leadingMargin" id="UwE-z2-V6d"/>
