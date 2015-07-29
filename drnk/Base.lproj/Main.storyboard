@@ -958,8 +958,8 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wQz-wB-DKv" id="Y3L-8I-gFh">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" alpha="0.30000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="barsimg" translatesAutoresizingMaskIntoConstraints="NO" id="gBT-K9-BaQ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
+                                                <imageView userInteractionEnabled="NO" alpha="0.30000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="slide" translatesAutoresizingMaskIntoConstraints="NO" id="gBT-K9-BaQ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </imageView>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="barmartiniicon" translatesAutoresizingMaskIntoConstraints="NO" id="GFl-C2-klX">
@@ -1430,10 +1430,10 @@
         <image name="Brothers" width="64" height="64"/>
         <image name="ThinLine" width="177" height="41"/>
         <image name="barmartiniicon" width="378" height="381"/>
-        <image name="barsimg" width="361" height="439"/>
         <image name="drnkLogo" width="90" height="90"/>
         <image name="liquorestore" width="413" height="232"/>
         <image name="newMap" width="201" height="131"/>
+        <image name="slide" width="418" height="634"/>
         <image name="space2.png" width="722" height="878"/>
         <image name="space3.png" width="1406" height="604"/>
     </resources>
