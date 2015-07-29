@@ -28,6 +28,6 @@
         </view>
     </objects>
     <resources>
-        <image name="barsimg" width="722" height="878"/>
+        <image name="barsimg" width="361" height="439"/>
     </resources>
 </document>
