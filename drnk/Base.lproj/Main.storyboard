@@ -959,7 +959,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" alpha="0.30000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="slide" translatesAutoresizingMaskIntoConstraints="NO" id="gBT-K9-BaQ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="675"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </imageView>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="barmartiniicon" translatesAutoresizingMaskIntoConstraints="NO" id="GFl-C2-klX">
