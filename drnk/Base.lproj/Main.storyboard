@@ -860,11 +860,11 @@
                         <viewControllerLayoutGuide type="bottom" id="NlW-AY-fIu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6Os-Q2-i0c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" translatesAutoresizingMaskIntoConstraints="NO" id="ZX6-Tr-JzZ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.36670278280000002" alpha="0.70999999999999996" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="aFS-wp-g30" id="Ri3-lt-8Xp"/>
@@ -943,13 +943,48 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="drnk." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OeZ-3n-p77">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="xfq-du-0R2" customClass="MainView" customModule="drnk" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="67"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="59"/>
-                            <color key="textColor" red="0.0" green="0.72941176470588232" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="drnk." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYh-nK-gVZ">
+                                    <rect key="frame" x="8" y="13" width="398" height="50"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="60"/>
+                                    <color key="textColor" red="0.0" green="0.72941176470000002" blue="1" alpha="0.92000000000000004" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="it2-Uc-T7a">
+                                    <rect key="frame" x="0.0" y="66" width="414" height="1"/>
+                                    <color key="backgroundColor" red="0.0" green="0.72941176470000002" blue="1" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="it2-Uc-T7a" secondAttribute="height" multiplier="414:1" id="l3b-oG-Hqd"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="GYh-nK-gVZ" firstAttribute="top" secondItem="xfq-du-0R2" secondAttribute="top" constant="13" id="0Fx-dQ-ZoM"/>
+                                <constraint firstItem="GYh-nK-gVZ" firstAttribute="leading" secondItem="xfq-du-0R2" secondAttribute="leading" constant="8" id="3fJ-cZ-Gxs"/>
+                                <constraint firstAttribute="bottom" secondItem="it2-Uc-T7a" secondAttribute="bottom" id="6pl-3p-gwd"/>
+                                <constraint firstAttribute="trailing" secondItem="it2-Uc-T7a" secondAttribute="trailing" id="KLr-mK-tDI"/>
+                                <constraint firstAttribute="trailing" secondItem="GYh-nK-gVZ" secondAttribute="trailing" constant="8" id="S3L-XD-P8a"/>
+                                <constraint firstAttribute="bottom" secondItem="GYh-nK-gVZ" secondAttribute="bottom" constant="4" id="TKB-NP-gPx"/>
+                                <constraint firstItem="it2-Uc-T7a" firstAttribute="leading" secondItem="xfq-du-0R2" secondAttribute="leading" id="wad-V1-cbo"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                    <color key="value" red="0.047058823529411764" green="0.047058823529411764" blue="0.047058823529411764" alpha="0.0" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                    <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="2ab-J2-AIx">
+                            <rect key="frame" x="0.0" y="291" width="414" height="446"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                        </view>
                         <sections>
                             <tableViewSection id="4d5-ud-djk">
                                 <cells>
@@ -958,10 +993,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wQz-wB-DKv" id="Y3L-8I-gFh">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" alpha="0.30000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="slide" translatesAutoresizingMaskIntoConstraints="NO" id="gBT-K9-BaQ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="675"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                </imageView>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="barmartiniicon" translatesAutoresizingMaskIntoConstraints="NO" id="GFl-C2-klX">
                                                     <rect key="frame" x="0.0" y="0.0" width="87" height="75"/>
                                                     <constraints>
@@ -969,15 +1000,15 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="bars." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KsI-5v-8Uu">
-                                                    <rect key="frame" x="95" y="0.0" width="286" height="75"/>
+                                                    <rect key="frame" x="113" y="0.0" width="268" height="75"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="30"/>
-                                                    <color key="textColor" red="0.0" green="0.72941176470588232" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.89039765211640209" green="0.89039765211640209" blue="0.89039765211640209" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="KsI-5v-8Uu" secondAttribute="bottom" constant="-8" id="9IF-89-udu"/>
-                                                <constraint firstItem="KsI-5v-8Uu" firstAttribute="leading" secondItem="GFl-C2-klX" secondAttribute="trailing" constant="8" id="Cwy-G0-rlX"/>
+                                                <constraint firstItem="KsI-5v-8Uu" firstAttribute="leading" secondItem="GFl-C2-klX" secondAttribute="trailing" constant="26" id="Cwy-G0-rlX"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="GFl-C2-klX" secondAttribute="bottom" constant="-8" id="DFg-nO-fAF"/>
                                                 <constraint firstItem="GFl-C2-klX" firstAttribute="top" secondItem="Y3L-8I-gFh" secondAttribute="topMargin" constant="-8" id="ICk-aW-eAi"/>
                                                 <constraint firstItem="GFl-C2-klX" firstAttribute="leading" secondItem="Y3L-8I-gFh" secondAttribute="leadingMargin" constant="-8" id="rwi-JC-yT6"/>
@@ -985,7 +1016,7 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="KsI-5v-8Uu" secondAttribute="trailing" constant="-8" id="yDl-ON-WGy"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="uuK-Dh-2uW" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="YC6-LE-fXp"/>
                                         </connections>
@@ -996,9 +1027,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="stores." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlZ-gc-WKR">
-                                                    <rect key="frame" x="95" y="0.0" width="286" height="75"/>
+                                                    <rect key="frame" x="113" y="0.0" width="268" height="75"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="30"/>
-                                                    <color key="textColor" red="0.0" green="0.71372549019999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.89039765209999999" green="0.89039765209999999" blue="0.89039765209999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="liquorestore" translatesAutoresizingMaskIntoConstraints="NO" id="Vkl-LL-Tyd">
@@ -1013,12 +1044,12 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="NlZ-gc-WKR" secondAttribute="bottom" constant="-8" id="VWW-7f-OZs"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Vkl-LL-Tyd" secondAttribute="bottom" constant="-8" id="XS0-QD-S2n"/>
                                                 <constraint firstItem="Vkl-LL-Tyd" firstAttribute="leading" secondItem="Aq4-Og-AUV" secondAttribute="leadingMargin" constant="-8" id="aLs-dT-zZQ"/>
-                                                <constraint firstItem="NlZ-gc-WKR" firstAttribute="leading" secondItem="Vkl-LL-Tyd" secondAttribute="trailing" constant="8" id="pul-Zb-bJb"/>
+                                                <constraint firstItem="NlZ-gc-WKR" firstAttribute="leading" secondItem="Vkl-LL-Tyd" secondAttribute="trailing" constant="26" id="pul-Zb-bJb"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="NlZ-gc-WKR" secondAttribute="trailing" constant="-8" id="rAc-sa-FYi"/>
                                                 <constraint firstItem="Vkl-LL-Tyd" firstAttribute="top" secondItem="Aq4-Og-AUV" secondAttribute="topMargin" constant="-8" id="uYH-bM-zw4"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="azA-YV-Brb" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSeguePushController" id="Cth-lk-Nd6"/>
                                         </connections>
@@ -1035,23 +1066,23 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="map." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRx-Xx-kjx">
-                                                    <rect key="frame" x="95" y="0.0" width="286" height="75"/>
+                                                    <rect key="frame" x="113" y="0.0" width="268" height="75"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="30"/>
-                                                    <color key="textColor" red="0.0" green="0.72941176470588232" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.89039765209999999" green="0.89039765209999999" blue="0.89039765209999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="d3d-OJ-fVq" firstAttribute="top" secondItem="UuE-g6-Cli" secondAttribute="topMargin" constant="-8" id="12S-zZ-fep"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="mRx-Xx-kjx" secondAttribute="trailing" constant="-8" id="Ooe-gN-GDN"/>
-                                                <constraint firstItem="mRx-Xx-kjx" firstAttribute="leading" secondItem="d3d-OJ-fVq" secondAttribute="trailing" constant="8" id="e5O-Ak-GhQ"/>
+                                                <constraint firstItem="mRx-Xx-kjx" firstAttribute="leading" secondItem="d3d-OJ-fVq" secondAttribute="trailing" constant="26" id="e5O-Ak-GhQ"/>
                                                 <constraint firstItem="mRx-Xx-kjx" firstAttribute="top" secondItem="UuE-g6-Cli" secondAttribute="topMargin" constant="-8" id="iaN-XO-VHR"/>
                                                 <constraint firstItem="d3d-OJ-fVq" firstAttribute="leading" secondItem="UuE-g6-Cli" secondAttribute="leadingMargin" constant="-8" id="qOo-lk-CYS"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="d3d-OJ-fVq" secondAttribute="bottom" constant="-8" id="xWV-XP-zWs"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="mRx-Xx-kjx" secondAttribute="bottom" constant="-8" id="zOV-UG-9Zh"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="893-TC-ifU" kind="custom" identifier="" customClass="SWRevealViewControllerSeguePushController" id="D4c-bS-gSz"/>
                                         </connections>
@@ -1433,12 +1464,11 @@
         <image name="drnkLogo" width="90" height="90"/>
         <image name="liquorestore" width="413" height="232"/>
         <image name="newMap" width="201" height="131"/>
-        <image name="slide" width="418" height="634"/>
-        <image name="space2.png" width="722" height="878"/>
+        <image name="space2.png" width="361" height="439"/>
         <image name="space3.png" width="1406" height="604"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="tP1-6s-IEs"/>
         <segue reference="hoP-Ax-9y1"/>
-        <segue reference="Z7a-UY-SB5"/>
     </inferredMetricsTieBreakers>
 </document>

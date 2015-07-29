@@ -19,14 +19,13 @@ class SlideTableViewController: UITableViewController, CLLocationManagerDelegate
     override func viewDidLoad() {
         
         super.viewDidLoad()
+
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
-        
-      
-    
-   
+        self.myTableView.backgroundView = UIImageView(image: UIImage(named: "slide"))
         
     }
 

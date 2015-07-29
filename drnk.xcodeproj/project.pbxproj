@@ -15,6 +15,7 @@
 		DE4C116A1B28AD3700CCB54D /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4C11691B28AD3700CCB54D /* Day.swift */; };
 		DE5C83E61B1435DA00ED4255 /* BarInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5C83E51B1435DA00ED4255 /* BarInformationViewController.swift */; };
 		DE5FB7871B14F73D00C9EC44 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE5FB7861B14F73D00C9EC44 /* CoreLocation.framework */; };
+		DE748FB11B693E98002AB490 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE748FB01B693E98002AB490 /* MainView.swift */; };
 		DE8377F61B13F30D00CD8435 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8377F51B13F30D00CD8435 /* AppDelegate.swift */; };
 		DE8377F81B13F30D00CD8435 /* BarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8377F71B13F30D00CD8435 /* BarsViewController.swift */; };
 		DE8377FA1B13F30D00CD8435 /* LiquorStoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8377F91B13F30D00CD8435 /* LiquorStoresViewController.swift */; };
@@ -76,6 +77,7 @@
 		DE4C11691B28AD3700CCB54D /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		DE5C83E51B1435DA00ED4255 /* BarInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarInformationViewController.swift; sourceTree = "<group>"; };
 		DE5FB7861B14F73D00C9EC44 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DE748FB01B693E98002AB490 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DE8377F01B13F30D00CD8435 /* drnk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = drnk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE8377F41B13F30D00CD8435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE8377F51B13F30D00CD8435 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				DE7202A21B5196330052FE64 /* Map */,
 				DE2E1EF91B23A2B600C73295 /* Bars */,
 				DE8377FB1B13F30D00CD8435 /* Main.storyboard */,
+				DE748FB01B693E98002AB490 /* MainView.swift */,
 				DE8378001B13F30E00CD8435 /* LaunchScreen.xib */,
 				DE8377FE1B13F30E00CD8435 /* Images.xcassets */,
 				DE8377F31B13F30D00CD8435 /* Supporting Files */,
@@ -420,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE4C116A1B28AD3700CCB54D /* Day.swift in Sources */,
+				DE748FB11B693E98002AB490 /* MainView.swift in Sources */,
 				DE8378201B13F72F00CD8435 /* CustomBarTableViewCell.swift in Sources */,
 				DEC341441B5449C50002A647 /* AboutUs.swift in Sources */,
 				DE9DA4DC1B28E02600AD8A2C /* SlideTableViewController.swift in Sources */,
