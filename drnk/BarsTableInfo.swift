@@ -58,7 +58,7 @@ class BarsTableInfo{
             
         default:
             
-            imageString = "cupIcon"
+            imageString = "drnkLogo"
             
         }
         
