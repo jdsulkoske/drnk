@@ -30,6 +30,7 @@ class BarInformationViewController: UIViewController, UITableViewDelegate, UITab
     var data = DataConnection(typeOfBusiness: "bars")
     var selectedIndexPath : NSIndexPath?
     
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
