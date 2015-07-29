@@ -947,12 +947,6 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="67"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="drnk." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYh-nK-gVZ">
-                                    <rect key="frame" x="8" y="13" width="398" height="50"/>
-                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="60"/>
-                                    <color key="textColor" red="0.0" green="0.72941176470000002" blue="1" alpha="0.92000000000000004" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="it2-Uc-T7a">
                                     <rect key="frame" x="0.0" y="66" width="414" height="1"/>
                                     <color key="backgroundColor" red="0.0" green="0.72941176470000002" blue="1" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
@@ -960,15 +954,21 @@
                                         <constraint firstAttribute="width" secondItem="it2-Uc-T7a" secondAttribute="height" multiplier="414:1" id="l3b-oG-Hqd"/>
                                     </constraints>
                                 </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="drnk." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYh-nK-gVZ">
+                                    <rect key="frame" x="75" y="19" width="264" height="48"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="60"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="GYh-nK-gVZ" firstAttribute="top" secondItem="xfq-du-0R2" secondAttribute="top" constant="13" id="0Fx-dQ-ZoM"/>
-                                <constraint firstItem="GYh-nK-gVZ" firstAttribute="leading" secondItem="xfq-du-0R2" secondAttribute="leading" constant="8" id="3fJ-cZ-Gxs"/>
+                                <constraint firstItem="GYh-nK-gVZ" firstAttribute="top" secondItem="xfq-du-0R2" secondAttribute="top" constant="19" id="0Fx-dQ-ZoM"/>
+                                <constraint firstItem="GYh-nK-gVZ" firstAttribute="leading" secondItem="xfq-du-0R2" secondAttribute="leading" constant="75" id="3fJ-cZ-Gxs"/>
                                 <constraint firstAttribute="bottom" secondItem="it2-Uc-T7a" secondAttribute="bottom" id="6pl-3p-gwd"/>
                                 <constraint firstAttribute="trailing" secondItem="it2-Uc-T7a" secondAttribute="trailing" id="KLr-mK-tDI"/>
-                                <constraint firstAttribute="trailing" secondItem="GYh-nK-gVZ" secondAttribute="trailing" constant="8" id="S3L-XD-P8a"/>
-                                <constraint firstAttribute="bottom" secondItem="GYh-nK-gVZ" secondAttribute="bottom" constant="4" id="TKB-NP-gPx"/>
+                                <constraint firstAttribute="trailing" secondItem="GYh-nK-gVZ" secondAttribute="trailing" constant="75" id="S3L-XD-P8a"/>
+                                <constraint firstAttribute="bottom" secondItem="GYh-nK-gVZ" secondAttribute="bottom" id="TKB-NP-gPx"/>
                                 <constraint firstItem="it2-Uc-T7a" firstAttribute="leading" secondItem="xfq-du-0R2" secondAttribute="leading" id="wad-V1-cbo"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
@@ -976,7 +976,7 @@
                                     <color key="value" red="0.047058823529411764" green="0.047058823529411764" blue="0.047058823529411764" alpha="0.0" colorSpace="calibratedRGB"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="endColor">
-                                    <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="value" red="0.0" green="0.72941176470000002" blue="1" alpha="0.92000000000000004" colorSpace="calibratedRGB"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
