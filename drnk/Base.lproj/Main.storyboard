@@ -1070,7 +1070,7 @@
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="newMap" translatesAutoresizingMaskIntoConstraints="NO" id="d3d-OJ-fVq">
                                                     <rect key="frame" x="0.0" y="0.0" width="87" height="75"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="d3d-OJ-fVq" secondAttribute="height" multiplier="35:34" constant="10" id="jNs-kd-pBi"/>
+                                                        <constraint firstAttribute="width" secondItem="d3d-OJ-fVq" secondAttribute="height" multiplier="35:34" constant="22.794117647058826" id="jNs-kd-pBi"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="map" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRx-Xx-kjx">
@@ -1083,7 +1083,7 @@
                                             <constraints>
                                                 <constraint firstItem="d3d-OJ-fVq" firstAttribute="top" secondItem="UuE-g6-Cli" secondAttribute="topMargin" constant="-8" id="12S-zZ-fep"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="mRx-Xx-kjx" secondAttribute="trailing" constant="-8" id="Ooe-gN-GDN"/>
-                                                <constraint firstItem="mRx-Xx-kjx" firstAttribute="leading" secondItem="d3d-OJ-fVq" secondAttribute="trailing" constant="26" id="e5O-Ak-GhQ"/>
+                                                <constraint firstItem="mRx-Xx-kjx" firstAttribute="leading" secondItem="d3d-OJ-fVq" secondAttribute="trailing" constant="13" id="e5O-Ak-GhQ"/>
                                                 <constraint firstItem="mRx-Xx-kjx" firstAttribute="top" secondItem="UuE-g6-Cli" secondAttribute="topMargin" constant="-8" id="iaN-XO-VHR"/>
                                                 <constraint firstItem="d3d-OJ-fVq" firstAttribute="leading" secondItem="UuE-g6-Cli" secondAttribute="leadingMargin" constant="-8" id="qOo-lk-CYS"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="d3d-OJ-fVq" secondAttribute="bottom" constant="-8" id="xWV-XP-zWs"/>
