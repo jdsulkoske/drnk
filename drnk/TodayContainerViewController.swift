@@ -37,9 +37,35 @@ class TodayContainerViewController: UIViewController,UITableViewDelegate {
         
         data.getData { (responseObject, error) -> Void in
             if  responseObject == nil{
+                
+                
+                
+                self.data.getData { (responseObject, error) -> Void in
+                    
+                    if  responseObject != nil{
+                    
+                    let parser = Parser(jsonFile: responseObject!)
+                    todaysSpecialArray.removeAll(keepCapacity: true)
+                    
+                    dispatch_async(dispatch_get_main_queue()){
+                        
+                        parser.findTodaysSpecial()
+                        
+                        self.myTableView.reloadData()
+                        }
+                        println("fuck")
+                        
+                    } else {
+                     
+                        println("super fucked")
+                        
+                    }
+                    
+                }
 
             } else {
                 
+                println("not fucked")
                // self.networkMessage.hidden = true
                 let parser = Parser(jsonFile: responseObject!)
                 todaysSpecialArray.removeAll(keepCapacity: true)
