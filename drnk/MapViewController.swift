@@ -40,7 +40,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
             self.back.enabled = false
             self.directionsButton.title = ""
             self.directionsButton.enabled = false
-             mugIconView = UIImageView(image: UIImage(named: "cupIcon"))
+             mugIconView = UIImageView(image: UIImage(named: "drnkLogo"))
             
         } else {
             
