@@ -84,9 +84,8 @@ class BarInformationViewController: UIViewController, UITableViewDelegate, UITab
             
             if  responseObject == nil{
                 
-                self.networkMessage.hidden = false
-                self.networkMessage.text = "Network Unavailable"
-                self.refresher.endRefreshing()
+                
+                self.updateData()
 
                 
             } else {
