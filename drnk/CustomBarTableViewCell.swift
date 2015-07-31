@@ -20,6 +20,17 @@ class CustomBarTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         
         super.awakeFromNib()
+        special1.numberOfLines = 1;
+        special1.minimumScaleFactor = 0.5;
+        special1.adjustsFontSizeToFitWidth = true;
+        
+        special2.numberOfLines = 1;
+        special2.minimumScaleFactor = 0.5;
+        special2.adjustsFontSizeToFitWidth = true;
+        
+        special3.numberOfLines = 1;
+        special3.minimumScaleFactor = 0.5;
+        special3.adjustsFontSizeToFitWidth = true;
        
     }
 
