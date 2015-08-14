@@ -54,7 +54,19 @@ class BarsTableInfo{
             
         case "5":
             
-            imageString = "main.png"
+            imageString = "Cleos-1"
+            
+        case "11":
+            
+            imageString = "BeHereNow"
+            
+        case "12":
+            
+            imageString = "TheChug"
+            
+        case "13":
+            
+            imageString = "Scottys"
             
         default:
             

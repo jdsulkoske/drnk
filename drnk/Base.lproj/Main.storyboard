@@ -74,7 +74,7 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of bar goes right here" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="9CW-uQ-Oxb">
                                                     <rect key="frame" x="26" y="3" width="414" height="33"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="21"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="21"/>
                                                     <color key="textColor" red="0.89155375869999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -220,6 +220,17 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ott-XJ-Nwa">
+                                <rect key="frame" x="16" y="28" width="382" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ott-XJ-Nwa" secondAttribute="height" multiplier="191:17" constant="-67.41176470588232" id="YoY-Mc-g19"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="26"/>
+                                <color key="textColor" red="0.89155375869999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="189" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="h7v-GH-4jG">
                                 <rect key="frame" x="16" y="265" width="382" height="419"/>
                                 <color key="backgroundColor" red="0.058823529411764705" green="0.058823529411764705" blue="0.058823529411764705" alpha="1" colorSpace="calibratedRGB"/>
@@ -374,17 +385,6 @@
                                     <constraint firstAttribute="width" secondItem="7sH-4s-IbM" secondAttribute="height" multiplier="382:1" id="cdc-Ny-AKy"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ott-XJ-Nwa">
-                                <rect key="frame" x="16" y="28" width="382" height="34"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="ott-XJ-Nwa" secondAttribute="height" multiplier="191:17" id="YoY-Mc-g19"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="30"/>
-                                <color key="textColor" red="0.89155375869999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JSo-XG-C89">
                                 <rect key="frame" x="16" y="220" width="382" height="29"/>
                                 <constraints>
@@ -427,7 +427,7 @@
                             <constraint firstItem="Wkt-zd-wi9" firstAttribute="top" secondItem="7sH-4s-IbM" secondAttribute="bottom" constant="8" id="bqr-jR-NFw"/>
                             <constraint firstItem="ott-XJ-Nwa" firstAttribute="trailing" secondItem="xRQ-0W-gYE" secondAttribute="trailingMargin" id="fBY-2K-CSW"/>
                             <constraint firstItem="ktM-Um-edh" firstAttribute="top" secondItem="Wkt-zd-wi9" secondAttribute="bottom" id="gVC-ES-ifj"/>
-                            <constraint firstItem="KnQ-zc-nuH" firstAttribute="top" secondItem="ott-XJ-Nwa" secondAttribute="bottom" constant="8" id="ikp-EZ-0x3"/>
+                            <constraint firstItem="KnQ-zc-nuH" firstAttribute="top" secondItem="ott-XJ-Nwa" secondAttribute="bottom" constant="2" id="ikp-EZ-0x3"/>
                             <constraint firstItem="Wkt-zd-wi9" firstAttribute="trailing" secondItem="xRQ-0W-gYE" secondAttribute="trailingMargin" id="nyB-q3-FzA"/>
                             <constraint firstItem="ott-XJ-Nwa" firstAttribute="leading" secondItem="xRQ-0W-gYE" secondAttribute="leadingMargin" id="rh4-Ei-z2p"/>
                             <constraint firstItem="Th1-Fy-9wl" firstAttribute="top" secondItem="7sH-4s-IbM" secondAttribute="bottom" constant="32" id="uBe-G5-HLc"/>
@@ -515,7 +515,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="Oa5-I1-0LE"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="21"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="21"/>
                                                     <color key="textColor" red="0.89155375869999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -792,7 +792,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rRI-NU-OhN" secondAttribute="height" multiplier="382:43" id="ZyR-A7-mva"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="22"/>
                                 <color key="textColor" red="0.89155375869999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1466,13 +1466,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Brothers" width="64" height="64"/>
+        <image name="Brothers" width="545" height="407"/>
         <image name="ThinLine" width="177" height="41"/>
         <image name="barmartiniicon" width="378" height="381"/>
         <image name="drnkLogo" width="90" height="90"/>
         <image name="liquorestore" width="413" height="232"/>
         <image name="newMap" width="201" height="131"/>
-        <image name="space2.png" width="453" height="694"/>
+        <image name="space2.png" width="396" height="222"/>
         <image name="space3.png" width="1406" height="604"/>
     </resources>
     <inferredMetricsTieBreakers>
