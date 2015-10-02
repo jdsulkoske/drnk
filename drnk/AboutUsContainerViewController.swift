@@ -84,7 +84,7 @@ class AboutUsContainerViewController: UIViewController {
     
     @IBAction func MakePhoneCall(sender: AnyObject) {
         
-        var number = businessNumber.titleLabel?.text!
+        let number = businessNumber.titleLabel?.text!
         
         if number == "Could not retrieve phone number" {
             

@@ -62,7 +62,7 @@ class LiquorStoresInformationViewController: UIViewController, UITableViewDelega
             } else {
                 
                 self.networkMessage.hidden = true
-                var parser = Parser(jsonFile: responseObject!)
+                let parser = Parser(jsonFile: responseObject!)
                 lsDetailArray.removeAll(keepCapacity: true)
                 
                 dispatch_async(dispatch_get_main_queue()){

@@ -63,7 +63,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
             } else {
                 
                 self.networkMessage.hidden = true
-                var parser = Parser(jsonFile: responseObject!)
+                let parser = Parser(jsonFile: responseObject!)
                 arrayOfBars.removeAll(keepCapacity: true)
                 
                 dispatch_async(dispatch_get_main_queue()){

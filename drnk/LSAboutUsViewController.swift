@@ -64,7 +64,7 @@ class LSAboutUSViewController: UIViewController{
     
     @IBAction func PhoneButton(sender: AnyObject) {
         
-        var number = phoneButton.titleLabel?.text!
+        let number = phoneButton.titleLabel?.text!
         if number == "Could not retrieve phone number" {
             
         } else {
