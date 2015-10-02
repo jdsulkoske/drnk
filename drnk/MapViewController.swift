@@ -314,7 +314,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
 
     @IBAction func showDirections(sender: AnyObject) {
         var dope = formatAddress()
-        dope = dope.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+        dope = dope.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!
         let url = NSURL(string: dope)
         UIApplication.sharedApplication().openURL(url!)
     }
