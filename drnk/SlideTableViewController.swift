@@ -39,41 +39,61 @@ class SlideTableViewController: UITableViewController, CLLocationManagerDelegate
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        var selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        let selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
         selectedCell.contentView.backgroundColor = UIColor.blackColor()
     }
     
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        CLGeocoder().reverseGeocodeLocation(manager.location, completionHandler: { (placemarks, error) -> Void in
+//    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+//        CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: { (placemarks, error) -> Void in
+//            if error != nil {
+//
+//                return
+//            
+//            }
+//            if let pm = placemarks?.first {
+//    
+//                self.displayLocationInfo(pm)
+//
+//                
+//            } else {
+//            
+//      
+//                
+//            }
+//            
+//        })
+//    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        CLGeocoder().reverseGeocodeLocation(manager.location!) { (placemarks, error) -> Void in
             if error != nil {
-
+                
                 return
-            
+                
             }
-            if placemarks.count > 0 {
-            
-                let pm = placemarks[0] as! CLPlacemark
+            if let pm = placemarks?.first {
+                
                 self.displayLocationInfo(pm)
-
+                
                 
             } else {
-            
-      
+                
+                
                 
             }
             
-        })
+        }
     }
     
     func displayLocationInfo(placemark: CLPlacemark) {
     
         self.locationManager.stopUpdatingLocation()
-        currentUserZip = placemark.postalCode
+        currentUserZip = placemark.postalCode!
 
         
     }
     
-    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         currentUserZip = "none"
     }
 

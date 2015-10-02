@@ -37,7 +37,7 @@ class Parser{
     init(jsonFile:NSArray){
         self.jsonFile = jsonFile
         let date = NSDate()
-        var formatter = NSDateFormatter()
+        let formatter = NSDateFormatter()
         formatter.dateFormat = "EEEE"
         let day = formatter.stringFromDate(date)
         dayOfTheWeek.findDay(day)
@@ -51,7 +51,7 @@ class Parser{
         
         for posts in jsonFile{
             if let street = posts["company_street"] as? String{
-            var city = posts["company_city"] as! String
+            let city = posts["company_city"] as! String
             address = street + ", " + city
 
             address.capitalizedString
@@ -90,8 +90,8 @@ class Parser{
         //THE ERROR IS HAPPENING RIGHT AFTER THIS BELOW!!!
         let json = jsonFile[index] as! NSDictionary
         if let currentdayHours = json[dayOfTheWeek.getDayAsString().lowercaseString+"_hours"] as? String{
-            var phone  = json["company_phone"] as! String
-            var info = AboutUS(currentdayHours: currentdayHours, phone: phone)
+            let phone  = json["company_phone"] as! String
+            let info = AboutUS(currentdayHours: currentdayHours, phone: phone)
             aboutUsArray.append(info)
         }
 
@@ -99,13 +99,13 @@ class Parser{
     
     private func findSpecials(){
         
-        var days = deals[dayOfTheWeek.getDayAsString().lowercaseString] as! NSArray
+        let days = deals[dayOfTheWeek.getDayAsString().lowercaseString] as! NSArray
         
         for posts in days{
             
-            var barspecial = posts["deal_name"] as! String
+            let barspecial = posts["deal_name"] as! String
             var specialPrice = posts["price"] as! String
-            var isFeatured = posts["featured"] as! Int
+            let isFeatured = posts["featured"] as! Int
             
             if specialPrice == "0.00" {
                 
@@ -118,12 +118,8 @@ class Parser{
             }
             
             if isFeatured == 1 {
-                
-                if specialPrice != ""{
                     
-                    barSpecialArray.append(specialPrice + barspecial)
-                    
-                }
+                barSpecialArray.append(specialPrice + barspecial)
                 
             }
             
@@ -202,13 +198,13 @@ class Parser{
     
     private func getNonFeaturedBarDeals(){
         
-        var days = deals[dayOfTheWeek.getDayAsString().lowercaseString] as! NSArray
+        let days = deals[dayOfTheWeek.getDayAsString().lowercaseString] as! NSArray
         
         for posts in days{
             
-            var barspecial = posts["deal_name"] as! String
+            let barspecial = posts["deal_name"] as! String
             var specialPrice = posts["price"] as! String
-            var isFeatured = posts["featured"] as! Int
+            let isFeatured = posts["featured"] as! Int
             
             if specialPrice == "0.00" {
                 
@@ -236,7 +232,7 @@ class Parser{
     
    private func addMoreBarSpecials(array:NSArray){
         
-        for numbers in 0...5{
+        for _ in 0...5{
             
             barSpecialArray.append("-")
             
@@ -250,9 +246,9 @@ class Parser{
             
         } else {
             
-            var number = 10 - barInfoArray.count
+            let number = 10 - barInfoArray.count
             
-            for numbers in 0...number{
+            for _ in 0...number{
                 
                 barInfoArray.append("-")
                 
@@ -269,11 +265,11 @@ class Parser{
             
             for(var i = 0; i<daysOfWeek.count; i++){
                 
-                var days = file[daysOfWeek[i].lowercaseString] as! NSArray
+                let days = file[daysOfWeek[i].lowercaseString] as! NSArray
                 
                 for deal in days{
                     
-                    var specialForDay = deal["deal_name"] as! String
+                    let specialForDay = deal["deal_name"] as! String
                     var specialPrice = deal["price"] as! String
                     
                     if specialPrice == "0.00" {
@@ -318,24 +314,24 @@ class Parser{
     
     func findTodaysSpecial(){
         if let file = jsonFile[detailViewIndex!]["deals"] as? NSDictionary{
-            var days = file[dayOfTheWeek.getDayAsString().lowercaseString] as! NSArray
+            let days = file[dayOfTheWeek.getDayAsString().lowercaseString] as! NSArray
             var special : String?
             for posts in days{
                 
-                var barspecial = posts["deal_name"] as! String
+                let barspecial = posts["deal_name"] as! String
                 var specialPrice = posts["price"] as! String
-                if barspecial == ""{
+                if barspecial != ""{
                     
-                
-                } else {
                     if specialPrice == "0.00" {
                     
                     specialPrice = ""
                     special = specialPrice + barspecial
-                    todayArray.append(special!)
+                        
                     } else {
+                        
                     specialPrice = "$" + specialPrice + " "
                     special = specialPrice + barspecial
+                        
                     }
                     todayArray.append(special!)
                 }
@@ -347,7 +343,7 @@ class Parser{
             if todayArray.count == 0 {
                 todaysSpecial = TodaysDeal(special: "Sorry, there are no specials for today.")
                 todaysSpecialArray.append(todaysSpecial)
-                var message = TodaysDeal(special: "Check out the specials for the rest of the week!")
+                let message = TodaysDeal(special: "Check out the specials for the rest of the week!")
                 todaysSpecialArray.append(message)
             }
             else {
@@ -371,7 +367,7 @@ class Parser{
         for posts in jsonFile {
         
             if let street = posts["company_street"] as? String{
-            var city = posts["company_city"] as! String
+            let city = posts["company_city"] as! String
             lsAddress = street + ", " + city
             lsAddress.capitalizedString
             lsName = posts["company_name"] as! String
@@ -393,13 +389,13 @@ class Parser{
     
     private func parseForLSSpecial(){
         
-        var days = lsDeals["everyday"] as! NSArray
+        let days = lsDeals["everyday"] as! NSArray
         
         for posts in days{
             
-            var lsSpecial = posts["deal_name"] as! String
+            let lsSpecial = posts["deal_name"] as! String
             var lsSpecialPrice = posts["price"] as! String
-            var featuredSpecial = posts["featured"] as! Int
+            let featuredSpecial = posts["featured"] as! Int
             
             if lsSpecialPrice == "0.00" {
                 
@@ -479,7 +475,7 @@ class Parser{
         
         if array.count <= 3 {
             
-            for numbers in 0...5{
+            for _ in 0...5{
                 
                 lsSpecialArray.append("-")
                 
@@ -495,11 +491,11 @@ class Parser{
         if let file = jsonFile[lsIndex!]["deals"] as? NSDictionary{
            
       
-                var days = file["everyday"] as! NSArray
+                let days = file["everyday"] as! NSArray
                 
                 for deal in days{
                     
-                    var specialForDay = deal["deal_name"] as! String
+                    let specialForDay = deal["deal_name"] as! String
                     var specialPrice = deal["price"] as! String
                     
                     if specialPrice == "0.00" {
@@ -526,7 +522,7 @@ class Parser{
                     
                     lsDetailArray.append(lsSpecial)
                     
-                    for numbers in 1...5 {
+                    for _ in 1...5 {
                     
                         lsSpecial = LiquorStoreDetail(special: "-")
                         
@@ -561,9 +557,9 @@ class Parser{
             
         } else {
             
-            var number = 10 - lsSpecialArray.count
+            let number = 10 - lsSpecialArray.count
             
-            for numbers in 0...number{
+            for _ in 0...number{
                 
                 lsSpecialArray.append("-")
                 
@@ -575,13 +571,13 @@ class Parser{
     }
     func checkRegularDeals(){
         
-        var days = lsDeals["everyday"] as! NSArray
+        let days = lsDeals["everyday"] as! NSArray
         
         for posts in days{
             
-            var lsSpecial = posts["deal_name"] as! String
+            let lsSpecial = posts["deal_name"] as! String
             var lsSpecialPrice = posts["price"] as! String
-            var featuredSpecial = posts["featured"] as! Int
+            let featuredSpecial = posts["featured"] as! Int
             
             if lsSpecialPrice == "0.00" {
                 
@@ -613,8 +609,8 @@ class Parser{
         
         for posts in jsonFile{
             
-            var street = posts["company_street"] as! String
-            var city = posts["company_city"] as! String
+            let street = posts["company_street"] as! String
+            let city = posts["company_city"] as! String
             name = posts["company_name"] as! String
             let address = street + ", " + city
             addressArray.append(address)
@@ -624,13 +620,5 @@ class Parser{
         }
         
     }
-    
-    
-    
-    
-    
-    
-    
-    
     
 }

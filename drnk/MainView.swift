@@ -32,12 +32,8 @@ import UIKit
             colorLocations)
         
         //6 - draw the gradient
-        var startPoint = CGPoint.zeroPoint
-        var endPoint = CGPoint(x:0, y:self.bounds.height)
-        CGContextDrawLinearGradient(context,
-            gradient,
-            startPoint,
-            endPoint,
-            0)
+        let startPoint = CGPoint.zero
+        let endPoint = CGPoint(x:0, y:self.bounds.height)
+        CGContextDrawLinearGradient(context,gradient,startPoint,endPoint, CGGradientDrawingOptions(rawValue: 0))
     }
 }

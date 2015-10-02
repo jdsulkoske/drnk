@@ -22,10 +22,13 @@ class Day: NSObject {
     }
     func hour()-> Int{
         
+//        let calendar = NSCalendar.currentCalendar()
         let calendar = NSCalendar.currentCalendar()
-        let comp = calendar.components((.CalendarUnitHour | .CalendarUnitMinute), fromDate: date)
-        let thishour = comp.hour
-        let minute = comp.minute
+        let component = calendar.component(.Hour, fromDate:NSDate())
+//        let comp = calendar.components((.CalendarUnitHour | .CalendarUnitMinute), fromDate: date)
+
+        let thishour = component.hashValue
+//        let minute = component.hashValue
         
         return thishour
         
@@ -78,7 +81,7 @@ class Day: NSObject {
     
     func getIntValueOfDay() -> Int {
         
-        var todayString = findDay(dayString)
+        let todayString = findDay(dayString)
         
         if hour() < 5 {
             
@@ -134,7 +137,7 @@ class Day: NSObject {
     
     func getDayAsString()-> String{
         
-        var intValue = getIntValueOfDay()
+        let intValue = getIntValueOfDay()
         
         return intValueToDayString(intValue)
         

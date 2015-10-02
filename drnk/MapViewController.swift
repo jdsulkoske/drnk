@@ -48,7 +48,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
             
         }
         
-        var uilpgr = UILongPressGestureRecognizer(target: self, action: "action:")
+        let uilpgr = UILongPressGestureRecognizer(target: self, action: "action:")
         uilpgr.minimumPressDuration = 2.0
         mapView.addGestureRecognizer(uilpgr)
         
@@ -76,7 +76,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
                 
             } else {
                 
-                var parser = Parser(jsonFile: responseObject!)
+                let parser = Parser(jsonFile: responseObject!)
                 
                 dispatch_async(dispatch_get_main_queue()){
                     
@@ -97,18 +97,19 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
         
         for (var i = 0; i<addressArray.count; i++){
             
-            var address = addressArray[i]
-            var business = nameOfBusinessArray[i]
-            var annotation = MKPointAnnotation()
-            var geocoder = CLGeocoder()
+            let address = addressArray[i]
+            let business = nameOfBusinessArray[i]
+            let annotation = MKPointAnnotation()
+            let geocoder = CLGeocoder()
             
-            geocoder.geocodeAddressString(address, completionHandler: {(placemarks: [AnyObject]!, error: NSError!) -> Void in
+//            geocoder.geocodeAddressString(address, completionHandler: {(placemarks: [AnyObject]!, error: NSError!) -> Void in
+                geocoder.geocodeAddressString(address, completionHandler: {(placemarks: [CLPlacemark]?, error: NSError?) -> Void in
                
-                if let placemark = placemarks?[0] as? CLPlacemark {
+                if let placemark = placemarks?[0] {
                     
-                    self.mapView.setRegion(MKCoordinateRegionMake(CLLocationCoordinate2DMake (placemark.location.coordinate.latitude, placemark.location.coordinate.longitude), MKCoordinateSpanMake(0.05, 0.05)), animated: true)
+                    self.mapView.setRegion(MKCoordinateRegionMake(CLLocationCoordinate2DMake (placemark.location!.coordinate.latitude, placemark.location!.coordinate.longitude), MKCoordinateSpanMake(0.05, 0.05)), animated: true)
                     
-                   annotation.coordinate = placemark.location.coordinate
+                   annotation.coordinate = placemark.location!.coordinate
                     annotation.title = business
                     annotation.subtitle = address
                     
@@ -160,16 +161,16 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
         }
         theAddress = address!
         
-        var annotation = MKPointAnnotation()
-        var geocoder = CLGeocoder()
-        
-        geocoder.geocodeAddressString(address, completionHandler: {(placemarks: [AnyObject]!, error: NSError!) -> Void in
+        let annotation = MKPointAnnotation()
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(address!, completionHandler: {(placemarks: [CLPlacemark]?, error: NSError?) -> Void in
+//        geocoder.geocodeAddressString(address, completionHandler: {(placemarks: [AnyObject]!, error: NSError!) -> Void in
             
-            if let placemark = placemarks?[0] as? CLPlacemark {
+            if let placemark = placemarks?[0] {
                 
-                self.mapView.setRegion(MKCoordinateRegionMake(CLLocationCoordinate2DMake (placemark.location.coordinate.latitude, placemark.location.coordinate.longitude), MKCoordinateSpanMake(0.002, 0.002)), animated: true)
+                self.mapView.setRegion(MKCoordinateRegionMake(CLLocationCoordinate2DMake (placemark.location!.coordinate.latitude, placemark.location!.coordinate.longitude), MKCoordinateSpanMake(0.002, 0.002)), animated: true)
                // self.mapView.addAnnotation(MKPlacemark(placemark: placemark))
-                annotation.coordinate = placemark.location.coordinate
+                annotation.coordinate = placemark.location!.coordinate
                 annotation.title = business
                 annotation.subtitle = address
                 self.mapView.addAnnotation(annotation)
@@ -185,11 +186,11 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
         
         if gestureRecognizer.state == UIGestureRecognizerState.Began {
             
-            var touchPoint = gestureRecognizer.locationInView(self.mapView)
+            let touchPoint = gestureRecognizer.locationInView(self.mapView)
             
-            var newCoordinate = self.mapView.convertPoint(touchPoint, toCoordinateFromView: self.mapView)
+            let newCoordinate = self.mapView.convertPoint(touchPoint, toCoordinateFromView: self.mapView)
             
-            var location = CLLocation(latitude: newCoordinate.latitude, longitude: newCoordinate.longitude)
+            let location = CLLocation(latitude: newCoordinate.latitude, longitude: newCoordinate.longitude)
             
             CLGeocoder().reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
                 
@@ -197,19 +198,18 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
                 var subTitle = ""
                 
                 if (error == nil) {
-                    
-                    if let p = CLPlacemark(placemark: placemarks?[0] as! CLPlacemark) {
+                    if let p = placemarks?[0]{
                         var streetNumber:String = ""
                         var streetName:String = ""
                         
                         if p.subThoroughfare != nil {
                             
-                            streetNumber = p.subThoroughfare
+                            streetNumber = p.subThoroughfare!
                         }
                         
                         if p.thoroughfare != nil {
                             
-                            streetName = p.thoroughfare
+                            streetName = p.thoroughfare!
                         }
                         
                         title = "\(streetNumber) \(streetName)"
@@ -221,7 +221,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
                     title = "Added \(NSDate())"
                 }
                 
-                var annotation = MKPointAnnotation()
+                let annotation = MKPointAnnotation()
                 
                 annotation.coordinate = newCoordinate
                 
@@ -262,11 +262,11 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
         if segue == "barDetailVC" || segue == "lsDetailVC"{
         for controller in self.navigationController!.viewControllers as Array {
             if controller.isKindOfClass(BarInformationViewController) {
-                self.navigationController?.popToViewController(controller as! UIViewController, animated: true)
+                self.navigationController?.popToViewController(controller, animated: true)
                 break
             }
             else if controller.isKindOfClass(LiquorStoresInformationViewController){
-                self.navigationController?.popToViewController(controller as! UIViewController, animated: true)
+                self.navigationController?.popToViewController(controller, animated: true)
                 break
             }
             
@@ -279,7 +279,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
         
     }
     
-    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         
         if annotation is MKUserLocation {
             //return nil so map view draws "blue dot" for standard user location
@@ -321,7 +321,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
     
     
     func formatAddress()-> String{
-        var address = "http://maps.apple.com/?q=" + theAddress
+        let address = "http://maps.apple.com/?q=" + theAddress
         return address
     }
 }
