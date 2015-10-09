@@ -36,6 +36,7 @@ class DataConnection {
                 switch result {
                 case .Success(let data):
                     self.post = data as! NSArray
+                    debugPrint(self.post[1])
                 case .Failure(_, let error):
                     self.error = error
                     print("Request failed with error: \(error)")
