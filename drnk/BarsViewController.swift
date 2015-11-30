@@ -42,12 +42,16 @@ class BarsViewController: UIViewController, UITableViewDelegate {
         
         self.myTableView.addSubview(refresher)
         self.navigationController?.toolbar.barTintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
-        self.navigationController?.toolbar.tintColor = UIColor(red: 0/255, green: 178/255, blue: 255/255, alpha: 1)
+        self.navigationController?.toolbar.tintColor = UIColor(red: 0/255, green: 178/255, blue: 255/255, alpha: 0.7)
+        self.navigationController?.toolbar.translucent = true
         self.navigationController?.navigationBarHidden = true
         self.updateData()
         
     }
     
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
     
     func updateData(){
         
@@ -126,7 +130,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
             
         }else{
             
-            cell.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.20)
+//            cell.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.20)
             
         }
         

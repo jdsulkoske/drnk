@@ -137,7 +137,6 @@ class Parser{
 
         if barSpecialArray.count >= 3{
             bar = BarsTableInfo(id: businessId, name: name, address: address,barImage:name,special1: barSpecialArray[0], special2:barSpecialArray[1],special3: barSpecialArray[2])
-            
         }
             
         else {
@@ -147,7 +146,6 @@ class Parser{
         }
         
     }
-    
     
     private func rearrangeBarFeaturedArray(){
         
@@ -194,7 +192,6 @@ class Parser{
         }
         
     }
-    
     
     private func getNonFeaturedBarDeals(){
         

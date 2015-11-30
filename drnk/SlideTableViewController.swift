@@ -12,6 +12,7 @@ var currentUserZip = ""
 
 class SlideTableViewController: UITableViewController, CLLocationManagerDelegate {
 
+    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var liquore: UIImageView!
     let locationManager = CLLocationManager()
     @IBOutlet var myTableView: UITableView!
@@ -26,7 +27,10 @@ class SlideTableViewController: UITableViewController, CLLocationManagerDelegate
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
         self.myTableView.backgroundView = UIImageView(image: UIImage(named: "slide"))
-        
+//        self.profileImage.layer.cornerRadius = CGRectGetWidth(self.profileImage.frame)/2.15
+//        self.profileImage.layer.masksToBounds = true
+//        self.profileImage.layer.borderWidth = 1.0
+//        self.profileImage.layer.borderColor = UIColor(red: 0/255, green: 186/255, blue: 255/255, alpha: 0.7).CGColor
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,7 +39,9 @@ class SlideTableViewController: UITableViewController, CLLocationManagerDelegate
 
     }
     
-
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)

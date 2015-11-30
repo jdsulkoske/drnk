@@ -37,7 +37,7 @@ class CustomLiquorStoresTableViewCell: UITableViewCell {
         self.lsSpecialTwo.text = special2
         self.lsSpecialThree.text = special3
         self.imageOfLiquorStore.image = UIImage(named: image)
-        
+
         
     }
 

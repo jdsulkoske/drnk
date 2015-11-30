@@ -13,24 +13,24 @@ class CustomBarTableViewCell: UITableViewCell {
     @IBOutlet weak var nameOfBar: UILabel!
     @IBOutlet weak var addressOfBar: UIButton!
     @IBOutlet weak var barImage: UIImageView!
-    @IBOutlet weak var special1: UILabel!
-    @IBOutlet weak var special2: UILabel!
-    @IBOutlet weak var special3: UILabel!
+//    @IBOutlet weak var special1: UILabel!
+//    @IBOutlet weak var special2: UILabel!
+//    @IBOutlet weak var special3: UILabel!
     
     override func awakeFromNib() {
         
         super.awakeFromNib()
-        special1.numberOfLines = 1;
-        special1.minimumScaleFactor = 0.5;
-        special1.adjustsFontSizeToFitWidth = true;
-        
-        special2.numberOfLines = 1;
-        special2.minimumScaleFactor = 0.5;
-        special2.adjustsFontSizeToFitWidth = true;
-        
-        special3.numberOfLines = 1;
-        special3.minimumScaleFactor = 0.5;
-        special3.adjustsFontSizeToFitWidth = true;
+//        special1.numberOfLines = 1;
+//        special1.minimumScaleFactor = 0.5;
+//        special1.adjustsFontSizeToFitWidth = true;
+//        
+//        special2.numberOfLines = 1;
+//        special2.minimumScaleFactor = 0.5;
+//        special2.adjustsFontSizeToFitWidth = true;
+//        
+//        special3.numberOfLines = 1;
+//        special3.minimumScaleFactor = 0.5;
+//        special3.adjustsFontSizeToFitWidth = true;
        
     }
 
@@ -44,10 +44,13 @@ class CustomBarTableViewCell: UITableViewCell {
         
         self.nameOfBar.text = nameOfBarText
         self.addressOfBar.setTitle(addressOfBarText, forState: UIControlState.Normal)
-        self.special1.text = special1
-        self.special2.text = special2
-        self.special3.text = special3
+//        self.special1.text = special1
+//        self.special2.text = special2
+//        self.special3.text = special3
         self.barImage.image = UIImage(named: image)
+        self.barImage.layer.cornerRadius = CGRectGetWidth(self.barImage.frame)/2.5
+        self.barImage.layer.masksToBounds = true
+        self.barImage.layer.borderWidth = 1.0
     
     }
 
