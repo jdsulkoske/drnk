@@ -8,6 +8,8 @@ class DataConnection {
     var post : NSArray!
     var error : ErrorType?
     var typeOfBusiness : String!
+    var barsTrue : String!
+    var liquorTrue : String!
     
     init(typeOfBusiness:String){
         
@@ -17,40 +19,15 @@ class DataConnection {
     
     func requestData(completionHandler: (responseObject: NSArray?, error: ErrorType?) -> ()){
       
-        let requestString = "http://drnkmobile.com/api/v1/businesses/" + typeOfBusiness+"/?zipcode="+currentUserZip + "&radius=10"
+//        let requestString = "http://drnkmedia.com/api/api.php/?company_city=Muncie&" + typeOfBusiness
+        let requestString = "http://drnkmedia.com/api/api.php/?company_city=Muncie&" + typeOfBusiness
         
-//        Alamofire.request(.GET, requestString).responseJSON { (request, response, json) -> Void in
-//            if json == nil{
-//                
-//                self.post = nil
-//                
-//            } else {
-//                
-//                self.post = json as! NSArray
-//                
-//            }
-//            completionHandler(responseObject: self.post , error: error)
-//        }
-//        Alamofire.request(.GET, requestString)
-//            .responseJSON { _, _, result in
-//                switch result {
-//                case .Success(let data):
-//                    self.post = data as! NSArray
-//                    debugPrint(self.post[1])
-//                case .Failure(_, let error):
-//                    self.error = error
-//                    print("Request failed with error: \(error)")
-//                
-//                }
-//                completionHandler(responseObject: self.post , error: self.error)
-//
-//        }
         Alamofire.request(.GET, requestString).responseJSON() {
             response in
             if response.result.isSuccess {
                 let data = response.result.value
-                    self.post = data as! NSArray
-                    debugPrint(self.post[1])
+                self.post = data as! NSArray
+//                debugPrint(self.post[1])
                     
             } else {
                 let error = self.error

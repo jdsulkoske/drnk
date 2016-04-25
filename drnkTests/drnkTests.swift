@@ -2,8 +2,8 @@
 //  drnkTests.swift
 //  drnkTests
 //
-//  Created by Jake Sulkoske on 5/25/15.
-//  Copyright (c) 2015 Sulk. All rights reserved.
+//  Created by drnk LLC on 5/25/15.
+//  Copyright (c) 2015 drnk LLC. All rights reserved.
 //
 
 import UIKit

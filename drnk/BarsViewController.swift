@@ -2,8 +2,8 @@
 //  FirstViewController.swift
 //  drnk
 //
-//  Created by Jake Sulkoske on 5/25/15.
-//  Copyright (c) 2015 Sulk. All rights reserved.
+//  Created by drnk LLC on 5/25/15.
+//  Copyright (c) 2015 drnk LLC. All rights reserved.
 //
 
 import UIKit
@@ -23,7 +23,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     var timer = NSTimer()
     var refresher : UIRefreshControl!
     var selected:[Bool] = Array(count: 100, repeatedValue: false)
-    var data = DataConnection(typeOfBusiness: "bars")
+    var data = DataConnection(typeOfBusiness: "bar=true")
     var barNameToPass : String?
     var barAddressToPass: String?
     var cellIndex : Int?
@@ -33,7 +33,6 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
     
         super.viewDidLoad()
-        
         refresher = UIRefreshControl()
         refresher.attributedTitle = NSAttributedString(string: "Pull to refresh", attributes: [NSForegroundColorAttributeName: UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 1.0)])
         refresher.backgroundColor = UIColor(red: 75/255, green: 75/255, blue: 75/255
@@ -72,7 +71,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
                 
                 dispatch_async(dispatch_get_main_queue()){
                     
-                    parser.parseBarInfo("barView")
+                parser.parseBarInfo("barView")
                     
                 self.myTableView.reloadData()
                     
@@ -119,20 +118,11 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        
         let cell: CustomBarTableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell") as! CustomBarTableViewCell
         cellIndex = indexPath.row
         let bar = arrayOfBars[indexPath.row]
         index = cell.tag
         cell.addressOfBar.tag = indexPath.row
-        
-        if ( indexPath.row % 2 == 0 ) {
-            
-        }else{
-            
-//            cell.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.20)
-            
-        }
         
         cell.setCell(bar.name, addressOfBarText: bar.address, image: bar.barImage,special1: bar.special1,special2: bar.special2,special3: bar.special3)
         cell.detailTextLabel?.text = bar.name

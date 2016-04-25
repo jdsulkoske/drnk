@@ -2,13 +2,14 @@
 //  SlideTableViewController.swift
 //  drnk
 //
-//  Created by Jake Sulkoske on 6/10/15.
-//  Copyright (c) 2015 Sulk. All rights reserved.
+//  Created by drnk LLC on 6/10/15.
+//  Copyright (c) 2015 drnk LLC. All rights reserved.
 //
 
 import UIKit
 import CoreLocation
 var currentUserZip = ""
+var currentCity = ""
 
 class SlideTableViewController: UITableViewController, CLLocationManagerDelegate {
 
@@ -82,6 +83,7 @@ class SlideTableViewController: UITableViewController, CLLocationManagerDelegate
                 self.displayLocationInfo(pm)
                 
                 
+                
             } else {
                 
                 
@@ -95,7 +97,7 @@ class SlideTableViewController: UITableViewController, CLLocationManagerDelegate
     
         self.locationManager.stopUpdatingLocation()
         currentUserZip = placemark.postalCode!
-
+        currentCity = placemark.subAdministrativeArea!
         
     }
     

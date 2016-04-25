@@ -34,7 +34,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
             
             locationManager.requestWhenInUseAuthorization()
             //locationManager.startUpdatingLocation()
-            data = DataConnection(typeOfBusiness: "")
+            data = DataConnection(typeOfBusiness: "bar=true&liquorstore=true")
             updateData()
             self.back.title = ""
             self.back.enabled = false
@@ -102,7 +102,6 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
             let annotation = MKPointAnnotation()
             let geocoder = CLGeocoder()
             
-//            geocoder.geocodeAddressString(address, completionHandler: {(placemarks: [AnyObject]!, error: NSError!) -> Void in
                 geocoder.geocodeAddressString(address, completionHandler: {(placemarks: [CLPlacemark]?, error: NSError?) -> Void in
                
                 if let placemark = placemarks?[0] {
@@ -164,7 +163,6 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
         let annotation = MKPointAnnotation()
         let geocoder = CLGeocoder()
         geocoder.geocodeAddressString(address!, completionHandler: {(placemarks: [CLPlacemark]?, error: NSError?) -> Void in
-//        geocoder.geocodeAddressString(address, completionHandler: {(placemarks: [AnyObject]!, error: NSError!) -> Void in
             
             if let placemark = placemarks?[0] {
                 
@@ -234,29 +232,6 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
             })
         }
     }
-    
- 
-//    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-//        
-//        var userLocation:CLLocation = locations[0] as! CLLocation
-//        
-//        var latitude = userLocation.coordinate.latitude
-//        
-//        var longitude = userLocation.coordinate.longitude
-//        
-//        var coordinate = CLLocationCoordinate2DMake(latitude, longitude)
-//        
-//        var latDelta:CLLocationDegrees = 0.01
-//        
-//        var lonDelta:CLLocationDegrees = 0.01
-//        
-//        var span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
-//        
-//        var region:MKCoordinateRegion = MKCoordinateRegionMake(coordinate, span)
-//
-//        self.mapView.setRegion(region, animated: true)
-//        
-//    }
 
     @IBAction func backButton(sender: AnyObject) {
         if segue == "barDetailVC" || segue == "lsDetailVC"{
@@ -293,10 +268,6 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
             pinView!.canShowCallout = true
             pinView!.image = UIImage(named: "smallCup")
             pinView!.frame = CGRectMake(10, 10, 25, 35)
-            
-            // Add image to left callout
-           
-            //var mugIconView = UIImageView(image: UIImage(named: arrayOfBars[index!].barImage))
                 
             mugIconView.frame = CGRectMake(0, 0, 35, 35)
             pinView!.leftCalloutAccessoryView = mugIconView

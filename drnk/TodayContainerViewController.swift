@@ -2,8 +2,8 @@
 //  ContainerViewController.swift
 //  drnk
 //
-//  Created by Jake Sulkoske on 7/10/15.
-//  Copyright (c) 2015 Sulk. All rights reserved.
+//  Created by drnk LLC on 7/10/15.
+//  Copyright (c) 2015 drnk LLC. All rights reserved.
 //
 
 import UIKit
@@ -17,7 +17,7 @@ class TodayContainerViewController: UIViewController,UITableViewDelegate {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "segmentedControlTapped:", name: "SCTapped", object: nil)
         
-        data = DataConnection(typeOfBusiness: "bars")
+        data = DataConnection(typeOfBusiness: "bar=true")
         
     }
 
@@ -71,15 +71,15 @@ class TodayContainerViewController: UIViewController,UITableViewDelegate {
         let special = todaysSpecialArray[indexPath.row]
        
         
-        if ( indexPath.row % 2 == 0 ) {
-            
-            cell.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
-            
-        } else {
-            
-            cell.backgroundColor = UIColor(red: 125/255, green: 125/255, blue: 125/255, alpha: 1)
-            
-        }
+//        if ( indexPath.row % 2 == 0 ) {
+//            
+//            cell.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+//            
+//        } else {
+//            
+//            cell.backgroundColor = UIColor(red: 125/255, green: 125/255, blue: 125/255, alpha: 1)
+//            
+//        }
         
         cell.setCell(special.special)
         return cell

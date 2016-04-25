@@ -2,8 +2,8 @@
 //  SecondViewController.swift
 //  drnk
 //
-//  Created by Jake Sulkoske on 5/25/15.
-//  Copyright (c) 2015 Sulk. All rights reserved.
+//  Created by drnk LLC on 5/25/15.
+//  Copyright (c) 2015 drnk LLC. All rights reserved.
 //
 
 import UIKit
@@ -22,7 +22,7 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
     var liqoureStoreNameToPass : String!
     var liqoureStoreImageToPass : String!
     var refresher: UIRefreshControl!
-    let data = DataConnection(typeOfBusiness: "liquorstores")
+    let data = DataConnection(typeOfBusiness: "liquorstore=true")
     var selected:[Bool] = Array(count: 100, repeatedValue: false)
     
     override func viewDidLoad() {
@@ -115,13 +115,6 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
         
         index = cell.tag
         cell.addressOfLiquorStore.tag = indexPath.row
-   
-        if ( indexPath.row % 2 == 0 ) {
-            
-        } else {
-            
-            cell.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.20)
-        }
 
         
         cell.setLiquorStoreCell(liquorStore.liquorStoreName, addressLabel: liquorStore.address, image: liquorStore.liquorStoreImage,special1: liquorStore.special1,special2: liquorStore.special2,special3: liquorStore.special3)

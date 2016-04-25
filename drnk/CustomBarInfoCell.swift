@@ -2,8 +2,8 @@
 //  BarInfoCustomTableView.swift
 //  drnk
 //
-//  Created by faris shatat on 6/20/15.
-//  Copyright (c) 2015 Sulk. All rights reserved.
+//  Created by drnk LLC on 6/20/15.
+//  Copyright (c) 2015 drnk LLC. All rights reserved.
 //
 
 import Foundation
@@ -61,16 +61,7 @@ class CustomBarInfoCell : UITableViewCell{
         NSNotificationCenter.defaultCenter().removeObserver(self, forKeyPath: "frame")
     
     }
-
-//    override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject:AnyObject], context: UnsafeMutablePointer<Void>) {
-//        
-//        if keyPath == "frame"{
-//            
-//            checkHeight()
-//            
-//        }
-//        
-//    }
+    
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
         if keyPath == "frame"{
             

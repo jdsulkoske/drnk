@@ -2,8 +2,8 @@
 //  BarInformationViewController.swift
 //  drnk
 //
-//  Created by Jake Sulkoske on 5/26/15.
-//  Copyright (c) 2015 Sulk. All rights reserved.
+//  Created by drnk LLC on 5/26/15.
+//  Copyright (c) 2015 drnk LLC. All rights reserved.
 //
 
 import UIKit
@@ -14,11 +14,12 @@ var detailViewIndex : Int!
 var segue : String!
 class BarInformationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var networkLabel: UILabel!
     @IBOutlet weak var barImage: UIImageView!
     @IBOutlet weak var secondView: UIView!
     @IBOutlet weak var firstView: UIView!
     @IBOutlet weak var barsController: UISegmentedControl!
-    @IBOutlet weak var networkMessage: UILabel!
+
     @IBOutlet weak var detailTableView: UITableView!
     @IBOutlet weak var nameOfBar: UILabel!
     @IBOutlet weak var addressOfBar: UILabel!
@@ -27,7 +28,7 @@ class BarInformationViewController: UIViewController, UITableViewDelegate, UITab
     var imagePassedValue : String!
     var addressPassedValie : String!
     var refresher : UIRefreshControl!
-    var data = DataConnection(typeOfBusiness: "bars")
+    var data = DataConnection(typeOfBusiness: "bar=true")
     var selectedIndexPath : NSIndexPath?
     
     
@@ -61,6 +62,9 @@ class BarInformationViewController: UIViewController, UITableViewDelegate, UITab
         
         nameOfBar.text = barPassedValue
         barImage.image = UIImage(named: imagePassedValue)
+        self.barImage.layer.cornerRadius = CGRectGetWidth(self.barImage.frame)/6.0
+        self.barImage.layer.masksToBounds = true
+        self.barImage.layer.borderWidth = 1.0
         addressOfBar.text = addressPassedValie
         
     }
@@ -90,7 +94,7 @@ class BarInformationViewController: UIViewController, UITableViewDelegate, UITab
                 
             } else {
                 
-                self.networkMessage.hidden = true
+                self.networkLabel.hidden = true
                 let parser = Parser(jsonFile: responseObject!)
                 
                 self.data.getData({ (responseObject, error) -> () in

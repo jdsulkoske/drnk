@@ -2,8 +2,8 @@
 //  LiquorStoresInformationViewController.swift
 //  drnk
 //
-//  Created by Jake Sulkoske on 6/21/15.
-//  Copyright (c) 2015 Sulk. All rights reserved.
+//  Created by drnk LLC on 6/21/15.
+//  Copyright (c) 2015 drnk LLC. All rights reserved.
 //
 
 import UIKit
@@ -40,7 +40,11 @@ class LiquorStoresInformationViewController: UIViewController, UITableViewDelega
             
         }
         
-        data = DataConnection(typeOfBusiness: "liquorstores")
+        self.liqoureStoreImage.layer.cornerRadius = CGRectGetWidth(self.liqoureStoreImage.frame)/3.0
+        self.liqoureStoreImage.layer.masksToBounds = true
+        self.liqoureStoreImage.layer.borderWidth = 1.0
+        
+        data = DataConnection(typeOfBusiness: "liquorstore=true")
         liquoreStoreName.text = liquoreStoreNamePasssedValue
         liqoureStoreImage.image = UIImage(named: liquoreStoreImagePassedValue)
    
@@ -103,16 +107,6 @@ class LiquorStoresInformationViewController: UIViewController, UITableViewDelega
         let liquorStore = lsDetailArray[indexPath.row]
         
         cell.setLiquorStoreCell(liquorStore.special)
-        
-        if ( indexPath.row % 2 == 0 ) {
-            
-            cell.backgroundColor = UIColor(red: 35/255, green: 35/255, blue: 35/255, alpha: 1)
-            
-        } else {
-            
-            cell.backgroundColor = UIColor(red: 55/255, green: 55/255, blue: 55/255, alpha: 1)
-            
-        }
         
         return cell
         

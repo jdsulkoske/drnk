@@ -2,7 +2,7 @@
 //  LSAboutUsViewController.swift
 //  Pods
 //
-//  Created by faris shatat on 7/13/15.
+//  Created by drnk LLC on 7/13/15.
 //
 //
 
@@ -16,7 +16,7 @@ class LSAboutUSViewController: UIViewController{
     var data : DataConnection!
     
     override func viewDidLoad() {
-        data = DataConnection(typeOfBusiness: "liquorstores")
+        data = DataConnection(typeOfBusiness: "liquorstore=true")
         self.addressButton.titleLabel?.adjustsFontSizeToFitWidth = true
         addressButton.setTitle(addressPassed, forState: UIControlState.Normal)
         self.addressButton.titleLabel?.adjustsFontSizeToFitWidth = true
