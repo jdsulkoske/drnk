@@ -260,7 +260,7 @@ class Parser{
         
         if let file = jsonFile[detailViewIndex!]["deals"] as? NSDictionary{
             
-            for(var i = 0; i<daysOfWeek.count; i++){
+            for i in 0 ..< daysOfWeek.count{
                 
                 let days = file[daysOfWeek[i].lowercaseString] as! NSArray
                 
@@ -344,7 +344,7 @@ class Parser{
                 todaysSpecialArray.append(message)
             }
             else {
-            for (var i = 0 ; i < todayArray.count; i++) {
+            for i in 0  ..< todayArray.count {
                 todaysSpecial = TodaysDeal(special: todayArray[i])
                 todaysSpecialArray.append(todaysSpecial)
                 }
@@ -530,7 +530,7 @@ class Parser{
                     
                 } else {
                     
-                    for (var i = 0; i < lsSpecialArray.count ; i++){
+                    for i in 0 ..< lsSpecialArray.count {
                 
                         lsSpecial = LiquorStoreDetail(special: lsSpecialArray[i])
                         

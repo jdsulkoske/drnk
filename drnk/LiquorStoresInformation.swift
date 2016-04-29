@@ -48,13 +48,17 @@ class LiquorStoresInformation {
         
         switch imageString{
             
-        case "3":
+        case "34":
                 
-            imageString = "friendly.png"
+            imageString = "friendly"
             
-        case "6":
+        case "42":
             
             imageString = "municeLiquors"
+            
+        case "41":
+            
+            imageString = "saveon"
         
         default:
             

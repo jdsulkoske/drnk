@@ -40,7 +40,7 @@ class LiquorStoresInformationViewController: UIViewController, UITableViewDelega
             
         }
         
-        self.liqoureStoreImage.layer.cornerRadius = CGRectGetWidth(self.liqoureStoreImage.frame)/3.0
+        self.liqoureStoreImage.layer.cornerRadius = CGRectGetWidth(self.liqoureStoreImage.frame)/5.0
         self.liqoureStoreImage.layer.masksToBounds = true
         self.liqoureStoreImage.layer.borderWidth = 1.0
         

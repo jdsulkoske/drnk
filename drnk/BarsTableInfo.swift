@@ -48,25 +48,42 @@ class BarsTableInfo{
         
         switch imageString{
             
-        case "4":
+        case "35":
             
             imageString = "brothersImage"
             
-        case "5":
             
-            imageString = "Cleos-1"
-            
-        case "11":
+        case "45":
             
             imageString = "BeHereNow"
             
-        case "12":
+        case "44":
             
             imageString = "TheChug"
             
-        case "13":
+        case "48":
             
             imageString = "Scottys"
+        
+        case "40":
+            
+            imageString = "heorot"
+            
+        case "43":
+            
+            imageString = "savages"
+            
+        case "46":
+            
+            imageString = "fickle"
+            
+        case "47":
+            
+            imageString = "amazing"
+            
+        case "49":
+            
+            imageString = "puerta"
             
         default:
             

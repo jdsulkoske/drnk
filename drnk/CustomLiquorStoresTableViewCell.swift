@@ -37,7 +37,7 @@ class CustomLiquorStoresTableViewCell: UITableViewCell {
         self.lsSpecialTwo.text = special2
         self.lsSpecialThree.text = special3
         self.imageOfLiquorStore.image = UIImage(named: image)
-        self.imageOfLiquorStore.layer.cornerRadius = CGRectGetWidth(self.imageOfLiquorStore.frame)/2.5
+        self.imageOfLiquorStore.layer.cornerRadius = CGRectGetWidth(self.imageOfLiquorStore.frame)/4
         self.imageOfLiquorStore.layer.masksToBounds = true
         self.imageOfLiquorStore.layer.borderWidth = 1.0
 

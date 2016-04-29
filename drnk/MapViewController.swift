@@ -48,7 +48,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
             
         }
         
-        let uilpgr = UILongPressGestureRecognizer(target: self, action: "action:")
+        let uilpgr = UILongPressGestureRecognizer(target: self, action: #selector(MapViewController.action(_:)))
         uilpgr.minimumPressDuration = 2.0
         mapView.addGestureRecognizer(uilpgr)
         
@@ -59,7 +59,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
         if self.revealViewController() != nil {
             
             menuButton.target = self.revealViewController()
-            menuButton.action = "revealToggle:"
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             
         }
@@ -95,7 +95,7 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
     
     func findAddressFromJsonFile(){
         
-        for (var i = 0; i<addressArray.count; i++){
+        for i in 0 ..< addressArray.count{
             
             let address = addressArray[i]
             let business = nameOfBusinessArray[i]

@@ -15,7 +15,7 @@ class TodayContainerViewController: UIViewController,UITableViewDelegate {
         
         super.viewDidLoad()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "segmentedControlTapped:", name: "SCTapped", object: nil)
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("segmentedControlTapped:"), name: "SCTapped", object: nil)
         
         data = DataConnection(typeOfBusiness: "bar=true")
         

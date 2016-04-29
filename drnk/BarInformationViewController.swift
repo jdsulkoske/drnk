@@ -45,7 +45,7 @@ class BarInformationViewController: UIViewController, UITableViewDelegate, UITab
         secondView.hidden = false
         refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refresher.backgroundColor = UIColor(red: 75/255, green: 75/255, blue: 75/255, alpha: 1)
-        refresher.addTarget(self, action: "updateData", forControlEvents: UIControlEvents.ValueChanged)
+        refresher.addTarget(self, action: #selector(BarInformationViewController.updateData), forControlEvents: UIControlEvents.ValueChanged)
         
         self.detailTableView.addSubview(refresher)
        
@@ -62,7 +62,7 @@ class BarInformationViewController: UIViewController, UITableViewDelegate, UITab
         
         nameOfBar.text = barPassedValue
         barImage.image = UIImage(named: imagePassedValue)
-        self.barImage.layer.cornerRadius = CGRectGetWidth(self.barImage.frame)/6.0
+        self.barImage.layer.cornerRadius = CGRectGetWidth(self.barImage.frame)/10.0
         self.barImage.layer.masksToBounds = true
         self.barImage.layer.borderWidth = 1.0
         addressOfBar.text = addressPassedValie

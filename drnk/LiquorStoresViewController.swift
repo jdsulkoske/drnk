@@ -31,7 +31,7 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
         
         refresher = UIRefreshControl()
         refresher.attributedTitle = NSAttributedString(string: "Pull to refresh", attributes: [NSForegroundColorAttributeName: UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 1.0)])
-        refresher.addTarget(self, action: "updateData", forControlEvents: UIControlEvents.ValueChanged)
+        refresher.addTarget(self, action: #selector(LiquorStoresViewController.updateData), forControlEvents: UIControlEvents.ValueChanged)
         
         self.liquorStoreTableVIew.addSubview(refresher)
         
@@ -49,7 +49,7 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
         if self.revealViewController() != nil {
             
             menuButton.target = self.revealViewController()
-            menuButton.action = "revealToggle:"
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             

@@ -37,7 +37,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
         refresher.attributedTitle = NSAttributedString(string: "Pull to refresh", attributes: [NSForegroundColorAttributeName: UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 1.0)])
         refresher.backgroundColor = UIColor(red: 75/255, green: 75/255, blue: 75/255
             , alpha: 1)
-        refresher.addTarget(self, action: "updateData", forControlEvents: UIControlEvents.ValueChanged)
+        refresher.addTarget(self, action: #selector(BarsViewController.updateData), forControlEvents: UIControlEvents.ValueChanged)
         
         self.myTableView.addSubview(refresher)
         self.navigationController?.toolbar.barTintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
@@ -91,7 +91,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
         if self.revealViewController() != nil {
             
             menuButton.target = self.revealViewController()
-            menuButton.action = "revealToggle:"
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             
         } else {

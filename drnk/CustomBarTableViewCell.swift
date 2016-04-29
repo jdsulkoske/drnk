@@ -48,7 +48,7 @@ class CustomBarTableViewCell: UITableViewCell {
         self.special2.text = special2
         self.special3.text = special3
         self.barImage.image = UIImage(named: image)
-        self.barImage.layer.cornerRadius = CGRectGetWidth(self.barImage.frame)/2.5
+        self.barImage.layer.cornerRadius = CGRectGetWidth(self.barImage.frame)/4
         self.barImage.layer.masksToBounds = true
         self.barImage.layer.borderWidth = 1.0
     
