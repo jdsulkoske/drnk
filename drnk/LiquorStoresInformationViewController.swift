@@ -10,6 +10,8 @@ import UIKit
 var lsDetailArray: [LiquorStoreDetail] = [LiquorStoreDetail]()
 class LiquorStoresInformationViewController: UIViewController, UITableViewDelegate {
     
+    @IBOutlet weak var specialsUnderline: UIView!
+    @IBOutlet weak var infoUnderline: UIView!
     @IBOutlet weak var networkMessage: UILabel!
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var liqoureStoreImage: UIImageView!
@@ -30,7 +32,8 @@ class LiquorStoresInformationViewController: UIViewController, UITableViewDelega
         
         segmentedControl.layer.cornerRadius = -0.5;
         segmentedControl.layer.borderWidth = 2.5;
-        segmentedControl.layer.borderColor = UIColor(red: 15/255, green: 15/255, blue: 15/255, alpha: 1).CGColor
+        segmentedControl.layer.borderColor = UIColor(red: 227/255, green: 255/255, blue: 255/255, alpha: 0).CGColor
+        segmentedControl.layer.borderWidth = 0
         
         secondView.hidden = true
         
@@ -117,7 +120,7 @@ class LiquorStoresInformationViewController: UIViewController, UITableViewDelega
         switch segmentedControl.selectedSegmentIndex {
             
         case 0:
-            
+
             secondView.hidden = true
             
         case 1:

@@ -56,7 +56,11 @@ class LiquorStoresInformation {
             
             imageString = "municeLiquors"
             
-        case "41":
+        case "57":
+            
+            imageString = "saveon"
+            
+        case "58":
             
             imageString = "saveon"
         
