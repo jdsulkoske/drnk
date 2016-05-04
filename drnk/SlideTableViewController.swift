@@ -96,8 +96,8 @@ class SlideTableViewController: UITableViewController, CLLocationManagerDelegate
     func displayLocationInfo(placemark: CLPlacemark) {
     
         self.locationManager.stopUpdatingLocation()
-        currentUserZip = placemark.postalCode!
-        currentCity = placemark.subAdministrativeArea!
+        let theCity = placemark.locality!
+        currentCity = theCity.lowercaseString
         
     }
     

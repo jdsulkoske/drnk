@@ -20,7 +20,8 @@ class DataConnection {
     func requestData(completionHandler: (responseObject: NSArray?, error: ErrorType?) -> ()){
       
 //        let requestString = "http://drnkmedia.com/api/api.php/?company_city=Muncie&" + typeOfBusiness
-        let requestString = "http://drnkmedia.com/api/api.php/?company_city=Muncie&" + typeOfBusiness
+        var requestString = "http://drnkmedia.com/api/api.php/?company_city=" + currentCity + "&" + typeOfBusiness
+        requestString = requestString.stringByReplacingOccurrencesOfString(" ", withString: "%20")
         
         Alamofire.request(.GET, requestString).responseJSON() {
             response in
