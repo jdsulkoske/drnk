@@ -100,7 +100,6 @@ class BarsViewController: UIViewController, UITableViewDelegate {
         
         
     }
-
     override func viewDidDisappear(animated: Bool) {
        
     }
