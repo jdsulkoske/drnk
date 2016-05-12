@@ -12,8 +12,9 @@ var arrayOfLiquorStores: [LiquorStoresInformation] = [LiquorStoresInformation]()
 var liquorStore : LiquorStoresInformation!
 var lsIndex : Int!
 
-class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPopoverPresentationControllerDelegate {
     
+    @IBOutlet weak var locationButton: UIBarButtonItem!
     @IBOutlet weak var networkMessage: UILabel!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var liquorStoreTableVIew: UITableView!
@@ -58,7 +59,7 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func updateData(){
-        
+        networkMessage.hidden = true
         data.getData { (responseObject, error) -> Void in
             if  responseObject == nil{
                 
@@ -77,6 +78,12 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
                     parser.parseLSInfo("lsTableView")
                     self.liquorStoreTableVIew.reloadData()
                     
+                    
+                }
+                
+                if arrayOfLiquorStores.count == 0{
+                    self.networkMessage.text = "Sorry, there doesn't seem to be any businesses in your area that utilize drnk! You can check out specials in other cities by changing your preferred location below!"
+                    self.networkMessage.hidden = false
                 }
                 
             }
@@ -86,13 +93,7 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
         }
         
     }
-
-    override func didReceiveMemoryWarning() {
-        
-        super.didReceiveMemoryWarning()
-
-    }
-
+    
     @IBAction func assignIndexRowToButtonInLiqourStoreView(sender: AnyObject) {
         
         let row = sender.tag
@@ -150,11 +151,31 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
             lsInformationViewController.liquoreStoreImagePassedValue = liqoureStoreImageToPass
             lsInformationViewController.liquoreStoreAddressPassed = liquoreStoreAddressToPass
             
+        } else if segue.identifier == "locationPopupSegue" {
+        
+            let vc = segue.destinationViewController 
+            
+            let controller = vc.popoverPresentationController
+            
+            if controller != nil {
+            
+                controller?.delegate = self
+                
+            }
+            
         }
         
     }
     
+    @IBAction func locationButton(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier("locationPopupSegue", sender: self)
+        
+    }
 
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .None
+    }
     
 
 }

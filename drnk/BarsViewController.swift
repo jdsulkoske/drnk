@@ -14,7 +14,8 @@ var index : Int?
 
 
 class BarsViewController: UIViewController, UITableViewDelegate {
-   
+    
+    @IBOutlet weak var locationIndicator: UIBarButtonItem!
     @IBOutlet weak var networkMessage: UILabel!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var dateLabel: UILabel!
@@ -53,7 +54,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     }
     
     func updateData(){
-        
+        self.networkMessage.hidden = true
         data.getData { (responseObject, error) -> Void in
             
             if  responseObject == nil{
@@ -74,6 +75,13 @@ class BarsViewController: UIViewController, UITableViewDelegate {
                 parser.parseBarInfo("barView")
                     
                 self.myTableView.reloadData()
+                
+                    
+                }
+                
+                if arrayOfBars.count == 0{
+                    self.networkMessage.text = "Sorry, there doesn't seem to be any businesses in your area that utilize drnk! You can check out specials in other cities by changing your preferred location below!"
+                    self.networkMessage.hidden = false
                     
                 }
             
@@ -100,15 +108,6 @@ class BarsViewController: UIViewController, UITableViewDelegate {
         
         
     }
-    override func viewDidDisappear(animated: Bool) {
-       
-    }
-    
-    override func didReceiveMemoryWarning() {
-        
-        super.didReceiveMemoryWarning()
-        
-    }
     
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
         
@@ -117,6 +116,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+        
         let cell: CustomBarTableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell") as! CustomBarTableViewCell
         cellIndex = indexPath.row
         let bar = arrayOfBars[indexPath.row]
@@ -125,7 +125,7 @@ class BarsViewController: UIViewController, UITableViewDelegate {
         
         cell.setCell(bar.name, addressOfBarText: bar.address, image: bar.barImage,special1: bar.special1,special2: bar.special2,special3: bar.special3)
         cell.detailTextLabel?.text = bar.name
-
+        
         return cell
         
     }

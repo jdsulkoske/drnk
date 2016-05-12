@@ -21,6 +21,7 @@ class DataConnection {
         
         var requestString = "http://drnkmedia.com/api/api.php/?company_city=" + currentCity + "&" + typeOfBusiness
         requestString = requestString.stringByReplacingOccurrencesOfString(" ", withString: "%20")
+        print(requestString)
         
         Alamofire.request(.GET, requestString).responseJSON() {
             response in

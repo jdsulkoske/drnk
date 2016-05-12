@@ -13,6 +13,7 @@
 		DE4034991B50830300803C4E /* LiquorStoreDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4034981B50830300803C4E /* LiquorStoreDetail.swift */; };
 		DE4667091B29E96F0033C1C3 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4667081B29E96F0033C1C3 /* SWRevealViewController.m */; };
 		DE4C116A1B28AD3700CCB54D /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4C11691B28AD3700CCB54D /* Day.swift */; };
+		DE5545CD1CE42771007258B9 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5545CC1CE42771007258B9 /* PopoverViewController.swift */; };
 		DE5C83E61B1435DA00ED4255 /* BarInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5C83E51B1435DA00ED4255 /* BarInformationViewController.swift */; };
 		DE5FB7871B14F73D00C9EC44 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE5FB7861B14F73D00C9EC44 /* CoreLocation.framework */; };
 		DE748FB11B693E98002AB490 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE748FB01B693E98002AB490 /* MainView.swift */; };
@@ -75,6 +76,7 @@
 		DE4667071B29E96F0033C1C3 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		DE4667081B29E96F0033C1C3 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		DE4C11691B28AD3700CCB54D /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		DE5545CC1CE42771007258B9 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		DE5C83E51B1435DA00ED4255 /* BarInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarInformationViewController.swift; sourceTree = "<group>"; };
 		DE5FB7861B14F73D00C9EC44 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DE748FB01B693E98002AB490 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 			children = (
 				DE8377F51B13F30D00CD8435 /* AppDelegate.swift */,
 				DE9DA4DB1B28E02600AD8A2C /* SlideTableViewController.swift */,
+				DE5545CC1CE42771007258B9 /* PopoverViewController.swift */,
 			);
 			name = Universal;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				DE90B2001B54B0850067F62C /* LSAboutUsViewController.swift in Sources */,
 				DE8377F61B13F30D00CD8435 /* AppDelegate.swift in Sources */,
 				DEFDB5621B51C1CB00794C98 /* TodaysDeal.swift in Sources */,
+				DE5545CD1CE42771007258B9 /* PopoverViewController.swift in Sources */,
 				DE2E1EFC1B23A5A300C73295 /* LiquorStoresInformation.swift in Sources */,
 				DED81B661B5065900007E2BE /* AboutUsContainerViewController.swift in Sources */,
 				DED81B641B50530A0007E2BE /* TodayContainerViewController.swift in Sources */,
