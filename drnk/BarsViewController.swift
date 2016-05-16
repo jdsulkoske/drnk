@@ -78,12 +78,6 @@ class BarsViewController: UIViewController, UITableViewDelegate {
                 
                     
                 }
-                
-                if arrayOfBars.count == 0{
-                    self.networkMessage.text = "Sorry, there doesn't seem to be any businesses in your area that utilize drnk! You can check out specials in other cities by changing your preferred location below!"
-                    self.networkMessage.hidden = false
-                    
-                }
             
             }
             
@@ -110,6 +104,14 @@ class BarsViewController: UIViewController, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+        
+        if arrayOfBars.count == 0{
+            self.networkMessage.text = "Sorry, there doesn't seem to be any businesses in your area that utilize drnk! You can check out specials in other cities by changing your preferred location below!"
+            self.networkMessage.hidden = false
+            
+        } else {
+            self.networkMessage.hidden = true
+        }
         
         return arrayOfBars.count
         

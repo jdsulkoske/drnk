@@ -19,7 +19,8 @@ class DataConnection {
     
     func requestData(completionHandler: (responseObject: NSArray?, error: ErrorType?) -> ()){
         
-        var requestString = "http://drnkmedia.com/api/api.php/?company_city=" + currentCity + "&" + typeOfBusiness
+//        var requestString = "http://drnkmedia.com/api/api.php/?company_city=" + currentCity + "&" + typeOfBusiness
+        var requestString = "http://drnkmedia.com/api/api.php/?company_city=muncie&" + typeOfBusiness
         requestString = requestString.stringByReplacingOccurrencesOfString(" ", withString: "%20")
         print(requestString)
         
