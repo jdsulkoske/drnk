@@ -3,6 +3,7 @@
 import MapKit
 import UIKit
 import CoreLocation
+import CoreData
 var theAddress = ""
 
 class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManagerDelegate {
@@ -18,6 +19,8 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
     var data : DataConnection!
     var mugIconView : UIImageView!
     var destination :MKMapItem = MKMapItem()
+    var userCurrentCity: String!
+    
     override func viewDidLoad() {
         
         self.navigationController?.toolbar.barTintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
@@ -31,16 +34,16 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
         
         
         if activePlace == 1 {
-            
             locationManager.requestWhenInUseAuthorization()
             //locationManager.startUpdatingLocation()
             data = DataConnection(typeOfBusiness: "bar=true&liquorstore=true")
             updateData()
+            print("Nope")
             self.back.title = ""
             self.back.enabled = false
             self.directionsButton.title = ""
             self.directionsButton.enabled = false
-             mugIconView = UIImageView(image: UIImage(named: "drnkLogo"))
+            mugIconView = UIImageView(image: UIImage(named: "drnkLogo"))
             
         } else {
             
@@ -295,5 +298,5 @@ class MapViewController: UIViewController, MKMapViewDelegate , CLLocationManager
         let address = "http://maps.apple.com/?q=" + theAddress
         return address
     }
+    
 }
-

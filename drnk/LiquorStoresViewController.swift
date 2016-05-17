@@ -29,7 +29,7 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+        self.networkMessage.hidden = true
         refresher = UIRefreshControl()
         refresher.attributedTitle = NSAttributedString(string: "Pull to refresh", attributes: [NSForegroundColorAttributeName: UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 1.0)])
         refresher.addTarget(self, action: #selector(LiquorStoresViewController.updateData), forControlEvents: UIControlEvents.ValueChanged)

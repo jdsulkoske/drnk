@@ -22,13 +22,9 @@ class Day: NSObject {
     }
     func hour()-> Int{
         
-//        let calendar = NSCalendar.currentCalendar()
         let calendar = NSCalendar.currentCalendar()
         let component = calendar.component(.Hour, fromDate:NSDate())
-//        let comp = calendar.components((.CalendarUnitHour | .CalendarUnitMinute), fromDate: date)
-
         let thishour = component.hashValue
-//        let minute = component.hashValue
         
         return thishour
         

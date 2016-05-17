@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class PopoverViewController: UIViewController, UIPickerViewDelegate {
 
+    let moc = DataController().managedObjectContext
     let cities = ["Muncie", "Broadripple"]
     
     override func viewDidLoad() {
@@ -48,12 +50,22 @@ class PopoverViewController: UIViewController, UIPickerViewDelegate {
         self.dismissViewControllerAnimated(false, completion: {()->Void in
             thisVC.dismissViewControllerAnimated(false, completion: nil);
         });
+        let lsVC = LiquorStoresViewController()
+        lsVC.viewDidLoad()
         
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         let city = cities[row].lowercaseString
-        currentCity = city
+        let moc = DataController().managedObjectContext
+        let entity = NSEntityDescription.insertNewObjectForEntityForName("Session", inManagedObjectContext: moc) as! Session
+        entity.setValue(city, forKey: "currentCity")
+        do{
+            try moc.save()
+        } catch {
+            fatalError("Failed to save context: \(error)")
+        }
+    
     }
 }

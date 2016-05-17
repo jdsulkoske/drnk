@@ -8,8 +8,7 @@
 
 import UIKit
 import CoreLocation
-var currentUserZip = ""
-var currentCity = ""
+import CoreData
 
 class SlideTableViewController: UITableViewController, CLLocationManagerDelegate {
 
@@ -17,14 +16,13 @@ class SlideTableViewController: UITableViewController, CLLocationManagerDelegate
     @IBOutlet weak var liquore: UIImageView!
     let locationManager = CLLocationManager()
     @IBOutlet var myTableView: UITableView!
+    
+    var userCurrentCity = ""
     var data = DataConnection(typeOfBusiness: "bar=true")
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
-        
-        
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         self.locationManager.startUpdatingLocation()
         self.locationManager.delegate = self
@@ -34,12 +32,6 @@ class SlideTableViewController: UITableViewController, CLLocationManagerDelegate
         self.myTableView.backgroundView = UIImageView(image: UIImage(named: "slide"))
         
         
-    }
-
-    override func didReceiveMemoryWarning() {
-        
-        super.didReceiveMemoryWarning()
-
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -63,8 +55,6 @@ class SlideTableViewController: UITableViewController, CLLocationManagerDelegate
                 
                 self.displayLocationInfo(pm)
                 
-                
-                
             } else {
                 
                 
@@ -77,12 +67,21 @@ class SlideTableViewController: UITableViewController, CLLocationManagerDelegate
     func displayLocationInfo(placemark: CLPlacemark) {
         self.locationManager.stopUpdatingLocation()
         let theCity = placemark.locality!
-        currentCity = theCity.lowercaseString
+        let newString = theCity.stringByReplacingOccurrencesOfString(" ", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        userCurrentCity = newString.lowercaseString
+        seedPerson()
         
     }
     
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        currentUserZip = "none"
+    func seedPerson(){
+        let moc = DataController().managedObjectContext
+        let entity = NSEntityDescription.insertNewObjectForEntityForName("Session", inManagedObjectContext: moc) as! Session
+        entity.setValue(userCurrentCity, forKey: "currentCity")
+        do{
+            try moc.save()
+        } catch {
+            fatalError("Failed to save context: \(error)")
+        }
     }
 
 }
