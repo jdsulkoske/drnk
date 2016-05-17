@@ -81,10 +81,6 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
                     
                 }
                 
-                if arrayOfLiquorStores.count == 0{
-                    self.networkMessage.text = "Sorry, there doesn't seem to be any businesses in your area that utilize drnk! You can check out specials in other cities by changing your preferred location below!"
-                    self.networkMessage.hidden = false
-                }
                 
             }
             
@@ -103,6 +99,13 @@ class LiquorStoresViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if arrayOfLiquorStores.count == 0{
+            self.networkMessage.text = "Sorry, there doesn't seem to be any businesses in your area that utilize drnk! You can check out specials in other cities by changing your preferred location below!"
+            self.networkMessage.hidden = false
+        } else {
+            self.networkMessage.hidden = true
+        }
         
         return arrayOfLiquorStores.count
         
